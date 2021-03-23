@@ -30,9 +30,11 @@ class AuthUserService {
       throw new Error('Senha incorreta')
     }
 
-    const token = sign({}, authConfig.secret, {
+    const { secret, expiresIn } = authConfig
+
+    const token = sign({}, secret, {
       subject: user.id,
-      expiresIn: authConfig.expiresIn
+      expiresIn
     })
 
     console.log(token)
