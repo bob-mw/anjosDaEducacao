@@ -9,9 +9,9 @@ function App(){
     return (
       <Provider>
         <NavBar />
-        <main>
+        <main className="gradient-sky">
+          <Container className="mr-5">
           <img src={ angel } />
-          <Container>
           <Card />
           </Container>
         </main>
