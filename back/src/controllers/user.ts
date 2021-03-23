@@ -2,7 +2,7 @@ import { Request, Response } from 'express'
 import CreateUserService from '@services/createUser'
 
 class UserController {
-  async CreateUser (request: Request, response: Response) {
+  async create (request: Request, response: Response) {
     const { name, email, password, student } = request.body
 
     const createUserService = new CreateUserService()
