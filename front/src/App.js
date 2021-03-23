@@ -1,19 +1,18 @@
 import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 import Provider from './context/Provider';
-import Card from './components/Card';
 import NavBar from './components/NavBar';
-import { Container } from 'react-bootstrap';
-import angel from './img/angel.svg';
+import Login from './Pages/Login';
+
 
 function App(){
     return (
       <Provider>
         <NavBar />
-        <main className="gradient-sky">
-          <Container className="mr-5">
-          <img src={ angel } />
-          <Card />
-          </Container>
+        <main className="gradient-sky full-screen">
+          <BrowserRouter>
+            <Route exact path="/" component={ Login } />
+          </BrowserRouter>
         </main>
       </Provider>
     );

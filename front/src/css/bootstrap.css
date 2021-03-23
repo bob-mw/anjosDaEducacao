@@ -30,6 +30,10 @@ my configurations:
   background: linear-gradient(to bottom, #8fdefa, #6DD5FA, #2980B9);
 }
 
+.full-screen {
+  height: 100vh;
+}
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
