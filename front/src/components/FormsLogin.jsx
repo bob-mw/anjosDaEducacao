@@ -23,8 +23,8 @@ function FormsLogin() {
         <a href="">esqueci minha senha</a>
         <br/>
         <div className="d-flex justify-content-around m-3">
-        <button type="submit" className="btn btn-success m-3">Entrar</button>
-        <button type="submit" className="btn btn-primary m-3">Cadastrar</button>
+        <a className="btn btn-success m-3">Entrar</a>
+        <a className="btn btn-primary m-3" href={ (formType === 'angel') ? "/registerAngel" : undefined }>Cadastrar</a>
         </div>
         </form>
     );
