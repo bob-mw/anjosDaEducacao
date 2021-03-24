@@ -2,8 +2,8 @@ import { Request, Response } from 'express'
 import CreateUserService from '@services/createUser'
 
 class UserController {
-  async CreateUser (request: Request, response: Response) {
-    const { name, email, password, student } = request.body
+  async create (request: Request, response: Response) {
+    const { name, email, password, student, cpf, phone } = request.body
 
     const createUserService = new CreateUserService()
 
@@ -11,7 +11,9 @@ class UserController {
       name,
       email,
       password,
-      student
+      student,
+      cpf,
+      phone
     })
 
     delete user.password

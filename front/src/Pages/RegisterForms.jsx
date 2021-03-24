@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import context from '../context/context';
+import axios from 'axios';
 
 function AngelRegisterForms() {
 
@@ -10,7 +11,6 @@ function AngelRegisterForms() {
     }
 
     const handleClick = () => {
-        localStorage.setItem('angel', JSON.stringify(angelRegister))
         axios.post('http://localhost:3333/user',  JSON.stringify(angelRegister)).then(function (response) {
             console.log(response)
         })
@@ -40,7 +40,7 @@ function AngelRegisterForms() {
             <div className="form-group">
                 <label for="whatsapp">
                     WhatsApp
-             <input type="whatsapp" name="whatsapp" className="form-control" id="whatsapp" placeholder="digite seu whatsapp" onChange={handleChange} />
+             <input type="whatsapp" name="phone" className="form-control" id="whatsapp" placeholder="digite seu whatsapp" onChange={handleChange} />
                 </label>
             </div>
             <div className="form-group">

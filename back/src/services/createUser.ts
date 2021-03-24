@@ -7,13 +7,14 @@ interface IUserData {
   name: string;
   email: string;
   password: string;
+  cpf: string;
+  phone: string;
   student?: boolean;
 }
 
 class CreateUserService {
-  async execute (
-    { name, email, password, student = false }: IUserData
-  ): Promise<User> {
+  public async execute
+  ({ name, email, password, cpf, phone, student = false }: IUserData) {
     const userRepository = getRepository(User)
 
     const exists = await userRepository.findOne({
@@ -32,6 +33,8 @@ class CreateUserService {
       name,
       email,
       password,
+      cpf,
+      phone,
       student
     })
 

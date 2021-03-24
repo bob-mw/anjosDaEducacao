@@ -17,6 +17,12 @@ class User {
   @Column()
   student: boolean;
 
+  @Column()
+  cpf: string;
+
+  @Column()
+  phone: string;
+
   @CreateDateColumn()
   created_at: string;
 
