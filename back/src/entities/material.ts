@@ -1,6 +1,6 @@
 import mongoose, { Document, Schema } from 'mongoose'
 
-type Material = Document & {};
+type Material = Document & {}
 
 const MaterialSchema = new Schema(
   {
@@ -17,6 +17,5 @@ const MaterialSchema = new Schema(
     timestamps: true
   }
 )
-  
+
 export default mongoose.model<Material>('Material', MaterialSchema)
-  
