@@ -11,7 +11,7 @@ interface IUserData {
 }
 
 class AuthUserService {
-  public async execute({ email, password }: IUserData): Promise<string> {
+  public async execute({ email, password }: IUserData) {
     const userRepository = getRepository(User)
 
     const user = await userRepository.findOne({

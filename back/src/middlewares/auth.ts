@@ -22,17 +22,12 @@ export default (request: Request, response: Response, next: NextFunction) => {
 
   try {
     const decoded = verify(token, secret)
-    console.log(decoded)
 
     const { sub } = decoded as IToken
-    
-    console.log(sub)
     
     request.user = {
       id: sub
     }
-
-    ///console.log(request.user.id)
 
     return next()
   }
