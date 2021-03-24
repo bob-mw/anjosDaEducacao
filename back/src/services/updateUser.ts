@@ -2,7 +2,6 @@ import { getRepository } from 'typeorm'
 import { compare, hash } from 'bcryptjs'
 
 import User from '@entities/user'
-import authConfig from '@config/auth'
 
 interface IUserData {
   id: string;
@@ -10,12 +9,13 @@ interface IUserData {
   newEmail?: string;
   password: string;
   newPassword: string;
+  newPhone: string;
   student?: boolean;
 }
 
 class UpdateUserService {
-  public async execute 
-  ({ id, newName, newEmail, password, newPassword, student }) {
+  public async execute
+  ({ id, newName, newEmail, password, newPassword, newPhone, student }: IUserData) {
     const userRepository = getRepository(User)
 
     const user = await userRepository.findOne({
@@ -48,6 +48,10 @@ class UpdateUserService {
 
     if (student) {
       user.student = student
+    }
+
+    if (newPhone) {
+      user.phone = newPhone
     }
 
     await userRepository.save(user)
