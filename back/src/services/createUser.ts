@@ -11,8 +11,8 @@ interface IUserData {
 }
 
 class CreateUserService {
-  public async execute (
-  { name, email, password, student = false }: IUserData) {
+  public async execute
+  ({ name, email, password, student = false }: IUserData) {
     const userRepository = getRepository(User)
 
     const exists = await userRepository.findOne({
