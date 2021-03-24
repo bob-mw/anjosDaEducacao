@@ -4,7 +4,7 @@ export default class addPhoneNumberFieldToUser1616585620263 implements Migration
   public async up (queryRunner: QueryRunner): Promise<void> {
     await queryRunner.addColumn('user', new TableColumn({
       name: 'phone',
-      type: 'integer',
+      type: 'varchar',
       isUnique: true,
       isNullable: true
     }))
