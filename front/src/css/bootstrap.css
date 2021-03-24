@@ -46,6 +46,10 @@ my configurations:
   background-color: #e09dffff;
 }
 
+.mt-10 {
+  margin-top: 10rem;
+}
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;

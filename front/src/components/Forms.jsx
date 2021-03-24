@@ -6,7 +6,7 @@ function Forms() {
     const { formType } = useContext(context);
 
     return(
-        <form className={ (formType === 'angel') ? "mt-2 b-radius border border-light shadow p-5 bg-purple-clear" : "mt-2 b-radius border border-light shadow p-5 bg-green-clear" }>
+        <form className={ (formType === 'angel') ? "m-5 b-radius border border-light shadow p-5 bg-purple-clear" : "m-5 b-radius border border-light shadow p-5 bg-green-clear" }>
             <h3>{ (formType === 'angel') ? "Entre como Anjo ou Cadastre-se" : "Entre como Protegido ou Cadastre-se" }</h3>
         <div className="form-group">
             <label for="email">
