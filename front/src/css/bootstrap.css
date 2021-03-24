@@ -34,6 +34,18 @@ my configurations:
   height: 100vh;
 }
 
+.bg-green-clear {
+  background-color: #b8ffaafe;
+}
+
+.bg-yellow-clear {
+  background-color: rgb(255, 223, 96);
+}
+
+.bg-purple-clear {
+  background-color: #e09dffff;
+}
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -3084,20 +3096,20 @@ fieldset:disabled a.btn {
 
 .btn-warning {
   color: #212529;
-  background-color: #ffc107;
-  border-color: #ffc107;
+  background-color: rgb(255, 223, 96);
+  border-color: rgb(255, 223, 96);
 }
 
 .btn-warning:hover {
   color: #212529;
-  background-color: #e0a800;
+  background-color: rgb(224, 195, 77);
   border-color: #d39e00;
 }
 
 .btn-warning:focus,
 .btn-warning.focus {
   color: #212529;
-  background-color: #e0a800;
+  background-color:  rgb(224, 195, 77);
   border-color: #d39e00;
   box-shadow: 0 0 0 0.2rem rgba(222, 170, 12, 0.5);
 }
@@ -3105,8 +3117,8 @@ fieldset:disabled a.btn {
 .btn-warning.disabled,
 .btn-warning:disabled {
   color: #212529;
-  background-color: #ffc107;
-  border-color: #ffc107;
+  background-color: rgb(255, 223, 96);
+  border-color: rgb(255, 223, 96);
 }
 
 .btn-warning:not(:disabled):not(.disabled):active,
@@ -3391,14 +3403,14 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-warning {
-  color: #ffc107;
-  border-color: #ffc107;
+  color: rgb(255, 223, 96);
+  border-color: rgb(255, 223, 96);
 }
 
 .btn-outline-warning:hover {
   color: #212529;
-  background-color: #ffc107;
-  border-color: #ffc107;
+  background-color: rgb(255, 223, 96);
+  border-color: rgb(255, 223, 96);
 }
 
 .btn-outline-warning:focus,
@@ -3408,7 +3420,7 @@ fieldset:disabled a.btn {
 
 .btn-outline-warning.disabled,
 .btn-outline-warning:disabled {
-  color: #ffc107;
+  color: rgb(255, 223, 96);
   background-color: transparent;
 }
 
@@ -3416,8 +3428,8 @@ fieldset:disabled a.btn {
 .btn-outline-warning:not(:disabled):not(.disabled).active,
 .show>.btn-outline-warning.dropdown-toggle {
   color: #212529;
-  background-color: #ffc107;
-  border-color: #ffc107;
+  background-color: rgb(255, 223, 96);
+  border-color: rgb(255, 223, 96);
 }
 
 .btn-outline-warning:not(:disabled):not(.disabled):active:focus,
