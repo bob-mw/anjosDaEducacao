@@ -9,7 +9,7 @@ function App(){
     return (
       <Provider>
         <NavBar />
-        <main className="gradient-sky full-screen">
+        <main className="gradient-sky">
           <BrowserRouter>
             <Route exact path="/" component={ Login } />
           </BrowserRouter>
