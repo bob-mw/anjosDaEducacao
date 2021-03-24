@@ -7,12 +7,15 @@ function Provider({ children }) {
 
     const [ formType, setFormType ] = useState([]);
     const [ angelRegister, setAngelRegister ] = useState({});
+    const [ angelFormValidation, setAngelFormValidation ] = useState(false)
 
     const value = {
         formType,
         setFormType,
         angelRegister,
-        setAngelRegister
+        setAngelRegister,
+        angelFormValidation,
+        setAngelFormValidation
     };
     return(
       <context.Provider value={ value }>

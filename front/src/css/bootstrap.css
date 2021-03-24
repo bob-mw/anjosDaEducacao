@@ -50,6 +50,22 @@ my configurations:
   margin-top: 10rem;
 }
 
+.margin-top-main {
+  margin-top: 100px;
+  overflow-x: hidden;
+}
+
+/* Retirar setas do input type=number https://pt.stackoverflow.com/questions/177573/retirar-as-setas-no-campo-tipo-number */
+input[type=number]::-webkit-inner-spin-button { 
+  -webkit-appearance: none;
+  
+}
+input[type=number] { 
+ -moz-appearance: textfield;
+ appearance: textfield;
+
+}
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
