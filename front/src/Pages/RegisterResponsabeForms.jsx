@@ -1,10 +1,13 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import context from '../context/context';
 
 function RegisterResposabeForms() {
 
     const { responsabeRegister, setResponsabeRegister, responsabeFormValidation, setResponsabeFormValidation } = useContext(context);
 
+    const [ brazilStates, setBrazilStates ] = useState([]);
+    const [ brazilCitys, setBrazilCitys ] = useState([]);
+    const [ stateId, setStateId ] = useState(0);
 
     const handleChange = ({ target: { name, value } }) => {
         setResponsabeRegister({ ...responsabeRegister, [name]: value })
@@ -18,19 +21,35 @@ function RegisterResposabeForms() {
         */
     }
 
-    /*REGEX: 
-    email: https://medium.com/swlh/how-to-validate-an-email-address-in-javascript-78d33f87f5c6,
-    cpf: https://operahouse.com.br/expressoes-regulares,
-    */
-    useEffect(() => {
-        
-    }, [responsabeRegister])
+    const selectStateId = ({ target: { value } }) => {
+        setStateId(value);
+    }
+
+    useEffect( async () => {
+       try {
+        const brazilStates = await fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados');
+        const jsonBrasilStates = await brazilStates.json();
+        setBrazilStates(jsonBrasilStates)
+       } catch (error) {
+        console.log(error)
+       }
+    }, [])
+
+    useEffect( async () => {
+        try {
+         const citys = await fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${stateId}/municipios`);
+         const jsonCitys = await citys.json();
+         setBrazilCitys(jsonCitys);
+        } catch (error) {
+         console.log(error)
+        }
+     }, [stateId])
 
     return (
         <form className="d-flex flex-column justify-content-center align-items-center shadow p-5 ">
             <h3>Cadastro de Resposável pela Criança</h3>
             <div className="form-group">
-                <label for="cpf">
+                <label for="nome">
                     Nome
              <input type="text" name="name" className="form-control" id="nome" placeholder="digite seu nome" onChange={handleChange} />
                 </label>
@@ -68,8 +87,9 @@ function RegisterResposabeForms() {
            <div className="form-group">
                 <label for="state">
                     Estado
-                    <select className="m-3" name="state" id="state" onChange={ handleChange }>
+                    <select className="m-3" name="state" id="state" onChange={ handleChange, selectStateId }>
                         <option value="" selected disabled>Selecione um estado</option>
+                        { brazilStates.map((state) => <option value={ state.id } key={ state.sigla } id={ state.id } >{ state.nome }</option> ) }
                     </select>
                 </label>
             </div>
@@ -78,6 +98,7 @@ function RegisterResposabeForms() {
                     Cidade
                     <select className="m-3" name="city" id="city" onChange={ handleChange }>
                         <option value="" selected disabled>Selecione uma cidade</option>
+                        { brazilCitys.map((city) => <option value={ city.nome } key={ city.id } id={ city.id } >{ city.nome }</option> ) }
                     </select>
                 </label>
             </div>
