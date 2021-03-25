@@ -37,8 +37,6 @@ class AuthUserService {
       expiresIn
     })
 
-    console.log(token)
-
     return token
   }
 }

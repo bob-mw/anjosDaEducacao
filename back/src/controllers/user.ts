@@ -1,10 +1,12 @@
 import { Request, Response } from 'express'
 import CreateUserService from '@services/createUser'
+import UpdateUserService from '@services/updateUser'
 
-import createUser from '@validation/createUser'
+import createUserSchema from '@validation/createUser'
+
 class UserController {
   async create (request: Request, response: Response) {
-    const validation = await createUser.isValid(request.body)
+    const validation = await createUserSchema.isValid(request.body)
 
     if (!validation) {
       throw new Error('Validation failed')
@@ -26,6 +28,25 @@ class UserController {
     delete user.password
 
     return response.status(201).json({
+      user
+    })
+  }
+
+  async update (request: Request, response: Response) {
+    const { newName, newEmail, newPassword, newPhone, password } = request.body
+
+    const updateUserService = new UpdateUserService()
+
+    const user = await updateUserService.execute({
+      id: request.user.id,
+      newName,
+      newEmail,
+      newPassword,
+      newPhone,
+      password
+    })
+
+    return response.json({
       user
     })
   }

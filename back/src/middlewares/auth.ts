@@ -12,11 +12,11 @@ interface IToken {
 export default (request: Request, response: Response, next: NextFunction) => {
   const auth_header = request.headers.authorization
 
-  if(!auth_header) {
+  if (!auth_header) {
     throw new Error('Você precisa estar logado para acessar isso')
   }
 
-  const [type, token] = auth_header.split(' ')
+  const [, token] = auth_header.split(' ')
 
   const { secret } = authConfig
 
@@ -24,14 +24,13 @@ export default (request: Request, response: Response, next: NextFunction) => {
     const decoded = verify(token, secret)
 
     const { sub } = decoded as IToken
-    
+
     request.user = {
       id: sub
     }
 
     return next()
-  }
-  catch (err) {
+  } catch (err) {
     throw new Error('Token invalido ou espirado')
   }
 }
