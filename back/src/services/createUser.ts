@@ -9,12 +9,11 @@ interface IUserData {
   password: string;
   cpf: string;
   phone: string;
-  student?: boolean;
 }
 
 class CreateUserService {
   public async execute
-  ({ name, email, password, cpf, phone, student = false }: IUserData) {
+  ({ name, email, password, cpf, phone }: IUserData) {
     const userRepository = getRepository(User)
 
     const exists = await userRepository.findOne({
@@ -34,8 +33,7 @@ class CreateUserService {
       email,
       password,
       cpf,
-      phone,
-      student
+      phone
     })
 
     await userRepository.save(user)

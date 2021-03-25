@@ -10,12 +10,11 @@ interface IUserData {
   password: string;
   newPassword: string;
   newPhone: string;
-  student?: boolean;
 }
 
 class UpdateUserService {
   public async execute
-  ({ id, newName, newEmail, password, newPassword, newPhone, student }: IUserData) {
+  ({ id, newName, newEmail, password, newPassword, newPhone }: IUserData) {
     const userRepository = getRepository(User)
 
     const user = await userRepository.findOne({
@@ -44,10 +43,6 @@ class UpdateUserService {
 
     if (newName) {
       user.name = newName
-    }
-
-    if (student) {
-      user.student = student
     }
 
     if (newPhone) {
