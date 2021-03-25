@@ -1,8 +1,15 @@
 import { Request, Response } from 'express'
 import CreateUserService from '@services/createUser'
 
+import createUser from '@validation/createUser'
 class UserController {
   async create (request: Request, response: Response) {
+    const validation = await createUser.isValid(request.body)
+
+    if (!validation) {
+      throw new Error('Validation failed')
+    }
+
     const { name, email, password, student, cpf, phone } = request.body
 
     const createUserService = new CreateUserService()
