@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import context from '../context/context';
 import axios from 'axios';
+import schema from '../valitations/createUser';
 
 function AngelRegisterForms() {
 
@@ -24,18 +25,9 @@ function AngelRegisterForms() {
         })
     }
 
-    /*REGEX: 
-    email: https://medium.com/swlh/how-to-validate-an-email-address-in-javascript-78d33f87f5c6,
-    cpf: https://operahouse.com.br/expressoes-regulares,
-    */
-    useEffect(() => {
-        const { name, email, password, confirmPassword , phone, cpf } = angelRegister;
-        const REGEX_EMAIL = /\S+@\S+\.\S+/;
-        const REGEX_CPF = /^[0-9]{3}.?[0-9]{3}.?[0-9]{3}-?[0-9]{2}/;
-        const cpfValidated = REGEX_CPF.test(cpf)
-        const emailValidated = REGEX_EMAIL.test(email);
-
-        (name && emailValidated && password === confirmPassword && phone && cpf && cpfValidated) ? setAngelFormValidation(true) : setAngelFormValidation(false);
+    useEffect(async () => {
+        const validate = await schema.isValid(angelRegister);
+        setAngelFormValidation(validate);
     }, [angelRegister])
 
 

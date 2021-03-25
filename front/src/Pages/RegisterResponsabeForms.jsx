@@ -11,7 +11,7 @@ function RegisterResposabeForms() {
     }
 
     const handleClick = () => {
-        const { name, email, password, phone, cpf } = responsabeRegister;
+        const { name, email, password, confirmPassword , phone, cpf, state, city } = responsabeRegister;
 
         /*
         Mandar dados para o banco
@@ -23,13 +23,7 @@ function RegisterResposabeForms() {
     cpf: https://operahouse.com.br/expressoes-regulares,
     */
     useEffect(() => {
-        const { name, email, password, confirmPassword , phone, cpf, state, city } = responsabeRegister;
-        const REGEX_EMAIL = /\S+@\S+\.\S+/;
-        const REGEX_CPF = /^[0-9]{3}.?[0-9]{3}.?[0-9]{3}-?[0-9]{2}/;
-        const cpfValidated = REGEX_CPF.test(cpf)
-        const emailValidated = REGEX_EMAIL.test(email);
-
-        (name && emailValidated && password === confirmPassword && phone && cpf && cpfValidated && state && city) ? setResponsabeFormValidation(true) : setResponsabeFormValidation(false);
+        
     }, [responsabeRegister])
 
     return (
