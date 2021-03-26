@@ -12,7 +12,7 @@ class UserController {
       throw new Error('Validation failed')
     }
 
-    const { name, email, password, student, cpf, phone } = request.body
+    const { name, email, password, cpf, phone } = request.body
 
     const createUserService = new CreateUserService()
 
@@ -20,7 +20,6 @@ class UserController {
       name,
       email,
       password,
-      student,
       cpf,
       phone
     })

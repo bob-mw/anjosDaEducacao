@@ -8,7 +8,7 @@ const RequisitionSchema = new Schema(
       type: String,
       required: true
     },
-    description: {
+    name: {
       type: String,
       required: true
     },
