@@ -9,7 +9,12 @@ const schema = yup.object().shape({
     return password === value
   }),
   cpf: yup.string().required().length(11),
-  phone: yup.string().required()
+  phone: yup.string().required(),
+  state: yup.string().required(),
+  city: yup.string().required(),
+  cep: yup.string().required(),
+  street: yup.string().required(),
+  number: yup.string().required()
 })
 
 export default schema
