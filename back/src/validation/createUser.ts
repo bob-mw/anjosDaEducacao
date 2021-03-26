@@ -14,7 +14,7 @@ const schema = yup.object().shape({
   city: yup.string().required(),
   cep: yup.string().required(),
   street: yup.string().required(),
-  number: yup.string().required()
+  number: yup.number().required()
 })
 
 export default schema
