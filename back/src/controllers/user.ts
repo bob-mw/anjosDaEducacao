@@ -12,7 +12,18 @@ class UserController {
       throw new Error('Validation failed')
     }
 
-    const { name, email, password, cpf, phone } = request.body
+    const {
+      name,
+      email,
+      password,
+      cpf,
+      phone,
+      state,
+      city,
+      cep,
+      street,
+      number
+    } = request.body
 
     const createUserService = new CreateUserService()
 
@@ -21,7 +32,12 @@ class UserController {
       email,
       password,
       cpf,
-      phone
+      phone,
+      state,
+      city,
+      cep,
+      street,
+      number
     })
 
     delete user.password
