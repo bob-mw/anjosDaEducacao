@@ -23,6 +23,21 @@ class User {
   @Column()
   phone: string;
 
+  @Column()
+  state: string;
+
+  @Column()
+  city: string;
+
+  @Column()
+  cep: string;
+
+  @Column()
+  street: string;
+
+  @Column()
+  number: number;
+
   @CreateDateColumn()
   created_at: string;
 
