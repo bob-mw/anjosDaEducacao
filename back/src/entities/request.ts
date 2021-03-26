@@ -22,6 +22,10 @@ const RequisitionSchema = new Schema(
       type: Number,
       required: true,
       default: 0
+    },
+    finished: {
+      type: Boolean,
+      default: false
     }
   },
   {
