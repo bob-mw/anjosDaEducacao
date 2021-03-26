@@ -15,7 +15,7 @@ class User {
   password: string;
 
   @Column()
-  student: boolean;
+  sons: string;
 
   @Column()
   cpf: string;
