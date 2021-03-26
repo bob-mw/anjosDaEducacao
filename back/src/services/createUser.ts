@@ -9,16 +9,21 @@ interface IUserData {
   password: string;
   cpf: string;
   phone: string;
+  state: string;
+  city: string;
+  cep: string;
+  street: string;
+  number: number;
 }
 
 class CreateUserService {
   public async execute
-  ({ name, email, password, cpf, phone }: IUserData) {
+  (userData: IUserData) {
     const userRepository = getRepository(User)
 
     const exists = await userRepository.findOne({
       where: {
-        email
+        email: userData.email
       }
     })
 
@@ -26,15 +31,11 @@ class CreateUserService {
       throw new Error('O usuario já existe')
     }
 
-    password = await hash(password, 10)
+    userData.password = await hash(userData.password, 10)
 
-    const user = userRepository.create({
-      name,
-      email,
-      password,
-      cpf,
-      phone
-    })
+    const user = userRepository.create(userData)
+
+    console.log(user)
 
     await userRepository.save(user)
 
