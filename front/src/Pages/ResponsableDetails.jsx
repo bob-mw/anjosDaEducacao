@@ -3,14 +3,10 @@ import WishList from '../components/WishList';
 import WishTable from '../components/WishTable';
 
 function ResponsableDetails() {
-    const data = JSON.parse(localStorage.getItem('cadastro'))
     return (
         <section className="p-5 m-auto shadow d-flex flex-column justify-content-center align-items-center">
             <h1>
-                Olá, {' '}
-                {
-                    data.nome
-                }
+                Olá, 
             </h1>
             <h2>Cadastre um filho para que ele receba doações de materiais</h2>
 
