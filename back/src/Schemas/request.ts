@@ -1,8 +1,8 @@
 import mongoose, { Document, Schema } from 'mongoose'
 
-type Requisition = Document & {}
+type Request = Document & {}
 
-const RequisitionSchema = new Schema(
+const RequestSchema = new Schema(
   {
     owner: {
       type: String,
@@ -33,4 +33,4 @@ const RequisitionSchema = new Schema(
   }
 )
 
-export default mongoose.model<Requisition>('Requisition', RequisitionSchema)
+export default mongoose.model<Request>('Request', RequestSchema)

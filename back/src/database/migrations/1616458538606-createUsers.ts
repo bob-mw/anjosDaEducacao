@@ -28,7 +28,8 @@ export default class createUsers1616458538606 implements MigrationInterface {
         {
           name: 'sons',
           type: 'uuid',
-          isUnique: true
+          isUnique: true,
+          isNullable: true
         },
         {
           name: 'created_at',
@@ -45,5 +46,6 @@ export default class createUsers1616458538606 implements MigrationInterface {
   }
 
   public async down (queryRunner: QueryRunner): Promise<void> {
+    await queryRunner.dropTable('user')
   }
 }
