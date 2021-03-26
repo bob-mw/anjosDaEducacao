@@ -2,6 +2,7 @@ import { getRepository } from 'typeorm'
 import { hash } from 'bcryptjs'
 
 import User from '@entities/user'
+import Requisition from '@entities/request'
 
 interface IUserData {
   name: string;
@@ -22,11 +23,11 @@ class CreateUserService {
       }
     })
 
-    password = await hash(password, 10)
-
     if (exists) {
       throw new Error('O usuario já existe')
     }
+
+    password = await hash(password, 10)
 
     const user = userRepository.create({
       name,
