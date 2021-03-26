@@ -35,8 +35,6 @@ class CreateUserService {
 
     const user = userRepository.create(userData)
 
-    console.log(user)
-
     await userRepository.save(user)
 
     return user
