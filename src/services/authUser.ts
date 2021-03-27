@@ -5,6 +5,8 @@ import { sign } from 'jsonwebtoken'
 import User from '@entities/user'
 import authConfig from '@config/auth'
 
+import AppError from '@errors/appError'
+
 interface IUserData {
   email: string;
   password: string;
@@ -21,13 +23,13 @@ class AuthUserService {
     })
 
     if (!user) {
-      throw new Error('Email e/ou senha incorretos')
+      throw new AppError('Email e/ou senha incorretos', 401)
     }
 
     const passwordMatch = await compare(password, user.password)
 
     if (!passwordMatch) {
-      throw new Error('Senha incorreta')
+      throw new AppError('Email e/ou senha incorretos', 401)
     }
 
     const { secret, expiresIn } = authConfig
