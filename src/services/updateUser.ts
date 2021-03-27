@@ -3,6 +3,8 @@ import { compare, hash } from 'bcryptjs'
 
 import User from '@entities/user'
 
+import AppError from '@errors/appError'
+
 interface IUserData {
   id: string;
   newName?: string;
@@ -24,13 +26,13 @@ class UpdateUserService {
     })
 
     if (!user) {
-      throw new Error('Usuário não encontrado')
+      throw new AppError('Usuário não encontrado')
     }
 
     const passwordMatch = await compare(password, user.password)
 
     if (!passwordMatch) {
-      throw new Error('Senha incorreta')
+      throw new AppError('Senha incorreta')
     }
 
     if (newPassword) {
