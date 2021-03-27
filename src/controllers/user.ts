@@ -4,13 +4,16 @@ import UpdateUserService from '@services/updateUser'
 import FindUserService from '@services/findUserService'
 
 import createUserSchema from '@validation/createUser'
+import updateUserSchema from '@validation/updateUser'
+
+import AppError from '@errors/appError'
 
 class UserController {
   async create (request: Request, response: Response) {
     const validation = await createUserSchema.isValid(request.body)
 
     if (!validation) {
-      throw new Error('Validation failed')
+      throw new AppError('Erro na validação, verifique seus dados', 401)
     }
 
     const {
@@ -49,6 +52,12 @@ class UserController {
   }
 
   async update (request: Request, response: Response) {
+    const validation = await updateUserSchema.isValid(request.body)
+
+    if (!validation) {
+      throw new AppError('Use um formato valido para atualizar seus dados')
+    }
+
     const { newName, newEmail, newPassword, newPhone, password } = request.body
 
     const updateUserService = new UpdateUserService()
