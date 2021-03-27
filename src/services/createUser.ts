@@ -3,6 +3,8 @@ import { hash } from 'bcryptjs'
 
 import User from '@entities/user'
 
+import AppError from '@errors/appError'
+
 interface IUserData {
   name: string;
   email: string;
@@ -28,7 +30,7 @@ class CreateUserService {
     })
 
     if (exists) {
-      throw new Error('O usuario já existe')
+      throw new AppError('O usuario já existe')
     }
 
     userData.password = await hash(userData.password, 10)
