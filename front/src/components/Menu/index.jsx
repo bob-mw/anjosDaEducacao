@@ -25,32 +25,37 @@ const Menu = () => {
 
     useEffect(()=>{
         timeline.current = gsap.timeline({paused: true})
-        .to(sidebar.current, 1, {
+        .to(sidebar.current, {
+            duration: 1,
             clipPath: `circle(200% at 16.3rem 3.7rem)`,
             ease: "power3"
         }, 0)
-        .to(lineOne.current, 0.3, {
+        .to(lineOne.current, {
+            duration: 0.3,
             scaleX: 1.3,
             top: "50%",
             rotation: 45,
             ease: "power3"
-        }, 0)
-        .to(lineTwo.current, 0.3, { 
+        }, "<")
+        .to(lineTwo.current, { 
+            duration: 0.3,
             autoAlpha: 0,
             ease: "power3"
-        }, 0)
-        .to(lineThree.current, 0.3, {
+        }, "<")
+        .to(lineThree.current, {
+            duration: 0.3,
             scaleX: 1.3,
             bottom: "0%",
             top: "50%",
             rotation: -45,
             ease: "power3",
-        }, 0)
-        .staggerFrom(menuItems.current, 0.3, {
+        }, "<")
+        .staggerFrom(menuItems.current, {
+            duration: 0.3,
             y: 30, 
             autoAlpha: 0,
-            ease: "power3"
-        }, 0.2)
+            ease: "elastic"
+        }, ">")
         .reverse()
         
     },[])
