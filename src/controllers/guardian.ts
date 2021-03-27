@@ -2,6 +2,7 @@ import { Request, Response } from 'express'
 import CreateGuardianService from '@services/createGuardian'
 
 import createGuardianSchema from '@validation/createGuardian'
+import updateGuardianSchema from '@validation/updateGuardian'
 
 import AppError from '@errors/appError'
 
@@ -10,7 +11,7 @@ class GuardianController {
     const validation = createGuardianSchema.isValid(request.body)
 
     if (!validation) {
-      throw new AppError('Erro na validação, verifique seus dados', 401)
+      throw new AppError('Erro na validação, verifique seus dados')
     }
 
     const { name, email, password } = request.body
@@ -26,6 +27,14 @@ class GuardianController {
     return response.status(201).json({
       user
     })
+  }
+
+  async update (request: Request, response: Response) {
+    const validation = updateGuardianSchema.isValid(request.body)
+
+    if (!validation) {
+      throw new AppError('Erro na validação, verifique seus dados')
+    }
   }
 }
 
