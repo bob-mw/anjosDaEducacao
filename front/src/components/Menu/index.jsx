@@ -1,9 +1,11 @@
 import React, { useRef, useState, useEffect} from 'react'
-import gsap from "gsap"
-import * as S from "./styled"
+import gsap from 'gsap'
+
+import * as S from './styled'
+import { useDimensions } from './useDimensions'
 
 const Menu = () => {
-
+    
     let sidebar = useRef(null)
     let lineOne = useRef(null)
     let lineTwo = useRef(null)
@@ -21,10 +23,14 @@ const Menu = () => {
     //let timeline = useState(new TimelineMax({paused: true})) //Outra possibilidade
     const [menuExpanded, setMenuExpanded] = useState(false)
 
+    const [height, setHeight] = useState(0)
+
     useEffect(()=>{
+        setHeight(sidebar.current.clientHeight)
+
         timeline.current = gsap.timeline({paused: true})
-        .to(sidebar.current, 0.5, {
-            clipPath: "circle(200% at 16.3rem 3.7rem)",
+        .to(sidebar.current, 1, {
+            clipPath: `circle(${height * 2 + 200}px at 16.3rem 3.7rem)`,
             ease: "slow"
         }, 0)
         .to(lineOne.current, 0.5, {
@@ -52,10 +58,10 @@ const Menu = () => {
     useEffect(() => {
         //timeline.current.reversed(!menuExpanded) //Outra possibilidade
         menuExpanded === true ? timeline.current.play() : timeline.current.reverse()
-    },[menuExpanded])      
+    },[menuExpanded])   
 
     return (
-        <>
+        <>  
             <S.ToggleBtn onClick={() => setMenuExpanded(!menuExpanded)}>
                 <S.Top ref={lineOne}></S.Top>
                 <S.Middle ref={lineTwo}></S.Middle>
