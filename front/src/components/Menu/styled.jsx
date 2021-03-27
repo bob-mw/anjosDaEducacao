@@ -1,20 +1,10 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
-
-export const Nav = styled(motion.nav)`
-  position: absolute;
-  top: 0;
-  right: -20rem;
-  height: 100%;
-  width: 20rem;
-  z-index: 3;
-`
-
 export const Sidebar = styled(motion.div)`
   position: absolute;
   top: 0;
-  right: 0;
+  right: -20rem;
   height: 100%;
   width: 20rem;
   background: linear-gradient(to left bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));

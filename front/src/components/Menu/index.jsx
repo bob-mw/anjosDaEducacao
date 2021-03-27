@@ -4,7 +4,7 @@ import * as S from "./styled"
 
 const Menu = () => {
 
-    let wrapper = useRef(null)
+    let sidebar = useRef(null)
     let lineOne = useRef(null)
     let lineTwo = useRef(null)
     let lineThree = useRef(null)
@@ -23,7 +23,11 @@ const Menu = () => {
 
     useEffect(()=>{
         timeline.current = gsap.timeline({paused: true})
-        .to(lineOne.current, 0.4, {
+        .to(sidebar.current, 0.5, {
+            right: "0%",
+            ease: "slow"
+        }, 0)
+        .to(lineOne.current, 0.5, {
             scaleX: 1.3,
             top: "50%",
             rotation: 45,
@@ -33,7 +37,7 @@ const Menu = () => {
             autoAlpha: 0,
             ease: "power3"
         }, 0)
-        .to(lineThree.current, 0.4, {
+        .to(lineThree.current, 0.5, {
             scaleX: 1.3,
             bottom: "0%",
             top: "50%",
@@ -57,7 +61,7 @@ const Menu = () => {
                 <S.Middle ref={lineTwo}></S.Middle>
                 <S.Bottom ref={lineThree}></S.Bottom>
             </S.ToggleBtn>
-
+            <S.Sidebar ref={sidebar}/>
         </>
     )
 }
