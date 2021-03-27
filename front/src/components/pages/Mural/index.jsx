@@ -7,8 +7,8 @@ const Mural = () => {
   
     return (
         <>
-        <Menu/>
         <S.Background>
+            <Menu/>
             <S.Panel>
 
             </S.Panel>

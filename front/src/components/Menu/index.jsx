@@ -24,7 +24,7 @@ const Menu = () => {
     useEffect(()=>{
         timeline.current = gsap.timeline({paused: true})
         .to(sidebar.current, 0.5, {
-            right: "0%",
+            clipPath: "circle(200% at 16.3rem 3.7rem)",
             ease: "slow"
         }, 0)
         .to(lineOne.current, 0.5, {
