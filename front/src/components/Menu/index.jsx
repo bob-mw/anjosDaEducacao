@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect} from 'react'
 import gsap from 'gsap'
 
 import * as S from './styled'
-import { useDimensions } from './useDimensions'
+import links from './links'
 
 const Menu = () => {
     
