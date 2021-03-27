@@ -1,7 +1,17 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
-export const Sidebar = styled.div`
+
+export const Nav = styled(motion.nav)`
+  position: absolute;
+  top: 0;
+  right: -20rem;
+  height: 100%;
+  width: 20rem;
+  z-index: 3;
+`
+
+export const Sidebar = styled(motion.div)`
   position: absolute;
   top: 0;
   right: 0;
@@ -41,7 +51,7 @@ export const Bottom = styled(Shape)`
 const side = 2.5;
 
 export const ToggleBtn = styled(motion.div)`
-  position: fixed;
+  position: absolute;
   right: 1rem;
   top: 1rem;
   margin: 1.5rem;

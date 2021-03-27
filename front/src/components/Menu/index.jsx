@@ -1,83 +1,66 @@
-import React, {useRef} from 'react'
-import { motion, useCycle } from 'framer-motion'
-import { useDimensions } from './useDimensions'
-
-const sidebar = {
-    open: (height = 1000) => ({
-      clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
-      transition: {
-        type: "spring",
-        stiffness: 20,
-        restDelta: 2
-      }
-    }),
-    closed: {
-      clipPath: "circle(30px at 40px 40px)",
-      transition: {
-        delay: 0.5,
-        type: "spring",
-        stiffness: 400,
-        damping: 40
-      }
-    }
-  };
-
-import * as S from './styled'
+import React, { useRef, useState, useEffect} from 'react'
+import gsap from "gsap"
+import * as S from "./styled"
 
 const Menu = () => {
-    const [isOpen, toggleOpen] = useCycle(false, true);
-    const containerRef = useRef(null);
-    const { height } = useDimensions(containerRef);
-  
+
+    let wrapper = useRef(null)
+    let lineOne = useRef(null)
+    let lineTwo = useRef(null)
+    let lineThree = useRef(null)
+    let menuItems = useRef([])
+    menuItems.current = []
+
+    const addToMenuItems = (el) => {
+        if (el && !menuItems.current.includes(el)) {
+          menuItems.current.push(el)
+        }
+    }
+
+    let timeline = useRef()
+    //let timeline = useState(new TimelineMax({paused: true})) //Outra possibilidade
+    const [menuExpanded, setMenuExpanded] = useState(false)
+
+    useEffect(()=>{
+        timeline.current = gsap.timeline({paused: true})
+        .to(lineOne.current, 0.4, {
+            scaleX: 1.3,
+            top: "50%",
+            rotation: 45,
+            ease: "power3"
+        }, 0)
+        .to(lineTwo.current, 0, { 
+            autoAlpha: 0,
+            ease: "power3"
+        }, 0)
+        .to(lineThree.current, 0.4, {
+            scaleX: 1.3,
+            bottom: "0%",
+            top: "50%",
+            rotation: -45,
+            ease: "power3",
+        }, 0)
+        .staggerFrom(menuItems.current, 1, {x: -200, opacity: 0, ease: "power3"}, 0.1)
+        .reverse()
+        
+    },[])
+
+    useEffect(() => {
+        //timeline.current.reversed(!menuExpanded) //Outra possibilidade
+        menuExpanded === true ? timeline.current.play() : timeline.current.reverse()
+    },[menuExpanded])      
+
     return (
         <>
-            <S.ToggleBtn 
-            onClick={() => toggleOpen()}
-            animate={isOpen ? "open" : "closed"}
-            >
-                <S.Top 
-                    variants={{
-                        closed: {
-                            scale: 1,
-                            top: 0,
-                            rotate: 0,
-                        },
-                        open: {
-                            scale: 1.2,
-                            top: "45%",
-                            rotate: 45,
-                        }
-                    }}
-                />
-                <S.Middle
-                variants={{
-                    closed: {
-                        width: "100%",
-                    },
-                    open: {
-                        width: 0,
-                    }
-                }}
-                />
-                <S.Bottom
-                    variants={{
-                        closed: {
-                            scale: 1,
-                            bottom: 0,
-                            rotate: 0,
-                        },
-                        open: {
-                            scale: 1.2,
-                            top: "45%",
-                            bottom:"0%",
-                            rotate: -45,
-                        }
-                    }}
-                />
+            <S.ToggleBtn onClick={() => setMenuExpanded(!menuExpanded)}>
+                <S.Top ref={lineOne}></S.Top>
+                <S.Middle ref={lineTwo}></S.Middle>
+                <S.Bottom ref={lineThree}></S.Bottom>
             </S.ToggleBtn>
-            <S.Sidebar ref={containerRef}/>
+
         </>
     )
 }
 
 export default Menu
+

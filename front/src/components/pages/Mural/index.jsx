@@ -6,12 +6,14 @@ import Menu from '../../Menu'
 const Mural = () => {
   
     return (
+        <>
+        <Menu/>
         <S.Background>
-            <Menu/>
             <S.Panel>
 
             </S.Panel>
         </S.Background>
+        </>
     )
 }
 
