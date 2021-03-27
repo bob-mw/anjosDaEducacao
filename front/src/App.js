@@ -12,7 +12,7 @@ function App(){
     return (
       <Provider>
         <NavBar />
-        <main className="gradient-sky margin-top-main w-100">
+        <main className="gradient-sky margin-top-main w-100"> 
           <BrowserRouter>
             <Route exact path="/" component={ Login } />
             <Route path="/registerAngel" component={ RegisterAngelForms } />
