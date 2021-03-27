@@ -2,6 +2,8 @@ import { getRepository } from 'typeorm'
 
 import User from '@entities/user'
 
+import AppError from '@errors/appError'
+
 class FindUserService {
   public async execute (id: string) {
     const userRepository = getRepository(User)
@@ -13,7 +15,7 @@ class FindUserService {
     })
 
     if (!user) {
-      throw new Error('User not found')
+      throw new AppError('User not found')
     }
 
     return user
