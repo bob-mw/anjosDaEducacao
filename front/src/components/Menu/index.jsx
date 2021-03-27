@@ -67,7 +67,16 @@ const Menu = () => {
                 <S.Middle ref={lineTwo}></S.Middle>
                 <S.Bottom ref={lineThree}></S.Bottom>
             </S.ToggleBtn>
-            <S.Sidebar ref={sidebar}/>
+            <S.Sidebar ref={sidebar}>
+                <S.List>
+                        <S.Item>Navegação</S.Item>
+                        {links.map((link, index) => (
+                            <S.Item key={index} ref={addToMenuItems}>
+                                <S.Link to={link.url}/>
+                            </S.Item>
+                        ))}
+                    </S.List>
+            </S.Sidebar>
         </>
     )
 }

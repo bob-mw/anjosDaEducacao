@@ -59,17 +59,19 @@ export const ToggleBtn = styled.div`
 `
 
 export const List = styled.ul`
-    list-style: none;
+  padding: 8rem 0 0 2rem;
+  text-align: left;
+  list-style: none;
 `
 
 export const Item = styled.li`  
-    padding: 1rem 0;
-    display: flex;
-    font-size: 2rem;
+  padding: 1rem 0;
+  display: flex;
+  font-size: 2rem;
 
-    &:first-child {
-        font-size: 3rem;
-    }   
+  &:first-child {
+      font-size: 3rem;
+  }   
 `
 export const Link= styled.a`
   color: var(--light-blue)
