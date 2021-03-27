@@ -1,6 +1,7 @@
 import React from 'react';
 
 function WishList() {
+
     return(
         <ul>
             <li>Materiais</li>

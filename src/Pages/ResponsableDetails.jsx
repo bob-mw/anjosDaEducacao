@@ -1,12 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import context from '../context/context';
 import WishList from '../components/WishList';
 import WishTable from '../components/WishTable';
 
 function ResponsableDetails() {
+    
+    const { childrenRegister, setChildrenRegister } = useContext(context);
+
+    const setChildrenInformations = ({ target: { name, value } }) => {
+        setChildrenRegister({ ...childrenRegister, [name]: value })
+    }
+
+    const handleSubmit = () => {
+        localStorage.setItem('childrens', JSON.stringify(childrenRegister))
+    }
+
     return (
         <section className="p-5 m-auto shadow d-flex flex-column justify-content-center align-items-center">
             <h1>
-                Olá, 
+                Olá,
             </h1>
             <h2>Cadastre um filho para que ele receba doações de materiais</h2>
 
@@ -14,48 +26,63 @@ function ResponsableDetails() {
 
                 <div className="row justify-content-around align-items-center">
 
-                <section id="informations">
+                    <section id="informations">
 
-                <label htmlFor="nome">
-                    Nome:
-                <input className="form-control" type="text" id="name" name="name" />
-                </label>
+                        <label className="m-3" htmlFor="nome">
+                            Nome:
+                <input className="form-control" type="text" id="name" name="name" onChange={ setChildrenInformations } />
+                        </label>
 
-                <section className="p-4">
-                    <div>
-                        <label className="form-check-label" htmlFor="infantil">
-                            <input className="form-check-input" type="radio" name="checkBox" id="infantil" />
+                        <label className="m-3" htmlFor="SchoolNome">
+                            Escola:
+                <input className="form-control" type="text" id="schoolName" name="schoolName" onChange={ setChildrenInformations } />
+                        </label>
+
+                        <label className="m-3" htmlFor="state">
+                            Estado:
+                <input className="form-control" type="text" id="state" name="state" onChange={ setChildrenInformations } />
+                        </label>
+
+                        <label className="m-3" htmlFor="city">
+                            cidade:
+                <input className="form-control" type="text" id="city" name="city" onChange={ setChildrenInformations } />
+                        </label>
+
+                    </section>
+                        <section className="p-4">
+                            <div>
+                                <label className="form-check-label" htmlFor="infantil">
+                                    <input className="form-check-input" type="radio" name="teaching" id="infantil" value="infantil" onClick={setChildrenInformations} />
                         Ensino Infantil
                     </label>
-                    </div>
-                    <div>
-                        <label className="form-check-label" htmlFor="primeiroAoQuinto">
-                            <input className="form-check-input" type="radio" name="checkBox" id="primeiroAoQuinto" />
+                            </div>
+                            <div>
+                                <label className="form-check-label" htmlFor="primeiroAoQuinto">
+                                    <input className="form-check-input" type="radio" name="teaching" id="primeiroAoQuinto" value="fundamental" onClick={setChildrenInformations} />
                         1º ao 5º ANO
                 </label>
-                    </div>
-                    <div>
-                        <label className="form-check-label" htmlFor="sextoAoNono">
-                            <input className="form-check-input" type="radio" name="checkBox" id="sextoAoNono" />
+                            </div>
+                            <div>
+                                <label className="form-check-label" htmlFor="sextoAoNono">
+                                    <input className="form-check-input" type="radio" name="teaching" id="sextoAoNono" value="fundamental2" onClick={setChildrenInformations} />
                         6º ao 9º ANO
                 </label>
-                    </div>
-                    <div>
-                        <label className="form-check-label" htmlFor="ensinoMedio">
-                            <input className="form-check-input" type="radio" name="checkBox" id="ensinoMedio" />
+                            </div>
+                            <div>
+                                <label className="form-check-label" htmlFor="ensinoMedio">
+                                    <input className="form-check-input" type="radio" name="teaching" id="ensinoMedio" value="medio" onClick={setChildrenInformations} />
                         Ensino Médio
-                </label>
-                    </div>
-                </section>
+                    </label>
+                            </div>
+                        </section>
 
-                </section>
 
-                <section id="wishList">
-                    <WishList />
-                </section>
+                    <section id="wishList">
+                        <WishList />
+                    </section>
                 </div>
 
-                <button type="button" className="btn btn-warning align-self-center text-center">Finalizar Pedido</button>
+                <button type="submit" className="btn btn-warning align-self-center text-center" onClick={ handleSubmit }>Finalizar Pedido</button>
 
             </form>
 

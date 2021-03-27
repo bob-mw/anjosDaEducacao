@@ -10,6 +10,7 @@ function Provider({ children }) {
     const [ angelFormValidation, setAngelFormValidation ] = useState(false)
     const [ responsabeRegister, setResponsabeRegister ] = useState({});
     const [ responsabeFormValidation, setResponsabeFormValidation ] = useState(false)
+    const [ childrenRegister, setChildrenRegister ] = useState({ materials: [] });
 
     const value = {
         formType,
@@ -21,7 +22,9 @@ function Provider({ children }) {
         responsabeRegister,
         setResponsabeRegister,
         responsabeFormValidation,
-        setResponsabeFormValidation
+        setResponsabeFormValidation,
+        childrenRegister,
+        setChildrenRegister
     };
     return(
       <context.Provider value={ value }>

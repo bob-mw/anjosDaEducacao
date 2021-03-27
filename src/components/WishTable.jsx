@@ -8,6 +8,7 @@ function WishTable() {
                     <th>#</th>
                     <th>Nome</th>
                     <th>Ano</th>
+                    <th>Escola</th>
                     <th>Pedidos</th>
                 </tr>
             </thead>
