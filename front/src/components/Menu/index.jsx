@@ -27,26 +27,30 @@ const Menu = () => {
         timeline.current = gsap.timeline({paused: true})
         .to(sidebar.current, 1, {
             clipPath: `circle(200% at 16.3rem 3.7rem)`,
-            ease: "slow"
+            ease: "power3"
         }, 0)
-        .to(lineOne.current, 0.5, {
+        .to(lineOne.current, 0.3, {
             scaleX: 1.3,
             top: "50%",
             rotation: 45,
             ease: "power3"
         }, 0)
-        .to(lineTwo.current, 0, { 
+        .to(lineTwo.current, 0.3, { 
             autoAlpha: 0,
             ease: "power3"
         }, 0)
-        .to(lineThree.current, 0.5, {
+        .to(lineThree.current, 0.3, {
             scaleX: 1.3,
             bottom: "0%",
             top: "50%",
             rotation: -45,
             ease: "power3",
         }, 0)
-        .staggerFrom(menuItems.current, 1, {x: -200, opacity: 0, ease: "power3"}, 0.1)
+        .staggerFrom(menuItems.current, 0.3, {
+            y: 30, 
+            autoAlpha: 0,
+            ease: "power3"
+        }, 0.2)
         .reverse()
         
     },[])
@@ -68,7 +72,7 @@ const Menu = () => {
                         <S.Item>Navegação</S.Item>
                         {links.map((link, index) => (
                             <S.Item key={index} ref={addToMenuItems}>
-                                <S.Link to={link.url}/>
+                                <S.Link to={link.url}>{link.label}</S.Link>
                             </S.Item>
                         ))}
                     </S.List>
