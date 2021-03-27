@@ -1,8 +1,8 @@
-import { Request, response, Response } from 'express'
+import { Request, Response } from 'express'
 import AuthUserService from '@services/authUser'
 
 class AuthController {
-  async create(request: Request, response: Response) {
+  async create (request: Request, response: Response) {
     const { email, password } = request.body
 
     const authUserService = new AuthUserService()
