@@ -1,6 +1,8 @@
 import { Request, Response, NextFunction } from 'express'
 import { verify } from 'jsonwebtoken'
 
+import AppError from '@errors/appError'
+
 import authConfig from '@config/auth'
 
 interface IToken {
@@ -13,7 +15,7 @@ export default (request: Request, response: Response, next: NextFunction) => {
   const auth_header = request.headers.authorization
 
   if (!auth_header) {
-    throw new Error('Você precisa estar logado para acessar isso')
+    throw new AppError('Você precisa estar logado para acessar isso', 401)
   }
 
   const [, token] = auth_header.split(' ')
@@ -31,6 +33,6 @@ export default (request: Request, response: Response, next: NextFunction) => {
 
     return next()
   } catch (err) {
-    throw new Error('Token invalido ou espirado')
+    throw new AppError('Token invalido ou espirado', 401)
   }
 }
