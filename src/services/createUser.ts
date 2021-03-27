@@ -11,11 +11,6 @@ interface IUserData {
   password: string;
   cpf: string;
   phone: string;
-  state: string;
-  city: string;
-  cep: string;
-  street: string;
-  number: number;
 }
 
 class CreateUserService {

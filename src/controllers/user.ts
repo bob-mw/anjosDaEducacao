@@ -21,12 +21,7 @@ class UserController {
       email,
       password,
       cpf,
-      phone,
-      state,
-      city,
-      cep,
-      street,
-      number
+      phone
     } = request.body
 
     const createUserService = new CreateUserService()
@@ -36,12 +31,7 @@ class UserController {
       email,
       password,
       cpf,
-      phone,
-      state,
-      city,
-      cep,
-      street,
-      number
+      phone
     })
 
     delete user.password
