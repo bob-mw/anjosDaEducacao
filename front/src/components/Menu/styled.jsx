@@ -15,6 +15,7 @@ export const Sidebar = styled.div`
 const thickness = 4;
 
 const Shape = styled(motion.span)`
+  display: inline-block;
   position: absolute;
   right: 0;
   width: 100%;
@@ -24,21 +25,22 @@ const Shape = styled(motion.span)`
 `
 
 export const Top = styled(Shape)`
-  top: calc(0% + ${thickness / 2}px);
+  top: 0;
 `
 
 export const Middle = styled(Shape)`
   top: 50%;
+  bottom: 50%;
   transform: translateY(-50%);
 `
 
 export const Bottom = styled(Shape)`
-  bottom: calc(0% + ${thickness / 2}px);
+  bottom: 0;
 `
 
 const side = 2.5;
 
-export const ToggleBtn = styled.div`
+export const ToggleBtn = styled(motion.div)`
   position: fixed;
   right: 1rem;
   top: 1rem;
