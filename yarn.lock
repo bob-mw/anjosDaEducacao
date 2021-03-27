@@ -5628,6 +5628,11 @@ react-overlays@^5.0.0:
     uncontrollable "^7.0.0"
     warning "^4.0.3"
 
+react-responsive-combo-box@^1.2.4:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/react-responsive-combo-box/-/react-responsive-combo-box-1.2.4.tgz#e3980c3e83bdd4ee54811859d5ee72971f4a9f9f"
+  integrity sha512-z/nyT+dGvW7J8zKLnoHn7O4m3APcb1/UMwKOTVfyd/Q34R1XSpoAzukLyWwqOngNDz2atdj6NuvJN2GjV0FadQ==
+
 react-router-dom@^5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-5.2.0.tgz#9e65a4d0c45e13289e66c7b17c7e175d0ea15662"
