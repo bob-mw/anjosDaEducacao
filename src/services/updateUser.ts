@@ -7,16 +7,16 @@ import AppError from '@errors/appError'
 
 interface IUserData {
   id: string;
-  newName?: string;
-  newEmail?: string;
+  name: string;
+  email: string;
   password: string;
   newPassword: string;
-  newPhone: string;
+  phone: string;
 }
 
 class UpdateUserService {
   public async execute
-  ({ id, newName, newEmail, password, newPassword, newPhone }: IUserData) {
+  ({ id, name, email, password, newPassword, phone }: IUserData) {
     const userRepository = getRepository(User)
 
     const user = await userRepository.findOne({
@@ -35,21 +35,26 @@ class UpdateUserService {
       throw new AppError('Senha incorreta')
     }
 
-    if (newPassword) {
+    if (user.email !== email) {
+      const exists = await userRepository.findOne({
+        where: {
+          email
+        }
+      })
+
+      if (exists) {
+        throw new AppError('Email já está em uso')
+      }
+
+      user.email = email
+    }
+
+    if (user.password !== password) {
       user.password = await hash(newPassword, 10)
     }
 
-    if (newEmail) {
-      user.email = newEmail
-    }
-
-    if (newName) {
-      user.name = newName
-    }
-
-    if (newPhone) {
-      user.phone = newPhone
-    }
+    user.name = name
+    user.phone = phone
 
     await userRepository.save(user)
 

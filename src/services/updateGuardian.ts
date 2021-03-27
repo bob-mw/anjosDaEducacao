@@ -16,16 +16,6 @@ class UpdateGuardianService {
   public async execute ({ id, name, email, password }: IGuardianData) {
     const guardianRepository = getRepository(Guardian)
 
-    const exists = await guardianRepository.findOne({
-      where: {
-        email
-      }
-    })
-
-    if (exists) {
-      throw new AppError('Email já está em uso')
-    }
-
     const guardian = await guardianRepository.findOne({
       where: {
         id
@@ -36,9 +26,25 @@ class UpdateGuardianService {
       throw new AppError('Usuario não encontrado')
     }
 
+    if (guardian.email !== email) {
+      const exists = await guardianRepository.findOne({
+        where: {
+          email
+        }
+      })
+
+      if (exists) {
+        throw new AppError('Email já está em uso')
+      }
+
+      guardian.email = email
+    }
+
+    if (guardian.password !== password) {
+      guardian.password = await hash(password, 10)
+    }
+
     guardian.name = name
-    guardian.email = email
-    guardian.password = await hash(password, 10)
 
     await guardianRepository.save(guardian)
 
