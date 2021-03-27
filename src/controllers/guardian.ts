@@ -8,7 +8,7 @@ import AppError from '@errors/appError'
 
 class GuardianController {
   async create (request: Request, response: Response) {
-    const validation = createGuardianSchema.isValid(request.body)
+    const validation = await createGuardianSchema.isValid(request.body)
 
     if (!validation) {
       throw new AppError('Erro na validação, verifique seus dados')
@@ -18,7 +18,7 @@ class GuardianController {
 
     const createGuardian = new CreateGuardianService()
 
-    const user = createGuardian.execute({
+    const user = await createGuardian.execute({
       name,
       email,
       password
@@ -30,7 +30,7 @@ class GuardianController {
   }
 
   async update (request: Request, response: Response) {
-    const validation = updateGuardianSchema.isValid(request.body)
+    const validation = await updateGuardianSchema.isValid(request.body)
 
     if (!validation) {
       throw new AppError('Erro na validação, verifique seus dados')
