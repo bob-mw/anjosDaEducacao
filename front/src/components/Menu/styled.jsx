@@ -5,7 +5,7 @@ export const Sidebar = styled.div`
   position: absolute;
   top: 0;
   right: 0;
-  height: 100%;
+  height: 50rem;
   width: 20rem;
   background: linear-gradient(to left bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
   backdrop-filter: blur(2rem);
