@@ -14,6 +14,8 @@ routes.get('/', async (request, response) => {
 
 routes.post('/user', userController.create)
 routes.put('/user', authMiddleware, userController.update)
+routes.get('/user', authMiddleware, userController.show)
+
 routes.post('/authentication', authController.create)
 
 export default routes

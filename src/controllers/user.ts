@@ -1,6 +1,7 @@
 import { Request, Response } from 'express'
 import CreateUserService from '@services/createUser'
 import UpdateUserService from '@services/updateUser'
+import FindUserService from '@services/findUserService'
 
 import createUserSchema from '@validation/createUser'
 
@@ -60,6 +61,20 @@ class UserController {
       newPhone,
       password
     })
+
+    delete user.password
+
+    return response.json({
+      user
+    })
+  }
+
+  async show (request: Request, response: Response) {
+    const { id } = request.user
+
+    const findUserService = new FindUserService()
+
+    const user = await findUserService.execute(id)
 
     delete user.password
 
