@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
-export const Path = styled.path`
+export const Path = styled(motion.path)`
     fill:#fff;
     stroke:#fff;
     stroke-miterlimit:10;
