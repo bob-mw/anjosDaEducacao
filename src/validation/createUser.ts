@@ -8,7 +8,7 @@ const schema = yup.object().shape({
     const { password } = this.parent
     return password === value
   }),
-  cpf: yup.string().required().length(11),
+  cpf: yup.string().length(11).required(),
   phone: yup.string().required()
 })
 

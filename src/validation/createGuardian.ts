@@ -7,7 +7,9 @@ const schema = yup.object().shape({
   confirmPassword: yup.string().test('passwords-match', function (value) {
     const { password } = this.parent
     return password === value
-  })
+  }),
+  cpf: yup.string().length(11).required(),
+  phone: yup.string().required()
 })
 
 export default schema
