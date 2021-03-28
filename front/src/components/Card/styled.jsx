@@ -21,3 +21,10 @@ const Card = styled.div`
   position: relative;
   cursor: pointer;
 `
+
+export const CompactCard = styled(Card)`
+    width: 7rem;
+    height: 7rem;
+    padding: 0.5rem;
+    border-radius: 1.5rem;
+`
