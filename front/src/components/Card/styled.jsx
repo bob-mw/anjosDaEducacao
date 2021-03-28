@@ -9,17 +9,17 @@ export const CardContainer = styled.div`
 `
 
 const Card = styled.div`
-  overflow: hidden;
-  box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.2);
-  padding: 2rem;
-  border-radius: 1rem;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  position: relative;
-  cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    cursor: pointer;
 `
 
 export const CompactCard = styled(Card)`
@@ -27,4 +27,13 @@ export const CompactCard = styled(Card)`
     height: 7rem;
     padding: 0.5rem;
     border-radius: 1.5rem;
+`
+
+export const ExpandedCard = styled(Card)`
+    width: 15rem;
+    height: 15rem;
+    background-color: navy;
+    position: relative;
+    left: -100%;
+    top: 150%;
 `
