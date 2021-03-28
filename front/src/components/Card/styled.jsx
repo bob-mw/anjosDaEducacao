@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
+
 
 export const CardContainer = styled.div`
     width: 7rem;
@@ -8,7 +10,7 @@ export const CardContainer = styled.div`
     margin-right: 1rem;
 `
 
-const Card = styled.div`
+const Card = styled(motion.div)`
     overflow: hidden;
     box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.2);
     background-color: linear-gradient(to right bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7));
@@ -39,7 +41,7 @@ export const ExpandedCard = styled(Card)`
     top: 150%;
 `
 
-export const Content = styled.h1`
+export const Content = styled(motion.h1)`
     .expanded {
         font-size: 5em;
         color: white;
