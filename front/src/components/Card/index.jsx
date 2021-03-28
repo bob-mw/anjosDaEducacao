@@ -3,7 +3,7 @@ import { motion, AnimateSharedLayout } from 'framer-motion'
 
 import * as S from './styled'
 
-function CompactCard({ children, onExpand, disabled }) {
+const CompactCard = ({ children, onExpand, disabled }) => {
     return (
       <motion.div
         className="card compact"
