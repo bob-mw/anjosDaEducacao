@@ -3,6 +3,18 @@ import { motion, AnimateSharedLayout } from 'framer-motion'
 
 import * as S from './styled'
 
+const Content = ({ text, disabled }) => {
+    return (
+      <motion.h1
+        className="title"
+        layoutId="title"
+        style={{ opacity: disabled ? 0.2 : 1 }}
+      >
+        {text}
+      </motion.h1>
+    );
+}
+
 const ExpandedCard = ({ children, onCollapse }) => {
     return (
       <>
@@ -20,7 +32,7 @@ const ExpandedCard = ({ children, onCollapse }) => {
           initial={{ opacity: 0, top: "6rem" }}
           animate={{ opacity: 1, top: "3rem" }}
         >
-          Today is clear
+            Teste
         </motion.p>
       </>
     );
