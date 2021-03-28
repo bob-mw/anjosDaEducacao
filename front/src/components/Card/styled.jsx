@@ -11,6 +11,7 @@ export const CardContainer = styled.div`
 const Card = styled.div`
     overflow: hidden;
     box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.2);
+    background-color: linear-gradient(to right bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7));
     padding: 2rem;
     border-radius: 1rem;
     box-sizing: border-box;
@@ -36,4 +37,15 @@ export const ExpandedCard = styled(Card)`
     position: relative;
     left: -100%;
     top: 150%;
+`
+
+export const Content = styled.h1`
+    .expanded {
+        font-size: 5em;
+        color: white;
+    }
+
+    .compact {
+        font-size: 1.5em;
+    }
 `

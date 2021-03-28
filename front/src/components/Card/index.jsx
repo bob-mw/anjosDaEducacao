@@ -19,7 +19,7 @@ const ExpandedCard = ({ children, onCollapse }) => {
     return (
       <>
         <motion.div
-          className="card expanded"
+          className="expanded"
           layoutId="expandable-card"
           onClick={onCollapse}
         >
@@ -41,7 +41,7 @@ const ExpandedCard = ({ children, onCollapse }) => {
 const CompactCard = ({ children, onExpand, disabled }) => {
     return (
       <motion.div
-        className="card compact"
+        className="compact"
         layoutId="expandable-card"
         onClick={disabled ? undefined : onExpand}
       >
