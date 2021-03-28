@@ -14,14 +14,16 @@ class GuardianController {
       throw new AppError('Erro na validação, verifique seus dados')
     }
 
-    const { name, email, password } = request.body
+    const { name, email, password, cpf, phone } = request.body
 
     const createGuardian = new CreateGuardianService()
 
     const user = await createGuardian.execute({
       name,
       email,
-      password
+      password,
+      cpf,
+      phone
     })
 
     return response.status(201).json({
