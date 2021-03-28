@@ -5,16 +5,28 @@ import * as S from './styled'
 
 const Card = () => {
 
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    const collapseCard = () => {
+        setIsExpanded(false)
+        onCollapse()
+    }
+
+    const expandCard = () => {
+        setIsExpanded(true)
+        onExpand()
+    }
+
     return (
         <S.CardContainer>
             <AnimateSharedLayout>
                 {isExpanded ? (
-                <ExpandedCard onCollapse={collapseDate} day={day}>
-                    <Content day={day} disabled={disabled} />
+                <ExpandedCard onCollapse={collapseCard} >
+                    <Content disabled={disabled} />
                 </ExpandedCard>
                 ) : (
-                <CompactCard onExpand={expandDate} disabled={disabled} day={day}>
-                    <Content day={day} disabled={disabled} />
+                <CompactCard onExpand={expandDate} disabled={disabled} >
+                    <Content disabled={disabled} />
                 </CompactCard>
                 )}
             </AnimateSharedLayout>
