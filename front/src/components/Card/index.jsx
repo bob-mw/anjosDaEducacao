@@ -1,30 +1,30 @@
 import React, { useState } from 'react'
-import { motion, AnimateSharedLayout } from 'framer-motion'
+import { AnimateSharedLayout } from 'framer-motion'
 
 import * as S from './styled'
 
 const Content = ({ text, disabled }) => {
     return (
-      <motion.h1
+      <S.Content
         className="title"
         layoutId="title"
         style={{ opacity: disabled ? 0.2 : 1 }}
       >
         {text}
-      </motion.h1>
+      </S.Content>
     );
 }
 
 const ExpandedCard = ({ children, onCollapse }) => {
     return (
       <>
-        <motion.div
+        <S.ExpandedCard
           className="expanded"
           layoutId="expandable-card"
           onClick={onCollapse}
         >
           {children}
-        </motion.div>
+        </S.ExpandedCard>
         <motion.p
           className="card expanded secondary"
           onClick={onCollapse}
@@ -40,13 +40,13 @@ const ExpandedCard = ({ children, onCollapse }) => {
 
 const CompactCard = ({ children, onExpand, disabled }) => {
     return (
-      <motion.div
+      <S.CompactCard
         className="compact"
         layoutId="expandable-card"
         onClick={disabled ? undefined : onExpand}
       >
         {children}
-      </motion.div>
+      </S.CompactCard>
     );
   }
 
