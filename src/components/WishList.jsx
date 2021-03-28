@@ -80,7 +80,10 @@ function WishList() {
     }
 
     return (
-      (teaching === 'EF') && EF_List()
+      (teaching === 'EF') && EF_List() ||
+      (teaching === 'F1') && F1_List() ||
+      (teaching === 'F2') && F2_List() ||
+      (teaching === 'EM') && EM_List()
     );
 }
 
