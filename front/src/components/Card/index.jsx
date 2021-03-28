@@ -3,7 +3,19 @@ import { motion, AnimateSharedLayout } from 'framer-motion'
 
 import * as S from './styled'
 
-const Card = () => {
+function CompactCard({ children, onExpand, disabled }) {
+    return (
+      <motion.div
+        className="card compact"
+        layoutId="expandable-card"
+        onClick={disabled ? undefined : onExpand}
+      >
+        {children}
+      </motion.div>
+    );
+  }
+
+const Card = ({onCollapse, onExpand, disabled}) => {
 
     const [isExpanded, setIsExpanded] = useState(false);
 
@@ -25,7 +37,7 @@ const Card = () => {
                     <Content disabled={disabled} />
                 </ExpandedCard>
                 ) : (
-                <CompactCard onExpand={expandDate} disabled={disabled} >
+                <CompactCard onExpand={expandCard} disabled={disabled} >
                     <Content disabled={disabled} />
                 </CompactCard>
                 )}
