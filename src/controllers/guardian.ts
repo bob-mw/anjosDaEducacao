@@ -1,9 +1,11 @@
 import { Request, Response } from 'express'
 import CreateGuardianService from '@services/createGuardian'
+import AuthGuardianService from '@services/authGuardian'
 import UpdateGuardianService from '@services/updateGuardian'
 
 import createGuardianSchema from '@validation/createGuardian'
 import updateGuardianSchema from '@validation/updateGuardian'
+import authSchema from '@validation/auth'
 
 import AppError from '@errors/appError'
 
@@ -29,6 +31,27 @@ class GuardianController {
 
     return response.status(201).json({
       user
+    })
+  }
+
+  async session (request: Request, response: Response) {
+    const validation = await authSchema.isValid(request.body)
+
+    if (!validation) {
+      throw new AppError('Erro na validação, verifique seus dados')
+    }
+
+    const { email, password } = request.body
+
+    const authGuardian = new AuthGuardianService()
+
+    const token = await authGuardian.execute({
+      email,
+      password
+    })
+
+    return response.json({
+      token
     })
   }
 
