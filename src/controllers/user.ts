@@ -7,6 +7,7 @@ import FindUserService from '@services/findUserService'
 
 import createUserSchema from '@validation/createUser'
 import updateUserSchema from '@validation/updateUser'
+import authSchema from '@validation/auth'
 
 import AppError from '@errors/appError'
 
@@ -15,7 +16,7 @@ class UserController {
     const validation = await createUserSchema.isValid(request.body)
 
     if (!validation) {
-      throw new AppError('Erro na validação, verifique seus dados', 401)
+      throw new AppError('Erro na validação, verifique seus dados')
     }
 
     const {
@@ -44,6 +45,12 @@ class UserController {
   }
 
   async session (request: Request, response: Response) {
+    const validation = await authSchema.isValid(request.body)
+
+    if (!validation) {
+      throw new AppError('Erro na validação, verifique seus dados')
+    }
+
     const { email, password } = request.body
 
     const authUserService = new AuthUserService()
