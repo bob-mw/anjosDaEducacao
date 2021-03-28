@@ -1,5 +1,7 @@
 import { Request, Response } from 'express'
+
 import CreateUserService from '@services/createUser'
+import AuthUserService from '@services/authUser'
 import UpdateUserService from '@services/updateUser'
 import FindUserService from '@services/findUserService'
 
@@ -38,6 +40,21 @@ class UserController {
 
     return response.status(201).json({
       user
+    })
+  }
+
+  async session (request: Request, response: Response) {
+    const { email, password } = request.body
+
+    const authUserService = new AuthUserService()
+
+    const token = await authUserService.execute({
+      email,
+      password
+    })
+
+    return response.json({
+      token
     })
   }
 
