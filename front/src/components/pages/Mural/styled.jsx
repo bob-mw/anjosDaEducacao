@@ -4,9 +4,9 @@ import Logo from '../../Logo'
 
 export const LogoNavbar = styled(Logo)`
   position: absolute;
-  top: 1.5rem;
+  top: 1rem;
   left: 2rem;
-  width: 5rem;
+  width: 6rem;
 `
 
 export const Background = styled.main`
