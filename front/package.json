@@ -5,6 +5,7 @@
   "dependencies": {
     "bootstrap": "^4.6.0",
     "framer-motion": "^4.0.3",
+    "gsap": "^3.6.1",
     "jquery": "^3.6.0",
     "popper.js": "^1.16.1",
     "react": "^17.0.1",
