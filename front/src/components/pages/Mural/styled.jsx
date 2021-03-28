@@ -1,5 +1,14 @@
 import styled from 'styled-components'
 
+import Logo from '../../Logo'
+
+export const LogoNavbar = styled(Logo)`
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+  width: 5rem;
+`
+
 export const Background = styled.main`
     min-height: 100vh;
     background: linear-gradient(to right top, var(--bg-dark-blue), var(--bg-blue), var(--bg-light-blue));
