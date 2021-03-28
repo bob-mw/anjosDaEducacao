@@ -1,5 +1,5 @@
 import { getRepository } from 'typeorm'
-import { hash } from 'bcryptjs'
+import { compare, hash } from 'bcryptjs'
 
 import Guardian from '@entities/guardian'
 
@@ -10,11 +10,12 @@ interface IGuardianData {
   name: string;
   email: string;
   password: string;
+  newPassword?: string;
   phone: string;
 }
 
 class UpdateGuardianService {
-  public async execute ({ id, name, email, password, phone }: IGuardianData) {
+  public async execute ({ id, name, email, password, newPassword, phone }: IGuardianData) {
     const guardianRepository = getRepository(Guardian)
 
     const guardian = await guardianRepository.findOne({
@@ -27,6 +28,12 @@ class UpdateGuardianService {
       throw new AppError('Usuario não encontrado')
     }
 
+    const passwordMatch = await compare(password, guardian.password)
+
+    if (!passwordMatch) {
+      throw new AppError('Senha invalida', 401)
+    }
+
     if (guardian.email !== email) {
       const exists = await guardianRepository.findOne({
         where: {
@@ -35,16 +42,27 @@ class UpdateGuardianService {
       })
 
       if (exists) {
-        throw new AppError('Email já está em uso')
+        throw new AppError('Email já está em uso', 401)
       }
-
-      guardian.email = email
     }
 
-    if (guardian.password !== password) {
-      guardian.password = await hash(password, 10)
+    if (guardian.phone !== phone) {
+      const exists = await guardianRepository.findOne({
+        where: {
+          phone
+        }
+      })
+
+      if (exists) {
+        throw new AppError('O número pertence a outro usuário', 401)
+      }
     }
 
+    if (newPassword) {
+      guardian.password = await hash(newPassword, 10)
+    }
+
+    guardian.email = email
     guardian.name = name
     guardian.phone = phone
 
