@@ -2,6 +2,7 @@ import { Request, Response } from 'express'
 import CreateGuardianService from '@services/createGuardian'
 import AuthGuardianService from '@services/authGuardian'
 import UpdateGuardianService from '@services/updateGuardian'
+import FindGuardianService from '@services/findGuardian'
 
 import createGuardianSchema from '@validation/createGuardian'
 import updateGuardianSchema from '@validation/updateGuardian'
@@ -28,6 +29,8 @@ class GuardianController {
       cpf,
       phone
     })
+
+    delete user.password
 
     return response.status(201).json({
       user
@@ -74,6 +77,20 @@ class GuardianController {
       newPassword,
       phone
     })
+
+    delete user.password
+
+    return response.json({
+      user
+    })
+  }
+
+  async show (request: Request, response: Response) {
+    const findGuardian = new FindGuardianService()
+
+    const user = await findGuardian.execute(request.user.id)
+
+    delete user.password
 
     return response.json({
       user
