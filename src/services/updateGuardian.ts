@@ -10,10 +10,11 @@ interface IGuardianData {
   name: string;
   email: string;
   password: string;
+  phone: string;
 }
 
 class UpdateGuardianService {
-  public async execute ({ id, name, email, password }: IGuardianData) {
+  public async execute ({ id, name, email, password, phone }: IGuardianData) {
     const guardianRepository = getRepository(Guardian)
 
     const guardian = await guardianRepository.findOne({
@@ -45,6 +46,7 @@ class UpdateGuardianService {
     }
 
     guardian.name = name
+    guardian.phone = phone
 
     await guardianRepository.save(guardian)
 
