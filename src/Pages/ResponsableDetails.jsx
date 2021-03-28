@@ -52,25 +52,25 @@ function ResponsableDetails() {
                         <section className="p-4">
                             <div>
                                 <label className="form-check-label" htmlFor="infantil">
-                                    <input className="form-check-input" type="radio" name="teaching" id="infantil" value="infantil" onClick={setChildrenInformations} />
+                                    <input className="form-check-input" type="radio" name="teaching" id="infantil" value="EF" onChange={setChildrenInformations}/>
                         Ensino Infantil
                     </label>
                             </div>
                             <div>
                                 <label className="form-check-label" htmlFor="primeiroAoQuinto">
-                                    <input className="form-check-input" type="radio" name="teaching" id="primeiroAoQuinto" value="fundamental" onClick={setChildrenInformations} />
+                                    <input className="form-check-input" type="radio" name="teaching" id="primeiroAoQuinto" value="F1" onChange={setChildrenInformations} />
                         1º ao 5º ANO
                 </label>
                             </div>
                             <div>
                                 <label className="form-check-label" htmlFor="sextoAoNono">
-                                    <input className="form-check-input" type="radio" name="teaching" id="sextoAoNono" value="fundamental2" onClick={setChildrenInformations} />
+                                    <input className="form-check-input" type="radio" name="teaching" id="sextoAoNono" value="F2" onChange={setChildrenInformations} />
                         6º ao 9º ANO
                 </label>
                             </div>
                             <div>
                                 <label className="form-check-label" htmlFor="ensinoMedio">
-                                    <input className="form-check-input" type="radio" name="teaching" id="ensinoMedio" value="medio" onClick={setChildrenInformations} />
+                                    <input className="form-check-input" type="radio" name="teaching" id="ensinoMedio" value="EM" onChange={setChildrenInformations} />
                         Ensino Médio
                     </label>
                             </div>

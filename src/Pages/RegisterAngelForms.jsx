@@ -13,11 +13,12 @@ function AngelRegisterForms() {
     }
 
     const handleClick = () => {
-        const { name, email, password, phone, cpf } = angelRegister
+        const { name, email, password, confirmPassword , phone, cpf } = angelRegister
         axios.post('http://localhost:3333/user',  {
             name,
 	        email,
 	        password,
+            confirmPassword,
 	        phone,
 	        cpf
         }).then(function (response) {
