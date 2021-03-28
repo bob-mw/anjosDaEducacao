@@ -68,11 +68,19 @@ export const Item = styled.li`
   padding: 1rem 0;
   display: flex;
   font-size: 2rem;
+  color: var(--bg-dark-blue);
 
   &:first-child {
       font-size: 3rem;
   }   
 `
 export const Link= styled.a`
-  color: var(--light-blue)
+  cursor: pointer;
+  transform-origin: center left;
+  transition: all .2s ease-in-out;
+  
+  &:hover { 
+    transform: scale(1.3);
+  }
+
 `
