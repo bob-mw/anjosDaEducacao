@@ -48,16 +48,16 @@ class UserController {
       throw new AppError('Use um formato valido para atualizar seus dados')
     }
 
-    const { newName, newEmail, newPassword, newPhone, password } = request.body
+    const { name, email, newPassword, phone, password } = request.body
 
     const updateUserService = new UpdateUserService()
 
     const user = await updateUserService.execute({
       id: request.user.id,
-      newName,
-      newEmail,
+      name,
+      email,
       newPassword,
-      newPhone,
+      phone,
       password
     })
 
