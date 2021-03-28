@@ -15,6 +15,11 @@ const icon = {
   }
 };
 
+const transition = {
+  default: { duration: 2, ease: "easeInOut" },
+  fill: { duration: 2, ease: [1, 0, 0.8, 1] }
+}
+
 const Logo = (props) => {
   return (
     <motion.svg
@@ -30,10 +35,7 @@ const Logo = (props) => {
               variants={icon}
               initial="hidden"
               animate="visible"
-              transition={{
-                default: { duration: 2, ease: "easeInOut" },
-                fill: { duration: 2, ease: [1, 0, 0.8, 1] }
-              }}
+              transition={transition}
 
               className="cls-1"
               d="M139.64 875.36A485.42 485.42 0 01561.45 905q-23.07-277.83-46.15-555.7a465.19 465.19 0 00-425.12-39.25z"
@@ -43,10 +45,7 @@ const Logo = (props) => {
               variants={icon}
               initial="hidden"
               animate="visible"
-              transition={{
-                default: { duration: 2, ease: "easeInOut" },
-                fill: { duration: 2, ease: [1, 0, 0.8, 1] }
-              }}
+              transition={transition}
 
               className="cls-1"
               d="M0 406.71l48.82 558c.36 4.21 1.59 10.31 6.18 14.26 12.2 10.52 38.89-2.21 48.73-6.73 70.2-32.28 155.54-48.35 177.88-52.55 39.81-7.5 72.89-8.28 102.78-9a814.83 814.83 0 0199 3.68 527.47 527.47 0 00-91.09-26.56c-123.51-24.16-229.06 1.46-291.44 23L56.07 399.34z"
@@ -58,10 +57,7 @@ const Logo = (props) => {
               variants={icon}
               initial="hidden"
               animate="visible"
-              transition={{
-                default: { duration: 2, ease: "easeInOut" },
-                fill: { duration: 2, ease: [1, 0, 0.8, 1] }
-              }}
+              transition={transition}
             
               className="cls-1"
               d="M1011.39 875.36A485.42 485.42 0 00589.58 905l46.16-555.74a465.17 465.17 0 01425.11-39.25z"
@@ -71,10 +67,7 @@ const Logo = (props) => {
               variants={icon}
               initial="hidden"
               animate="visible"
-              transition={{
-                default: { duration: 2, ease: "easeInOut" },
-                fill: { duration: 2, ease: [1, 0, 0.8, 1] }
-              }}
+              transition={transition}
 
               className="cls-1"
               d="M1151 406.71l-48.81 558c-.37 4.21-1.6 10.31-6.18 14.26-12.21 10.52-38.89-2.21-48.73-6.73-70.2-32.28-155.55-48.35-177.89-52.55-39.81-7.5-72.89-8.28-102.78-9a814.92 814.92 0 00-99 3.68 527.33 527.33 0 0191.1-26.56c123.51-24.16 229.05 1.46 291.43 23L1095 399.34z"
@@ -86,10 +79,7 @@ const Logo = (props) => {
           variants={icon}
           initial="hidden"
           animate="visible"
-          transition={{
-            default: { duration: 2, ease: "easeInOut" },
-            fill: { duration: 2, ease: [1, 0, 0.8, 1] }
-          }}
+          transition={transition}
 
           id="Halo"
           className="cls-1"
@@ -100,10 +90,7 @@ const Logo = (props) => {
           variants={icon}
           initial="hidden"
           animate="visible"
-          transition={{
-            default: { duration: 2, ease: "easeInOut" },
-            fill: { duration: 2, ease: [1, 0, 0.8, 1] }
-          }}
+          transition={transition}
 
           id="Head"
           className="cls-1"
