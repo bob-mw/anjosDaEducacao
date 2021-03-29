@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import context from '../context/context';
 
 function WishList() {
 
     const { childrenRegister, setChildrenRegister } = useContext(context);
 
-    const { teaching, materials } = childrenRegister;
+    const { teaching } = childrenRegister;
 
     const listEF =
         ["1 PACOTE CHAMEX 500 FLS",
@@ -55,7 +55,14 @@ function WishList() {
         "2 CANETAS PRETAS",
         "1 CX DE LÁPIS DE COR 12 CORES",
         "1 COLA BASTÃO",
-        "1 MOCHILA"]
+        "1 MOCHILA"];
+
+    useEffect(() => {
+        (teaching === 'EF') && setChildrenRegister({ ...childrenRegister, materials: listEF }) ||
+        (teaching === 'F1') && setChildrenRegister({ ...childrenRegister, materials: listF1 }) ||
+        (teaching === 'F2') && setChildrenRegister({ ...childrenRegister, materials: listF2 }) ||
+        (teaching === 'EM') && setChildrenRegister({ ...childrenRegister, materials: listEM })
+    }, [teaching])
 
     const EF_List = () => {
 
