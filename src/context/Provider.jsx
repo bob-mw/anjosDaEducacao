@@ -6,25 +6,22 @@ import context from './context';
 function Provider({ children }) {
 
     const [ formType, setFormType ] = useState([]);
-    const [ angelRegister, setAngelRegister ] = useState({});
-    const [ angelFormValidation, setAngelFormValidation ] = useState(false)
-    const [ responsabeRegister, setResponsabeRegister ] = useState({});
-    const [ responsabeFormValidation, setResponsabeFormValidation ] = useState(false)
+    const [ register, setRegister ] = useState({});
+    const [ formValidation, setFormValidation ] = useState(false)
     const [ childrenRegister, setChildrenRegister ] = useState({ materials: [] });
+    const [ registerType, setRegisterType ] = useState('');
 
     const value = {
         formType,
         setFormType,
-        angelRegister,
-        setAngelRegister,
-        angelFormValidation,
-        setAngelFormValidation,
-        responsabeRegister,
-        setResponsabeRegister,
-        responsabeFormValidation,
-        setResponsabeFormValidation,
+        register,
+        setRegister,
+        formValidation,
+        setFormValidation,
         childrenRegister,
-        setChildrenRegister
+        setChildrenRegister,
+        registerType,
+        setRegisterType 
     };
     return(
       <context.Provider value={ value }>

@@ -3,17 +3,17 @@ import context from '../context/context';
 import axios from 'axios';
 import schema from '../valitations/createUser';
 
-function AngelRegisterForms() {
+function RegisterForms() {
 
-    const { angelRegister, setAngelRegister, angelFormValidation, setAngelFormValidation } = useContext(context);
+    const { register, setRegister, formValidation, setFormValidation, registerType } = useContext(context);
 
 
     const handleChange = ({ target: { name, value } }) => {
-        setAngelRegister({ ...angelRegister, [name]: value })
+        setRegister({ ...register, [name]: value })
     }
 
     const handleClick = () => {
-        const { name, email, password, confirmPassword , phone, cpf } = angelRegister
+        const { name, email, password, confirmPassword , phone, cpf } = register
         axios.post('http://localhost:3333/user',  {
             name,
 	        email,
@@ -27,14 +27,14 @@ function AngelRegisterForms() {
     }
 
     useEffect(async () => {
-        const validate = await schema.isValid(angelRegister);
-        setAngelFormValidation(validate);
-    }, [angelRegister])
+        const validate = await schema.isValid(register);
+        setFormValidation(validate);
+    }, [register])
 
 
     return (
         <form className="d-flex flex-column justify-content-center align-items-center shadow p-5 ">
-            <h3>Cadastro de Anjo da Guarda</h3>
+            <h3>{ (registerType === 'guardian') && "Cadastro de Guardião" || "Cadastro de Pais da Criança" }</h3>
             <div className="form-group">
                 <label for="cpf">
                     Nome
@@ -55,8 +55,8 @@ function AngelRegisterForms() {
             </div>
             <div className="form-group">
                 <label for="whatsapp">
-                    WhatsApp
-             <input type="number" name="phone" className="form-control" id="whatsapp" placeholder="digite seu whatsapp" onChange={handleChange} />
+                    Telefone
+             <input type="number" name="phone" className="form-control" id="whatsapp" placeholder="digite seu telefone" onChange={handleChange} />
                 </label>
             </div>
             <div className="form-group">
@@ -73,10 +73,10 @@ function AngelRegisterForms() {
             </div>
 
             <div>
-                <button type="button" className="btn btn-warning m-3" onClick={handleClick} disabled={ !angelFormValidation }>Cadastrar</button>
+                <button type="button" className="btn btn-warning m-3" onClick={handleClick} disabled={ !formValidation }>Cadastrar</button>
             </div>
         </form>
     );
 }
 
-export default AngelRegisterForms;
+export default RegisterForms;
