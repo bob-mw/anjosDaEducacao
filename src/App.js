@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Provider from './context/Provider';
 import NavBar from './components/NavBar';
 import Login from './Pages/Login';
@@ -14,10 +14,12 @@ function App(){
         <NavBar />
         <main className="gradient-sky margin-top-main w-100"> 
           <BrowserRouter>
-            <Route exact path="/" component={ Login } />
-            <Route path="/registerAngel" component={ RegisterGuandian } />
-            <Route path="/registerResponsabe" component={ RegisterResponsable } />
-            <Route path="/responsableDetails" component={ ResponsableDetails } />
+            <Switch>
+              <Route exact path="/" component={ Login } />
+              <Route path="/registerGuardian" component={ RegisterGuandian } />
+              <Route path="/registerResponsabe" component={ RegisterResponsable } />
+              <Route path="/responsableDetails" component={ ResponsableDetails } />
+            </Switch>
           </BrowserRouter>
         </main>
       </Provider>

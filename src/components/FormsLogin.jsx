@@ -24,7 +24,7 @@ function FormsLogin() {
         <br/>
         <div className="d-flex justify-content-around m-3">
         <a className="btn btn-success m-3">Entrar</a>
-        <a className="btn btn-primary m-3" href={ (formType === 'angel') ? "/registerAngel" : "registerResponsabe" }>Cadastrar</a>
+        <a className="btn btn-primary m-3" href={ (formType === 'angel') ? "/registerGuardian" : "registerResponsabe" }>Cadastrar</a>
         </div>
         </form>
     );
