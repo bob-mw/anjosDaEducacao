@@ -1,0 +1,241 @@
+{
+    "EF": [
+        {
+            "name": "TUBO DE COLA",
+            "price": "",
+            "amount": "1"
+        },
+        {
+            "name": "ROLO FITA CREPE 50 mm x 50 mm",
+            "price": "",
+            "amount": "1"
+        },
+        {
+            "name": "CAIXA DE GIZ DE CERA GRANDE",
+            "price": "",
+            "amount": "1"
+        },
+        {
+            "name": "TESOURA SEM PONTA",
+            "price": "",
+            "amount": "1"
+        },
+
+        {
+            "name": "CX DE LÁPIS DE COR 12 CORES",
+            "price": "",
+            "amount": "2"
+        },
+
+        {
+            "name": "PINCEL TIGRE Nº 12",
+            "price": "",
+            "amount": "1"
+        },
+
+        {
+            "name": "LANCHEIRA",
+            "price": "",
+            "amount": "1"
+        },
+
+        {
+            "name": "AGENDA",
+            "price": "",
+            "amount": "1"
+        },
+
+        {
+            "name": "PACOTE CHAMEX 500 FLS",
+            "price": "",
+            "amount": "1"
+        }
+    ],
+
+    "F1": [
+        
+        {
+            "name": "CADERNOS UNIVERSITÁRIOS 200 FOLHAS PAUTADAS",
+            "price": "",
+            "amount": "4"
+        },
+        {
+            "name": "RÉGUA 30 cm",
+            "price": "",
+            "amount": "1"
+        },
+        {
+            "name": "ESTOJO",
+            "price": "",
+            "amount": "1"
+        },
+        {
+            "name": "TESOURA SEM PONTA",
+            "price": "",
+            "amount": "1"
+        },
+        {
+            "name": "BORRACHA",
+            "price": "",
+            "amount": "1"
+        },
+        {
+            "name": "APONTADOR",
+            "price": "",
+            "amount": "1"
+        },
+        {
+            "name": "LÁPIS PRETOS",
+            "price": "",
+            "amount": "3"
+        },
+        {
+            "name": "CX DE LÁPIS DE COR 12 CORES",
+            "price": "",
+            "amount": "1"
+        },
+        {
+            "name": "TUBO DE COLA",
+            "price": "",
+            "amount": "1"
+        },
+        {
+            "name": "MOCHILA",
+            "price": "",
+            "amount": "1"
+        }
+
+    ],
+
+    "F2": [
+        {
+            "name": "CADERNOS UNIVERSITÁRIOS 200 FOLHAS PAUTADAS",
+            "price": "",
+            "amount": "4"
+        },
+        {
+            "name": "CADERNO EDUCAÇÃO ARTÍSTICA",
+            "price": "",
+            "amount": "1"
+        },
+        {
+            "name": "RÉGUA 30 cm",
+            "price": "",
+            "amount": "1"
+        },
+        {
+            "name": "ESTOJO",
+            "price": "",
+            "amount": "1"
+        },
+        {
+            "name": "TESOURA SEM PONTA",
+            "price": "",
+            "amount": "1"
+        },
+        {
+            "name": "BORRACHA",
+            "price": "",
+            "amount": "1"
+        },
+        {
+            "name": "APONTADOR",
+            "price": "",
+            "amount": "1"
+        },
+        {
+            "name": "LÁPIS PRETOS",
+            "price": "",
+            "amount": "3"
+        },
+        {
+            "name": "CANETAS AZUIS",
+            "price": "",
+            "amount": "2"
+        },
+        {
+            "name": "2 CANETAS PRETAS",
+            "price": "",
+            "amount": "2"
+        },
+        {
+            "name": "CX DE LÁPIS DE COR 12 CORES",
+            "price": "",
+            "amount": "1"
+        },
+        {
+            "name": "TUBO DE COLA",
+            "price": "",
+            "amount": "1"
+        },
+        {
+            "name": "MOCHILA",
+            "price": "",
+            "amount": "1"
+        }
+
+    ],
+
+    "EM": [
+        {
+            "name": "CADERNOS UNIVERSITÁRIOS 200 FOLHAS PAUTADAS",
+            "price": "",
+            "amount": "4"
+        },
+        {
+            "name": "RÉGUA 30 cm",
+            "price": "",
+            "amount": "1"
+        },
+        {
+            "name": "ESTOJO",
+            "price": "",
+            "amount": "1"
+        },
+        {
+            "name": "TESOURA SEM PONTA",
+            "price": "",
+            "amount": "1"
+        },
+        {
+            "name": "BORRACHA",
+            "price": "",
+            "amount": "1"
+        },
+        {
+            "name": "APONTADOR",
+            "price": "",
+            "amount": "1"
+        },
+        {
+            "name": "LÁPIS PRETOS",
+            "price": "",
+            "amount": "3"
+        },
+        {
+            "name": "CANETAS AZUIS",
+            "price": "",
+            "amount": "3"
+        },
+        {
+            "name": "CANETAS PRETAS",
+            "price": "",
+            "amount": "2"
+        },
+        {
+            "name": "CX DE LÁPIS DE COR 12 CORES",
+            "price": "",
+            "amount": "1"
+        },
+        {
+            "name": "COLA BASTÃO",
+            "price": "",
+            "amount": "1"
+        },
+        {
+            "name": "MOCHILA",
+            "price": "",
+            "amount": "1"
+        }
+    ]
+}
