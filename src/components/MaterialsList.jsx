@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from 'react';
+import { EF, F1, F2, EM } from  '../data/materialsList.js';
 import context from '../context/context';
 
 function MaterialsList() {
@@ -7,61 +8,11 @@ function MaterialsList() {
 
     const { teaching } = childrenRegister;
 
-    const listEF =
-        ["1 PACOTE CHAMEX 500 FLS",
-            "1 TUBO DE COLA",
-            "1 ROLO FITA CREPE 50 mm x 50 mm",
-            "1 CAIXA DE GIZ DE CERA GRANDE",
-            "1 TESOURA SEM PONTA",
-            "2 CX DE LÁPIS DE COR 12 CORES",
-            "1 PINCEL TIGRE Nº 12",
-            "1 LANCHEIRA",
-            "1 AGENDA"];
-
-    const listF1 = ["4 CADERNOS UNIVERSITÁRIOS 200 FOLHAS PAUTADAS",
-        "1 RÉGUA 30 cm",
-        "1 ESTOJO",
-        "1 TESOURA SEM PONTA",
-        "1 BORRACHA",
-        "1 APONTADOR",
-        "3 LÁPIS PRETOS",
-        "1 CX DE LÁPIS DE COR 12 CORES",
-        "1 TUBO DE COLA",
-        "1 MOCHILA"];
-
-    const listF2 = [
-        "4 CADERNOS UNIVERSITÁRIOS 200 FOLHAS PAUTADAS",
-        "1 CADERNO EDUCAÇÃO ARTÍSTICA",
-        "1 RÉGUA 30 cm",
-        "1 ESTOJO",
-        "1 TESOURA SEM PONTA",
-        "1 BORRACHA",
-        "1 APONTADOR",
-        "3 LÁPIS PRETOS",
-        "2 CANETAS AZUIS",
-        "2 CANETAS PRETAS",
-        "1 CX DE LÁPIS DE COR 12 CORES",
-        "1 TUBO DE COLA",
-        "1 MOCHILA"];
-
-    const listEM = ["4 CADERNOS UNIVERSITÁRIOS 200 FOLHAS PAUTADAS",
-        "1 RÉGUA 30 cm",
-        "1 ESTOJO",
-        "1 TESOURA SEM PONTA",
-        "1 BORRACHA",
-        "1 APONTADOR",
-        "3 LÁPIS PRETOS",
-        "2 CANETAS AZUIS",
-        "2 CANETAS PRETAS",
-        "1 CX DE LÁPIS DE COR 12 CORES",
-        "1 COLA BASTÃO",
-        "1 MOCHILA"];
-
     useEffect(() => {
-        (teaching === 'EF') && setChildrenRegister({ ...childrenRegister, materials: listEF }) ||
-        (teaching === 'F1') && setChildrenRegister({ ...childrenRegister, materials: listF1 }) ||
-        (teaching === 'F2') && setChildrenRegister({ ...childrenRegister, materials: listF2 }) ||
-        (teaching === 'EM') && setChildrenRegister({ ...childrenRegister, materials: listEM })
+        (teaching === 'EF') && setChildrenRegister({ ...childrenRegister, materials: EF }) ||
+        (teaching === 'F1') && setChildrenRegister({ ...childrenRegister, materials: F1 }) ||
+        (teaching === 'F2') && setChildrenRegister({ ...childrenRegister, materials: F2 }) ||
+        (teaching === 'EM') && setChildrenRegister({ ...childrenRegister, materials: EM })
     }, [teaching])
 
     const EF_List = () => {
@@ -69,7 +20,7 @@ function MaterialsList() {
         return (
             <ul>
                 {
-                    listEF.map((item, index) => <li key={index}>{item}</li>)
+                    EF.map((item, index) => <li key={index}>{ item.amount } - { item.name }</li>)
                 }
             </ul>
         );
@@ -80,7 +31,7 @@ function MaterialsList() {
         return (
             <ul>
                 {
-                    listF1.map((item, index) => <li key={index}>{item}</li>)
+                    F1.map((item, index) => <li key={index}>{ item.amount } - { item.name }</li>)
                 }
             </ul>
         );
@@ -90,7 +41,7 @@ function MaterialsList() {
         return (
             <ul>
                 {
-                    listF2.map((item, index) => <li key={index}>{item}</li>)
+                    F2.map((item, index) => <li key={index}>{ item.amount } - { item.name }</li>)
                 }
             </ul>
         );
@@ -100,7 +51,7 @@ function MaterialsList() {
         return (
             <ul>
                 {
-                    listEM.map((item, index) => <li key={index}>{item}</li>)
+                    EM.map((item, index) => <li key={index}>{ item.amount } - { item.name }</li>)
                 }
             </ul>
         );
