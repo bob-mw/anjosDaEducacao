@@ -3,39 +3,78 @@ import context from '../context/context';
 
 function WishList() {
 
-    const { childrenRegister } = useContext(context);
+    const { childrenRegister, setChildrenRegister } = useContext(context);
 
-    const { teaching } = childrenRegister;
+    const { teaching, materials } = childrenRegister;
+
+    const listEF =
+        ["1 PACOTE CHAMEX 500 FLS",
+            "1 TUBO DE COLA",
+            "1 ROLO FITA CREPE 50 mm x 50 mm",
+            "1 CAIXA DE GIZ DE CERA GRANDE",
+            "1 TESOURA SEM PONTA",
+            "2 CX DE LÁPIS DE COR 12 CORES",
+            "1 PINCEL TIGRE Nº 12",
+            "1 LANCHEIRA",
+            "1 AGENDA"];
+
+    const listF1 = ["4 CADERNOS UNIVERSITÁRIOS 200 FOLHAS PAUTADAS",
+        "1 RÉGUA 30 cm",
+        "1 ESTOJO",
+        "1 TESOURA SEM PONTA",
+        "1 BORRACHA",
+        "1 APONTADOR",
+        "3 LÁPIS PRETOS",
+        "1 CX DE LÁPIS DE COR 12 CORES",
+        "1 TUBO DE COLA",
+        "1 MOCHILA"];
+
+    const listF2 = [
+        "4 CADERNOS UNIVERSITÁRIOS 200 FOLHAS PAUTADAS",
+        "1 CADERNO EDUCAÇÃO ARTÍSTICA",
+        "1 RÉGUA 30 cm",
+        "1 ESTOJO",
+        "1 TESOURA SEM PONTA",
+        "1 BORRACHA",
+        "1 APONTADOR",
+        "3 LÁPIS PRETOS",
+        "2 CANETAS AZUIS",
+        "2 CANETAS PRETAS",
+        "1 CX DE LÁPIS DE COR 12 CORES",
+        "1 TUBO DE COLA",
+        "1 MOCHILA"];
+
+    const listEM = ["4 CADERNOS UNIVERSITÁRIOS 200 FOLHAS PAUTADAS",
+        "1 RÉGUA 30 cm",
+        "1 ESTOJO",
+        "1 TESOURA SEM PONTA",
+        "1 BORRACHA",
+        "1 APONTADOR",
+        "3 LÁPIS PRETOS",
+        "2 CANETAS AZUIS",
+        "2 CANETAS PRETAS",
+        "1 CX DE LÁPIS DE COR 12 CORES",
+        "1 COLA BASTÃO",
+        "1 MOCHILA"]
 
     const EF_List = () => {
+
         return (
             <ul>
-                <li>1 PACOTE CHAMEX 500 FLS</li>
-                <li>1 TUBO DE COLA</li>
-                <li>1 ROLO FITA CREPE 50 mm x 50 mm</li>
-                <li>1 CAIXA DE GIZ DE CERA GRANDE</li>
-                <li>1 TESOURA SEM PONTA</li>
-                <li>2 CX DE LÁPIS DE COR 12 CORES</li>
-                <li>1 PINCEL TIGRE Nº 12</li>
-                <li>1 LANCHEIRA</li>
-                <li>1 AGENDA</li>
+                {
+                    listEF.map((item, index) => <li key={index}>{item}</li>)
+                }
             </ul>
         );
     }
 
     const F1_List = () => {
+
         return (
             <ul>
-                <li>4 CADERNOS UNIVERSITÁRIOS 200 FOLHAS PAUTADAS</li>
-                <li>1 RÉGUA 30 cm</li>
-                <li>1 ESTOJO</li>
-                <li>1 TESOURA SEM PONTA</li>
-                <li>1 BORRACHA</li>
-                <li>1 APONTADOR</li>
-                <li>3 LÁPIS PRETOS</li>
-                <li>1 CX DE LÁPIS DE COR 12 CORES</li>
-                <li>1 TUBO DE COLA</li>
-                <li>1 MOCHILA</li>
+                {
+                    listF1.map((item, index) => <li key={index}>{item}</li>)
+                }
             </ul>
         );
     }
@@ -43,19 +82,9 @@ function WishList() {
     const F2_List = () => {
         return (
             <ul>
-                <li>4 CADERNOS UNIVERSITÁRIOS 200 FOLHAS PAUTADAS</li>
-                <li>1 CADERNO EDUCAÇÃO ARTÍSTICA</li>
-                <li>1 RÉGUA 30 cm</li>
-                <li>1 ESTOJO</li>
-                <li>1 TESOURA SEM PONTA</li>
-                <li>1 BORRACHA</li>
-                <li>1 APONTADOR</li>
-                <li>3 LÁPIS PRETOS</li>
-                <li>2 CANETAS AZUIS</li>
-                <li>2 CANETAS PRETAS</li>
-                <li>1 CX DE LÁPIS DE COR 12 CORES</li>
-                <li>1 TUBO DE COLA</li>
-                <li>1 MOCHILA</li>
+                {
+                    listF2.map((item, index) => <li key={index}>{item}</li>)
+                }
             </ul>
         );
     }
@@ -63,27 +92,18 @@ function WishList() {
     const EM_List = () => {
         return (
             <ul>
-                <li>4 CADERNOS UNIVERSITÁRIOS 200 FOLHAS PAUTADAS</li>
-                <li>1 RÉGUA 30 cm</li>
-                <li>1 ESTOJO</li>
-                <li>1 TESOURA SEM PONTA</li>
-                <li>1 BORRACHA</li>
-                <li>1 APONTADOR</li>
-                <li>3 LÁPIS PRETOS</li>
-                <li>2 CANETAS AZUIS</li>
-                <li>2 CANETAS PRETAS</li>
-                <li>1 CX DE LÁPIS DE COR 12 CORES</li>
-                <li>1 COLA BASTÃO</li>
-                <li>1 MOCHILA</li>
+                {
+                    listEM.map((item, index) => <li key={index}>{item}</li>)
+                }
             </ul>
         );
     }
 
     return (
-      (teaching === 'EF') && EF_List() ||
-      (teaching === 'F1') && F1_List() ||
-      (teaching === 'F2') && F2_List() ||
-      (teaching === 'EM') && EM_List()
+        (teaching === 'EF') && EF_List() ||
+        (teaching === 'F1') && F1_List() ||
+        (teaching === 'F2') && F2_List() ||
+        (teaching === 'EM') && EM_List()
     );
 }
 
