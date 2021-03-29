@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import context from '../context/context';
-import WishList from '../components/WishList';
-import WishTable from '../components/WishTable';
+import MaterialsList from '../components/MaterialsList';
+import ChildrenTable from '../components/ChildrenTable';
 
 function ResponsableDetails() {
     
@@ -77,8 +77,8 @@ function ResponsableDetails() {
                         </section>
 
 
-                    <section id="wishList">
-                        <WishList />
+                    <section id="MaterialsList">
+                        <MaterialsList />
                     </section>
                 </div>
 
@@ -86,7 +86,7 @@ function ResponsableDetails() {
 
             </form>
 
-            <WishTable />
+            <ChildrenTable />
 
         </section>
     );

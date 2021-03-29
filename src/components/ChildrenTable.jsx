@@ -1,6 +1,6 @@
 import React from 'react';
 
-function WishTable() {
+function ChildrenTable() {
     return (
         <table class="table table-bordered my-5">
             <thead>
@@ -16,4 +16,4 @@ function WishTable() {
     );
 }
 
-export default WishTable;
+export default ChildrenTable;

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import context from '../context/context';
 
-function WishList() {
+function MaterialsList() {
 
     const { childrenRegister, setChildrenRegister } = useContext(context);
 
@@ -114,4 +114,4 @@ function WishList() {
     );
 }
 
-export default WishList;
+export default MaterialsList;
