@@ -24,5 +24,6 @@ routes.put('/guardian', authMiddleware, guardianController.update)
 routes.get('/guardian', authMiddleware, guardianController.show)
 
 routes.post('/store', storeController.create)
+routes.post('/store/authentication', storeController.session)
 
 export default routes

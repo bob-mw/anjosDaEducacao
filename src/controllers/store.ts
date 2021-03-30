@@ -1,8 +1,10 @@
 import { Request, Response } from 'express'
 
 import CreateStoreService from '@services/createStore'
+import AuthStoreService from '@services/authStore'
 
 import createStoreSchema from '@validation/createStore'
+import authSchema from '@validation/auth'
 
 import AppError from '@errors/appError'
 
@@ -28,6 +30,26 @@ class StoreController {
 
     return response.json({
       user
+    })
+  }
+
+  async session (request: Request, response: Response) {
+    const validation = await authSchema.isValid(request.body)
+
+    if (!validation) {
+      throw new AppError('Erro na validação, verifique seus dados')
+    }
+
+    const { email, password } = request.body
+
+    const authStore = new AuthStoreService()
+
+    const token = await authStore.execute({
+      email, password
+    })
+
+    return response.json({
+      token
     })
   }
 }
