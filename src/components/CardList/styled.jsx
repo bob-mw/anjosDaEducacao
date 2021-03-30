@@ -31,6 +31,7 @@ export const CardImageContainer = styled(motion.div)`
     `
 
 export const TitleContainer = styled(motion.div)`
+    color: white;
     position: absolute;
     top: 15px;
     left: 15px;
@@ -38,7 +39,7 @@ export const TitleContainer = styled(motion.div)`
 `
 
 export const Name = styled.span`
-    color: #fff;
+    color: white;
     font-size: 2.5rem;
     text-transform: uppercase;
 `
