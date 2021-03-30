@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 export const Overlay = styled(motion.div)`
     z-index: 1;
     position: fixed;
-    background: rgba(0, 0, 0, 0.8);
     will-change: opacity;
     top: 0;
     bottom: 0;

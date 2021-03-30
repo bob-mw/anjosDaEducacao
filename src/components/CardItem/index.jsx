@@ -18,7 +18,7 @@ const CardItem = ({ id }) => {
         transition={{ duration: 0.2, delay: 0.15 }}
         style={{ pointerEvents: "auto" }}
       >
-        <Link to="/" />
+        <Link to="/mural" />
       </S.Overlay>
       <S.CardContentContainer>
         <S.CardContent layoutId={`card-container-${id}`}>

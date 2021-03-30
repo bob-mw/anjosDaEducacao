@@ -23,7 +23,7 @@ const Card = ({ id, title, name, theme }) => {
           </S.TitleContainer>
         </S.CardContent>
       </S.CardContentContainer>
-      <S.CardOpenLink to={id} />
+      <S.CardOpenLink to={`/mural/${id}`} />
     </S.Item>
   )
 }
