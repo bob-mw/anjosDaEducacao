@@ -2,6 +2,7 @@ import { Router } from 'express'
 
 import userController from '@controllers/user'
 import guardianController from '@controllers/guardian'
+import storeController from '@controllers/store'
 import authMiddleware from '@middlewares/auth'
 
 const routes = Router()
@@ -21,5 +22,7 @@ routes.post('/guardian', guardianController.create)
 routes.post('/guardian/authentication', guardianController.session)
 routes.put('/guardian', authMiddleware, guardianController.update)
 routes.get('/guardian', authMiddleware, guardianController.show)
+
+routes.post('/store', storeController.create)
 
 export default routes
