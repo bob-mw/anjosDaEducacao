@@ -7,6 +7,7 @@ import RegisterGuandian from './Pages/RegisterGuandian';
 import RegisterResponsable from './Pages/RegisterResponsable';
 import ResponsableDetails from './Pages/ResponsableDetails';
 import WishList from './Pages/WishList';
+import Mural from './Pages/Mural';
 
 
 function App(){
@@ -21,6 +22,7 @@ function App(){
               <Route path="/registerResponsabe" component={ RegisterResponsable } />
               <Route path="/responsableDetails" component={ ResponsableDetails } />
               <Route path="/wishList" component={ WishList } />
+              <Route path="/mural" component={ Mural } />
             </Switch>
           </BrowserRouter>
         </main>
