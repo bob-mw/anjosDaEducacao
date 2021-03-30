@@ -2,6 +2,7 @@ import { Request, Response } from 'express'
 
 import CreateStoreService from '@services/createStore'
 import AuthStoreService from '@services/authStore'
+import FindStoreService from '@services/findStore'
 
 import createStoreSchema from '@validation/createStore'
 import authSchema from '@validation/auth'
@@ -28,6 +29,8 @@ class StoreController {
       phone
     })
 
+    delete user.password
+
     return response.json({
       user
     })
@@ -50,6 +53,18 @@ class StoreController {
 
     return response.json({
       token
+    })
+  }
+
+  async show (request: Request, response: Response) {
+    const findStore = new FindStoreService()
+
+    const user = await findStore.execute(request.user.id)
+
+    delete user.password
+
+    return response.json({
+      user
     })
   }
 }
