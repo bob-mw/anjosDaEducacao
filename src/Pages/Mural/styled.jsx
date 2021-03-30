@@ -28,7 +28,6 @@ export const Panel = styled.div`
 `
 
 export const Container = styled.div`
-    max-width: 990px;
     flex: 1 1 100%;
     padding: 45px 25px;
 `

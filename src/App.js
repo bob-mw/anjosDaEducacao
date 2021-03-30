@@ -3,11 +3,11 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Provider from './context/Provider';
 import NavBar from './components/NavBar';
 import Login from './Pages/Login';
-import RegisterGuandian from './Pages/RegisterGuandian';
+import RegisterGuardian from './Pages/RegisterGuardian';
 import RegisterResponsable from './Pages/RegisterResponsable';
 import ResponsableDetails from './Pages/ResponsableDetails';
 import WishList from './Pages/WishList';
-import Mural from './Pages/Mural';
+import Mural from './Pages/Mural'
 
 
 function App(){
@@ -18,7 +18,7 @@ function App(){
           <BrowserRouter>
             <Switch>
               <Route exact path="/" component={ Login } />
-              <Route path="/registerGuardian" component={ RegisterGuandian } />
+              <Route path="/registerGuardian" component={ RegisterGuardian } />
               <Route path="/registerResponsabe" component={ RegisterResponsable } />
               <Route path="/responsableDetails" component={ ResponsableDetails } />
               <Route path="/wishList" component={ WishList } />

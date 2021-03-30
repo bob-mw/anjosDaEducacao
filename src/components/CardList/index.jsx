@@ -20,6 +20,7 @@ const Card = ({ id, title, name, theme }) => {
           >
             <S.Name>{name}</S.Name>
             <h2>{title}</h2>
+            <p>Clique para abrir</p>
           </S.TitleContainer>
         </S.CardContent>
       </S.CardContentContainer>

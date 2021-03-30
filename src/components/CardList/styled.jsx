@@ -36,6 +36,10 @@ export const TitleContainer = styled(motion.div)`
     top: 15px;
     left: 15px;
     max-width: 300px;
+
+    p {
+        font-size: 1rem;
+    }
 `
 
 export const Name = styled.span`
@@ -58,52 +62,31 @@ export const List = styled.ul`
     margin: 0;
     display: flex;
     flex-wrap: wrap;
-    align-content: flex-start;
+    align-content: center;
 `
 
 export const Item = styled.li`
     position: relative;
     padding: 25px;
     height: 460px;
-    flex: 0 0 40%;
-    max-width: 40%;  
+    flex: 0 0 25%;
+    max-width: 25%;  
     
-    &:nth-child(4n + 1),
-    &:nth-child(4n + 4) {
-        flex: 0 0 60%;
-        max-width: 60%;
+
+    @media only screen and (max-width: 1700px) {
+        flex: 0 0 33%;
+        max-width: 33%;
     }
 
-    &:nth-child(odd) {
-        padding-left: 0;
-    }
-
-    &:nth-child(even) {
-        padding-right: 0;
-    }
-
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 1200px) {
         flex: 0 0 50%;
         max-width: 50%;
-
-        &:nth-child(4n + 1),
-        &:nth-child(4n + 4) {
-            flex: 0 0 50%;
-            max-width: 50%;
-        }
     }
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 900px) {
         flex: 1 0 100%;
         max-width: 100%;
         padding: 10px;
         padding-left: 0;
         padding-right: 0;
-
-        &:nth-child(4n + 1),
-        &:nth-child(4n + 4) {
-            flex: 1 0 100%;
-            max-width: 100%;
-        }
-    }
 `

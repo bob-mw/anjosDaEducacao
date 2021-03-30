@@ -20,7 +20,7 @@ const CardItem = ({ id }) => {
       >
         <Link to="/mural" />
       </S.Overlay>
-      
+
       <S.CardContentContainer>
         <S.CardContent layoutId={`card-container-${id}`}>
 
@@ -33,6 +33,7 @@ const CardItem = ({ id }) => {
           >
             <S.Name>{name}</S.Name>
             <h2>{title}</h2>
+            <p>Clique para fechar</p>
           </S.TitleContainer>
 
           <S.ContentContainer animate>

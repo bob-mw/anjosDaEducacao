@@ -10,7 +10,6 @@ export const Overlay = styled(motion.div)`
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    max-width: 990px;
 
     a {
         display: block;
@@ -79,6 +78,10 @@ export const TitleContainer = styled(motion.div)`
     top: 15px;
     left: 15px;
     max-width: 300px;
+
+    p {
+        font-size: 1rem;
+    }
 `
 
 export const Name = styled.span`
@@ -93,6 +96,6 @@ export const ContentContainer = styled(motion.div)`
     width: 90vw;
 
     @media only screen and (max-width: 600px) {
-        padding: 20rem 2rem 5rem 2rem;
+        padding: 20rem 2rem 10rem 2rem;
     }
 `
