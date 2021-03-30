@@ -1,32 +1,42 @@
 import React, { useState } from 'react'
-import * as S from './styled'
+import { AnimateSharedLayout, AnimatePresence } from 'framer-motion'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-import Menu from '../../Menu'
-import CardMural from '../../CardMural'
+import * as S from './styled'
+import CardItem from '../../components/CardItem'
+import CardList from '../../components/CardList'
+import Menu from '../../components/Menu'
+
+const Store = ({ match }) => {
+    let { id } = match.params;
+    const imageHasLoaded = true
+  
+    return (
+      <>
+        <CardList selectedId={id} />
+        <AnimatePresence>
+          {id && imageHasLoaded && <CardItem id={id} key="item" />}
+        </AnimatePresence>
+      </>
+    )
+  }
 
 const Mural = () => {
-  
-    const [expandedCard, setCollapsedCard] = useState()
-    const texts = ["um", "dois", "três"]
 
     return (
-        <>
         <S.Background>
             <S.LogoNavbar/>
             <Menu/>
             <S.Panel>
-            {texts.map((text, index) => (
-                <CardMural
-                    key={index}
-                    text={text}
-                    disabled={expandedCard !== text && expandedCard !== undefined}
-                    onExpand={() => setCollapsedCard(text)}
-                    onCollapse={() => setCollapsedCard()}
-                />
-            ))}
+                <S.Container>
+                    <AnimateSharedLayout type="crossfade">
+                        <Router>
+                            <Route path={["/:id", "/"]} component={Store} />
+                        </Router>
+                    </AnimateSharedLayout>
+                </S.Container>
             </S.Panel>
         </S.Background>
-        </>
     )
 }
 

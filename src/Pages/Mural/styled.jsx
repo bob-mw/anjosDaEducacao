@@ -3,10 +3,10 @@ import styled from 'styled-components'
 import Logo from '../../Logo'
 
 export const LogoNavbar = styled(Logo)`
-  position: absolute;
-  top: 1rem;
-  left: 2rem;
-  width: 6rem;
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+    width: 6rem;
 `
 
 export const Background = styled.main`
@@ -23,4 +23,10 @@ export const Panel = styled.div`
     margin-top: 5rem;
     background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
     border-radius: 2rem;
+`
+
+export const Container = styled.div`
+    max-width: 990px;
+    flex: 1 1 100%;
+    padding: 45px 25px;
 `
