@@ -31,7 +31,8 @@ export default class createStore1617075734268 implements MigrationInterface {
         },
         {
           name: 'phone',
-          type: 'varchar'
+          type: 'varchar',
+          isUnique: true
         },
         {
           name: 'created_at',
