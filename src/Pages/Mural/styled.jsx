@@ -18,6 +18,8 @@ export const Background = styled.main`
 `
 
 export const Panel = styled.div`
+    display:flex;
+    justify-content: center;
     min-height: 80vh;
     width: 90%;
     margin-top: 5rem;

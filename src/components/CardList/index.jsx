@@ -5,6 +5,9 @@ import { items } from '../../Pages/Mural/data'
 
 
 const Card = ({ id, title, name, theme }) => {
+
+  const Img = require(`../../img/mural/${id}.jpg`).ReactComponent
+
   return (
     <S.Item>
       <S.CardContentContainer>
@@ -12,7 +15,7 @@ const Card = ({ id, title, name, theme }) => {
           <S.CardImageContainer
             layoutId={`card-image-container-${id}`}
           >
-            <img className="card-image" src={`../../img/mural/${id}.jpg`} alt="" />
+            <img className="card-image" src={Img} alt="" />
           </S.CardImageContainer>
           <S.TitleContainer
             layoutId={`title-container-${id}`}
