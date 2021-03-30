@@ -31,7 +31,7 @@ const Mural = () => {
                 <S.Container>
                     <AnimateSharedLayout type="crossfade">
                         <Router>
-                            <Route path={["/:id", "/"]} component={Store} />
+                            <Route path={["/mural/:id", "/mural"]} component={Store} />
                         </Router>
                     </AnimateSharedLayout>
                 </S.Container>

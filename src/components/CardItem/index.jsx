@@ -7,7 +7,7 @@ import { items } from '../../Pages/Mural/data'
 
 
 const CardItem = ({ id }) => {
-  const { name, title } = items.find(item => item.id === id);
+  const { name, title } = items.find(item => item.id === id)
 
   return (
     <>
