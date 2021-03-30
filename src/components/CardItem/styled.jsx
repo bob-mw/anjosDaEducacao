@@ -32,7 +32,7 @@ export const CardContentContainer = styled.div`
     display: block;
     pointer-events: none;
 
-    top: 0;
+    top: 6rem;
     left: 0;
     right: 0;
     position: fixed;
