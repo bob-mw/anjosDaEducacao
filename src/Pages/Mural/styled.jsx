@@ -22,7 +22,7 @@ export const Panel = styled.div`
     justify-content: center;
     min-height: 80vh;
     width: 90%;
-    margin-top: 5rem;
+    margin: 5rem 0;
     background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
     border-radius: 2rem;
 `
