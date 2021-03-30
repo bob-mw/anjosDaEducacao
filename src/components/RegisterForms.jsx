@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import context from '../context/context';
-import axios from 'axios';
 import schema from '../valitations/createUser';
+import CreateService from '../services/create';
 
 function RegisterForms() {
 
@@ -12,18 +12,11 @@ function RegisterForms() {
         setRegister({ ...register, [name]: value })
     }
 
+
     const handleClick = () => {
         const { name, email, password, confirmPassword , phone, cpf } = register
-        axios.post('http://localhost:3333/user',  {
-            name,
-	        email,
-	        password,
-            confirmPassword,
-	        phone,
-	        cpf
-        }).then(function (response) {
-            console.log(response)
-        })
+        CreateService.execute({ name, email, password, confirmPassword , phone, cpf, registerType })
+        
     }
 
     useEffect(async () => {

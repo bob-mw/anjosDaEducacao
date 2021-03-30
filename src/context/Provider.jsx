@@ -5,11 +5,12 @@ import context from './context';
 
 function Provider({ children }) {
 
-    const [ formType, setFormType ] = useState([]);
-    const [ register, setRegister ] = useState({});
+    const [ formType, setFormType ] = useState('');
+    const [ register, setRegister ] = useState([]);
     const [ formValidation, setFormValidation ] = useState(false)
-    const [ childrenRegister, setChildrenRegister ] = useState({ materials: [] });
+    const [ childrenRegister, setChildrenRegister ] = useState([]);
     const [ registerType, setRegisterType ] = useState('');
+    const [ authLogin, setAuthLogin ] = useState({});
 
     const value = {
         formType,
@@ -21,8 +22,11 @@ function Provider({ children }) {
         childrenRegister,
         setChildrenRegister,
         registerType,
-        setRegisterType 
+        setRegisterType,
+        authLogin,
+        setAuthLogin 
     };
+
     return(
       <context.Provider value={ value }>
           { children }

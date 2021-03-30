@@ -8,11 +8,11 @@ function Login() {
     const { setFormType } = useContext(context);
 
     const formAngel = () => {
-        setFormType('angel');
+        setFormType('guardian');
     }
 
     const formKid = () => {
-        setFormType('kid');
+        setFormType('user');
     }
 
     return (

@@ -6,6 +6,7 @@ import Login from './Pages/Login';
 import RegisterGuandian from './Pages/RegisterGuandian';
 import RegisterResponsable from './Pages/RegisterResponsable';
 import ResponsableDetails from './Pages/ResponsableDetails';
+import WishList from './Pages/WishList';
 
 
 function App(){
@@ -19,6 +20,7 @@ function App(){
               <Route path="/registerGuardian" component={ RegisterGuandian } />
               <Route path="/registerResponsabe" component={ RegisterResponsable } />
               <Route path="/responsableDetails" component={ ResponsableDetails } />
+              <Route path="/wishList" component={ WishList } />
             </Switch>
           </BrowserRouter>
         </main>

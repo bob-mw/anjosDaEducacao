@@ -7,7 +7,7 @@ function RegisterResposable() {
     const { setRegisterType } = useContext(context);
 
     useEffect(() => {
-        setRegisterType('parents')
+        setRegisterType('user')
     },[])
 
     return(
