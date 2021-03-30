@@ -24,15 +24,17 @@ const Card = ({ id, title, name, theme }) => {
       </S.CardContentContainer>
       <S.CardOpenLink to={id} />
     </S.Item>
-  );
+  )
 }
 
-export const CardList = ({ selectedId }) => {
+const CardList = ({ selectedId }) => {
   return (
     <S.List>
       {items.map(card => (
         <Card key={card.id} {...card} isSelected={card.id === selectedId} />
       ))}
     </S.List>
-  );
+  )
 }
+
+export default CardList

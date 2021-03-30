@@ -6,7 +6,7 @@ import * as S from './styled'
 import { items } from '../../Pages/Mural/data'
 
 
-export const CardItem = ({ id }) => {
+const CardItem = ({ id }) => {
   const { name, title } = items.find(item => item.id === id);
 
   return (
@@ -43,5 +43,7 @@ export const CardItem = ({ id }) => {
         </S.CardContent>
       </S.CardContentContainer>
     </>
-  );
+  )
 }
+
+export default CardItem
