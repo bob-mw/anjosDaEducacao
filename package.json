@@ -18,7 +18,9 @@
     "styled-components": "^5.2.1",
     "yup": "^0.32.9"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "react-lorem-ipsum": "^1.4.9"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

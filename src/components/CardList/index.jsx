@@ -1,7 +1,7 @@
 import React from 'react'
 
 import * as S from './styled'
-import { items } from '../data'
+import { items } from '../../Pages/Mural/data'
 
 
 const Card = ({ id, title, name, theme }) => {
@@ -12,7 +12,7 @@ const Card = ({ id, title, name, theme }) => {
           <S.CardImageContainer
             layoutId={`card-image-container-${id}`}
           >
-            <img className="card-image" src={`images/${id}.jpg`} alt="" />
+            <img className="card-image" src={`../../img/mural/${id}.jpg`} alt="" />
           </S.CardImageContainer>
           <S.TitleContainer
             layoutId={`title-container-${id}`}
