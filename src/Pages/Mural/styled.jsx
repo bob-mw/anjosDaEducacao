@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import Logo from '../../Logo'
+import Logo from '../../components/Logo'
 
 export const LogoNavbar = styled(Logo)`
     position: absolute;
