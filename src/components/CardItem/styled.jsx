@@ -47,14 +47,17 @@ export const CardContentContainer = styled.div`
 
 export const CardContent = styled(motion.div)`
     position: relative;
+    display: flex;
+    justify-content: center;
     border-radius: 20px;
     background: white;
     overflow: hidden;
     height: auto;
     width: 100%;
-    max-width: 700px;
+    max-width: 43rem;
     margin: 0 auto;
     pointer-events: none;
+
 `
 
 export const CardImageContainer = styled(motion.div)`
@@ -64,6 +67,10 @@ export const CardImageContainer = styled(motion.div)`
     overflow: hidden;
     height: 420px;
     width: 100vw;
+
+    @media only screen and (max-width: 600px) {
+        height:300px
+    }
 `
 
 export const TitleContainer = styled(motion.div)`
@@ -81,7 +88,11 @@ export const Name = styled.span`
 `
 
 export const ContentContainer = styled(motion.div)`
-    padding: 460px 35px 35px 35px;
-    max-width: 700px;
+    padding: 28rem 2rem 2rem 2rem;
+    max-width: 43rem;
     width: 90vw;
+
+    @media only screen and (max-width: 600px) {
+        padding: 20rem 2rem 5rem 2rem;
+    }
 `

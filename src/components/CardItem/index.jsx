@@ -20,19 +20,21 @@ const CardItem = ({ id }) => {
       >
         <Link to="/mural" />
       </S.Overlay>
+      
       <S.CardContentContainer>
         <S.CardContent layoutId={`card-container-${id}`}>
-          <S.CardImageContainer
-            layoutId={`card-image-container-${id}`}
-          >
+
+          <S.CardImageContainer layoutId={`card-image-container-${id}`}>
             <img className="card-image" src={`/mural/${id}.jpg`} alt="" />
           </S.CardImageContainer>
+
           <S.TitleContainer
             layoutId={`title-container-${id}`}
           >
             <S.Name>{name}</S.Name>
             <h2>{title}</h2>
           </S.TitleContainer>
+
           <S.ContentContainer animate>
             <LoremIpsum
               p={3}
@@ -40,6 +42,7 @@ const CardItem = ({ id }) => {
               avgSentencesPerParagraph={4}
             />
           </S.ContentContainer>
+          
         </S.CardContent>
       </S.CardContentContainer>
     </>
