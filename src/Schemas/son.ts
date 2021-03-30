@@ -1,22 +1,16 @@
-import mongoose, { Document, Schema } from 'mongoose'
+import { Schema } from 'mongoose'
 
-type Son = Document & {}
-
-const SonsSchema = new Schema(
+const sonSchema = new Schema(
   {
     name: {
-      type: String
+      type: String,
+      required: true
     },
-    requests: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: 'Request'
-      }
-    ]
-  },
-  {
-    timestamps: true
+    school: {
+      type: String,
+      required: true
+    }
   }
 )
 
-export default mongoose.model<Son>('Son', SonsSchema)
+export default sonSchema

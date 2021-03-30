@@ -1,5 +1,8 @@
 import mongoose, { Document, Schema } from 'mongoose'
 
+import material from './material'
+import son from './son'
+
 type Request = Document & {}
 
 const RequestSchema = new Schema(
@@ -8,15 +11,9 @@ const RequestSchema = new Schema(
       type: String,
       required: true
     },
-    name: {
-      type: String,
-      required: true
-    },
+    son,
     materials: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: 'Material'
-      }
+      material
     ],
     donated: {
       type: Number,

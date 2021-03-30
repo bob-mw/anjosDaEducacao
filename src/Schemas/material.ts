@@ -1,14 +1,16 @@
-import mongoose, { Document, Schema } from 'mongoose'
+import { Schema } from 'mongoose'
 
-type Material = Document & {}
-
-const MaterialSchema = new Schema(
+const materialSchema = new Schema(
   {
     name: {
       type: String,
       required: true
     },
     cost: {
+      type: Number,
+      required: true
+    },
+    amount: {
       type: Number,
       required: true
     }
@@ -18,4 +20,4 @@ const MaterialSchema = new Schema(
   }
 )
 
-export default mongoose.model<Material>('Material', MaterialSchema)
+export default materialSchema
