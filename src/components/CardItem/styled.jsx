@@ -48,7 +48,7 @@ export const CardContentContainer = styled.div`
 export const CardContent = styled(motion.div)`
     position: relative;
     border-radius: 20px;
-    background: #1c1c1e;
+    background: white;
     overflow: hidden;
     height: auto;
     width: 100%;

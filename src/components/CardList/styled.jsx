@@ -14,7 +14,7 @@ export const CardContent = styled(motion.div)`
     pointer-events: auto;
     position: relative;
     border-radius: 20px;
-    background: #1c1c1e;
+    background: white;
     overflow: hidden;
     width: 100%;
     height: 100%;
@@ -52,6 +52,9 @@ export const CardOpenLink = styled(Link)`
 `
 
 export const List = styled.ul`
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
