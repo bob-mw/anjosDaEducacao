@@ -5,6 +5,8 @@
   "dependencies": {
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
+    "framer-motion": "^4.0.3",
+    "gsap": "^3.6.1",
     "react": "^17.0.1",
     "react-bootstrap": "^1.5.2",
     "react-dom": "^17.0.1",
@@ -12,7 +14,8 @@
     "react-icons": "^4.2.0",
     "react-responsive-combo-box": "^1.2.4",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "0.9.5",
+    "react-scripts": "^4.0.3",
+    "styled-components": "^5.2.1",
     "yup": "^0.32.9"
   },
   "devDependencies": {},
@@ -24,5 +27,17 @@
   },
   "engines": {
     "node": "12.x"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
