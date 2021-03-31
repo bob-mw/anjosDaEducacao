@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Provider from './context/Provider';
-import NavBar from './components/NavBar';
+import Layout from './components/Layout';
 import Login from './Pages/Login';
 import RegisterGuardian from './Pages/RegisterGuardian';
 import RegisterResponsable from './Pages/RegisterResponsable';
@@ -14,8 +14,7 @@ import PaymentForm from './Pages/PaymentForm';
 function App(){
     return (
       <Provider>
-        <NavBar />
-        <main className="gradient-sky margin-top-main full-screen w-100"> 
+        <Layout>
           <BrowserRouter>
             <Switch>
               <Route exact path="/" component={ Login } />
@@ -27,7 +26,7 @@ function App(){
               <Route path="/paymentForm" component={ PaymentForm } />
             </Switch>
           </BrowserRouter>
-        </main>
+          </Layout>
       </Provider>
     );
 }

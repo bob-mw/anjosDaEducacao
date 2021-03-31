@@ -1,14 +1,19 @@
 import React from 'react'
 
+import GlobalStyles from '../../css/GlobalStyles'
 import Navbar from '../Navbar'
 import * as S from './styled'
 
-const Layout = () => {
+const Layout = ({children}) => {
 
     return (
-        <S.Background>
-           <Navbar/> 
-        </S.Background>
+        <>
+            <GlobalStyles/>
+            <S.Background>
+                <Navbar/> 
+                {children}
+            </S.Background>
+        </>
     )
 }
 
