@@ -25,9 +25,11 @@ my configurations:
 }
 
 .gradient-sky {
-  background: #2980B9;
-  background: -webkit-linear-gradient(to bottom, #8fdefa, #6DD5FA, #2980B9);
-  background: linear-gradient(to bottom, #8fdefa, #6DD5FA, #2980B9);
+background: #f1d7d8ff;
+}
+
+.text-pink {
+  color:#e83e8c;
 }
 
 .bg-green-clear {

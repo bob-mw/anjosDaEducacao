@@ -20,8 +20,8 @@ function Login() {
             <Jumbotron />
            <img src={ angel } width="75%" alt="logo"/>
            <div className="d-flex w-50 justify-content-around m-3">
-                <button type="button" className="btn btn-warning p-3 m-3" onClick={ formKid }>Cadastrar Protegido</button>
-                <button type="button" className="btn btn-warning p-3 m-3" onClick={ formAngel }>Cadastrar Anjo</button>
+                <button type="button" className="btn btn-light btn-outline-secondary p-3 m-3" onClick={ formKid }><p className="text-pink text-uppercase">Anjinho:</p> Criança</button>
+                <button type="button" className="btn btn-light btn-outline-secondary p-3 m-3" onClick={ formAngel }><p className="text-pink text-uppercase">Guardião:</p>  Doador</button>
             </div>
             <FormsLogin />
         </section>
