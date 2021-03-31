@@ -9,28 +9,42 @@ interface IUserData {
   name: string;
   email: string;
   password: string;
-  cpf: string;
   phone: string;
 }
 
 class CreateUserService {
   public async execute
-  (userData: IUserData) {
+  ({ name, email, password, phone }: IUserData) {
     const userRepository = getRepository(User)
 
-    const exists = await userRepository.findOne({
+    const emailExists = await userRepository.findOne({
       where: {
-        email: userData.email
+        email
       }
     })
 
-    if (exists) {
+    if (emailExists) {
       throw new AppError('O usuario já existe')
     }
 
-    userData.password = await hash(userData.password, 10)
+    const phoneExists = await userRepository.findOne({
+      where: {
+        phone
+      }
+    })
 
-    const user = userRepository.create(userData)
+    if (phoneExists) {
+      throw new AppError('O usuario já existe')
+    }
+
+    password = await hash(password, 10)
+
+    const user = userRepository.create({
+      name,
+      email,
+      password,
+      phone
+    })
 
     await userRepository.save(user)
 
