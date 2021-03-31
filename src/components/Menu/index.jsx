@@ -24,7 +24,11 @@ const Menu = () => {
     const [menuExpanded, setMenuExpanded] = useState(false)
 
     useEffect(()=>{
+
         timeline.current = gsap.timeline({paused: true})
+        .from([lineOne.current,lineTwo.current,lineThree.current], {
+            background: "#fff",
+        })
         .to(sidebar.current, {
             duration: 1.5,
             clipPath: `circle(200% at 16.3rem 3.7rem)`,
@@ -35,11 +39,13 @@ const Menu = () => {
             scaleX: 1.3,
             top: "50%",
             rotation: 45,
+            background: "#dd9ea1",
             ease: "power3"
         }, "<")
         .to(lineTwo.current, { 
             duration: 0.5,
             autoAlpha: 0,
+            background: "#dd9ea1",
             ease: "power3"
         }, "<")
         .to(lineThree.current, {
@@ -48,6 +54,7 @@ const Menu = () => {
             bottom: "0%",
             top: "50%",
             rotation: -45,
+            background: "#dd9ea1",
             ease: "power3",
         }, "<")
         .from(menuItems.current, {

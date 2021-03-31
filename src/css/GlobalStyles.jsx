@@ -4,7 +4,8 @@ const GlobalStyles = createGlobalStyle`
 
     :root {
         --bg-light-pink: #F1D7D8;
-        --bg-dark-pink: #e4b1b3;
+        --bg-pink: #e4b1b3;
+        --bg-dark-pink: #dd9ea1;
     }
 
     html, body, div, span, applet, object, iframe,

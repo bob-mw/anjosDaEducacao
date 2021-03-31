@@ -22,7 +22,7 @@ const Shape = styled.span`
   width: 100%;
   height: ${thickness}px;
   border-radius: 3px;
-  background: var(--bg-blue);
+  background: white;
 `
 
 export const Top = styled(Shape)`
