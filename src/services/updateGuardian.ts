@@ -11,11 +11,10 @@ interface IGuardianData {
   email: string;
   password: string;
   newPassword?: string;
-  phone: string;
 }
 
 class UpdateGuardianService {
-  public async execute ({ id, name, email, password, newPassword, phone }: IGuardianData) {
+  public async execute ({ id, name, email, password, newPassword }: IGuardianData) {
     const guardianRepository = getRepository(Guardian)
 
     const guardian = await guardianRepository.findOne({
@@ -46,25 +45,12 @@ class UpdateGuardianService {
       }
     }
 
-    if (guardian.phone !== phone) {
-      const exists = await guardianRepository.findOne({
-        where: {
-          phone
-        }
-      })
-
-      if (exists) {
-        throw new AppError('O número pertence a outro usuário', 401)
-      }
-    }
-
     if (newPassword) {
       guardian.password = await hash(newPassword, 10)
     }
 
     guardian.email = email
     guardian.name = name
-    guardian.phone = phone
 
     await guardianRepository.save(guardian)
 
