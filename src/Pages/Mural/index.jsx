@@ -23,20 +23,16 @@ const Store = ({ match }) => {
 
 const Mural = () => {
 
-    return (
-        <S.Background>
-            <S.LogoNavbar/>
-            <Menu/>
-            <S.Panel>
-                <S.Container>
-                    <AnimateSharedLayout type="crossfade">
-                        <Router>
-                            <Route path={["/mural/:id", "/mural"]} component={Store} />
-                        </Router>
-                    </AnimateSharedLayout>
-                </S.Container>
-            </S.Panel>
-        </S.Background>
+    return (  
+      <S.Panel>
+          <S.Container>
+              <AnimateSharedLayout type="crossfade">
+                  <Router>
+                      <Route path={["/mural/:id", "/mural"]} component={Store} />
+                  </Router>
+              </AnimateSharedLayout>
+          </S.Container>
+      </S.Panel>
     )
 }
 
