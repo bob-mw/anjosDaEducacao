@@ -18,9 +18,6 @@ class User {
   sons: string;
 
   @Column()
-  cpf: string;
-
-  @Column()
   phone: string;
 
   @CreateDateColumn()
