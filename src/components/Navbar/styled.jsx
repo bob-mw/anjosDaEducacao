@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import Logo from '../Logo'
+
 export const Container = styled.nav`
     position: absolute;
     width: 100%;
@@ -8,3 +10,9 @@ export const Container = styled.nav`
     left: 0;
 `
 
+export const LogoNavbar = styled(Logo)`
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+    width: 6rem;
+`
