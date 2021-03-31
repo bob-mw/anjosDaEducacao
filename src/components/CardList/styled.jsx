@@ -44,16 +44,19 @@ export const TitleContainer = styled(motion.div)`
     top: 15px;
     left: 15px;
     max-width: 300px;
-
-    p {
-        font-size: 1rem;
-    }
 `
 
 export const Name = styled.span`
     color: white;
     font-size: 2.5rem;
     text-transform: uppercase;
+`
+
+export const Description = styled.h2`
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding-top: 0.5rem;
 `
 
 export const CardOpenLink = styled(Link)`

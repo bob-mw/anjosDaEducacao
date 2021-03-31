@@ -19,8 +19,8 @@ const Card = ({ id, title, name, theme }) => {
             layoutId={`title-container-${id}`}
           >
             <S.Name>{name}</S.Name>
-            <h2>{title}</h2>
-            <p>Clique para abrir</p>
+            <S.Description>{title}</S.Description>
+            <S.Description>Clique para abrir</S.Description>
           </S.TitleContainer>
         </S.CardContent>
       </S.CardContentContainer>
