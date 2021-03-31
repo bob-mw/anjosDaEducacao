@@ -8,6 +8,7 @@ export const Container = styled.nav`
     height: 6rem;
     top: 0;
     left: 0;
+    z-index: 2;
 `
 
 export const LogoNavbar = styled(Logo)`
