@@ -6,6 +6,7 @@ const GlobalStyles = createGlobalStyle`
         --bg-light-pink: #F1D7D8;
         --bg-pink: #e4b1b3;
         --bg-dark-pink: #dd9ea1;
+        --bg-darker-pink:#a02a5fff;
     }
 
     html, body, div, span, applet, object, iframe,

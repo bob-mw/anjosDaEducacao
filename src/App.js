@@ -14,8 +14,8 @@ import PaymentForm from './Pages/PaymentForm';
 function App(){
     return (
       <Provider>
-        <Layout>
-          <BrowserRouter>
+        <BrowserRouter>
+          <Layout>
             <Switch>
               <Route exact path="/" component={ Login } />
               <Route path="/guardian" component={ RegisterGuardian } />
@@ -25,8 +25,8 @@ function App(){
               <Route path="/mural" component={ Mural } />
               <Route path="/paymentForm" component={ PaymentForm } />
             </Switch>
-          </BrowserRouter>
           </Layout>
+        </BrowserRouter>
       </Provider>
     );
 }

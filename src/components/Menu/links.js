@@ -1,11 +1,19 @@
 const links = [
     {
-      label: "Home",
+      label: "Projeto",
       url: "/",
     },
     {
       label: "Mural",
       url: "/mural",
+    },
+    {
+      label: "Guardiões",
+      url: "/guardian",
+    },
+    {
+      label: "Pais",
+      url: "/parents",
     },
   ]
   

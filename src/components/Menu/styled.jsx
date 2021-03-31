@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { NavLink } from 'react-router-dom'
 
 export const Sidebar = styled.div`
   position: absolute;
@@ -76,13 +77,13 @@ export const Item = styled.li`
   padding: 1rem 0;
   display: flex;
   font-size: 2rem;
-  color: var(--bg-dark-blue);
+  color: var(--bg-darker-pink);
 
   &:first-child {
       font-size: 3rem;
   }   
 `
-export const Link= styled.a`
+export const Link = styled(NavLink)`
   text-decoration: none !important;
   cursor: pointer;
   display: inline-block;
