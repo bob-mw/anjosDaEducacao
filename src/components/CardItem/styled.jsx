@@ -72,6 +72,14 @@ export const CardImageContainer = styled(motion.div)`
     }
 `
 
+export const CardImage = styled.img`
+    display: block;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    object-fit: cover;
+`
+
 export const TitleContainer = styled(motion.div)`
     color: white;
     position: absolute;

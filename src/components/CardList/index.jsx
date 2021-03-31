@@ -13,7 +13,7 @@ const Card = ({ id, title, name, theme }) => {
           <S.CardImageContainer
             layoutId={`card-image-container-${id}`}
           >
-            <img className="card-image" src={`/mural/${id}.jpg`} alt="" />
+            <S.CardImage src={`/mural/${id}.jpg`} alt="" />
           </S.CardImageContainer>
           <S.TitleContainer
             layoutId={`title-container-${id}`}

@@ -25,7 +25,7 @@ const CardItem = ({ id }) => {
         <S.CardContent layoutId={`card-container-${id}`}>
 
           <S.CardImageContainer layoutId={`card-image-container-${id}`}>
-            <img className="card-image" src={`/mural/${id}.jpg`} alt="" />
+            <S.CardImage src={`/mural/${id}.jpg`} alt="" />
           </S.CardImageContainer>
 
           <S.TitleContainer
