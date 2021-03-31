@@ -8,7 +8,7 @@ function NavBar() {
         <Navbar expand="" variant="light" className="shadow bg-yellow-clear fixed-top">
             <Container>
                 <Navbar.Brand href="#">
-                    <GiAngelWings style={{ 'font-size': '5rem' }} className="text-light" />
+                    <GiAngelWings style={{ 'font-size': '3rem' }} className="text-light" />
                 </Navbar.Brand>
                 <h1 className="text-light lobster text-border-pink">
                     Anjos da Educação

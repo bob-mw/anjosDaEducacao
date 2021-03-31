@@ -17,7 +17,7 @@ function FormsLogin() {
 
     return(
         <form className={ (formType === 'guardian') ? "d-flex flex-column justify-content-center align-items-center m-5 b-radius border border-light shadow p-5 bg-purple-clear" : "d-flex flex-column justify-content-center align-items-center m-5 b-radius border border-light shadow p-5 bg-green-clear" }>
-            <h3>{ (formType === 'guardian') ? "Entre como Anjo ou Cadastre-se" : "Entre como Protegido ou Cadastre-se" }</h3>
+            <h3>{ (formType === 'guardian') ? "Entre ou Cadastre-se para Doar" : "Entre ou Cadastre-se para Receber Doações" }</h3>
         <div className="form-group">
             <label for="email">
                 Email
