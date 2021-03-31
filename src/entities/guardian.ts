@@ -14,12 +14,6 @@ class Guardian {
   @Column()
   password: string;
 
-  @Column()
-  cpf: string;
-
-  @Column()
-  phone: string;
-
   @CreateDateColumn()
   created_at: Date;
 
