@@ -49,6 +49,18 @@ class UpdateUserService {
       user.email = email
     }
 
+    if (user.email !== email) {
+      const exists = await userRepository.findOne({
+        where: {
+          phone
+        }
+      })
+
+      if (exists) {
+        throw new AppError('Este número já está em uso')
+      }
+    }
+
     if (user.password !== password) {
       user.password = await hash(newPassword, 10)
     }
