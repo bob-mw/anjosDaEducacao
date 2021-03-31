@@ -86,10 +86,13 @@ export const TitleContainer = styled(motion.div)`
     top: 15px;
     left: 15px;
     max-width: 300px;
+`
 
-    p {
-        font-size: 1rem;
-    }
+export const Description = styled.h2`
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding-top: 0.5rem;
 `
 
 export const Name = styled.span`

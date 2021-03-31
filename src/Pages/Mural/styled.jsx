@@ -39,4 +39,9 @@ export const Title = styled.h1`
     @media only screen and (max-width: 900px) {
         font-size: 2rem;
     }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 1.5rem;
+        padding: 3rem 0 1rem 3rem;
+    }
 `

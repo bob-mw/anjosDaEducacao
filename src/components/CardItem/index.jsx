@@ -32,8 +32,8 @@ const CardItem = ({ id }) => {
             layoutId={`title-container-${id}`}
           >
             <S.Name>{name}</S.Name>
-            <h2>{title}</h2>
-            <p>Clique para fechar</p>
+            <S.Description>{title}</S.Description>
+            <S.Description>Clique para fechar</S.Description>
           </S.TitleContainer>
 
           <S.ContentContainer animate>
