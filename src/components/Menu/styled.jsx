@@ -103,7 +103,7 @@ export const Link= styled.a`
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: #0cf;
+		background-color: var(--bg-light-pink);
 		border-radius: 10rem;
 		z-index: -5;
 	}
@@ -114,7 +114,7 @@ export const Link= styled.a`
 		left: 0;
 		width: 0%;
 		height: 100%;
-		background-color: #65e0ff;
+		background-color: var(--bg-dark-pink);
 		transition: all .3s;
 		border-radius: 10rem;
 		z-index: -1;
