@@ -2,10 +2,11 @@ import React from 'react';
 
 function Jumbotron() {
     return (
-            <div className="text-center mx-5 mt-10">
-            <p className="lead">Você não pode mudar o mundo, mas pode mudar o mundo de alguém!</p>
+            <div className="text-center mx-5 mt-10 jumbotron">
+            <p className="lead text-pink">Você não pode mudar o mundo, mas pode mudar o mundo de alguém!</p>
             <hr className="my-4" />
-                <p>Nossa história há dois personagens: o Anjo da Guarda e a Criaça. O Anjo doa os materiais escolares que a criança precisa. Venha fazer parte desse cenario!</p>
+                <p><strong>Nossa história há dois personagens: o Guardião (doador) e o Anjinho (criança).</strong></p>
+                <p>A Criança precisa de materiais escolares para continuar seus estudos e o Guardião pode ajudar doando a as papelarias voarão para entregar à escola da criança</p>
             </div>
     );
 }
