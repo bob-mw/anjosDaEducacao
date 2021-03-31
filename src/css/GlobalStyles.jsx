@@ -3,9 +3,8 @@ import { createGlobalStyle } from "styled-components"
 const GlobalStyles = createGlobalStyle`
 
     :root {
-        --bg-dark-blue: #7F7FD5;
-        --bg-blue: #86A8E7;
-        --bg-light-blue: #91EAE4;
+        --bg-light-pink: #F1D7D8;
+        --bg-dark-pink: #e4b1b3;
     }
 
     html, body, div, span, applet, object, iframe,
