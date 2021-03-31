@@ -13,6 +13,15 @@ export const Sidebar = styled.div`
   clip-path: circle(0 at 16.3rem 3.7rem);
 `
 
+export const Description = styled.p`
+  position: absolute;
+  top: 5.5rem;
+  right: 2rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: white;
+`
+
 const thickness = 4;
 
 const Shape = styled.span`

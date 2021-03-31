@@ -80,6 +80,7 @@ const Menu = () => {
                 <S.Middle ref={lineTwo}></S.Middle>
                 <S.Bottom ref={lineThree}></S.Bottom>
             </S.ToggleBtn>
+            <S.Description>Menu</S.Description>
             <S.Sidebar ref={sidebar}>
                 <S.List>
                         <S.Item>Navegação</S.Item>
