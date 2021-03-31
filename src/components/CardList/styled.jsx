@@ -26,13 +26,13 @@ export const CardImageContainer = styled(motion.div)`
     top: 0;
     left: 0;
     overflow: hidden;
-    height: 420px;
+    height: 100%;
     width: 100vw;
 `
 
 export const CardImage = styled.img`
     display: block;
-    height: auto;
+    height: 100%;
     width: auto;
     max-width: 100%;
     object-fit: cover;
