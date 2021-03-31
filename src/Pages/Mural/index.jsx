@@ -25,6 +25,7 @@ const Mural = () => {
 
     return (  
       <S.Panel>
+          <S.Title>Mural de depoimentos</S.Title>
           <S.Container>
               <AnimateSharedLayout type="crossfade">
                   <Router>

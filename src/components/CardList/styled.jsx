@@ -89,4 +89,5 @@ export const Item = styled.li`
         padding: 10px;
         padding-left: 0;
         padding-right: 0;
+    }
 `

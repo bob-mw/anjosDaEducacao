@@ -12,6 +12,7 @@ export const LogoNavbar = styled(Logo)`
 export const Panel = styled.div`
     position: relative;
     display:flex;
+    flex-direction: column;
     justify-content: center;
     min-height: 80vh;
     width: 90%;
@@ -23,4 +24,15 @@ export const Panel = styled.div`
 export const Container = styled.div`
     flex: 1 1 100%;
     padding: 45px 25px;
+`
+
+export const Title = styled.h1`
+    position: relative;
+    color: var(--bg-darker-pink);
+    font-size: 4rem;
+    padding: 2rem 0 1rem 3rem;
+
+    @media only screen and (max-width: 900px) {
+        font-size: 2rem;
+    }
 `
