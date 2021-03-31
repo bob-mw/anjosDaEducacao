@@ -49,12 +49,12 @@ background: #f1d7d8ff;
 }
 
 .margin-top-main {
-  margin-top: 100px;
+  margin-top: 50px;
   overflow-x: hidden;
 }
 
 .full-screen {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 /* Retirar setas do input type=number https://pt.stackoverflow.com/questions/177573/retirar-as-setas-no-campo-tipo-number */

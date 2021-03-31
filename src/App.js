@@ -8,21 +8,23 @@ import RegisterResponsable from './Pages/RegisterResponsable';
 import ResponsableDetails from './Pages/ResponsableDetails';
 import WishList from './Pages/WishList';
 import Mural from './Pages/Mural'
+import PaymentForm from './Pages/PaymentForm';
 
 
 function App(){
     return (
       <Provider>
         <NavBar />
-        <main className="gradient-sky margin-top-main w-100"> 
+        <main className="gradient-sky margin-top-main full-screen w-100"> 
           <BrowserRouter>
             <Switch>
               <Route exact path="/" component={ Login } />
-              <Route path="/registerGuardian" component={ RegisterGuardian } />
-              <Route path="/registerResponsabe" component={ RegisterResponsable } />
-              <Route path="/responsableDetails" component={ ResponsableDetails } />
+              <Route path="/guardian" component={ RegisterGuardian } />
+              <Route path="/parents" component={ RegisterResponsable } />
+              <Route path="/parentDetails" component={ ResponsableDetails } />
               <Route path="/wishList" component={ WishList } />
               <Route path="/mural" component={ Mural } />
+              <Route path="/paymentForm" component={ PaymentForm } />
             </Switch>
           </BrowserRouter>
         </main>

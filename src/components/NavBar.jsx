@@ -16,9 +16,9 @@ function NavBar() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link className="btn btn-light m-3" href="#">Conheça o Projeto</Nav.Link>
-                        <Nav.Link className="btn btn-light m-3" href="/registerGuardian">Seja um Doador</Nav.Link>
-                        <Nav.Link className="btn btn-light m-3" href="/registerResponsabe">Cadastrar Protegidos</Nav.Link>
+                        <Nav.Link className="btn btn-light m-3" href="/">Conheça o Projeto</Nav.Link>
+                        <Nav.Link className="btn btn-light m-3" href="/guardian">Seja um Doador</Nav.Link>
+                        <Nav.Link className="btn btn-light m-3" href="/parents">Cadastrar Protegidos</Nav.Link>
                         <Nav.Link className="btn btn-light m-3" href="#">Renovar Cadastro</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
