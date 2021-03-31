@@ -9,15 +9,8 @@ export const LogoNavbar = styled(Logo)`
     width: 6rem;
 `
 
-export const Background = styled.main`
-    min-height: 100vh;
-    background: linear-gradient(to right top, var(--bg-dark-blue), var(--bg-blue), var(--bg-light-blue));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-`
-
 export const Panel = styled.div`
+    position: relative;
     display:flex;
     justify-content: center;
     min-height: 80vh;

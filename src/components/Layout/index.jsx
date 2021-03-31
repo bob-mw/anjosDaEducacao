@@ -11,7 +11,7 @@ const Layout = ({children}) => {
             <GlobalStyles/>
             <S.Background>
                 <Navbar/> 
-                {children}
+                <S.Container>{children}</S.Container>
             </S.Background>
         </>
     )

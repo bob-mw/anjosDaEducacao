@@ -7,3 +7,11 @@ export const Background = styled.main`
     align-items: center;
     justify-content: center;
 `
+
+export const Container = styled.main`
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 6rem;
+`

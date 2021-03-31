@@ -5,10 +5,10 @@ import Logo from '../Logo'
 export const Container = styled.nav`
     position: absolute;
     width: 100%;
-    height: 6rem;
+    height: 8rem;
+    padding-bottom: 2rem;
     top: 0;
     left: 0;
-    z-index: 2;
 `
 
 export const LogoNavbar = styled(Logo)`
