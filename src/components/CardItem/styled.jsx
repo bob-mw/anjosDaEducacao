@@ -35,12 +35,13 @@ export const CardContentContainer = styled.div`
     left: 0;
     right: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 5;
     overflow: hidden;
     padding: 40px 0;
 
     @media only screen and (max-width: 600px) {
         padding: 0;
+        top: 0;
     }
 `
 
