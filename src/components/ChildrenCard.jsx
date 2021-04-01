@@ -41,7 +41,7 @@ function ChildrenCard() {
 
                             <hr />
 
-                            <a href="#" className="btn btn-success w-100"> Doar</a>
+                            <a href="#" className="btn w-100" style={ { background: '#f1d7d8ff'} }> Doar</a>
                         </div>
                     </div>
                 ))
