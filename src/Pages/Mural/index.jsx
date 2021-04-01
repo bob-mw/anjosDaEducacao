@@ -24,7 +24,7 @@ const Store = ({ match }) => {
 const Mural = () => {
 
     return (  
-      <S.Panel>
+      <>
           <S.Title>Mural de depoimentos</S.Title>
           <S.Container>
               <AnimateSharedLayout type="crossfade">
@@ -33,7 +33,7 @@ const Mural = () => {
                   </Router>
               </AnimateSharedLayout>
           </S.Container>
-      </S.Panel>
+      </>
     )
 }
 

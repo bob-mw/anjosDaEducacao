@@ -28,7 +28,7 @@ function ResponsableDetails() {
     }, [])
 
     return (
-        <section className="p-5 m-auto shadow d-flex flex-column justify-content-center align-items-center">
+        <section className="p-5 m-auto d-flex flex-column justify-content-center align-items-center">
             <h1>
                 Olá,
             </h1>
