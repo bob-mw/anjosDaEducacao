@@ -20,6 +20,10 @@ my configurations:
   -webkit-text-stroke-color: #e83e8c;
 }
 
+.form-width {
+  max-width: 400px;
+}
+
 .b-radius {
   border-radius: 15px;
 }

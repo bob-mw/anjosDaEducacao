@@ -14,8 +14,8 @@ function RegisterForms() {
 
 
     const handleClick = () => {
-        const { name, email, password, confirmPassword , phone, cpf } = register
-        CreateService.execute({ name, email, password, confirmPassword , phone, cpf, registerType })
+        const { name, email, password, confirmPassword , phone } = register
+        CreateService.execute({ name, email, password, confirmPassword , phone, registerType })
         
     }
 
@@ -26,49 +26,48 @@ function RegisterForms() {
 
 
     return (
-        <form className="d-flex flex-column justify-content-center align-items-center p-5 ">
-            <h3>{ (registerType === 'guardian') && "Cadastro de Guardião" || "Cadastro de Pais da Criança" }</h3>
+        <section className="d-flex flex-column justify-content-center align-items-center">
+            <div className="text-center">
+            <h3 className="display-4">{ (registerType === 'guardian') && "Cadastro de Guardião" || "Cadastro de Pais da Criança" }</h3>
+            </div>
+            <hr/>
+        <form className="d-flex flex-column justify-content-center align-items-center p-5 bg-light b-radius m-5 form-width shadow">
             <div className="form-group">
                 <label for="cpf">
                     Nome
-             <input type="text" name="name" className="form-control" id="nome" placeholder="digite seu nome" onChange={handleChange} />
-                </label>
-            </div>
-            <div className="form-group">
-                <label for="cpf">
-                    CPF
-             <input type="number" name="cpf" className="form-control" id="cpf" placeholder="digite seu cpf" onChange={handleChange} />
+             <input type="text" name="name" className="form-control" id="nome" placeholder="Nome Completo" onChange={handleChange} />
                 </label>
             </div>
             <div className="form-group">
                 <label for="email">
                     Email
-             <input type="email" name="email" className="form-control" id="email" placeholder="digite seu email" onChange={handleChange} />
+             <input type="email" name="email" className="form-control" id="email" placeholder="email@dominio.com" onChange={handleChange} />
                 </label>
             </div>
             <div className="form-group">
                 <label for="whatsapp">
-                    Telefone
-             <input type="number" name="phone" className="form-control" id="whatsapp" placeholder="digite seu telefone" onChange={handleChange} />
+                    Cel
+             <input type="number" name="phone" className="form-control" id="whatsapp" placeholder="Somente Números" onChange={handleChange} />
                 </label>
             </div>
             <div className="form-group">
                 <label for="password">
                     Senha
-            <input type="password" name="password" className="form-control" id="password" placeholder="digite sua senha" onChange={handleChange} />
+            <input type="password" name="password" className="form-control" id="password" placeholder="Minimo de 6 Digitos" onChange={handleChange} />
                 </label>
             </div>
             <div className="form-group">
                 <label for="password">
                     Confirmar Senha
-            <input type="password" name="confirmPassword" className="form-control" id="confirmPassword" placeholder="confirme sua senha" onChange={handleChange} />
+            <input type="password" name="confirmPassword" className="form-control" id="confirmPassword" placeholder="Confirme sua Senha" onChange={handleChange} />
                 </label>
             </div>
 
             <div>
-                <button type="button" className="btn btn-warning m-3" onClick={handleClick} disabled={ !formValidation }>Cadastrar</button>
+                <button type="button" className="btn border border-white m-3 " onClick={handleClick} style={ {  background: '#f1d7d8ff', 'border-radius': '5rem' }} disabled={ !formValidation }>Finalizar Cadastro</button>
             </div>
         </form>
+        </section>
     );
 }
 
