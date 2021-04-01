@@ -58,7 +58,7 @@ const Menu = () => {
             ease: "power3",
         }, "<")
         .from(menuItems.current, {
-            duration: 0.2,
+            duration: 0.1,
             stagger: 0.1,
             y: 30, 
             autoAlpha: 0,
@@ -86,7 +86,7 @@ const Menu = () => {
                         <S.Item>Navegação</S.Item>
                         {links.map((link, index) => (
                             <S.Item key={index} ref={addToMenuItems}>
-                                <S.Link to={link.url}>{link.label}</S.Link>
+                                <S.Link to={link.url} onClick={() => setMenuExpanded(!menuExpanded)}>{link.label}</S.Link>
                             </S.Item>
                         ))}
                     </S.List>
