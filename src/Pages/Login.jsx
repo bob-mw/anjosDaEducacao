@@ -5,7 +5,7 @@ import context from  '../context/context';
 import Jumbotron from '../components/Jumbotron';
 
 function Login() {
-    const { setFormType } = useContext(context);
+    const { setFormType, formType } = useContext(context);
 
     const formAngel = () => {
         setFormType('guardian');
@@ -18,12 +18,13 @@ function Login() {
     return (
         <section className="d-flex flex-column justify-content-center align-items-center">
             <Jumbotron />
-           <img src={ angel } width="75%" alt="logo"/>
+           { 
+               (!formType) ? <img src={ angel } width="75%" alt="logo"/> : <FormsLogin />
+           }
            <div className="d-flex w-50 justify-content-around m-3">
                 <button type="button" className="btn btn-light btn-outline-secondary p-3 m-3" onClick={ formKid }><p className="text-pink text-uppercase">Anjinho:</p> Criança</button>
                 <button type="button" className="btn btn-light btn-outline-secondary p-3 m-3" onClick={ formAngel }><p className="text-pink text-uppercase">Guardião:</p>  Doador</button>
             </div>
-            <FormsLogin />
         </section>
     );
 }
