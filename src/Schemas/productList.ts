@@ -11,12 +11,14 @@ const productListSchema = new Schema({
   },
   name: {
     type: String,
-    required: true,
-    uppercase: true
+    required: true
   },
-  prodcuts: [
-    product
+  products: [
+    product.schema
   ]
+},
+{
+  timestamps: true
 })
 
 export default mongoose.model<ProductList>('ProductList', productListSchema)

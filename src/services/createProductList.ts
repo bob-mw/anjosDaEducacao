@@ -14,11 +14,14 @@ interface IProductListData {
 
 class CreateProductListService {
   async execute ({ owner, name, products }: IProductListData) {
+    console.log(owner, name, products)
     const productList = await ProductList.create({
       owner,
       name,
       products
     })
+
+    console.log('Service end')
 
     return productList
   }

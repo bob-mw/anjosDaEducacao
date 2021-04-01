@@ -4,6 +4,7 @@ import userController from '@controllers/user'
 import guardianController from '@controllers/guardian'
 import storeController from '@controllers/store'
 import listController from '@controllers/list'
+import prodcutController from '@controllers/product'
 
 import authMiddleware from '@middlewares/auth'
 
@@ -29,6 +30,8 @@ routes.post('/store', storeController.create)
 routes.post('/store/authentication', storeController.session)
 routes.put('/store', authMiddleware, storeController.update)
 routes.get('/store', authMiddleware, storeController.show)
+
+routes.post('/product', authMiddleware, prodcutController.create)
 
 routes.get('/list', listController.show)
 

@@ -1,9 +1,11 @@
 import { createConnection } from 'typeorm'
-import { connect } from 'mongodb'
+import { connect } from 'mongoose'
 
 createConnection()
 
-connect('mongodb://localhost:27017/angels', {
+connect('mongodb://mongoadmin:secret@localhost:27017/', {
+  useCreateIndex: true,
+  useFindAndModify: true,
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
