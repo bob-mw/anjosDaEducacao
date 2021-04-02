@@ -2,8 +2,9 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     flex: 1 1 100%;
-    padding: 2rem;
     width: 100%;
+    padding: 0 2rem;
+    margin: 5rem 0;
 `
 
 export const Title = styled.h1`
