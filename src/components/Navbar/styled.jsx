@@ -11,13 +11,23 @@ export const Container = styled.nav`
     left: 0;
 `
 
-export const LogoNavbar = styled(Logo)`
+export const Wrapper = styled.div`
     position: absolute;
     top: 1rem;
     left: 2rem;
+    display: flex;
+    align-items: center;
+
+`
+
+export const LogoNavbar = styled(Logo)`
     width: 6rem;
 `
 
 export const Name = styled.span`
     display: inline-block;
+    color: white;
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding-left: 2rem;
 `

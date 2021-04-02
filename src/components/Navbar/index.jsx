@@ -7,8 +7,10 @@ const Navbar = () => {
     
     return (
         <S.Container>
-            <S.LogoNavbar/>
-            <S.Name>Anjos da Educação</S.Name>
+            <S.Wrapper>
+                <S.LogoNavbar/>
+                <S.Name>Anjos da Educação</S.Name>
+            </S.Wrapper>
             <Menu/>
         </S.Container>
     )
