@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
-import context from '../context/context';
-import schema from '../valitations/createUser';
-import CreateService from '../services/create';
+import context from '../../context/context';
+import schema from '../../valitations/createUser';
+import CreateService from '../../services/create';
 
 function RegisterForms() {
 
