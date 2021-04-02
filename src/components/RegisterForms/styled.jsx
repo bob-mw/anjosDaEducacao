@@ -30,7 +30,6 @@ export const Form = styled.form`
     flex-direction: column;
     justify-content: center;
     align-items:center;
-    max-width: 50%;
     padding: 5rem;
     margin: 5rem 0;
     border-radius: 2rem;
