@@ -104,7 +104,7 @@ export const Link = styled(NavLink)`
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: var(--bg-light-pink);
+		background-color: var(--bg-lighter-orange);
 		border-radius: 10rem;
 		z-index: -5;
 	}
@@ -115,7 +115,7 @@ export const Link = styled(NavLink)`
 		left: 0;
 		width: 0%;
 		height: 100%;
-		background-color: var(--bg-dark-pink);
+		background-color: var(--bg-dark-orange);
 		transition: all .3s;
 		border-radius: 10rem;
 		z-index: -1;
