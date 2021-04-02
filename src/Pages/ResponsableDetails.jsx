@@ -35,7 +35,7 @@ function ResponsableDetails() {
             <h1>Fazer pedido para meus filhos</h1>
 
             <hr/>
-            <form action="" className="bg-light b-radius p-5 my-5 d-flex flex-column justify-content-center align-items-center form-min-hight form-width">
+            <form action="" className="bg-light b-radius p-5 my-5 d-flex flex-column justify-content-center align-items-center    ">
 
                 <div className="row flex-column justify-content-around align-items-center">
 

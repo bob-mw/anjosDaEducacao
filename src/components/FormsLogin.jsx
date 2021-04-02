@@ -26,7 +26,7 @@ function FormsLogin() {
             <div className="text-center lead">
             <h3>{ (formType === 'guardian') ? "Doador" : "Peça Doações" }</h3>
             </div>
-        <form className="d-flex flex-column justify-content-center align-items-center m-5 b-radius border border-light shadow p-5 form-width bg-light">
+        <form className="d-flex flex-column justify-content-center align-items-center m-5 b-radius border border-light shadow p-5   bg-light">
             
         <div className="form-group">
             <label for="email">

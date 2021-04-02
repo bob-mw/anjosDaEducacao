@@ -31,7 +31,7 @@ function RegisterForms() {
             <h3 className="display-4">{ (registerType === 'guardian') && "Cadastro de Guardião" || "Cadastro de Pais da Criança" }</h3>
             </div>
             <hr/>
-        <form className="d-flex flex-column justify-content-center align-items-center p-5 bg-light b-radius m-5 form-width shadow">
+        <form className="d-flex flex-column justify-content-center align-items-center p-5 bg-light b-radius m-5   shadow">
             <div className="form-group">
                 <label for="cpf">
                     Nome

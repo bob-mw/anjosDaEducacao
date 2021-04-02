@@ -20,13 +20,8 @@ my configurations:
   -webkit-text-stroke-color: #e83e8c;
 }
 
-.form-width {
-  max-width: 600px;
-  width: 600px;;
-}
-
-.form-min-hight {
-  height: 1000px;
+.methodPayment-width {
+  width: 11rem;
 }
 
 .b-radius {

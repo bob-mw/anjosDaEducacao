@@ -27,7 +27,7 @@ function PaymentForm() {
                 <div className="text-center my-5">
                 <h1>Infomações do Cartão</h1>
                 </div>
-            <div className="row align-items-center p-5 m-5" id="PaymentForm">
+            <div className="row align-items-center" id="PaymentForm">
 
             <Cards
                     cvc={cvc}

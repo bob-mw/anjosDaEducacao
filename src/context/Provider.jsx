@@ -11,6 +11,7 @@ function Provider({ children }) {
     const [ childrenRegister, setChildrenRegister ] = useState([]);
     const [ registerType, setRegisterType ] = useState('');
     const [ authLogin, setAuthLogin ] = useState({});
+    const [ idLittleCow, setIdLittleCow ] = useState(0);
 
     const value = {
         formType,
@@ -24,7 +25,9 @@ function Provider({ children }) {
         registerType,
         setRegisterType,
         authLogin,
-        setAuthLogin 
+        setAuthLogin,
+        idLittleCow,
+        setIdLittleCow
     };
 
     return(
