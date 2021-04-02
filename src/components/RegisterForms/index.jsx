@@ -32,7 +32,6 @@ const RegisterForms = () => {
             <S.TextCenter>
             <S.Title>{ (registerType === 'guardian') && "Cadastro de Guardião" || "Cadastro de Pais da Criança" }</S.Title>
             </S.TextCenter>
-            <hr/>
         <S.Form>
             <div className="form-group">
                 <label for="cpf">

@@ -10,7 +10,7 @@ export const Title = styled.h1`
     position: relative;
     color: var(--bg-darker-pink);
     font-size: 4rem;
-    padding: 2rem 0 1rem 3rem;
+    padding-top: 2rem;
 
     @media only screen and (max-width: 1200px) {
         font-size: 3rem;
