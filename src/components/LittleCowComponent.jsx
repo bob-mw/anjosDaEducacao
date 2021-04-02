@@ -69,7 +69,7 @@ function littleCow() {
 
                     </div>
 
-                    <section className="border border-primary p-2 b-radius methodPayment-width mx-auto my-5">
+                    <section className="border border-primary p-2 b-radius   boxInputRadio-width mx-auto my-5">
                         <h1 className="text-center">Método de Pagamento</h1>
                         <div className="my-3">
 

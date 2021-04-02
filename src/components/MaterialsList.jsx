@@ -4,15 +4,6 @@ import context from '../context/context';
 
 function MaterialsList() {
 
-    const styleList = {
-        "min-height": "300px",
-        "max-width": "80%",
-        "min-width": "80%",
-        "background": "rgb(85 85 85 / 19%)",
-        "border-radius": "1.3rem",
-        "margin-bottom": "40px"
-    }
-
     const { childrenRegister, setChildrenRegister } = useContext(context);
 
     const { teaching } = childrenRegister;
@@ -24,61 +15,41 @@ function MaterialsList() {
             (teaching === 'EM') && setChildrenRegister({ ...childrenRegister, materials: EM })
     }, [teaching])
 
-    const EF_List = () => {
+
+    const list = () => {
+        let childrenMaterials = [];
+
+        (teaching === 'EF') ? childrenMaterials = EF : undefined;
+        (teaching === 'F1') ? childrenMaterials = F1 : undefined;
+        (teaching === 'F2') ? childrenMaterials = F2 : undefined;
+        (teaching === 'EM') ? childrenMaterials = EM : undefined;
 
         return (
-            <div style={styleList}>
-                <ul>
-                    {
-                        EF.map((item, index) => <li key={index}>{item.amount} - {item.name}</li>)
-                    }
-                </ul>
-            </div>
-        );
-    }
-
-    const F1_List = () => {
-
-        return (
-            <div style={styleList}>
-                <ul>
-                    {
-                        F1.map((item, index) => <li key={index}>{item.amount} - {item.name}</li>)
-                    }
-                </ul>
-            </div>
-        );
-    }
-
-    const F2_List = () => {
-        return (
-            <div style={styleList}>
-                <ul>
-                    {
-                        F2.map((item, index) => <li key={index}>{item.amount} - {item.name}</li>)
-                    }
-                </ul>
-            </div>
-        );
-    }
-
-    const EM_List = () => {
-        return (
-            <div style={styleList}>
-                <ul>
-                    {
-                        EM.map((item, index) => <li key={index}>{item.amount} - {item.name}</li>)
-                    }
-                </ul>
-            </div>
+            
+            <table class="table table-bordered table-hover text-center">
+            <thead>
+                <tr>
+                    <th>Quantidade</th>
+                    <th>Material</th>
+                </tr>
+            </thead>
+            <tbody>
+                {
+                    childrenMaterials.map((material, index) => (
+                        <tr key={index}>
+                            <td>{material.amount}</td>
+                            <td>{material.name}</td>
+                        </tr>
+                    ))
+                }
+            </tbody>
+        </table>
+         
         );
     }
 
     return (
-        (teaching === 'EF') && EF_List() ||
-        (teaching === 'F1') && F1_List() ||
-        (teaching === 'F2') && F2_List() ||
-        (teaching === 'EM') && EM_List()
+        list(teaching)
     );
 }
 

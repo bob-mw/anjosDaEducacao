@@ -20,8 +20,9 @@ my configurations:
   -webkit-text-stroke-color: #e83e8c;
 }
 
-.methodPayment-width {
+.boxInputRadio-width {
   width: 11rem;
+  min-height: 11rem;
 }
 
 .b-radius {
