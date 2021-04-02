@@ -14,21 +14,23 @@ const Navbar = () => {
 
     useEffect(() => {
         gsap.to(nameRef.current, {
-            duration: 1.5, 
+            duration: 1.5,
             text: name,
             ease: "power3.out",
             delay: 2
         })
 
     }, [])
-    
+
     return (
         <S.Container>
             <S.Wrapper>
-                <S.LogoNavbar/>
+                <a href="/">
+                    <S.LogoNavbar />
+                </a>
                 <S.Name ref={nameRef}></S.Name>
             </S.Wrapper>
-            <Menu/>
+            <Menu />
         </S.Container>
     )
 }
