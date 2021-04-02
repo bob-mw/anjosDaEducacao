@@ -3,11 +3,12 @@ import { LoremIpsum } from 'react-lorem-ipsum'
 import { Link } from 'react-router-dom'
 
 import * as S from './styled'
+
 import { items } from '../../Pages/Mural/data'
 
 
 const CardItem = ({ id }) => {
-  const { name, title } = items.find(item => item.id === id)
+  const { city, name, age, state } = items.find(item => item.id === id)
 
   return (
     <>
@@ -32,7 +33,7 @@ const CardItem = ({ id }) => {
             layoutId={`title-container-${id}`}
           >
             <S.Name>{name}</S.Name>
-            <S.Description>{title}</S.Description>
+            <S.Description>{`${age} anos, ${city}, ${state}`}</S.Description>
             <S.Description>Clique para fechar</S.Description>
           </S.TitleContainer>
 

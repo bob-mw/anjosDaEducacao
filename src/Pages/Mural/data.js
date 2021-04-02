@@ -1,60 +1,68 @@
 export const items = [
   {
-    id: "c",
-    name: "Pedro",
-    title: "10 anos, São Paulo",
-    pointOfInterest: 80,
-    backgroundColor: "#814A0E"
+      id: "a",
+      city: "São Paulo",
+      name: "Pedro",
+      age: 5,
+      state: "SP",
   },
   {
-    id: "f",
-    name: "Jonathas",
-    title: "10 anos, São Paulo",
-    pointOfInterest: 120,
-    backgroundColor: "#959684"
+      id: "b",
+      city: "São Paulo",
+      name: "Miguel",
+      age: 8,
+      state: "SP",
   },
+
   {
-    id: "a",
-    name: "Paulo",
-    title: "10 anos, São Paulo",
-    pointOfInterest: 260,
-    backgroundColor: "#5DBCD2"
+      id: "c",
+      city: "São Paulo",
+      name: "João Pedro",
+      age: 4,
+      state: "SP",
   },
+
   {
-    id: "g",
-    name: "Maria",
-    title: "10 anos, São Paulo",
-    pointOfInterest: 200,
-    backgroundColor: "#8F986D"
+      id: "d",
+      city: "São Paulo",
+      name: "Iasmin",
+      age: 7,
+      state: "SP",
   },
+
   {
-    id: "d",
-    name: "Julia",
-    title: "10 anos, São Paulo",
-    pointOfInterest: 150,
-    backgroundColor: "#FA6779"
+      id: "e",
+      city: "Osasco",
+      name: "Sérgio",
+      age: 5,
+      state: "SP",
+      teaching: "EM",
   },
+
   {
-    id: "h",
-    name: "Ricardo",
-    title: "10 anos, São Paulo",
-    pointOfInterest: 60,
-    backgroundColor: "#282F49"
+      id: "f",
+      city: "Guarulhos",
+      name: "Murilo",
+      age: 5,
+      state: "SP",
   },
+
   {
-    id: "e",
-    name: "Iasmin",
-    title: "10 anos, São Paulo",
-    pointOfInterest: 200,
-    backgroundColor: "#AC7441"
+      id: "g",
+      city: "Diadema",
+      name: "Roberto",
+      age: 5,
+      state: "SP",
   },
+
   {
-    id: "b",
-    name: "Tatiana",
-    title: "10 anos, São Paulo",
-    pointOfInterest: 260,
-    backgroundColor: "#CC555B"
-  }
+      id: "h",
+      city: "São Caetano do Sul",
+      name: "Joana",
+      age: 6,
+      state: "SP",
+  },
+
 ];
 
 export const openSpring = { type: "spring", stiffness: 200, damping: 30 };
