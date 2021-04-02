@@ -30,4 +30,12 @@ export const Name = styled.span`
     font-size: 2rem;
     text-transform: uppercase;
     padding-left: 2rem;
+
+    @media only screen and (max-width: 900px) {
+        font-size: 1.5rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        display: none;
+    }
 `
