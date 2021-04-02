@@ -10,7 +10,11 @@ const Layout = ({children}) => {
         <>
             <GlobalStyles/>
             <S.Background>
+                <S.LogoContainer>
+                    <S.LogoBackground/>
+                </S.LogoContainer>
                 <Navbar/> 
+                <S.Blur/>
                 <S.Container>
                     <S.Panel>
                         {children}

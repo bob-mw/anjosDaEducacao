@@ -4,45 +4,39 @@ import { motion } from 'framer-motion'
 export const Overlay = styled(motion.div)`
     z-index: 1;
     position: fixed;
-    will-change: opacity;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+
+    height: 100%;
     width: 100%;
 
     a {
         display: block;
         position: fixed;
+        width: 100%;
+        height: 100%;
+
+        left: 50%;
+        transform: translateX(-50%);
         top: 0;
         bottom: 0;
-        width: 100vw;
-        left: 50%;
 
-        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.4);
+        will-change: opacity;
     }
 
 `
 
 export const CardContentContainer = styled.div`
-    width: 100%;
-    height: 100%;
-    position: relative;
+    position: fixed;
     display: block;
     pointer-events: none;
 
-    top: 6rem;
+    top: 50vh;
+    transform:translateY(-50%);
     left: 0;
     right: 0;
-    position: fixed;
+
     z-index: 5;
     overflow: hidden;
-    padding: 40px 0;
-
-    @media only screen and (max-width: 600px) {
-        padding: 0;
-        top: 0;
-    }
 `
 
 export const CardContent = styled(motion.div)`
@@ -65,8 +59,8 @@ export const CardImageContainer = styled(motion.div)`
     top: 0;
     left: 0;
     overflow: hidden;
-    height: 420px;
-    width: 100vw;
+    max-height: 400px;
+    max-width: 100vw;
 
     @media only screen and (max-width: 600px) {
         height:300px
@@ -103,11 +97,11 @@ export const Name = styled.span`
 `
 
 export const ContentContainer = styled(motion.div)`
-    padding: 28rem 2rem 2rem 2rem;
+    padding: 26rem 2rem 2rem 2rem;
     max-width: 43rem;
     width: 90vw;
 
     @media only screen and (max-width: 600px) {
-        padding: 20rem 2rem 10rem 2rem;
+        padding: 20rem 2rem 2rem 2rem;
     }
 `

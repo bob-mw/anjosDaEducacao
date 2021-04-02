@@ -22,8 +22,6 @@ const transition = {
 
 const Logo = (props) => {
   return (
-    <S.Link to="/">
-
       <motion.svg
         id="Logo"
         xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +99,6 @@ const Logo = (props) => {
           />
         </g>
       </motion.svg>
-    </S.Link>
   )
 }
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Provider from './context/Provider';
 import Layout from './components/Layout';
-import Login from './Pages/Login';
+import Login from './Pages/Login/index';
 import RegisterGuardian from './Pages/RegisterGuardian';
 import RegisterResponsable from './Pages/RegisterResponsable';
 import ResponsableDetails from './Pages/ResponsableDetails';
