@@ -6,29 +6,29 @@ interface IMaterialData {
 }
 
 interface IMaterialListData {
-  listName: string;
+  teaching: string;
   materials: [IMaterialData]
 }
 
 class CreateMaterialListValidation {
-  async isValid ({ listName, materials }: IMaterialListData) {
+  async isValid ({ teaching, materials }: IMaterialListData) {
     if (
-      listName !== 'EI' &&
-      listName !== 'F1' &&
-      listName !== 'F2' &&
-      listName !== 'EM'
+      teaching !== 'EI' &&
+      teaching !== 'F1' &&
+      teaching !== 'F2' &&
+      teaching !== 'EM'
     ) {
       return false
     }
 
-    if (materials.length !== lists[listName].length) {
+    if (materials.length !== lists[teaching].length) {
       return false
     }
 
-    for (let i = 0; i < lists[listName].length; i++) {
+    for (let i = 0; i < lists[teaching].length; i++) {
       if (
-        materials[i].name !== lists[listName][i].name ||
-        materials[i].amount > lists[listName][i].amount
+        materials[i].name !== lists[teaching][i].name ||
+        materials[i].amount > lists[teaching][i].amount
       ) {
         return false
       }

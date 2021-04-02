@@ -7,8 +7,7 @@ const materialSchema = new Schema(
       required: true
     },
     cost: {
-      type: Number,
-      required: true
+      type: Number
     },
     amount: {
       type: Number,

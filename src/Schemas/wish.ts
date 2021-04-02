@@ -31,7 +31,6 @@ const RequestSchema = new Schema(
     ],
     collected: {
       type: Number,
-      required: true,
       default: 0
     },
     finished: {
