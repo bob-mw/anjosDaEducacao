@@ -32,8 +32,9 @@ export const Panel = styled.div`
     width: 90%;
     margin: 5rem 0;
     border-radius: 2rem;
+    /*
     background: linear-gradient(to left bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
-    box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.15); */
 `
 
 export const Blur = styled.div`
@@ -58,4 +59,5 @@ export const LogoBackground = styled(Logo)`
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+
 `

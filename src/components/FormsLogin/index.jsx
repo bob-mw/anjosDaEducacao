@@ -7,7 +7,7 @@ import * as S from './styled'
 
 const FormsLogin = () => {
 
-    const { formType, authLogin, setAuthLogin, formValidation, setFormValidation  } = useContext(context);
+    const { authLogin, setAuthLogin, formValidation, setFormValidation  } = useContext(context);
 
     const handleChange = ({ target: { name, value } }) => {
         setAuthLogin({ ...authLogin, [name]: value })
@@ -25,9 +25,6 @@ const FormsLogin = () => {
 
     return(
         <>
-            <S.TextCenter>
-                <S.Title>{ (formType === 'guardian') ? "Doador" : "Peça Doações" }</S.Title>
-            </S.TextCenter>
         <S.Form>         
         <S.FormGroup>
             <S.Label for="email">
@@ -42,11 +39,16 @@ const FormsLogin = () => {
             </S.Label>
         </S.FormGroup>
 
-        <S.Button href={ (formType === 'guardian') ? "/wishList" : "/parentDetails" } onClick={ handleSubmit }>Entrar</S.Button>
+        <S.Button href="/parentDetails" onClick={ handleSubmit }>Entrar</S.Button>
+        
+        <a href="#" className="my-3">esqueceu sua senha?</a>
+
+        <p>Ainda não tem cadastro? <a href="/parents">Cadastre-se</a></p>
 
         <hr/>
+            <h1>OU</h1>
+        <S.LinkStyleButton href="/wishList" onClick={ handleSubmit }>Seja Doador</S.LinkStyleButton>
 
-        <p>Ainda não tem cadastro? <a className="m-3" href={ (formType === 'guardian') ? "/guardian" : "/parents" }>Cadastre-se</a></p>
         </S.Form>
         </>
     );

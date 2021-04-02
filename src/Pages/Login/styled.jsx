@@ -63,3 +63,7 @@ export const ButtonContainer = styled.div`
     margin: 2rem;
     min-width: 50%;
 `
+
+export const Image = styled.img`
+	width: 75%;
+`;
