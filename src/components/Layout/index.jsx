@@ -14,6 +14,7 @@ const Layout = ({children}) => {
                     <S.LogoBackground/>
                 </S.LogoContainer>
                 <Navbar/> 
+                <S.Blur/>
                 <S.Container>
                     <S.Panel>
                         {children}

@@ -36,6 +36,15 @@ export const Panel = styled.div`
     box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 `
 
+export const Blur = styled.div`
+    position: absolute;
+    min-height: 80vh;
+    width: 90%;
+    margin: 5rem 0;
+    border-radius: 2rem;
+    backdrop-filter: blur(0.5rem);
+`
+
 export const LogoContainer = styled.div`
     position:absolute; 
     height:100%; 
