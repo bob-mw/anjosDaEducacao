@@ -2,7 +2,10 @@ import styled from 'styled-components'
 
 export const Background = styled.main`
     min-height: 100vh;
-    background: linear-gradient(to right bottom, var(--bg-light-pink), var(--bg-pink));
+    background: linear-gradient(to right bottom, 
+    var(--bg-dark-orange), var(--bg-orange), var(--bg-light-orange), var(--bg-lighter-orange),
+    var(--bg-lighter-blue), var(--bg-light-blue), var(--bg-blue), var(--bg-dark-blue));
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,4 +28,5 @@ export const Panel = styled.div`
     width: 90%;
     margin: 5rem 0;
     border-radius: 2rem;
+    background: linear-gradient(to left bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
 `
