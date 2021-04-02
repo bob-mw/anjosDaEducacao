@@ -41,16 +41,13 @@ export const LogoContainer = styled.div`
     position:absolute; 
     height:100%; 
     width:100%;
-    display: table;
 `
 
 export const LogoBackground = styled(Logo)`
-    display: table-cell;
-    vertical-align: middle;
-    text-align:center;
     width: 40%;
-    
+   
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
 `
