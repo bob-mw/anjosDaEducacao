@@ -8,18 +8,11 @@ const GlobalStyles = createGlobalStyle`
         --bg-dark-pink: #dd9ea1;
         --bg-darker-pink:#a02a5fff;
 
-        --bg-laranja: #EF6351;
-        --bg-goiaba: #F38375;
-        --bg-amarelo: #FDFFB6;
-        --bg-verde-agua: #B8F2E6;
-        --bg-azul: #AED9E0;
-
-        --bg-fire-opal: #EF6351;
-        --bg-salmon: #F38375;
-        --bg-vivid-tangerine: #F7A399;
-        --bg-spanish-pink: #FBC3BC;
-        --bg-misty-rose: #FFE3E0;
-
+        --bg-dark-orange: #EF6351;
+        --bg-orange: #F38375;
+        --bg-light-orange: #F7A399;
+        --bg-lighter-orange: #FBC3BC;
+        --bg-lighter-blue: #AED9E0;
         --bg-light-blue: #86C5FC;
         --bg-blue: #6CAEE7;
         --bg-dark-blue: #5296D1;

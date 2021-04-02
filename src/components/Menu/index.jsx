@@ -89,7 +89,7 @@ const Menu = () => {
                                 <S.Link to={link.url} onClick={() => setMenuExpanded(!menuExpanded)}>{link.label}</S.Link>
                             </S.Item>
                         ))}
-                    </S.List>
+                </S.List>
             </S.Sidebar>
         </>
     )
