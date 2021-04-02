@@ -5,21 +5,19 @@ export const Overlay = styled(motion.div)`
     z-index: 1;
     position: fixed;
     will-change: opacity;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    height: 100%;
     width: 100%;
 
     a {
         display: block;
         position: fixed;
+        width: 100%;
+        height: 100%;
+
+        left: 50%;
+        transform: translateX(-50%);
         top: 0;
         bottom: 0;
-        width: 100%;
-        left: 50%;
-
-        transform: translateX(-50%);
     }
 
 `
@@ -29,9 +27,8 @@ export const CardContentContainer = styled.div`
     display: block;
     pointer-events: none;
 
-    height: 100%;
-    width: 100%;
-    top: 10rem;
+    top: 50vh;
+    transform:translateY(-50%);
     left: 0;
     right: 0;
 

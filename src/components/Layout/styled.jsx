@@ -33,7 +33,6 @@ export const Panel = styled.div`
     margin: 5rem 0;
     border-radius: 2rem;
     background: linear-gradient(to left bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
-    backdrop-filter: blur(0.5rem);
     box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 `
 
