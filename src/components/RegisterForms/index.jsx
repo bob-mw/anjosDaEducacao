@@ -33,7 +33,7 @@ const RegisterForms = () => {
             <S.Title>{ (registerType === 'guardian') && "Cadastro de Guardião" || "Cadastro de Pais da Criança" }</S.Title>
             </S.TextCenter>
             <hr/>
-        <form className="d-flex flex-column justify-content-center align-items-center p-5 bg-light b-radius m-5 form-width shadow">
+        <S.Form>
             <div className="form-group">
                 <label for="cpf">
                     Nome
@@ -68,7 +68,7 @@ const RegisterForms = () => {
             <div>
                 <button type="button" className="btn border border-white m-3 " onClick={handleClick} style={ {  background: '#f1d7d8ff', 'border-radius': '5rem' }} disabled={ !formValidation }>Finalizar Cadastro</button>
             </div>
-        </form>
+        </S.Form>
         </>
     );
 }
