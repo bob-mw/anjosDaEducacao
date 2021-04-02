@@ -14,6 +14,7 @@ export const Button = styled.button`
 	position: relative;
 	overflow: hidden;
 	z-index: 1;
+    justify-self: center;
 
 	&:after {
 		content: '';
@@ -56,7 +57,7 @@ export const Button = styled.button`
 
 export const ButtonContainer = styled.div`
     display: grid;
-    grid: 1fr / 12rem 12rem;
+    grid: 1fr / 1fr 1fr;
     justify-content: space-around;
     column-gap: 1rem;
     margin: 2rem;
