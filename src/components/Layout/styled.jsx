@@ -59,4 +59,5 @@ export const LogoBackground = styled(Logo)`
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+
 `
