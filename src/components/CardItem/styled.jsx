@@ -77,6 +77,8 @@ export const CardImage = styled.img`
 
 export const TitleContainer = styled(motion.div)`
     color: var(--bg-dark-pink);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
     position: absolute;
     top: 15px;
     left: 15px;

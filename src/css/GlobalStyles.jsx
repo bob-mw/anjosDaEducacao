@@ -71,7 +71,7 @@ const GlobalStyles = createGlobalStyle`
     body {
         line-height: 1;
         font-size: 100%;
-        font-family: 'Calibri', sans-serif;
+        font-family: 'Montserrat', sans-serif;
     }
     img {
         display: block;

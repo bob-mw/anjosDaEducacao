@@ -1,51 +1,51 @@
 import { css } from 'styled-components'
 
-import MontserratExtraLight from 'src/fonts/Montserrat/Montserrat-ExtraLight.ttf'
-import MontserratRegular from 'src/fonts/Montserrat/Montserrat-Regular.ttf'
-import MontserratMedium from 'src/fonts/Montserrat/Montserrat-Medium.ttf'
-import MontserratSemibold from 'src/fonts/Montserrat/Montserrat-Semibold.ttf'
+import MontserratExtraLight from '../fonts/Montserrat/Montserrat-ExtraLight.ttf'
+import MontserratRegular from '../fonts/Montserrat/Montserrat-Regular.ttf'
+import MontserratMedium from '../fonts/Montserrat/Montserrat-Medium.ttf'
+import MontserratSemiBold from '../fonts/Montserrat/Montserrat-SemiBold.ttf'
 
-import MontserratExtraLightItalic from 'src/fonts/Montserrat/Montserrat-ExtraLightItalic.ttf'
-import MontserratRegularItalic from 'src/fonts/Montserrat/Montserrat-RegularItalic.ttf'
-import MontserratMediumItalic from 'src/fonts/Montserrat/Montserrat-MediumItalic.ttf'
-import MontserratSemiboldItalic from 'src/fonts/Montserrat/Montserrat-SemiboldItalic.ttf'
+import MontserratExtraLightItalic from '../fonts/Montserrat/Montserrat-ExtraLightItalic.ttf'
+import MontserratRegularItalic from '../fonts/Montserrat/Montserrat-RegularItalic.ttf'
+import MontserratMediumItalic from '../fonts/Montserrat/Montserrat-MediumItalic.ttf'
+import MontserratSemiBoldItalic from '../fonts/Montserrat/Montserrat-SemiBoldItalic.ttf'
 
-import PoppinsExtraLight from 'src/fonts/Poppins/Poppins-ExtraLight.ttf'
-import PoppinsRegular from 'src/fonts/Poppins/Poppins-Regular.ttf'
-import PoppinsMedium from 'src/fonts/Poppins/Poppins-Medium.ttf'
-import PoppinsSemibold from 'src/fonts/Poppins/Poppins-Semibold.ttf'
+import PoppinsExtraLight from '../fonts/Poppins/Poppins-ExtraLight.ttf'
+import PoppinsRegular from '../fonts/Poppins/Poppins-Regular.ttf'
+import PoppinsMedium from '../fonts/Poppins/Poppins-Medium.ttf'
+import PoppinsSemiBold from '../fonts/Poppins/Poppins-SemiBold.ttf'
 
-import PoppinsExtraLightItalic from 'src/fonts/Poppins/Poppins-ExtraLightItalic.ttf'
-import PoppinsRegularItalic from 'src/fonts/Poppins/Poppins-RegularItalic.ttf'
-import PoppinsMediumItalic from 'src/fonts/Poppins/Poppins-MediumItalic.ttf'
-import PoppinsSemiboldItalic from 'src/fonts/Poppins/Poppins-SemiboldItalic.ttf'
+import PoppinsExtraLightItalic from '../fonts/Poppins/Poppins-ExtraLightItalic.ttf'
+import PoppinsRegularItalic from '../fonts/Poppins/Poppins-RegularItalic.ttf'
+import PoppinsMediumItalic from '../fonts/Poppins/Poppins-MediumItalic.ttf'
+import PoppinsSemiBoldItalic from '../fonts/Poppins/Poppins-SemiBoldItalic.ttf'
 
 const MontserratNormalWeights = {
     200: MontserratExtraLight,  
     400: MontserratRegular,
     500: MontserratMedium,
-    600: MontserratSemibold,
+    600: MontserratSemiBold,
 }
 
 const MontserratItalicWeights = {
     200: MontserratExtraLightItalic,  
     400: MontserratRegularItalic,
     500: MontserratMediumItalic,
-    600: MontserratSemiboldItalic,
+    600: MontserratSemiBoldItalic,
 }
 
 const PoppinsNormalWeights = {
     200: PoppinsExtraLight,  
     400: PoppinsRegular,
     500: PoppinsMedium,
-    600: PoppinsSemibold,
+    600: PoppinsSemiBold,
 }
 
 const PoppinsItalicWeights = {
     200: PoppinsExtraLightItalic,  
     400: PoppinsRegularItalic,
     500: PoppinsMediumItalic,
-    600: PoppinsSemiboldItalic,
+    600: PoppinsSemiBoldItalic,
 }
 
 const montserrat = {

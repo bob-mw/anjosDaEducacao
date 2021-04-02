@@ -13,6 +13,9 @@ export const Title = styled.h1`
     font-size: 4rem;
     padding-top: 2rem;
 
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+
     @media only screen and (max-width: 1200px) {
         font-size: 3rem;
     }
