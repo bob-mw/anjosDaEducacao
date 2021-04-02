@@ -2,7 +2,8 @@ import styled from 'styled-components'
 
 export const Background = styled.main`
     min-height: 100vh;
-    background: linear-gradient(to right bottom, var(--bg-laranja), var(--bg-goiaba), var(--bg-vivid-tangerine), var(--bg-spanish-pink),
+    background: linear-gradient(to right bottom, 
+    var(--bg-dark-orange), var(--bg-orange), var(--bg-light-orange), var(--bg-lighter-orange),
     var(--bg-lighter-blue), var(--bg-light-blue), var(--bg-blue), var(--bg-dark-blue));
 
     display: flex;
