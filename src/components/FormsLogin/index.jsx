@@ -24,10 +24,10 @@ const FormsLogin = () => {
     }, [authLogin])
 
     return(
-        <section>
-            <div className="text-center lead">
-            <h3>{ (formType === 'guardian') ? "Doador" : "Peça Doações" }</h3>
-            </div>
+        <>
+            <S.TextCenter>
+                <S.Title>{ (formType === 'guardian') ? "Doador" : "Peça Doações" }</S.Title>
+            </S.TextCenter>
         <S.Form>         
         <S.FormGroup>
             <S.Label for="email">
@@ -41,16 +41,14 @@ const FormsLogin = () => {
             <S.Field type="password" name="password" id="password" onChange={ handleChange } placeholder="digite sua senha" />
             </S.Label>
         </S.FormGroup>
-        <a href="">Esqueceu a senha?</a>
-        <br/>
 
-        <a className="btn w-100 m-3" href={ (formType === 'guardian') ? "/wishList" : "/parentDetails" } style={ { background: '#f1d7d8ff', 'border-radius': '15px' } } onClick={ handleSubmit }>Entrar</a>
+        <S.Button href={ (formType === 'guardian') ? "/wishList" : "/parentDetails" } onClick={ handleSubmit }>Entrar</S.Button>
 
         <hr/>
 
         <p>Ainda não tem cadastro? <a className="m-3" href={ (formType === 'guardian') ? "/guardian" : "/parents" }>Cadastre-se</a></p>
         </S.Form>
-        </section>
+        </>
     );
 }
 
