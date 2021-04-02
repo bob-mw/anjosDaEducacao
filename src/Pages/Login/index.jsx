@@ -18,7 +18,7 @@ const Login = () => {
     }
 
     return (
-        <section className="d-flex flex-column justify-content-center align-items-center">
+        <>
             <Jumbotron />
            { 
                (!formType) ? <img src={ angel } width="75%" alt="logo"/> : <FormsLogin />
@@ -27,7 +27,7 @@ const Login = () => {
                 <S.Button type="button"  onClick={ formKid }><p>Anjinho:</p> Criança</S.Button>
                 <S.Button type="button"  onClick={ formAngel }><p>Guardião:</p>  Doador</S.Button>
             </S.ButtonContainer>
-        </section>
+        </>
     );
 }
 
