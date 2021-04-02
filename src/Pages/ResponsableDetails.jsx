@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import context from '../context/context';
 import MaterialsList from '../components/MaterialsList';
-import ChildrenTable from '../components/ChildrenTable';
 
 function ResponsableDetails() {
 
@@ -27,32 +26,34 @@ function ResponsableDetails() {
         }
     }, [])
 
+    useEffect(() => {
+        setChildrenRegister({ ...childrenRegister, teaching: 'EM' })
+    }, [])
+
     return (
-        <section className="p-5 m-auto d-flex flex-column justify-content-center align-items-center">
-            <h1>
-                Olá,
-            </h1>
-            <h2>Cadastre um filho para que ele receba doações de materiais</h2>
+        <section className="d-flex flex-column justify-content-center align-items-center">
+            <h1>Fazer pedido para meus filhos</h1>
 
-            <form action="" className="bg-purple-clear w-75 b-radius p-5 my-5 d-flex flex-column">
+            <hr/>
+            <form action="" className="bg-light b-radius p-5 my-5 d-flex flex-column justify-content-center align-items-center form-min-hight form-width">
 
-                <div className="row justify-content-around align-items-center">
+                <div className="row flex-column justify-content-around align-items-center">
 
-                    <section id="informations">
+                    <section id="informations" className="d-flex flex-column">
 
-                        <label className="m-3" htmlFor="nome">
+                        <label className="my-3 row " htmlFor="nome">
                             Nome:
-                <input className="form-control" type="text" id="name" name="name" placeholder="digite o nome da criança" onChange={setChildrenInformations} />
+                <input className="form-control ml-3" type="text" id="name" name="name" placeholder="digite o nome da criança" onChange={setChildrenInformations} />
                         </label>
 
-                        <label className="m-3" htmlFor="SchoolNome">
+                        <label className="my-3 row " htmlFor="SchoolNome">
                             Escola:
-                <input className="form-control" type="text" id="schoolName" name="schoolName" placeholder="digite o nome da escola" onChange={setChildrenInformations} />
+                <input className="form-control ml-3" type="text" id="schoolName" name="schoolName" placeholder="digite o nome da escola" onChange={setChildrenInformations} />
                         </label>
 
-                        <label className="m-3" htmlFor="state">
+                        <label className="my-3 row " htmlFor="state">
                             Estado:
-                            <select name="state" id="state" onChange={setChildrenInformations}>
+                            <select name="state" id="state" className="form-control ml-3" onChange={setChildrenInformations}>
                                 <option value="" selected disabled>Escolha um Estado</option>
                                 {
                                     brazilStates.map((state) => <option key={state.sigla} value={state.sigla}>{state.nome}</option>)
@@ -60,9 +61,9 @@ function ResponsableDetails() {
                             </select>
                         </label>
 
-                        <label className="m-3" htmlFor="city">
+                        <label className="my-3 row " htmlFor="city">
                             cidade:
-                <input className="form-control" type="text" id="city" name="city" placeholder="digite o nome da cidade" onChange={setChildrenInformations} />
+                <input className="form-control ml-3" type="text" id="city" name="city" placeholder="digite o nome da cidade" onChange={setChildrenInformations} />
                         </label>
 
                     </section>
@@ -94,19 +95,18 @@ function ResponsableDetails() {
                     </section>
 
 
-                    <section id="MaterialsList">
                         <MaterialsList />
-                    </section>
+
                 </div>
 
-                <button type="submit" className="btn btn-warning align-self-center text-center" onClick={handleSubmit}>Finalizar Pedido</button>
+                <button type="submit" className="btn w-100 m-3" style={ { background: '#f1d7d8ff', 'border-radius': '15px' } }  onClick={handleSubmit}>Finalizar Pedido</button>
+
+                <a className="btn w-100 m-3" style={ { background: '#f1d7d8ff', 'border-radius': '15px' } } href="/childDetails" >Vizualizar</a>
 
             </form>
-
-            <ChildrenTable />
-
         </section>
     );
 }
 
 export default ResponsableDetails;
+

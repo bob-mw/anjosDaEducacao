@@ -41,7 +41,7 @@ function ChildrenCard() {
 
                             <hr />
 
-                            <a href="#" className="btn w-100" style={ { background: '#f1d7d8ff'} }> Doar</a>
+                            <a href="/littleCow" className="btn w-100" style={ { background: '#f1d7d8ff'} }> Doar</a>
                         </div>
                     </div>
                 ))

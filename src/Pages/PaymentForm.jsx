@@ -37,7 +37,7 @@ function PaymentForm() {
                     number={number}
                 />
                 
-                <form className="col-12 col-md-6 col-lg-6 align-items-center bg-green-clear p-4 b-radius border border-primary mt-5 shadow">
+                <form className="col-12 col-md-6 col-lg-6 align-items-center bg-light p-4 b-radius mt-5 shadow">
 
                     <section className="d-flex flex-column">
                         <label htmlFor="cardNumber">
@@ -68,7 +68,7 @@ function PaymentForm() {
                         <div className="d-flex">
 
                         <label className="m-3" htmlFor="validateDate">
-                            Valido Até:
+                            Valido até:
                     <input
                                 id="validateDate"
                                 type="data"
@@ -92,8 +92,21 @@ function PaymentForm() {
                                 />
                         </label>
                         
+                        
                             
                 </div>
+                        <label className="m-3" htmlFor="donate">
+                            Valor a ser doado
+                    <input
+                                id="donate"
+                                type="number"
+                                name="donate"
+                                placeholder="00.00"
+                                onChange={handleInputChange}
+                                onFocus={handleInputFocus}
+                                className="form-control"
+                                />
+                        </label>
                 <label htmlFor="paymentMethod">
                             Método de Pagamento
                         <select
