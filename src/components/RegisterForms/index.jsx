@@ -33,36 +33,36 @@ const RegisterForms = () => {
             <S.Title>{ (registerType === 'guardian') && "Cadastro de Guardião" || "Cadastro de Pais da Criança" }</S.Title>
             </S.TextCenter>
         <S.Form>
-            <div className="form-group">
-                <label for="cpf">
+            <S.FormGroup>
+                <S.Label for="cpf">
                     Nome
-             <input type="text" name="name" className="form-control" id="nome" placeholder="Nome Completo" onChange={handleChange} />
-                </label>
-            </div>
-            <div className="form-group">
-                <label for="email">
+             <S.Field type="text" name="name" id="nome" placeholder="Nome Completo" onChange={handleChange} />
+                </S.Label>
+            </S.FormGroup>
+            <S.FormGroup>
+                <S.Label for="email">
                     Email
-             <input type="email" name="email" className="form-control" id="email" placeholder="email@dominio.com" onChange={handleChange} />
-                </label>
-            </div>
-            <div className="form-group">
-                <label for="whatsapp">
+             <S.Field type="email" name="email" id="email" placeholder="email@dominio.com" onChange={handleChange} />
+                </S.Label>
+            </S.FormGroup>
+            <S.FormGroup>
+                <S.Label for="whatsapp">
                     Cel
-             <input type="number" name="phone" className="form-control" id="whatsapp" placeholder="Somente Números" onChange={handleChange} />
-                </label>
-            </div>
-            <div className="form-group">
-                <label for="password">
+             <S.Field type="number" name="phone" id="whatsapp" placeholder="Somente Números" onChange={handleChange} />
+                </S.Label>
+            </S.FormGroup>
+            <S.FormGroup>
+                <S.Label for="password">
                     Senha
-            <input type="password" name="password" className="form-control" id="password" placeholder="Minimo de 6 Digitos" onChange={handleChange} />
-                </label>
-            </div>
-            <div className="form-group">
-                <label for="password">
+            <S.Field type="password" name="password" id="password" placeholder="Minimo de 6 Digitos" onChange={handleChange} />
+                </S.Label>
+            </S.FormGroup>
+            <S.FormGroup>
+                <S.Label for="password">
                     Confirmar Senha
-            <input type="password" name="confirmPassword" className="form-control" id="confirmPassword" placeholder="Confirme sua Senha" onChange={handleChange} />
-                </label>
-            </div>
+            <S.Field type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirme sua Senha" onChange={handleChange} />
+                </S.Label>
+            </S.FormGroup>
 
             <div>
                 <button type="button" className="btn border border-white m-3 " onClick={handleClick} style={ {  background: '#f1d7d8ff', 'border-radius': '5rem' }} disabled={ !formValidation }>Finalizar Cadastro</button>

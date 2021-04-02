@@ -30,10 +30,19 @@ export const Form = styled.form`
     flex-direction: column;
     justify-content: center;
     align-items:center;
-    max-width: 80%;
+    max-width: 50%;
     padding: 5rem;
     margin: 5rem 0;
     border-radius: 2rem;
     background: linear-gradient(to left bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
     box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+`
+
+export const FormGroup = styled.div`
+    margin-bottom: 1rem;
+`
+
+export const Label = styled.label`
+    font-size: 1.2rem;
+    color: var(--bg-darker-pink);
 `
