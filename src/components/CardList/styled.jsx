@@ -31,6 +31,8 @@ export const CardImageContainer = styled(motion.div)`
 `
 
 export const CardImage = styled.img`
+    position: relative;
+    left:-10%;
     display: block;
     height: 100%;
     width: auto;
