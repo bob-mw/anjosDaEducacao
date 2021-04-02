@@ -6,7 +6,7 @@ import Jumbotron from '../../components/Jumbotron';
 
 import * as S from './styled'
 
-function Login() {
+const Login = () => {
     const { setFormType, formType } = useContext(context);
 
     const formAngel = () => {
