@@ -64,9 +64,7 @@ const RegisterForms = () => {
                 </S.Label>
             </S.FormGroup>
 
-            <div>
-                <button type="button" className="btn border border-white m-3 " onClick={handleClick} style={ {  background: '#f1d7d8ff', 'border-radius': '5rem' }} disabled={ !formValidation }>Finalizar Cadastro</button>
-            </div>
+            <S.Button type="button" onClick={handleClick} disabled={ !formValidation }>Finalizar Cadastro</S.Button>
         </S.Form>
         </>
     );
