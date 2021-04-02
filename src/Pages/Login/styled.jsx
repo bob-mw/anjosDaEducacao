@@ -2,17 +2,18 @@ import styled from 'styled-components'
 
 export const Button = styled.button`
     text-decoration: none !important;
-  cursor: pointer;
-  display: inline-block;
-	padding: .75rem 1.25rem;
+    cursor: pointer;
+    display: inline-block;
+	padding: 1.5rem;
 	border-radius: 10rem;
+    border: none;
 	color: #fff;
 	text-transform: uppercase;
 	letter-spacing: .15rem;
 	transition: all .3s;
 	position: relative;
 	overflow: hidden;
-	z-index: 3;
+	z-index: 1;
 
 	&:after {
 		content: '';
@@ -23,7 +24,7 @@ export const Button = styled.button`
 		height: 100%;
 		background-color: var(--bg-lighter-orange);
 		border-radius: 10rem;
-		z-index: -5;
+		z-index: -2;
 	}
 	&:before {
 		content: '';
@@ -44,5 +45,11 @@ export const Button = styled.button`
 			width: 100%;
 		}
 	}
+
+    p { 
+        font-size: 1.2rem;
+        padding-bottom: 0.5rem;
+        color: var(--bg-orange);
+    }
 
 `

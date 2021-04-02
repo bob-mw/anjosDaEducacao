@@ -24,8 +24,8 @@ const Login = () => {
                (!formType) ? <img src={ angel } width="75%" alt="logo"/> : <FormsLogin />
            }
            <div className="d-flex w-50 justify-content-around m-3">
-                <button type="button" className="btn btn-light btn-outline-secondary p-3 m-3" onClick={ formKid }><p className="text-pink text-uppercase">Anjinho:</p> Criança</button>
-                <button type="button" className="btn btn-light btn-outline-secondary p-3 m-3" onClick={ formAngel }><p className="text-pink text-uppercase">Guardião:</p>  Doador</button>
+                <S.Button type="button"  onClick={ formKid }><p>Anjinho:</p> Criança</S.Button>
+                <S.Button type="button"  onClick={ formAngel }><p>Guardião:</p>  Doador</S.Button>
             </div>
         </section>
     );
