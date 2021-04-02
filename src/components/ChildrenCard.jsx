@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import dataChildrens from '../data/fakeDbChildrens.js';
+import context from '../context/context';
 
 function ChildrenCard() {
+
+    const { setIdLittleCow, idLittleCow } = useContext(context);
+
+    const sendIdToLittleCow = (id) => {
+    /*
+        tentando enviar o id para carregar a proxima pagina
+    */
+    }
     return (
         <section className="row">
             {
                 dataChildrens.map((children, index) => (
-                    <div key={index} className=" shadowp-5 card m-5 d-flex flex-column justify-content-center align-items-center" style={{ width: '15rem' }}>
+                    <div key={index} className=" shadow p-5 card m-5 d-flex flex-column justify-content-center align-items-center" style={{ width: '15rem' }}>
                         <div className="card-body">
                             <h3 className="card-title text-uppercase">{children.name}</h3>
                             <p className="card-title text-uppercase">{(children.teaching === "EF") && "Ensino Infantil" || (children.teaching === "F1") && "Fundamental 1" || (children.teaching === "F2") && "Fundamental 2" || (children.teaching === "EM") && "Ensino Médio" }</p>
@@ -41,7 +50,7 @@ function ChildrenCard() {
 
                             <hr />
 
-                            <a href="/littleCow" className="btn w-100" style={ { background: '#f1d7d8ff'} }> Doar</a>
+                            <a href="/littleCow" className="btn w-100" style={ { background: '#f1d7d8ff'}  }> Doar</a>
                         </div>
                     </div>
                 ))

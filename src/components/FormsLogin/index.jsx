@@ -3,6 +3,8 @@ import context from '../../context/context';
 import authService from '../../services/auth';
 import validationLogin from '../../valitations/validationLogin';
 
+import * as S from './styled'
+
 const FormsLogin = () => {
 
     const { formType, authLogin, setAuthLogin, formValidation, setFormValidation  } = useContext(context);
@@ -26,20 +28,19 @@ const FormsLogin = () => {
             <div className="text-center lead">
             <h3>{ (formType === 'guardian') ? "Doador" : "Peça Doações" }</h3>
             </div>
-        <form className="d-flex flex-column justify-content-center align-items-center m-5 b-radius border border-light shadow p-5 form-width bg-light">
-            
-        <div className="form-group">
-            <label for="email">
+        <S.Form>         
+        <S.FormGroup>
+            <S.Label for="email">
                 Email
-             <input type="email" name="email" className="form-control" id="email" onChange={ handleChange }  placeholder="digite seu email" />
-            </label>
-        </div>
-        <div className="form-group">
-            <label for="password">
+             <S.Field type="email" name="email" id="email" onChange={ handleChange }  placeholder="digite seu email" />
+            </S.Label>
+        </S.FormGroup>
+        <S.FormGroup>
+            <S.Label for="password">
                 Senha
-            <input type="password" name="password" className="form-control" id="password" onChange={ handleChange } placeholder="digite sua senha" />
-            </label>
-        </div>
+            <S.Field type="password" name="password" id="password" onChange={ handleChange } placeholder="digite sua senha" />
+            </S.Label>
+        </S.FormGroup>
         <a href="">Esqueceu a senha?</a>
         <br/>
 
@@ -48,7 +49,7 @@ const FormsLogin = () => {
         <hr/>
 
         <p>Ainda não tem cadastro? <a className="m-3" href={ (formType === 'guardian') ? "/guardian" : "/parents" }>Cadastre-se</a></p>
-        </form>
+        </S.Form>
         </section>
     );
 }

@@ -31,15 +31,16 @@ function ResponsableDetails() {
     }, [])
 
     return (
-        <section className="d-flex flex-column justify-content-center align-items-center">
-            <h1>Fazer pedido para meus filhos</h1>
+        <section >
 
-            <hr/>
-            <form action="" className="bg-light b-radius p-5 my-5 d-flex flex-column justify-content-center align-items-center form-min-hight form-width">
+            <h1 className="text-center display-4">Fazer pedido para meus filhos</h1>
 
-                <div className="row flex-column justify-content-around align-items-center">
+            <hr />
+            <form action="" className="bg-light b-radius p-5 my-5 row">
 
-                    <section id="informations" className="d-flex flex-column">
+                <div className=" row m-auto">
+
+                    <section id="informations" className="m-5">
 
                         <label className="my-3 row " htmlFor="nome">
                             Nome:
@@ -67,41 +68,39 @@ function ResponsableDetails() {
                         </label>
 
                     </section>
-                    <section className="p-4">
-                        <div>
-                            <label className="form-check-label" htmlFor="infantil">
+
+
+                    <section className="d-flex flex-column justify-content-center align-items-center border border-primary p-2 b-radius m-auto boxInputRadio-width">
+                            <label className="d-flex align-items-center my-2" htmlFor="infantil">
                                 <input className="form-check-input" type="radio" name="teaching" id="infantil" value="EF" onChange={setChildrenInformations} />
                         Ensino Infantil
                     </label>
-                        </div>
-                        <div>
-                            <label className="form-check-label" htmlFor="primeiroAoQuinto">
+
+                            <label className="d-flex align-items-center my-2" htmlFor="primeiroAoQuinto">
                                 <input className="form-check-input" type="radio" name="teaching" id="primeiroAoQuinto" value="F1" onChange={setChildrenInformations} />
                         1º ao 5º ANO
                 </label>
-                        </div>
-                        <div>
-                            <label className="form-check-label" htmlFor="sextoAoNono">
+
+                            <label className="d-flex align-items-center my-2" htmlFor="sextoAoNono">
                                 <input className="form-check-input" type="radio" name="teaching" id="sextoAoNono" value="F2" onChange={setChildrenInformations} />
                         6º ao 9º ANO
                 </label>
-                        </div>
-                        <div>
-                            <label className="form-check-label" htmlFor="ensinoMedio">
+
+                            <label className="d-flex align-items-center my-2" htmlFor="ensinoMedio">
                                 <input className="form-check-input" type="radio" name="teaching" id="ensinoMedio" value="EM" onChange={setChildrenInformations} />
                         Ensino Médio
                     </label>
-                        </div>
+                    
                     </section>
 
 
-                        <MaterialsList />
 
                 </div>
+                        <MaterialsList />
 
-                <button type="submit" className="btn w-100 m-3" style={ { background: '#f1d7d8ff', 'border-radius': '15px' } }  onClick={handleSubmit}>Finalizar Pedido</button>
+                <button type="submit" className="btn w-100 m-3" style={{ background: '#f1d7d8ff', 'border-radius': '15px' }} onClick={handleSubmit}>Finalizar Pedido</button>
 
-                <a className="btn w-100 m-3" style={ { background: '#f1d7d8ff', 'border-radius': '15px' } } href="/childDetails" >Vizualizar</a>
+                <a className="btn w-100 m-3" style={{ background: '#f1d7d8ff', 'border-radius': '15px' }} href="/childDetails" >Vizualizar</a>
 
             </form>
         </section>
