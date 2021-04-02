@@ -77,18 +77,20 @@ export const CardImage = styled.img`
 
 export const TitleContainer = styled(motion.div)`
     color: var(--bg-dark-pink);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
     position: absolute;
     top: 15px;
     left: 15px;
     max-width: 300px;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background: linear-gradient(to left bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.8));
 `
 
 export const Description = styled.h2`
     color: var(--bg-dark-pink);
     font-size: 1.25rem;
     text-transform: uppercase;
+    font-weight: 600;
     padding-top: 0.5rem;
 `
 

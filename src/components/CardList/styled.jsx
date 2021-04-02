@@ -44,6 +44,9 @@ export const TitleContainer = styled(motion.div)`
     top: 15px;
     left: 15px;
     max-width: 300px;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background: linear-gradient(to left bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.8));
 `
 
 export const Name = styled.span`
