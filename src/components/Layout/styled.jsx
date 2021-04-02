@@ -50,6 +50,7 @@ export const LogoBackground = styled(Logo)`
     text-align:center;
     width: 40%;
     
+    position: absolute;
     left: 50%;
     transform: translateX(-50%);
 `
