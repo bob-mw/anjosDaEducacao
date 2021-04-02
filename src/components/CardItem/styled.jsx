@@ -78,7 +78,7 @@ export const CardImage = styled.img`
 export const TitleContainer = styled(motion.div)`
     color: var(--bg-dark-pink);
     position: absolute;
-    top: 15px;
+    bottom: 13.7rem;
     left: 15px;
     max-width: 300px;
     padding: 0.5rem;
