@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { TextPlugin } from 'gsap/TextPlugin'
 
@@ -7,10 +7,17 @@ import * as S from './styled'
 
 const Navbar = () => {
 
-    let name = useRef(null)
+    gsap.registerPlugin(TextPlugin)
+
+    let nameRef = useRef(null)
+    let name = 'Anjos da Educação'
 
     useEffect(() => {
-
+        gsap.to(nameRef.current, {
+            duration: 1, 
+            text: "Anjos da Educação",
+            ease: "power3"
+        })
 
     }, [])
     
@@ -18,7 +25,7 @@ const Navbar = () => {
         <S.Container>
             <S.Wrapper>
                 <S.LogoNavbar/>
-                <S.Name ref={name}>Anjos da Educação</S.Name>
+                <S.Name ref={nameRef}></S.Name>
             </S.Wrapper>
             <Menu/>
         </S.Container>
