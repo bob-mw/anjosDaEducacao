@@ -1,12 +1,9 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import dataFake from '../data/fakeDbChildrens';
-import context from '../context/context';
 
 function littleCow() {
-    
-    const { idLittleCow } = useContext(context)
 
-    const children = dataFake[idLittleCow];
+    const children = dataFake[0];
 
     return (
         <section>
