@@ -53,3 +53,12 @@ export const Button = styled.button`
     }
 
 `
+
+export const ButtonContainer = styled.div`
+    display: grid;
+    grid: 1fr / 12rem 12rem;
+    justify-content: space-around;
+    column-gap: 1rem;
+    margin: 2rem;
+    min-width: 50%;
+`
