@@ -22,8 +22,8 @@ export const Panel = styled.div`
 `
 
 export const Container = styled.div`
-    flex: 1 1 100%;
-    padding: 45px 25px;
+    flex: 1 1 auto;
+    padding: 2rem;
 `
 
 export const Title = styled.h1`
