@@ -45,7 +45,7 @@ export const LogoContainer = styled.div`
 
 export const LogoBackground = styled(Logo)`
     width: 40%;
-   
+    opacity: 40%;
     position: absolute;
     left: 50%;
     top: 50%;
