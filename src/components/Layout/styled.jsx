@@ -28,4 +28,5 @@ export const Panel = styled.div`
     width: 90%;
     margin: 5rem 0;
     border-radius: 2rem;
+    background: linear-gradient(to left bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
 `
