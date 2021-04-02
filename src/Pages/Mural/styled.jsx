@@ -22,7 +22,7 @@ export const Panel = styled.div`
 `
 
 export const Container = styled.div`
-    flex: 1 1 auto;
+    flex: 1 1 100%;
     padding: 2rem;
 `
 

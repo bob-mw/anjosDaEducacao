@@ -24,7 +24,6 @@ export const Panel = styled.div`
     display:flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     min-height: 80vh;
     width: 90%;
     margin: 5rem 0;
