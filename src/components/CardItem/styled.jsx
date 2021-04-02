@@ -56,8 +56,8 @@ export const CardImageContainer = styled(motion.div)`
     top: 0;
     left: 0;
     overflow: hidden;
-    height: 420px;
-    width: 100vw;
+    max-height: 400px;
+    max-width: 100vw;
 
     @media only screen and (max-width: 600px) {
         height:300px
@@ -94,11 +94,11 @@ export const Name = styled.span`
 `
 
 export const ContentContainer = styled(motion.div)`
-    padding: 28rem 2rem 2rem 2rem;
+    padding: 26rem 2rem 2rem 2rem;
     max-width: 43rem;
     width: 90vw;
 
     @media only screen and (max-width: 600px) {
-        padding: 20rem 2rem 10rem 2rem;
+        padding: 20rem 2rem 2rem 2rem;
     }
 `
