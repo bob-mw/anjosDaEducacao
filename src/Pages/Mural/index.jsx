@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import * as S from './styled'
 import CardItem from '../../components/CardItem'
 import CardList from '../../components/CardList'
-import Menu from '../../components/Menu'
 
 const Store = ({ match }) => {
     let { id } = match.params;

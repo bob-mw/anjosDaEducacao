@@ -20,10 +20,8 @@ const Login = () => {
     return (
         <>
             <Jumbotron />
-           { 
-               (!formType) ? <img src={ angel } width="75%" alt="logo"/> : <FormsLogin />
-           }
-           <S.ButtonContainer>
+            {(!formType) ? <img src={ angel } width="75%" alt="logo"/> : <FormsLogin />}
+            <S.ButtonContainer>
                 <S.Button type="button"  onClick={ formKid }><p>Anjinho:</p> Criança</S.Button>
                 <S.Button type="button"  onClick={ formAngel }><p>Guardião:</p>  Doador</S.Button>
             </S.ButtonContainer>
