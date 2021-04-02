@@ -85,7 +85,7 @@ export const TitleContainer = styled(motion.div)`
 
 export const Description = styled.h2`
     color: var(--bg-dark-pink);
-    font-size: 1rem;
+    font-size: 1.25rem;
     text-transform: uppercase;
     padding-top: 0.5rem;
 `

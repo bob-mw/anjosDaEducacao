@@ -33,7 +33,7 @@ const CardItem = ({ id }) => {
             layoutId={`title-container-${id}`}
           >
             <S.Name>{name}</S.Name>
-            <S.Description>{`${age} anos, ${city}, ${state}`}</S.Description>
+            <S.Description>{`${age} anos, ${city} - ${state}`}</S.Description>
             <S.Description>Clique para fechar</S.Description>
           </S.TitleContainer>
 

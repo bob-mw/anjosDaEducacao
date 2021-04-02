@@ -19,7 +19,7 @@ const Card = ({ id, name, age, city, state }) => {
             layoutId={`title-container-${id}`}
           >
             <S.Name>{name}</S.Name>
-            <S.Description>{`${age} anos, ${city}, ${state}`}</S.Description>
+            <S.Description>{`${age} anos, ${city} - ${state}`}</S.Description>
             <S.Description>Clique para abrir</S.Description>
           </S.TitleContainer>
         </S.CardContent>

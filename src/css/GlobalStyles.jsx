@@ -1,5 +1,7 @@
 import { createGlobalStyle } from "styled-components"
 
+import Fonts from './fonts'
+
 const GlobalStyles = createGlobalStyle`
 
     :root {
@@ -17,6 +19,8 @@ const GlobalStyles = createGlobalStyle`
         --bg-blue: #6CAEE7;
         --bg-dark-blue: #5296D1;
     }
+
+    ${Fonts}
 
     html, body, div, span, applet, object, iframe,
     h1, h2, h3, h4, h5, h6, p, blockquote, pre,
