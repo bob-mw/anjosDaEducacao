@@ -1,4 +1,6 @@
 import React from 'react'
+import { gsap } from 'gsap'
+import { TextPlugin } from 'gsap/TextPlugin'
 
 import Menu from '../Menu'
 import * as S from './styled'
