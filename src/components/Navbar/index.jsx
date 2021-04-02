@@ -14,9 +14,10 @@ const Navbar = () => {
 
     useEffect(() => {
         gsap.to(nameRef.current, {
-            duration: 1, 
-            text: "Anjos da Educação",
-            ease: "power3"
+            duration: 1.5, 
+            text: name,
+            ease: "power3.out",
+            delay: 2
         })
 
     }, [])
