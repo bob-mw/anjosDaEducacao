@@ -7,23 +7,11 @@ import {
 
 const dataChildrens = [
     {
-        id: 0,
-        city: "cidade",
-        materials: EF,
-        name: "joão",
-        schoolName: "nome da escola",
-        state: "SP",
-        teaching: "EF",
-        goal: 100,
-        collected: 75,
-        guardians: 1
-
-    },
-    {
         id: 1,
-        city: "cidade",
+        city: "São Paulo",
         materials: F1,
-        name: "josé",
+        name: "Pedro",
+        age: 5,
         schoolName: "nome da escola",
         state: "SP",
         teaching: "F1",
@@ -33,9 +21,10 @@ const dataChildrens = [
     },
     {
         id: 2,
-        city: "cidade",
+        city: "São Paulo",
         materials: F2,
-        name: "maria",
+        name: "Miguel",
+        age: 8,
         schoolName: "nome da escola",
         state: "SP",
         teaching: "F2",
@@ -46,9 +35,10 @@ const dataChildrens = [
 
     {
         id: 3,
-        city: "cidade",
+        city: "São Paulo",
         materials: EM,
-        name: "piquinique",
+        name: "João Pedro",
+        age: 4,
         schoolName: "nome da escola",
         state: "SP",
         teaching: "EM",
@@ -59,9 +49,10 @@ const dataChildrens = [
 
     {
         id: 4,
-        city: "cidade",
+        city: "São Paulo",
         materials: EM,
-        name: "Josias",
+        name: "Iasmin",
+        age: 7,
         schoolName: "nome da escola",
         state: "SP",
         teaching: "EM",
@@ -72,9 +63,10 @@ const dataChildrens = [
 
     {
         id: 5,
-        city: "cidade",
+        city: "Osasco",
         materials: EM,
-        name: "leléque",
+        name: "Sérgio",
+        age: 5,
         schoolName: "nome da escola",
         state: "SP",
         teaching: "EM",
@@ -85,9 +77,10 @@ const dataChildrens = [
 
     {
         id: 6,
-        city: "cidade",
+        city: "Guarulhos",
         materials: EM,
-        name: "murilin",
+        name: "Murilo",
+        age: 5,
         schoolName: "nome da escola",
         state: "SP",
         teaching: "EM",
@@ -98,9 +91,10 @@ const dataChildrens = [
 
     {
         id: 7,
-        city: "cidade",
+        city: "Diadema",
         materials: EM,
-        name: "quiabison",
+        name: "Roberto",
+        age: 5,
         schoolName: "nome da escola",
         state: "SP",
         teaching: "EM",
@@ -111,9 +105,10 @@ const dataChildrens = [
 
     {
         id: 8,
-        city: "cidade",
+        city: "São Caetano do Sul",
         materials: EM,
-        name: "Garibaldo",
+        name: "Joana",
+        age: 6,
         schoolName: "nome da escola",
         state: "SP",
         teaching: "EM",

@@ -4,7 +4,7 @@ import * as S from './styled'
 import { items } from '../../Pages/Mural/data'
 
 
-const Card = ({ id, title, name, theme }) => {
+const Card = ({ id, name, age, city, state }) => {
   
   return (
     <S.Item>
@@ -19,7 +19,7 @@ const Card = ({ id, title, name, theme }) => {
             layoutId={`title-container-${id}`}
           >
             <S.Name>{name}</S.Name>
-            <S.Description>{title}</S.Description>
+            <S.Description>{`${age} anos, ${city}, ${state}`}</S.Description>
             <S.Description>Clique para abrir</S.Description>
           </S.TitleContainer>
         </S.CardContent>
