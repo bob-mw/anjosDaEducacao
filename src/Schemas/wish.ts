@@ -1,7 +1,6 @@
 import mongoose, { Document, Schema } from 'mongoose'
 
-import material from './material'
-import son from './son'
+import material from '@schemas/material'
 
 type Request = Document & {}
 
@@ -11,11 +10,26 @@ const RequestSchema = new Schema(
       type: String,
       required: true
     },
-    son,
+    name: {
+      type: String,
+      required: true
+    },
+    schoolName: {
+      type: String,
+      required: true
+    },
+    city: {
+      type: String,
+      required: true
+    },
+    state: {
+      type: String,
+      required: true
+    },
     materials: [
       material
     ],
-    donated: {
+    collected: {
       type: Number,
       required: true,
       default: 0
@@ -23,7 +37,13 @@ const RequestSchema = new Schema(
     finished: {
       type: Boolean,
       default: false
-    }
+    },
+    message: {
+      type: String
+    },
+    guardians: [
+      String
+    ]
   },
   {
     timestamps: true
