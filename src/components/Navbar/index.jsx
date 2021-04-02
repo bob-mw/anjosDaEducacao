@@ -8,6 +8,7 @@ const Navbar = () => {
     return (
         <S.Container>
             <S.LogoNavbar/>
+            <S.Name>Anjos da Educação</S.Name>
             <Menu/>
         </S.Container>
     )

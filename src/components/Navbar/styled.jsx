@@ -17,3 +17,7 @@ export const LogoNavbar = styled(Logo)`
     left: 2rem;
     width: 6rem;
 `
+
+export const Name = styled.span`
+    display: inline-block;
+`
