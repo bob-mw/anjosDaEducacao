@@ -23,7 +23,7 @@ const ChipIn = () => {
 
             <hr />
 
-            <section>
+            <S.DetailsContainer>
 
                 <S.ProgressBarContainer>
                     <S.ProgressBar style={{
@@ -36,13 +36,11 @@ const ChipIn = () => {
                 </S.ProgressBarContainer>
 
 
-                <div className="d-flex flex-column">
-                    <h1>Conseguimos: R$ {children.collected}</h1>
+                <S.Details>Conseguimos: R$ {children.collected}</S.Details>
 
-                    <h1>Meta: R$ {children.goal}</h1>
+                <S.Details>Meta: R$ {children.goal}</S.Details>
 
-                    <h1>Guardiões: {children.guardians}</h1>
-                </div>
+                <S.Details>Guardiões: {children.guardians}</S.Details>
 
                 <table class="table table-bordered">
                     <thead>
@@ -88,7 +86,7 @@ const ChipIn = () => {
                     </div>
                 </section>
 
-            </section>
+            </S.DetailsContainer>
 
             <hr />
 

@@ -25,6 +25,12 @@ export const Description = styled.h3`
     padding-bottom: 0.5rem;
 `
 
+export const DetailsContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+`
+
 export const ProgressBarContainer = styled.div`
 	box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 	border: 1px solid #dee2e6;
@@ -37,4 +43,12 @@ export const ProgressBar = styled.div`
 	height: 20px;
 	background-color: #28a745;
 	border-radius: 15px;
+`
+
+export const Details = styled.p`
+    color: black;
+    font-size: 1.3rem;
+	font-weight: 600;
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
 `
