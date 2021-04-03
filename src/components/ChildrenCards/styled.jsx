@@ -1,36 +1,21 @@
 import styled from 'styled-components'
 
-export const TextCenter = styled.div`
-    text-align: center;
-`
-
-export const Title = styled.h1`
-    position: relative;
-    color: var(--bg-darker-pink);
-    font-size: 4rem;
-    padding-top: 2rem;
-
-    @media only screen and (max-width: 1200px) {
-        font-size: 3rem;
-    }
-
-    @media only screen and (max-width: 900px) {
-        font-size: 2rem;
-    }
-
-    @media only screen and (max-width: 600px) {
-        font-size: 1.5rem;
-        padding-top: 4rem;
-    }
-`
-
 export const List = styled.ul`
     list-style-type: none;
     padding: 0;
     margin: 0;
+
     display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 1rem;
+	grid-gap: 4rem;
+
+	@media only screen and (max-width: 1200px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+	@media only screen and (max-width: 800px) {
+        grid-template-columns: 1fr
+    }
 `
 
 export const Card = styled.li`
