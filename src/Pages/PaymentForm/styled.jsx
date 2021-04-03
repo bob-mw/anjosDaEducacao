@@ -75,6 +75,12 @@ export const Field = styled.input`
     box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 `
 
+export const FieldContainer = styled.div`
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+`
+
 export const Select = styled.select`
     width: 100%;
     height: 3rem;

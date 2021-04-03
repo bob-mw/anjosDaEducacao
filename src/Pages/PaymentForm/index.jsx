@@ -47,7 +47,6 @@ const PaymentForm = () => {
                             placeholder="Número do Cartão"
                             onChange={handleInputChange}
                             onFocus={handleInputFocus}
-                            className="form-control"
                         />
                     </S.Label>
                     <S.Label htmlFor="cardName">
@@ -59,12 +58,10 @@ const PaymentForm = () => {
                             placeholder="Nome que está no Cartão"
                             onChange={handleInputChange}
                             onFocus={handleInputFocus}
-                            className="form-control"
                         />
                     </S.Label>
 
-                    <div className="d-flex">
-
+                    <S.FieldContainer>
                         <S.Label htmlFor="validateDate">
                             Valido até:
                             <S.Field
@@ -74,7 +71,6 @@ const PaymentForm = () => {
                                 placeholder="mês/ano"
                                 onChange={handleInputChange}
                                 onFocus={handleInputFocus}
-                                className="form-control"
                                 />
                         </S.Label>
                         <S.Label htmlFor="validateDate">
@@ -86,10 +82,9 @@ const PaymentForm = () => {
                                 placeholder="cvc"
                                 onChange={handleInputChange}
                                 onFocus={handleInputFocus}
-                                className="form-control"
                                 />
                         </S.Label>           
-                    </div>
+                    </S.FieldContainer>
 
                     <S.Label htmlFor="donate">
                         Valor a ser doado
@@ -100,7 +95,6 @@ const PaymentForm = () => {
                             placeholder="00.00"
                             onChange={handleInputChange}
                             onFocus={handleInputFocus}
-                            className="form-control"
                         />
                     </S.Label>
                     <S.Label htmlFor="paymentMethod">
