@@ -1,9 +1,10 @@
-import React, {useRef, useEffect} from 'react';
+import React, {useRef, useEffect} from 'react'
 import gsap from 'gsap'
 
-import FormsLogin from '../../components/FormsLogin/index';
-import angel from '../../img/angel.svg';
-import Footer from '../../components/Footer';
+import FormsLogin from '../../components/FormsLogin/index'
+import angel from '../../img/angel.svg'
+import Footer from '../../components/Footer'
+import SplitText from '../../components/SplitText'
 
 import * as S from './styled'
 
@@ -34,7 +35,12 @@ const Login = () => {
     return (
         <>
             <S.HeroContainer>
-                <S.HeroTitle><span ref={addToHeroTexts}>Você não pode mudar o mundo, mas pode mudar o mundo de alguém!</span></S.HeroTitle>
+                <S.HeroTitle>
+                    <SplitText 
+                        copy={"Você não pode mudar o mundo, mas pode mudar o mundo de alguém!"} 
+                        ref={addToHeroTexts}
+                    />
+                </S.HeroTitle>
             </S.HeroContainer>
             <S.HeroContainer>
                 <S.HeroSubtitle><span ref={addToHeroTexts}>Anjos da Educação</span></S.HeroSubtitle>
