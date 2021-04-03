@@ -78,3 +78,29 @@ export const PaymentMethodContainer = styled.div`
     border-radius: 2rem;
     align-self: center;
 `
+
+export const Subtitle = styled.h3`
+    color: black;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+    align-self: center;
+`
+
+export const RadioContainer = styled.div`
+    margin: 1rem 0;
+`
+
+export const Input = styled.input`
+    margin-right: 0.5rem;
+`
+
+export const RadioLabel = styled.label`
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+`

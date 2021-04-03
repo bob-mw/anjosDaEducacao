@@ -69,19 +69,19 @@ const ChipIn = () => {
 
 
                 <S.PaymentMethodContainer>
-                    <h1 className="text-center">Método de Pagamento</h1>
-                    <div className="my-3">
+                    <S.Subtitle>Método de Pagamento</S.Subtitle>
+                    <S.RadioContainer>
 
-                        <label htmlFor="card" className="d-flex align-items-center my-2">
-                            <input value="card" name="paymentMethod" className="mx-2" type="radio" id="card" />
+                        <S.RadioLabel htmlFor="card">
+                            <S.Input value="card" name="paymentMethod" type="radio" id="card"/>
                             Cartão
-                        </label>
+                        </S.RadioLabel>
 
-                        <label htmlFor="ticket" className="d-flex align-items-center my-2">
-                            <input value="ticket" name="paymentMethod" className="mx-2" type="radio" id="ticket"/>
+                        <S.RadioLabel htmlFor="ticket">
+                            <S.Input value="ticket" name="paymentMethod" type="radio" id="ticket"/>
                             Boleto
-                        </label>
-                    </div>
+                        </S.RadioLabel>
+                    </S.RadioContainer>
                 </S.PaymentMethodContainer>
 
             </S.DetailsContainer>
