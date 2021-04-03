@@ -72,19 +72,28 @@ O usuário pode entrar na aplicação utilizando o formulario de login:
 
 Caso o usuário não for cadastrado será direcionado para tela de cadastro:
 
+<p align="center"><img width="400" src="./printImages/solicitacaoCadastro.png" alt="print"></p>
+
+
+
 **End Point**: `/parents`
 
-<p align="center"><img width="400" src="./printImages/register.png" alt="print"></p>
+<p align="center"><img width="400" src="./printImages/formularioCadastropng.png" alt="print"></p>
 
 Caso o usuário já tenha feito o cadastro será direcionado para página onde irá registrar a criança que precisa dos materiais. Sendo preciso nome, endereço da escola, e série. A uma lista de matériais para cada ciclo de ensino.
 
 **End Point**: `/parentDetails`
 
-<p align="center"><img width="400" src="./printImages/registerKid2.png" alt="print"></p>
+<p align="center"><img width="400" src="./printImages/registroCrianca.png" alt="print"></p>
 
-<p align="center"><img width="400" src="./printImages/registerKid3.png" alt="print"></p>
+<p align="center"><img width="400" src="./printImages/registroCriancaTable.png" alt="print"></p>
+
+
 
 Logo após registrar uma criança, ou clicando em vizualizar o responsável poderá vizualizar as crianças que tem cadastradas
+
+<p align="center"><img width="400" src="./printImages/alertaSucessoCrianca.png" alt="print"></p>
+
 
 **End Point**: `/childDetails`
 
@@ -138,10 +147,3 @@ Os usuários poderem visitar o mural de depoimentos para casos de sucesso e mens
 **End Point**: `/mural`
 
 <p align="center"><img width="400" src="./printImages/" alt="print"></p>
-
-
-
-
-
-
-
