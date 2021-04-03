@@ -21,9 +21,11 @@ export const List = styled.ul`
 export const Card = styled.li`
 	position: relative;
     height: 30rem;
+	padding: 1.25rem;
 	justify-self: stretch;
 
 	display: flex;
+	flex: 1 1 auto;
 	flex-direction: column;
 	justify-content: center;
 
@@ -32,24 +34,61 @@ export const Card = styled.li`
     box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 `
 
+export const Name = styled.h2`
+    color: var(--bg-darker-orange);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+`
+
+export const Description = styled.h3`
+    color: var(--bg-darker-orange);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+`
+
+export const ProgressBarContainer = styled.div`
+	box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+	border: 1px solid #dee2e6;
+	border-color: black;
+	border-radius: 15px;
+	margin-bottom: 2rem;
+`
+
+export const ProgressBar = styled.div`
+	height: 20px;
+	background-color: #28a745;
+	border-radius: 15px;
+`
+
+export const Details = styled.p`
+    color: black;
+    font-size: 1.3rem;
+	font-weight: 600;
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+`
+
 
 export const Button = styled.a`
     font-size: 1.2rem;
     text-decoration: none !important;
     cursor: pointer;
+	text-transform: uppercase;
+	letter-spacing: .15rem;
+	transition: all .3s;
+
     display: inline-block;
-	padding: 1.5rem;
+	padding: 1.5rem 3rem;
     margin-top: 1.5rem;
 	border-radius: 2rem;
     border: none;
 	color: #fff;
-	text-transform: uppercase;
-	letter-spacing: .15rem;
-	transition: all .3s;
 	position: relative;
 	overflow: hidden;
 	z-index: 1;
-    justify-self: center;
+    align-self: center;
 
 	&:after {
 		content: '';

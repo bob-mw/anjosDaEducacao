@@ -9,42 +9,38 @@ const ChildrenCards = () => {
             {
                 dataChildrens.map((children, index) => (
                     <S.Card key={index}>
-                        <div className="card-body">
-                            <h3 className="card-title text-uppercase">{children.name}</h3>
-                            <p className="card-title text-uppercase">{(children.teaching === "EF") && "Ensino Infantil" || (children.teaching === "F1") && "Fundamental 1" || (children.teaching === "F2") && "Fundamental 2" || (children.teaching === "EM") && "Ensino Médio" }</p>
-                            <p className="card-title text-uppercase">{children.schoolName}</p>
-                            <hr />
+                        <S.Name>{children.name}</S.Name>
+                        <S.Description>
+                            {
+                                (children.teaching === "EF") && "Ensino Infantil" || 
+                                (children.teaching === "F1") && "Fundamental 1" || 
+                                (children.teaching === "F2") && "Fundamental 2" || 
+                                (children.teaching === "EM") && "Ensino Médio" 
+                            }
+                        </S.Description>
+                        <S.Description>{children.schoolName}</S.Description>
+                        
+                        <hr />
 
-                            <section>
+                            <S.ProgressBarContainer>
+                                <S.ProgressBar style={{
+                                        width: `${(children.collected === children.goal / 4) && "25%" ||
+                                        (children.collected <= children.goal / 2) && "50%" ||
+                                        (children.collected <= (children.goal / 4) * 3) && "75%" ||
+                                        (children.collected <= children.goal / 1) && "100%"}`
+                                }
+                                }></S.ProgressBar>
+                            </S.ProgressBarContainer>
 
-                                <div className="shadow b-radius border border-dark mb-3">
-                                    <div className="bg-success b-radius" style={{
-                                        height: '10px', width: `${(children.collected === children.goal / 4) && "25%" ||
-                                            (children.collected <= children.goal / 2) && "50%" ||
-                                            (children.collected <= (children.goal / 4) * 3) && "75%" ||
-                                            (children.collected <= children.goal / 1) && "100%"}`
-                                    }
-                                    }></div>
-                                </div>
+                            <S.Details>Conseguimos: R$ {children.collected}</S.Details>
 
-                                <div>
-                                    <span><strong>Conseguimos: </strong> R$ {children.collected}</span>
-                                </div>
+                            <S.Details>Meta: R$ {children.goal}</S.Details>
 
-                                <div>
-                                    <span><strong>Meta: </strong>R$ {children.goal}</span>
-                                </div>
+                            <S.Details>Guardiões: {children.guardians}</S.Details>
 
-                                <div>
-                                    <span><strong>Guardiões: </strong> {children.guardians}</span>
-                                </div>
+                        <hr />
 
-                            </section>
-
-                            <hr />
-
-                            <S.Button href="/littleCow"> Doar</S.Button>
-                        </div>
+                        <S.Button href="/littleCow"> Doar</S.Button>
                     </S.Card>
                 ))
             }
