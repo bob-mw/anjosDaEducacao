@@ -10,9 +10,9 @@ const ChildDetails = () => {
 
             <S.Title>Você tem { fakeData.length } filhos cadastrados</S.Title>
 
-            <label htmlFor="yourChildrens" className="my-5">
+            <S.Label htmlFor="yourChildrens">
 
-                <select name="yourChildrens" id="yourChildrens" className="form-control mx-3 text-uppercase">
+                <select name="yourChildrens" id="yourChildrens">
                     <option value="" selected disabled>Filhos cadastrados</option>
                     {
                         fakeData.map((child, index) => (
@@ -20,7 +20,7 @@ const ChildDetails = () => {
                         ))
                     }
                 </select>
-            </label>
+            </S.Label>
 
             <ChipIn/>
         </>

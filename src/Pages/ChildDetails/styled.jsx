@@ -20,3 +20,8 @@ export const Title = styled.h1`
         padding-top: 4rem;
     }
 `
+export const Label = styled.label`
+    font-size: 1.3rem;
+    color: var(--bg-darker-orange);
+    margin: 5rem 0;
+`
