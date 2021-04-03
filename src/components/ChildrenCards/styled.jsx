@@ -21,9 +21,11 @@ export const List = styled.ul`
 export const Card = styled.li`
 	position: relative;
     height: 30rem;
+	padding: 1.25rem;
 	justify-self: stretch;
 
 	display: flex;
+	flex: 1 1 auto;
 	flex-direction: column;
 	justify-content: center;
 
@@ -37,19 +39,20 @@ export const Button = styled.a`
     font-size: 1.2rem;
     text-decoration: none !important;
     cursor: pointer;
+	text-transform: uppercase;
+	letter-spacing: .15rem;
+	transition: all .3s;
+
     display: inline-block;
 	padding: 1.5rem;
     margin-top: 1.5rem;
 	border-radius: 2rem;
     border: none;
 	color: #fff;
-	text-transform: uppercase;
-	letter-spacing: .15rem;
-	transition: all .3s;
 	position: relative;
 	overflow: hidden;
 	z-index: 1;
-    justify-self: center;
+    align-self: center;
 
 	&:after {
 		content: '';
