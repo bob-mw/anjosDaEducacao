@@ -52,3 +52,21 @@ export const Details = styled.p`
     text-transform: uppercase;
     padding-bottom: 0.5rem;
 `
+export const Table = styled.table`
+    width: 100%;
+    margin: 2rem 0;
+    color: black;
+    border: 1px solid var(--bg-dark-orange);
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    thead > tr > th {
+        padding: 0.75rem;
+        border: 1px solid var(--bg-dark-orange);
+    }
+
+    tbody > tr > td {
+        padding: 0.75rem;
+        border: 1px solid var(--bg-dark-orange);
+    }
+`

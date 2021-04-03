@@ -42,7 +42,7 @@ const ChipIn = () => {
 
                 <S.Details>Guardiões: {children.guardians}</S.Details>
 
-                <table class="table table-bordered">
+                <S.Table>
                     <thead>
                         <tr>
                             <th>Qt</th>
@@ -61,14 +61,12 @@ const ChipIn = () => {
                             ))
                         }
                     </tbody>
-                </table>
+                </S.Table>
 
-                <div className="d-flex flex-column align-items-end">
-                    <h1>Taxa de entrega: </h1>
+                <S.Details>Taxa de entrega:</S.Details>
 
-                    <h1>Total: </h1>
+                <S.Details>Total:</S.Details>
 
-                </div>
 
                 <section className="border border-primary p-2 b-radius   boxInputRadio-width mx-auto my-5">
                     <h1 className="text-center">Método de Pagamento</h1>
