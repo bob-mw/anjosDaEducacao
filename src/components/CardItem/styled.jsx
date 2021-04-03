@@ -81,7 +81,7 @@ export const TitleContainer = styled(motion.div)`
     bottom: 13.7rem;
     left: 15px;
     max-width: 300px;
-    padding: 0.5rem;
+    padding: 1rem;
     border-radius: 1rem;
     background: linear-gradient(to left bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.8));
     box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.3); 
