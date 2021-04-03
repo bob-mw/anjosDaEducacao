@@ -2,11 +2,13 @@ import React from 'react'
 import ChipIn from '../../components/ChipInComponent/'
 import fakeData from '../../data/fakeDbChildrens'
 
+import * as S from './styled'
+
 const ChildDetails = () => {
     return (
         <>
 
-            <h1 className="display-4">Você tem { fakeData.length } filhos cadastrados</h1>
+            <S.Title>Você tem { fakeData.length } filhos cadastrados</S.Title>
 
             <label htmlFor="yourChildrens" className="my-5">
 
