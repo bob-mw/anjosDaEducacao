@@ -76,7 +76,7 @@ export const CardImage = styled.img`
 `
 
 export const TitleContainer = styled(motion.div)`
-    color: var(--bg-dark-pink);
+    color: var(--bg-darker-orange);
     position: absolute;
     bottom: 13.7rem;
     left: 15px;
@@ -88,7 +88,7 @@ export const TitleContainer = styled(motion.div)`
 `
 
 export const Description = styled.h2`
-    color: var(--bg-darker-pink);
+    color: var(--bg-darker-orange);
     font-size: 1.25rem;
     text-transform: uppercase;
     font-weight: 600;
@@ -96,7 +96,7 @@ export const Description = styled.h2`
 `
 
 export const Name = styled.span`
-    color: var(--bg-darker-pink);
+    color: var(--bg-darker-orange);
     font-size: 2.5rem;
     text-transform: uppercase;
 `

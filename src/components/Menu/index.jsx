@@ -39,13 +39,13 @@ const Menu = () => {
             scaleX: 1.3,
             top: "50%",
             rotation: 45,
-            background: "#dd9ea1",
+            background: "#df2c15",
             ease: "power3"
         }, "<")
         .to(lineTwo.current, { 
             duration: 0.5,
             autoAlpha: 0,
-            background: "#dd9ea1",
+            background: "#df2c15",
             ease: "power3"
         }, "<")
         .to(lineThree.current, {
@@ -54,7 +54,7 @@ const Menu = () => {
             bottom: "0%",
             top: "50%",
             rotation: -45,
-            background: "#dd9ea1",
+            background: "#df2c15",
             ease: "power3",
         }, "<")
         .from(menuItems.current, {

@@ -6,7 +6,7 @@ export const TextCenter = styled.div`
 
 export const Title = styled.h1`
     position: relative;
-    color: var(--bg-darker-pink);
+    color: var(--bg-darker-orange);
     font-size: 4rem;
     padding-top: 2rem;
 
@@ -33,8 +33,8 @@ export const Form = styled.form`
     padding: 5rem;
     margin: 5rem 1rem;
     border-radius: 2rem;
-    background: linear-gradient(to left bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
-    box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    background: linear-gradient(to left bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5));
+    box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.3);
 `
 
 export const FormGroup = styled.div`

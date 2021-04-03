@@ -8,6 +8,7 @@ export const Sidebar = styled.div`
   height: 50rem;
   width: 20rem;
   background: linear-gradient(to left bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+  box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.15); 
   backdrop-filter: blur(2rem);
   border-radius: 2rem 0 0 2rem;
   z-index:3;
