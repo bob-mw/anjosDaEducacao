@@ -40,7 +40,7 @@ const ChildrenCards = () => {
 
                         <hr />
 
-                        <S.Button href="/littleCow"> Doar</S.Button>
+                        <S.Button href="/chipIn"> Doar</S.Button>
                     </S.Card>
                 ))
             }

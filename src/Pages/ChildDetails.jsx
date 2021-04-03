@@ -1,6 +1,6 @@
-import React from 'react';
-import LittleCow from '../components/LittleCowComponent/index';
-import fakeData from '../data/fakeDbChildrens';
+import React from 'react'
+import ChipIn from '../components/ChipInComponent/'
+import fakeData from '../data/fakeDbChildrens'
 
 function ChildDetails() {
     return (
@@ -22,7 +22,7 @@ function ChildDetails() {
                 </select>
             </label>
 
-            <LittleCow />
+            <ChipIn/>
         </div>
     );
 }

@@ -10,7 +10,7 @@ import WishList from './Pages/WishList';
 import Mural from './Pages/Mural'
 import PaymentForm from './Pages/PaymentForm';
 import ChildDetails from './Pages/ChildDetails';
-import LittleCowPage from './Pages/LittleCow';
+import ChipInPage from './Pages/ChipIn';
 
 
 
@@ -28,7 +28,7 @@ function App(){
               <Route path="/wishList" component={ WishList } />
               <Route path="/mural" component={ Mural } />
               <Route path="/paymentForm" component={ PaymentForm } />
-              <Route path="/littleCow" component={ LittleCowPage } />
+              <Route path="/chipIn" component={ ChipInPage } />
             </Switch>
           </Layout>
         </BrowserRouter>
