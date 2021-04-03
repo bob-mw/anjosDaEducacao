@@ -7,17 +7,37 @@ export const HeroContainer = styled.div`
 	line-height: 1.5;
 	align-self: flex-start;
 
+	@media only screen and (max-width: 1500px) {
+        font-size: 16px;
+    }
+	@media only screen and (max-width: 1320px) {
+        font-size: 14px;
+    }
+	@media only screen and (max-width: 1180px) {
+        font-size: 12px;
+    }
+	@media only screen and (max-width: 1020px) {
+        font-size: 10px;
+    }
+	@media only screen and (max-width: 860px) {
+        font-size: 9px;
+    }
+	@media only screen and (max-width: 760px) {
+        font-size: 8px;
+    }
 	@media only screen and (max-width: 400px) {
-        padding: 0.5rem 0.5rem 0.5rem 1rem;
+		padding: 0.5rem 0.5rem 0.5rem 1rem;
+        font-size: 7px;
     }
 `
+
 
 export const HeroTitle = styled.h2`
 	-webkit-text-stroke-width: 3px; 
     -webkit-text-stroke-color: var(--bg-darker-orange); 
 	color: transparent;
 	font-weight:800;
-	font-size: 4.5rem;
+	font-size: 4.5em;
 	text-align: justify;
   	text-justify: inter-word;
 	overflow: hidden;
@@ -27,27 +47,10 @@ export const HeroTitle = styled.h2`
 		transform: translateY(100%);
 	}
 
-	@media only screen and (max-width: 1500px) {
-        font-size: 4rem;
-    }
-	@media only screen and (max-width: 1320px) {
-        font-size: 3.5rem;
-    }
-	@media only screen and (max-width: 1180px) {
-        font-size: 3rem;
-    }
 	@media only screen and (max-width: 1020px) {
-        font-size: 2.5rem;
 		-webkit-text-stroke-width: 2px; 
     }
-	@media only screen and (max-width: 860px) {
-        font-size: 2.2rem;
-    }
-	@media only screen and (max-width: 760px) {
-        font-size: 2rem;
-    }
 	@media only screen and (max-width: 400px) {
-        font-size: 1.8rem;
 		-webkit-text-stroke-width: 1px; 
     }
 `
