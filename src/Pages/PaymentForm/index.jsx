@@ -122,7 +122,7 @@ const PaymentForm = () => {
                                 </select>
                         </label>
                 
-                <button className="btn btn-warning my-3 text-uppercase">Doar</button>
+                <S.Button>Doar</S.Button>
                 
                 </S.Form>
 
