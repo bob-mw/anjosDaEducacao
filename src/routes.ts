@@ -37,5 +37,6 @@ routes.get('/list', listController.show)
 routes.post('/product', authMiddleware, productController.create)
 
 routes.post('/wish', authMiddleware, wishController.create)
+routes.get('/wish', authMiddleware, wishController.show)
 
 export default routes

@@ -24,7 +24,7 @@ class FindWishService {
     }
 
     const wish = await Wish.find({
-      name: id
+      owner: id
     })
 
     if (!wish) {

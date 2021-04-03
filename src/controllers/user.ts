@@ -3,7 +3,7 @@ import { Request, Response } from 'express'
 import CreateUserService from '@services/createUser'
 import AuthUserService from '@services/authUser'
 import UpdateUserService from '@services/updateUser'
-import FindUserService from '@services/findUserService'
+import FindUserService from '@services/findUser'
 
 import createUserSchema from '@validation/createUser'
 import updateUserSchema from '@validation/updateUser'
@@ -23,7 +23,6 @@ class UserController {
       name,
       email,
       password,
-      cpf,
       phone
     } = request.body
 
@@ -33,7 +32,6 @@ class UserController {
       name,
       email,
       password,
-      cpf,
       phone
     })
 

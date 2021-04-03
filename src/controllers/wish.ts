@@ -4,6 +4,7 @@ import createWishSchema from '@validation/createWish'
 import materialListSchema from '@validation/MaterialList'
 
 import CreateWishService from '@services/createWish'
+import FindWishService from '@services/findWish'
 
 import AppError from '@errors/appError'
 
@@ -33,6 +34,18 @@ class WishController {
       schoolName,
       materials,
       teaching
+    })
+
+    return response.json({
+      wish
+    })
+  }
+
+  async show (request: Request, response: Response) {
+    const findWishService = new FindWishService()
+
+    const wish = await findWishService.execute({
+      id: request.user.id
     })
 
     return response.json({
