@@ -9,6 +9,11 @@ const Card = ({ id, name, age, city, state }) => {
   return (
     <S.Item>
       <S.CardContentContainer>
+        <S.Menu>
+            <S.Top/>
+            <S.Middle/>
+            <S.Bottom/>
+        </S.Menu>
         <S.CardContent layoutId={`card-container-${id}`}>
           <S.CardImageContainer
             layoutId={`card-image-container-${id}`}
