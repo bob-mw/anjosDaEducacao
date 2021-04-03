@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Cards from 'react-credit-cards';
 
-function PaymentForm() {
+const PaymentForm = () => {
 
     const [cardInformations, setCardInformations] = useState({
         cvc: '',

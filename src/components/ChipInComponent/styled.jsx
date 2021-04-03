@@ -62,7 +62,6 @@ export const Table = styled.table`
     line-height: 1.4;
     font-weight: 600;
     font-size: 1.2em;
-    color: black;
 
     thead > tr > th {
         padding: 0.75rem;
