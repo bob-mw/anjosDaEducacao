@@ -135,3 +135,42 @@ export const ContentContainer = styled(motion.div)`
         padding: 20rem 2rem 2rem 2rem;
     }
 `
+
+const thickness = 3;
+
+const Shape = styled(motion.span)`
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: ${thickness}px;
+  border-radius: 3px;
+  background: var(--bg-darker-orange);
+`
+
+export const Top = styled(Shape)`
+  top: 50%;
+  transform: rotate(45deg);
+`
+
+export const Bottom = styled(Shape)`
+  top: 50%;
+  transform: rotate(-45deg);
+`
+
+const side = 2;
+
+export const Menu = styled(motion.div)`
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  margin: 1.5rem;
+  width: ${side}rem;
+  height: ${side}rem;
+  transition: transform 0.2s, opacity 0.2s !important;
+  will-change: transform;
+  &:hover {
+    opacity: 0.7;
+    transform: scale(1.2);
+  }
+`

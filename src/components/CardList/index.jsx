@@ -26,7 +26,7 @@ const Card = ({ id, name, age, city, state }) => {
             <S.Top/>
             <S.Middle/>
             <S.Bottom/>
-        </S.Menu>
+          </S.Menu>
         </S.CardContent>
       </S.CardContentContainer>
       <S.CardOpenLink to={`/mural/${id}`} />

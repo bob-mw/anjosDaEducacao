@@ -51,7 +51,7 @@ const Menu = () => {
         .to(lineThree.current, {
             duration: 0.5,
             scaleX: 1.5,
-            bottom: "0%",
+            bottom: null,
             top: "50%",
             rotation: -45,
             background: "#df2c15",

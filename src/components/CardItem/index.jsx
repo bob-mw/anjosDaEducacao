@@ -37,6 +37,11 @@ const CardItem = ({ id }) => {
             <S.Description>Clique para fechar</S.Description>
           </S.TitleContainer>
 
+          <S.Menu>
+            <S.Top/>
+            <S.Bottom/>
+          </S.Menu>
+
           <S.ContentContainer animate>
             <LoremIpsum
               p={3}
