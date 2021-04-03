@@ -50,7 +50,7 @@ http://localhost:3000/
 
 **Você também pode acessar o deploy da aplicação:**
 
-<p align="center"><a href="" target="_blank"><img src="https://img.shields.io/static/v1?label=deploy&message=Anjos da Educacao&color=rgb(245, 188, 66)&style=for-the-badge&logo=ghost"></a></p>
+<p align="center"><a href="" target="_blank"><img src="https://img.shields.io/static/v1?label=Deploy&message=AnjosDaEducacao&color=rgb(245,197,66)&style=for-the-badge&logo=ghost"></a></p>
 
 <hr>
 
