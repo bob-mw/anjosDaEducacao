@@ -68,7 +68,7 @@ const ChipIn = () => {
                 <S.Details>Total:</S.Details>
 
 
-                <section className="border border-primary p-2 b-radius   boxInputRadio-width mx-auto my-5">
+                <S.PaymentMethodContainer>
                     <h1 className="text-center">Método de Pagamento</h1>
                     <div className="my-3">
 
@@ -82,7 +82,7 @@ const ChipIn = () => {
                             Boleto
                         </label>
                     </div>
-                </section>
+                </S.PaymentMethodContainer>
 
             </S.DetailsContainer>
 

@@ -70,3 +70,11 @@ export const Table = styled.table`
         border: 1px solid var(--bg-dark-orange);
     }
 `
+
+export const PaymentMethodContainer = styled.div`
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border: 2px solid var(--bg-dark-orange);
+    border-radius: 2rem;
+    align-self: center;
+`
