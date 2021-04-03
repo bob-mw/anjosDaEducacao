@@ -30,7 +30,7 @@ export const Name = styled.span`
     font-size: 2rem;
     text-transform: uppercase;
     padding-left: 2rem;
-    font-weight: 200;
+    font-weight: 600;
 
     @media only screen and (max-width: 900px) {
         font-size: 1.5rem;

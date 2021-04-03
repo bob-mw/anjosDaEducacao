@@ -55,6 +55,7 @@ export const TitleContainer = styled(motion.div)`
 export const Name = styled.span`
     color: var(--bg-darker-orange);
     font-size: 2.5rem;
+    font-weight: 600;
     text-transform: uppercase;
 `
 

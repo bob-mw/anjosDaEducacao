@@ -18,13 +18,14 @@ export const Sidebar = styled.div`
 export const Description = styled.p`
   position: absolute;
   top: 5.5rem;
-  right: 2rem;
-  font-size: 1.2rem;
+  right: 1.7rem;
+  font-size: 1.3rem;
+  font-weight: 600;
   text-transform: uppercase;
   color: white;
 `
 
-const thickness = 4;
+const thickness = 6;
 
 const Shape = styled.span`
   display: inline-block;

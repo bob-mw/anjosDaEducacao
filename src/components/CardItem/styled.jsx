@@ -100,7 +100,6 @@ export const Description = styled.h2`
     color: var(--bg-darker-orange);
     font-size: 1.25rem;
     text-transform: uppercase;
-    font-weight: 600;
     padding-top: 0.5rem;
 
     @media only screen and (max-width: 600px) {
@@ -115,6 +114,7 @@ export const Description = styled.h2`
 export const Name = styled.span`
     color: var(--bg-darker-orange);
     font-size: 2.5rem;
+    font-weight: 600;
     text-transform: uppercase;
 
     @media only screen and (max-width: 600px) {

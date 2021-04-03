@@ -36,7 +36,7 @@ const Menu = () => {
         }, "0")
         .to(lineOne.current, {
             duration: 0.5,
-            scaleX: 1.3,
+            scaleX: 1.5,
             top: "50%",
             rotation: 45,
             background: "#df2c15",
@@ -50,7 +50,7 @@ const Menu = () => {
         }, "<")
         .to(lineThree.current, {
             duration: 0.5,
-            scaleX: 1.3,
+            scaleX: 1.5,
             bottom: "0%",
             top: "50%",
             rotation: -45,
