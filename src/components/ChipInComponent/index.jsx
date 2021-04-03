@@ -86,9 +86,7 @@ const ChipIn = () => {
 
             </S.DetailsContainer>
 
-            <hr />
-
-            <a className="btn w-100 m-3" style={ { background: '#f1d7d8ff', 'border-radius': '15px' } } href="/paymentForm" >Próximo</a>
+            <S.Button href="/paymentForm">Próximo</S.Button>
 
         </S.Container>
     )

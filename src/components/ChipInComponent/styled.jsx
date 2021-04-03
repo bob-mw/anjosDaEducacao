@@ -59,15 +59,25 @@ export const Table = styled.table`
     border: 1px solid var(--bg-dark-orange);
     border-collapse: collapse;
     border-spacing: 0;
+    line-height: 1.4;
+    font-weight: 600;
+    font-size: 1.2em;
+    color: black;
 
     thead > tr > th {
         padding: 0.75rem;
         border: 1px solid var(--bg-dark-orange);
+        background-color: var(--bg-dark-orange);
     }
 
     tbody > tr > td {
         padding: 0.75rem;
         border: 1px solid var(--bg-dark-orange);
+        background-color: var(--bg-orange);
+
+        &:nth-child(even){
+            background-color: var(--bg-light-orange);
+        }
     }
 `
 
@@ -105,4 +115,56 @@ export const RadioLabel = styled.label`
     font-size: 1.2rem;
     font-weight: 600;
     text-transform: uppercase;
+`
+
+export const Button = styled.a`
+    font-size: 1.2rem;
+    text-decoration: none !important;
+    cursor: pointer;
+	text-transform: uppercase;
+	letter-spacing: .15rem;
+	transition: all .3s;
+
+    display: inline-block;
+	padding: 1.5rem 3rem;
+    margin-top: 1.5rem;
+	border-radius: 2rem;
+    border: none;
+	color: #fff;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+    align-self: center;
+
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: var(--bg-dark-orange);
+		border-radius: 10rem;
+		z-index: -2;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0%;
+		height: 100%;
+		background-color: var(--bg-lighter-orange);
+		transition: all .3s;
+		border-radius: 10rem;
+		z-index: -1;
+	}
+
+	&:hover {
+		color: #fff;
+		&:before {
+			width: 100%;
+		}
+	}
+
 `
