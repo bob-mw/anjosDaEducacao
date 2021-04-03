@@ -10,14 +10,16 @@ const ChipIn = () => {
     return (
         <S.Container>
 
-            <div className="text-center">
-
-                <h1 className="text-uppercase display-4">{children.name}</h1>
-
-                <h2 className="text-uppercase">{(children.teaching === "EF") && "Ensino Infantil" || (children.teaching === "F1") && "Fundamental 1" || (children.teaching === "F2") && "Fundamental 2" || (children.teaching === "EM") && "Ensino Médio"}</h2>
-
-                <h3>{children.schoolName}</h3>
-            </div>
+            <S.Name>{children.name}</S.Name>
+            <S.Description>
+                {
+                    (children.teaching === "EF") && "Ensino Infantil" || 
+                    (children.teaching === "F1") && "Fundamental 1" || 
+                    (children.teaching === "F2") && "Fundamental 2" || 
+                    (children.teaching === "EM") && "Ensino Médio" 
+                }
+            </S.Description>
+            <S.Description>{children.schoolName}</S.Description>
 
             <hr />
 

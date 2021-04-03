@@ -7,8 +7,20 @@ export const Container = styled.form`
     justify-content: center;
     align-items:center;
     padding: 3rem;
-    margin: 5rem 1rem;
-    border-radius: 2rem;
-    background: linear-gradient(to left bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5));
-    box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+    margin: 5rem 0;
+    background: none;
+`
+
+export const Name = styled.h2`
+    color: var(--bg-darker-orange);
+    font-size: 4rem;
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+`
+
+export const Description = styled.h3`
+    color: var(--bg-darker-orange);
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
 `
