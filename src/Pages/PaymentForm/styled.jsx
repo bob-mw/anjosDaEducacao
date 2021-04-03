@@ -75,6 +75,21 @@ export const Field = styled.input`
     box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 `
 
+export const Select = styled.select`
+    width: 100%;
+    height: 3rem;
+    padding: 0.375rem 0.75rem;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #000;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.2rem;
+    box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+`
+
 export const Button = styled.a`
     font-size: 1.2rem;
     text-decoration: none !important;

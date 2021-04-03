@@ -65,7 +65,7 @@ const PaymentForm = () => {
 
                     <div className="d-flex">
 
-                        <S.Label className="m-3" htmlFor="validateDate">
+                        <S.Label htmlFor="validateDate">
                             Valido até:
                             <S.Field
                                 id="validateDate"
@@ -77,7 +77,7 @@ const PaymentForm = () => {
                                 className="form-control"
                                 />
                         </S.Label>
-                        <S.Label className="m-3" htmlFor="validateDate">
+                        <S.Label htmlFor="validateDate">
                             CVC
                             <S.Field
                                 id="validateDate"
@@ -91,7 +91,7 @@ const PaymentForm = () => {
                         </S.Label>           
                     </div>
 
-                    <S.Label className="m-3" htmlFor="donate">
+                    <S.Label htmlFor="donate">
                         Valor a ser doado
                         <S.Field
                             id="donate"
@@ -105,19 +105,18 @@ const PaymentForm = () => {
                     </S.Label>
                     <S.Label htmlFor="paymentMethod">
                                 Método de Pagamento
-                            <select
+                            <S.Select
                                 id="validateDate"
                                 type="number"
                                 name="payment"
                                 placeholder="cvc"
                                 onChange={handleInputChange}
                                 onFocus={handleInputFocus}
-                                className="form-control"
                                 >
                                 <option value="Debit" selected disabled>Escolher</option>
                                 <option value="Debit">Débito</option>
                                 <option value="Credit">Crédito</option>
-                            </select>
+                            </S.Select>
                     </S.Label>
                 
                     <S.Button>Doar</S.Button>
