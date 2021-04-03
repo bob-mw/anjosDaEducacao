@@ -1,12 +1,11 @@
-import React from 'react';
-import ChildrenCard from '../../components/ChildrenCards/index';
+import React from 'react'
+import ChildrenCard from '../../components/ChildrenCards/index'
 
-function WishList() {
+const WishList = () => {
     return (
         <section>
             <div className="text-center">
             <h1 className="display-4">Lista de Pedidos</h1>
-            <hr/>
             </div>
             <section className="p-5">
                 <ChildrenCard />
@@ -15,4 +14,4 @@ function WishList() {
     );
 }
 
-export default WishList;
+export default WishList
