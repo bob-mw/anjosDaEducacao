@@ -43,7 +43,7 @@ const ChildrenCards = () => {
 
                             <hr />
 
-                            <S.LinkStyleButton href="/littleCow" className="btn w-100" style={ { background: '#f1d7d8ff'}  }> Doar</S.LinkStyleButton>
+                            <S.Button href="/littleCow"> Doar</S.Button>
                         </div>
                     </S.Card>
                 ))

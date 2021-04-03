@@ -20,8 +20,12 @@ export const List = styled.ul`
 
 export const Card = styled.li`
 	position: relative;
-    height: 460px;
+    height: 30rem;
 	justify-self: stretch;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 
     border-radius: 2rem;
     background: linear-gradient(to left bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
@@ -29,7 +33,7 @@ export const Card = styled.li`
 `
 
 
-export const LinkStyleButton = styled.a`
+export const Button = styled.a`
     font-size: 1.2rem;
     text-decoration: none !important;
     cursor: pointer;
@@ -54,7 +58,7 @@ export const LinkStyleButton = styled.a`
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: var(--bg-lighter-orange);
+		background-color: var(--bg-dark-orange);
 		border-radius: 10rem;
 		z-index: -2;
 	}
@@ -65,7 +69,7 @@ export const LinkStyleButton = styled.a`
 		left: 0;
 		width: 0%;
 		height: 100%;
-		background-color: var(--bg-dark-orange);
+		background-color: var(--bg-lighter-orange);
 		transition: all .3s;
 		border-radius: 10rem;
 		z-index: -1;
