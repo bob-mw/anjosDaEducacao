@@ -4,6 +4,8 @@ import Fonts from './fonts'
 
 const GlobalStyles = createGlobalStyle`
 
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;800&display=swap');
+
     :root {
         --bg-light-pink: #F1D7D8;
         --bg-pink: #e4b1b3;
