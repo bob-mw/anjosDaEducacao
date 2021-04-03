@@ -1,5 +1,5 @@
 import React from 'react'
-import ChildrenCard from '../../components/ChildrenCards/index'
+import ChildrenCards from '../../components/ChildrenCards/index'
 
 import * as S from './styled'
 
@@ -8,7 +8,7 @@ const WishList = () => {
         <>
             <S.Title>Lista de Pedidos</S.Title>
             <S.Container>
-                <ChildrenCard />
+                <ChildrenCards />
             </S.Container>
         </>
     )

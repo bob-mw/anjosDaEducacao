@@ -24,14 +24,20 @@ export const Title = styled.h1`
     }
 `
 
-export const Card = styled.section`
-    position: relative;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center;
-    padding: 5rem;
-    margin: 5rem 1rem;
+export const List = styled.ul`
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 1rem;
+`
+
+export const Card = styled.li`
+	position: relative;
+    height: 460px;
+	justify-self: stretch;
+
     border-radius: 2rem;
     background: linear-gradient(to left bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
     box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.15);
