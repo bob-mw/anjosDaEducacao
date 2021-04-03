@@ -1,7 +1,7 @@
 import React from 'react';
 import dataFake from '../../data/fakeDbChildrens';
 
-function littleCow() {
+const ChipIn = () => {
 
     const children = dataFake[0];
 
@@ -98,4 +98,4 @@ function littleCow() {
     );
 }
 
-export default littleCow;
+export default ChipIn
