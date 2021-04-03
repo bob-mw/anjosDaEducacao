@@ -39,9 +39,26 @@ const Login = () => {
             </S.HeroContainer>
             <S.HeroContainer>
                 <S.HeroSubtitle><span ref={addToHeroTexts}>Anjos da Educação</span></S.HeroSubtitle>
+                <S.HeroText>
+                    <span ref={addToHeroTexts}>
+                        A iniciativa desse projeto se deu a partir de um desafio do Hackaton proposto pelo Grupo FCamara. 
+                        A ideia era criar uma solução para viabilizar doações de materiais escolares para crianças de escolas públicas.
+                        Nosso objetivo é que as doações ocorram em qualquer lugar de modo que o doador possa ajudar de forma online e 
+                        ainda ter papelarias parceiras que possam ter uma maior visibilidade financeira e social. 
+                    </span>
+                </S.HeroText>
             </S.HeroContainer>
             <S.HeroContainer>
                 <S.HeroSubtitle><span ref={addToHeroTexts}>Como acontece?</span></S.HeroSubtitle>
+                <S.HeroText>
+                    <span ref={addToHeroTexts}>
+                        O pai/mãe/responsável legal de um aluno cadastra em nosso site e seleciona os materiais que sua criança 
+                        está precisando por meio de uma lista já cadastrada em nosso site. O doador (de forma anônima ou não) entra no site 
+                        e seleciona o aluno que quer ajudar. Ele visualiza a lista de pedidos já cadastrados ou tem a opção de escolher por escola. 
+                        Quando a meta de doação do aluno for completa, o nosso sistema envia para a papelaria um aviso e a papelaria se encarrega de 
+                        entregar à escola do aluno todo material.
+                    </span>
+                </S.HeroText>
             </S.HeroContainer>
             <S.Image src={ angel } alt="logo"/>
             <FormsLogin />

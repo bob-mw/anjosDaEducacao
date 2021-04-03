@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const HeroContainer = styled.div`
 	width: 100%;
-	margin-top: 5rem;
+	margin-top: 3rem;
 	padding: 2rem 2rem 2rem 4rem;
 	line-height: 1.5;
 	align-self: flex-start;
@@ -14,6 +14,8 @@ export const HeroTitle = styled.h2`
 	color: transparent;
 	font-weight:800;
 	font-size: 4.5rem;
+	text-align: justify;
+  	text-justify: inter-word;
 	overflow: hidden;
 
 	span {
@@ -27,6 +29,19 @@ export const HeroSubtitle = styled.h3`
 	font-weight:800;
 	font-size: 3rem;
 	overflow: hidden;
+
+	span {
+		display: inline-block;
+		transform: translateY(100%);
+	}
+`
+
+export const HeroText = styled.p`
+    color: black; 
+	font-weight:400;
+	font-size: 1.5rem;
+	overflow: hidden;
+	width: 80%;
 
 	span {
 		display: inline-block;
