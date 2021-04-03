@@ -4,7 +4,6 @@ import gsap from 'gsap'
 import FormsLogin from '../../components/FormsLogin/index'
 import angel from '../../img/angel.svg'
 import Footer from '../../components/Footer'
-import SplitText from '../../components/SplitText'
 
 import * as S from './styled'
 
@@ -32,14 +31,14 @@ const Login = () => {
         
     },[])
 
-    let Title = "Você não pode mudar o mundo, mas pode mudar o mundo de alguém!"
+    let title = "Você não pode mudar o mundo, mas pode mudar o mundo de alguém!"
 
     return (
-        <>
+        <>  
             <S.HeroContainer>
                 <S.HeroTitle>
-                    {Title.split('/(\s+)/').map(function(char, index){
-                        return <span ref={addToHeroTexts} key={index} data-title={char}>{char}</span>
+                    {title.split(" ").map(function(word, index){
+                        return <span ref={addToHeroTexts} key={index} data-title={word}>{`${word} `}</span>
                     })}
                 </S.HeroTitle>
             </S.HeroContainer>
