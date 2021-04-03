@@ -1,5 +1,5 @@
 import React from 'react';
-import LittleCow from '../components/LittleCowComponent';
+import LittleCow from '../components/LittleCowComponent/index';
 import fakeData from '../data/fakeDbChildrens';
 
 function ChildDetails() {

@@ -1,5 +1,5 @@
 import React from 'react';
-import dataFake from '../data/fakeDbChildrens';
+import dataFake from '../../data/fakeDbChildrens';
 
 function littleCow() {
 
@@ -7,7 +7,7 @@ function littleCow() {
 
     return (
         <section>
-            <div className=" shadow p-5 m-auto bg-light">
+            <div className="m-auto p-5">
 
                 <div className="text-center">
 
