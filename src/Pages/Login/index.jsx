@@ -25,8 +25,8 @@ const Login = () => {
         .to(heroTexts.current, {
             y: "0%",
             duration: 0.7,
-            stagger: 0.2,
-            delay: 1
+            stagger: 0.1,
+            delay: 1.5
         }, "0")
         
     },[])
