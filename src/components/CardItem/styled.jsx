@@ -85,6 +85,15 @@ export const TitleContainer = styled(motion.div)`
     border-radius: 1rem;
     background: linear-gradient(to left bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.8));
     box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.3); 
+
+    @media only screen and (max-width: 700px) {
+        bottom: 15rem;
+    }
+
+    @media only screen and (max-width: 500px) {
+        bottom: auto;
+        top: 1rem;
+    }
 `
 
 export const Description = styled.h2`
@@ -93,12 +102,20 @@ export const Description = styled.h2`
     text-transform: uppercase;
     font-weight: 600;
     padding-top: 0.5rem;
+
+    @media only screen and (max-width: 500px) {
+        font-size: 0.8rem;
+    }
 `
 
 export const Name = styled.span`
     color: var(--bg-darker-orange);
     font-size: 2.5rem;
     text-transform: uppercase;
+
+    @media only screen and (max-width: 500px) {
+        font-size: 1.5rem;
+    }
 `
 
 export const ContentContainer = styled(motion.div)`
