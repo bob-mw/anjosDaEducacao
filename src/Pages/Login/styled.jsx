@@ -6,6 +6,10 @@ export const HeroContainer = styled.div`
 	padding: 2rem 2rem 2rem 4rem;
 	line-height: 1.5;
 	align-self: flex-start;
+
+	@media only screen and (max-width: 400px) {
+        padding: 0.5rem 0.5rem 0.5rem 1rem;
+    }
 `
 
 export const HeroTitle = styled.h2`
@@ -22,6 +26,30 @@ export const HeroTitle = styled.h2`
 		display: inline-block;
 		transform: translateY(100%);
 	}
+
+	@media only screen and (max-width: 1500px) {
+        font-size: 4rem;
+    }
+	@media only screen and (max-width: 1320px) {
+        font-size: 3.5rem;
+    }
+	@media only screen and (max-width: 1180px) {
+        font-size: 3rem;
+    }
+	@media only screen and (max-width: 1020px) {
+        font-size: 2.5rem;
+		-webkit-text-stroke-width: 2px; 
+    }
+	@media only screen and (max-width: 860px) {
+        font-size: 2.2rem;
+    }
+	@media only screen and (max-width: 760px) {
+        font-size: 2rem;
+    }
+	@media only screen and (max-width: 400px) {
+        font-size: 1.8rem;
+		-webkit-text-stroke-width: 1px; 
+    }
 `
 
 export const HeroSubtitle = styled.h3`
