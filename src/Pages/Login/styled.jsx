@@ -5,11 +5,9 @@ export const HeroContainer = styled.div`
 	margin-top: 3rem;
 	padding: 2rem 2rem 2rem 4rem;
 	line-height: 1.5;
+	font-size: 16px;
 	align-self: flex-start;
 
-	@media only screen and (max-width: 1500px) {
-        font-size: 16px;
-    }
 	@media only screen and (max-width: 1320px) {
         font-size: 14px;
     }
@@ -17,17 +15,17 @@ export const HeroContainer = styled.div`
         font-size: 12px;
     }
 	@media only screen and (max-width: 1020px) {
-        font-size: 10px;
+        font-size: 11px;
     }
 	@media only screen and (max-width: 860px) {
-        font-size: 9px;
+        font-size: 10px;
     }
 	@media only screen and (max-width: 760px) {
-        font-size: 8px;
+        font-size: 9px;
     }
 	@media only screen and (max-width: 400px) {
 		padding: 0.5rem 0.5rem 0.5rem 1rem;
-        font-size: 7px;
+        font-size: 8px;
     }
 `
 
@@ -38,7 +36,7 @@ export const HeroTitle = styled.h2`
 	color: transparent;
 	font-weight:800;
 	font-size: 4.5em;
-	text-align: justify;
+	text-align: left;
   	text-justify: inter-word;
 	overflow: hidden;
 
@@ -58,7 +56,7 @@ export const HeroTitle = styled.h2`
 export const HeroSubtitle = styled.h3`
     color: var(--bg-darker-orange); 
 	font-weight:800;
-	font-size: 3rem;
+	font-size: 3.5em;
 	overflow: hidden;
 
 	span {
@@ -69,8 +67,8 @@ export const HeroSubtitle = styled.h3`
 
 export const HeroText = styled.p`
     color: black; 
-	font-weight:400;
-	font-size: 1.5rem;
+	font-weight:200;
+	font-size: 2em;
 	overflow: hidden;
 	width: 80%;
 
@@ -78,6 +76,10 @@ export const HeroText = styled.p`
 		display: inline-block;
 		transform: translateY(100%);
 	}
+
+	@media only screen and (max-width: 1180px) {
+        width: 95%;
+    }
 `
 
 export const Button = styled.button`
