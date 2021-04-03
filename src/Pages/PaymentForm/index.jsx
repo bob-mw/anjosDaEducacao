@@ -27,7 +27,7 @@ const PaymentForm = () => {
     return (
             <>
                 <S.Title>Informações do Cartão</S.Title>
-            <div className="row align-items-center" id="PaymentForm">
+            <S.Container id="PaymentForm">
 
             <Cards
                     cvc={cvc}
@@ -118,7 +118,7 @@ const PaymentForm = () => {
                 </S.Form>
 
 
-            </div>
+            </S.Container>
         </>
     );
 }

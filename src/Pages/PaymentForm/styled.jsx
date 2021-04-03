@@ -28,11 +28,16 @@ export const Container = styled.div`
 	grid-template-columns: repeat(2, 1fr);
 	grid-gap: 4rem;
     justify-content: center;
-    align-content: stretch;
+    align-content: center;
+    align-items: center;
 
     width: 100%;
     padding: 0 3rem;
     margin: 5rem 0;
+
+    @media only screen and (max-width: 1300px) {
+        grid-template-columns: 1fr
+    }
 `
 
 export const CardVisualizer = styled(Card)`
