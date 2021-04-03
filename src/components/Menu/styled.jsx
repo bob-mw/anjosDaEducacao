@@ -77,7 +77,7 @@ export const Item = styled.li`
   padding: 1rem 0;
   display: flex;
   font-size: 2rem;
-  color: var(--bg-darker-pink);
+  color: var(--bg-darker-orange);
 
   &:first-child {
       font-size: 3rem;
@@ -104,7 +104,7 @@ export const Link = styled(NavLink)`
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: var(--bg-lighter-orange);
+		background-color: var(--bg-dark-orange);
 		border-radius: 10rem;
 		z-index: -5;
 	}
@@ -115,7 +115,7 @@ export const Link = styled(NavLink)`
 		left: 0;
 		width: 0%;
 		height: 100%;
-		background-color: var(--bg-dark-orange);
+		background-color: var(--bg-lighter-orange);
 		transition: all .3s;
 		border-radius: 10rem;
 		z-index: -1;

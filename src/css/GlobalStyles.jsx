@@ -10,6 +10,7 @@ const GlobalStyles = createGlobalStyle`
         --bg-dark-pink: #dd9ea1;
         --bg-darker-pink:#a02a5fff;
 
+        --bg-darker-orange: #df2c15;
         --bg-dark-orange: #EF6351;
         --bg-orange: #F38375;
         --bg-light-orange: #F7A399;

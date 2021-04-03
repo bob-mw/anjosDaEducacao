@@ -30,42 +30,42 @@ const RegisterForms = () => {
     return (
         <>
             <S.TextCenter>
-            <S.Title>{ (registerType === 'guardian') && "Cadastro de Guardião" || "Cadastro de Pais da Criança" }</S.Title>
+                <S.Title>{ (registerType === 'guardian') && "Cadastro de Guardião" || "Cadastro de Pais da Criança" }</S.Title>
             </S.TextCenter>
-        <S.Form>
-            <S.FormGroup>
-                <S.Label for="cpf">
-                    Nome
-             <S.Field type="text" name="name" id="nome" placeholder="Nome Completo" onChange={handleChange} />
-                </S.Label>
-            </S.FormGroup>
-            <S.FormGroup>
-                <S.Label for="email">
-                    Email
-             <S.Field type="email" name="email" id="email" placeholder="email@dominio.com" onChange={handleChange} />
-                </S.Label>
-            </S.FormGroup>
-            <S.FormGroup>
-                <S.Label for="whatsapp">
-                    Cel
-             <S.Field type="number" name="phone" id="whatsapp" placeholder="Somente Números" onChange={handleChange} />
-                </S.Label>
-            </S.FormGroup>
-            <S.FormGroup>
-                <S.Label for="password">
-                    Senha
-            <S.Field type="password" name="password" id="password" placeholder="Minimo de 6 Digitos" onChange={handleChange} />
-                </S.Label>
-            </S.FormGroup>
-            <S.FormGroup>
-                <S.Label for="password">
-                    Confirmar Senha
-            <S.Field type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirme sua Senha" onChange={handleChange} />
-                </S.Label>
-            </S.FormGroup>
+            <S.Form>
+                <S.FormGroup>
+                    <S.Label for="cpf">
+                        Nome
+                <S.Field type="text" name="name" id="nome" placeholder="Nome Completo" onChange={handleChange} />
+                    </S.Label>
+                </S.FormGroup>
+                <S.FormGroup>
+                    <S.Label for="email">
+                        Email
+                <S.Field type="email" name="email" id="email" placeholder="email@dominio.com" onChange={handleChange} />
+                    </S.Label>
+                </S.FormGroup>
+                <S.FormGroup>
+                    <S.Label for="whatsapp">
+                        Cel
+                <S.Field type="number" name="phone" id="whatsapp" placeholder="Somente Números" onChange={handleChange} />
+                    </S.Label>
+                </S.FormGroup>
+                <S.FormGroup>
+                    <S.Label for="password">
+                        Senha
+                <S.Field type="password" name="password" id="password" placeholder="Minimo de 6 Digitos" onChange={handleChange} />
+                    </S.Label>
+                </S.FormGroup>
+                <S.FormGroup>
+                    <S.Label for="password">
+                        Confirmar Senha
+                <S.Field type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirme sua Senha" onChange={handleChange} />
+                    </S.Label>
+                </S.FormGroup>
 
-            <S.Button type="button" onClick={handleClick} disabled={ !formValidation }>Finalizar Cadastro</S.Button>
-        </S.Form>
+                <S.Button type="button" onClick={handleClick} disabled={ !formValidation }>Finalizar Cadastro</S.Button>
+            </S.Form>
         </>
     );
 }

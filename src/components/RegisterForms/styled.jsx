@@ -43,7 +43,7 @@ export const FormGroup = styled.div`
 
 export const Label = styled.label`
     font-size: 1.2rem;
-    color: var(--bg-darker-pink);
+    color: var(--bg-dark-orange);
 `
 
 export const Field = styled.input`
@@ -87,7 +87,7 @@ export const Button = styled.button`
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: var(--bg-lighter-orange);
+		background-color: var(--bg-dark-orange);
 		border-radius: 10rem;
 		z-index: -2;
 	}
@@ -98,7 +98,7 @@ export const Button = styled.button`
 		left: 0;
 		width: 0%;
 		height: 100%;
-		background-color: var(--bg-dark-orange);
+		background-color: var(--bg-lighter-orange);
 		transition: all .3s;
 		border-radius: 10rem;
 		z-index: -1;

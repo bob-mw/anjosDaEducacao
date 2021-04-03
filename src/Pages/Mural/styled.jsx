@@ -9,7 +9,7 @@ export const Container = styled.div`
 
 export const Title = styled.h1`
     position: relative;
-    color: var(--bg-darker-pink);
+    color: var(--bg-darker-orange);
     font-size: 4rem;
     padding-top: 2rem;
 
