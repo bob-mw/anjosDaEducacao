@@ -3,6 +3,8 @@ import FormsLogin from '../../components/FormsLogin/index';
 import angel from '../../img/angel.svg';
 import Jumbotron from '../../components/Jumbotron';
 
+import Footer from '../../components/Footer';
+
 import * as S from './styled'
 
 const Login = () => {
@@ -11,7 +13,7 @@ const Login = () => {
             <Jumbotron />
               <S.Image src={ angel } alt="logo"/>
             <FormsLogin />
-       
+            <Footer/>
         </>
     );
 }
