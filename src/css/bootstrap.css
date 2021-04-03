@@ -62,6 +62,10 @@ background: #f1d7d8ff;
   min-height: 100vh;
 }
 
+.border-orange {
+  border: 2px, solid, #df2c15;
+}
+
 /* Retirar setas do input type=number https://pt.stackoverflow.com/questions/177573/retirar-as-setas-no-campo-tipo-number */
 input[type=number]::-webkit-inner-spin-button { 
   -webkit-appearance: none;
