@@ -6,12 +6,26 @@ export const HeroText = styled.div`
 	-webkit-text-stroke-width: 3px; 
     -webkit-text-stroke-color: var(--bg-darker-orange); 
 	color: transparent;
-	font-weight:600;
+	font-weight:800;
 	font-size: 4.5rem;
 	margin-top: 5rem;
 	padding: 2rem 2rem 2rem 4rem;
 	align-self: flex-start;
 `
+
+export const title = styled.h2`
+	width: 90%;
+	line-height: 1.5;
+	-webkit-text-stroke-width: 3px; 
+    -webkit-text-stroke-color: var(--bg-darker-orange); 
+	color: transparent;
+	font-weight:800;
+	font-size: 4.5rem;
+	margin-top: 5rem;
+	padding: 2rem 2rem 2rem 4rem;
+	align-self: flex-start;
+`
+
 
 export const Button = styled.button`
     text-decoration: none !important;
