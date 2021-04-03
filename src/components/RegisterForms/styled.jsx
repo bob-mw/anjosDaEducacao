@@ -44,7 +44,7 @@ export const FormGroup = styled.div`
 
 export const Label = styled.label`
     font-size: 1.2rem;
-    color: var(--bg-dark-orange);
+    color: var(--bg-darker-orange);
 `
 
 export const Field = styled.input`
@@ -55,12 +55,12 @@ export const Field = styled.input`
     margin-top: 0.5rem;
     font-size: 1rem;
     line-height: 1.5;
-    color: #495057;
+    color: #000;
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: 2rem;
-    box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.3);
 `
 
 export const Button = styled.button`
