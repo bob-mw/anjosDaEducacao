@@ -38,36 +38,36 @@ const PaymentForm = () => {
                 />
                 
                 <S.Form>
-                        <label htmlFor="cardNumber">
-                            Número:
-                            <input
-                                id="cardNumber"
-                                type="tel"
-                                name="number"
-                                placeholder="Número do Cartão"
-                                onChange={handleInputChange}
-                                onFocus={handleInputFocus}
-                                className="form-control"
-                            />
-                        </label>
-                        <label htmlFor="cardName">
-                            Nome:
-                            <input
-                                id="cardName"
-                                type="tel"
-                                name="name"
-                                placeholder="Nome que está no Cartão"
-                                onChange={handleInputChange}
-                                onFocus={handleInputFocus}
-                                className="form-control"
-                            />
-                        </label>
+                    <S.Label htmlFor="cardNumber">
+                        Número:
+                        <S.Field
+                            id="cardNumber"
+                            type="tel"
+                            name="number"
+                            placeholder="Número do Cartão"
+                            onChange={handleInputChange}
+                            onFocus={handleInputFocus}
+                            className="form-control"
+                        />
+                    </S.Label>
+                    <S.Label htmlFor="cardName">
+                        Nome:
+                        <S.Field
+                            id="cardName"
+                            type="tel"
+                            name="name"
+                            placeholder="Nome que está no Cartão"
+                            onChange={handleInputChange}
+                            onFocus={handleInputFocus}
+                            className="form-control"
+                        />
+                    </S.Label>
 
-                        <div className="d-flex">
+                    <div className="d-flex">
 
-                        <label className="m-3" htmlFor="validateDate">
+                        <S.Label className="m-3" htmlFor="validateDate">
                             Valido até:
-                            <input
+                            <S.Field
                                 id="validateDate"
                                 type="data"
                                 name="expiry"
@@ -76,10 +76,10 @@ const PaymentForm = () => {
                                 onFocus={handleInputFocus}
                                 className="form-control"
                                 />
-                        </label>
-                        <label className="m-3" htmlFor="validateDate">
+                        </S.Label>
+                        <S.Label className="m-3" htmlFor="validateDate">
                             CVC
-                            <input
+                            <S.Field
                                 id="validateDate"
                                 type="number"
                                 name="cvc"
@@ -88,26 +88,24 @@ const PaymentForm = () => {
                                 onFocus={handleInputFocus}
                                 className="form-control"
                                 />
-                        </label>
-                        
-                        
-                            
-                </div>
-                        <label className="m-3" htmlFor="donate">
-                            Valor a ser doado
-                            <input
-                                id="donate"
-                                type="number"
-                                name="donate"
-                                placeholder="00.00"
-                                onChange={handleInputChange}
-                                onFocus={handleInputFocus}
-                                className="form-control"
-                                />
-                        </label>
-                <label htmlFor="paymentMethod">
-                            Método de Pagamento
-                        <select
+                        </S.Label>           
+                    </div>
+
+                    <S.Label className="m-3" htmlFor="donate">
+                        Valor a ser doado
+                        <S.Field
+                            id="donate"
+                            type="number"
+                            name="donate"
+                            placeholder="00.00"
+                            onChange={handleInputChange}
+                            onFocus={handleInputFocus}
+                            className="form-control"
+                        />
+                    </S.Label>
+                    <S.Label htmlFor="paymentMethod">
+                                Método de Pagamento
+                            <select
                                 id="validateDate"
                                 type="number"
                                 name="payment"
@@ -119,10 +117,10 @@ const PaymentForm = () => {
                                 <option value="Debit" selected disabled>Escolher</option>
                                 <option value="Debit">Débito</option>
                                 <option value="Credit">Crédito</option>
-                                </select>
-                        </label>
+                            </select>
+                    </S.Label>
                 
-                <S.Button>Doar</S.Button>
+                    <S.Button>Doar</S.Button>
                 
                 </S.Form>
 
