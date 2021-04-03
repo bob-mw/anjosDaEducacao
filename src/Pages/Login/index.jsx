@@ -10,10 +10,10 @@ import * as S from './styled'
 const Login = () => {
     return (
         <>
-            <S.HeroText>
-                Você não pode mudar o mundo, 
-                mas pode mudar o mundo de alguém!
-            </S.HeroText>
+            <S.HeroContainer>
+                <S.HeroText><span>Você não pode mudar o mundo,</span></S.HeroText>
+                <S.HeroText><span>mas pode mudar o mundo de alguém!</span></S.HeroText>
+            </S.HeroContainer>
             <S.Image src={ angel } alt="logo"/>
             <FormsLogin />
             <Footer/>

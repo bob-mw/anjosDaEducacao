@@ -1,29 +1,25 @@
 import styled from 'styled-components'
 
-export const HeroText = styled.div`
+export const HeroContainer = styled.div`
 	width: 90%;
-	line-height: 1.5;
-	-webkit-text-stroke-width: 3px; 
-    -webkit-text-stroke-color: var(--bg-darker-orange); 
-	color: transparent;
-	font-weight:800;
-	font-size: 4.5rem;
 	margin-top: 5rem;
 	padding: 2rem 2rem 2rem 4rem;
+	line-height: 1.5;
 	align-self: flex-start;
 `
 
-export const title = styled.h2`
-	width: 90%;
-	line-height: 1.5;
+export const HeroText = styled.h2`
 	-webkit-text-stroke-width: 3px; 
     -webkit-text-stroke-color: var(--bg-darker-orange); 
 	color: transparent;
 	font-weight:800;
 	font-size: 4.5rem;
-	margin-top: 5rem;
-	padding: 2rem 2rem 2rem 4rem;
-	align-self: flex-start;
+	overflow: hidden;
+
+	span {
+		display: inline-block;
+		transform: translateY(100%);
+	}
 `
 
 
