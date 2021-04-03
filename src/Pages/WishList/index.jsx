@@ -1,5 +1,5 @@
 import React from 'react';
-import ChildrenCard from '../components/ChildrenCards/index';
+import ChildrenCard from '../../components/ChildrenCards/index';
 
 function WishList() {
     return (
