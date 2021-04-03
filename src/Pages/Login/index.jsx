@@ -34,8 +34,7 @@ const Login = () => {
     return (
         <>
             <S.HeroContainer>
-                <S.HeroTitle><span ref={addToHeroTexts}>Você não pode mudar o mundo,</span></S.HeroTitle>
-                <S.HeroTitle><span ref={addToHeroTexts}>mas pode mudar o mundo de alguém!</span></S.HeroTitle>
+                <S.HeroTitle><span ref={addToHeroTexts}>Você não pode mudar o mundo, mas pode mudar o mundo de alguém!</span></S.HeroTitle>
             </S.HeroContainer>
             <S.HeroContainer>
                 <S.HeroSubtitle><span ref={addToHeroTexts}>Anjos da Educação</span></S.HeroSubtitle>

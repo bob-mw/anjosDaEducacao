@@ -35,7 +35,7 @@ export const HeroTitle = styled.h2`
     -webkit-text-stroke-color: var(--bg-darker-orange); 
 	color: transparent;
 	font-weight:800;
-	font-size: 4.5em;
+	font-size: 4em;
 	text-align: left;
   	text-justify: inter-word;
 	overflow: hidden;
