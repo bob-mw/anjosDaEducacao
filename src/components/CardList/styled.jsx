@@ -110,7 +110,7 @@ export const Item = styled.li`
     }
 `
 
-const thickness = 3;
+const thickness = 5;
 
 const Shape = styled(motion.span)`
   display: inline-block;

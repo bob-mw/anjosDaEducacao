@@ -136,7 +136,7 @@ export const ContentContainer = styled(motion.div)`
     }
 `
 
-const thickness = 3;
+const thickness = 5;
 
 const Shape = styled(motion.span)`
   display: inline-block;
@@ -151,11 +151,13 @@ const Shape = styled(motion.span)`
 export const Top = styled(Shape)`
   top: 50%;
   transform: rotate(45deg);
+  width: 130%;
 `
 
 export const Bottom = styled(Shape)`
   top: 50%;
   transform: rotate(-45deg);
+  width: 130%;
 `
 
 const side = 2;
