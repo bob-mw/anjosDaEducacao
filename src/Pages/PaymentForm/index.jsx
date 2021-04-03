@@ -27,109 +27,107 @@ const PaymentForm = () => {
     return (
             <>
                 <S.Title>Informações do Cartão</S.Title>
-                <S.Container id="PaymentForm">
+            <div className="row align-items-center" id="PaymentForm">
 
-                    <Cards
-                        cvc={cvc}
-                        expiry={expiry}
-                        focused={focus}
-                        name={name}
-                        number={number}
-                    />
-                    
-                    <S.Form>
+            <Cards
+                    cvc={cvc}
+                    expiry={expiry}
+                    focused={focus}
+                    name={name}
+                    number={number}
+                />
+                
+                <S.Form>
+                        <label htmlFor="cardNumber">
+                            Número:
+                            <input
+                                id="cardNumber"
+                                type="tel"
+                                name="number"
+                                placeholder="Número do Cartão"
+                                onChange={handleInputChange}
+                                onFocus={handleInputFocus}
+                                className="form-control"
+                            />
+                        </label>
+                        <label htmlFor="cardName">
+                            Nome:
+                            <input
+                                id="cardName"
+                                type="tel"
+                                name="name"
+                                placeholder="Nome que está no Cartão"
+                                onChange={handleInputChange}
+                                onFocus={handleInputFocus}
+                                className="form-control"
+                            />
+                        </label>
 
-                        <section className="d-flex flex-column">
-                            <label htmlFor="cardNumber">
-                                Número:
-                        <input
-                                    id="cardNumber"
-                                    type="tel"
-                                    name="number"
-                                    placeholder="Número do Cartão"
-                                    onChange={handleInputChange}
-                                    onFocus={handleInputFocus}
-                                    className="form-control"
+                        <div className="d-flex">
+
+                        <label className="m-3" htmlFor="validateDate">
+                            Valido até:
+                            <input
+                                id="validateDate"
+                                type="data"
+                                name="expiry"
+                                placeholder="mês/ano"
+                                onChange={handleInputChange}
+                                onFocus={handleInputFocus}
+                                className="form-control"
                                 />
-                            </label>
-                            <label htmlFor="cardName">
-                                Nome:
-                        <input
-                                    id="cardName"
-                                    type="tel"
-                                    name="name"
-                                    placeholder="Nome que está no Cartão"
-                                    onChange={handleInputChange}
-                                    onFocus={handleInputFocus}
-                                    className="form-control"
+                        </label>
+                        <label className="m-3" htmlFor="validateDate">
+                            CVC
+                            <input
+                                id="validateDate"
+                                type="number"
+                                name="cvc"
+                                placeholder="cvc"
+                                onChange={handleInputChange}
+                                onFocus={handleInputFocus}
+                                className="form-control"
                                 />
-                            </label>
-
-                            <div className="d-flex">
-
-                            <label className="m-3" htmlFor="validateDate">
-                                Valido até:
-                        <input
-                                    id="validateDate"
-                                    type="data"
-                                    name="expiry"
-                                    placeholder="mês/ano"
-                                    onChange={handleInputChange}
-                                    onFocus={handleInputFocus}
-                                    className="form-control"
-                                    />
-                            </label>
-                            <label className="m-3" htmlFor="validateDate">
-                                CVC
-                        <input
-                                    id="validateDate"
-                                    type="number"
-                                    name="cvc"
-                                    placeholder="cvc"
-                                    onChange={handleInputChange}
-                                    onFocus={handleInputFocus}
-                                    className="form-control"
-                                    />
-                            </label>
+                        </label>
+                        
+                        
                             
-                            
-                                
-                    </div>
-                            <label className="m-3" htmlFor="donate">
-                                Valor a ser doado
-                        <input
-                                    id="donate"
-                                    type="number"
-                                    name="donate"
-                                    placeholder="00.00"
-                                    onChange={handleInputChange}
-                                    onFocus={handleInputFocus}
-                                    className="form-control"
-                                    />
-                            </label>
-                    <label htmlFor="paymentMethod">
-                                Método de Pagamento
-                            <select
-                                    id="validateDate"
-                                    type="number"
-                                    name="payment"
-                                    placeholder="cvc"
-                                    onChange={handleInputChange}
-                                    onFocus={handleInputFocus}
-                                    className="form-control"
-                                    >
-                                    <option value="Debit" selected disabled>Escolher</option>
-                                    <option value="Debit">Débito</option>
-                                    <option value="Credit">Crédito</option>
-                                    </select>
-                            </label>
-                    <button className="btn btn-warning my-3 text-uppercase">Doar</button>
-                        </section>
-                    
-                    </S.Form>
+                </div>
+                        <label className="m-3" htmlFor="donate">
+                            Valor a ser doado
+                            <input
+                                id="donate"
+                                type="number"
+                                name="donate"
+                                placeholder="00.00"
+                                onChange={handleInputChange}
+                                onFocus={handleInputFocus}
+                                className="form-control"
+                                />
+                        </label>
+                <label htmlFor="paymentMethod">
+                            Método de Pagamento
+                        <select
+                                id="validateDate"
+                                type="number"
+                                name="payment"
+                                placeholder="cvc"
+                                onChange={handleInputChange}
+                                onFocus={handleInputFocus}
+                                className="form-control"
+                                >
+                                <option value="Debit" selected disabled>Escolher</option>
+                                <option value="Debit">Débito</option>
+                                <option value="Credit">Crédito</option>
+                                </select>
+                        </label>
+                
+                <button className="btn btn-warning my-3 text-uppercase">Doar</button>
+                
+                </S.Form>
 
 
-                </S.Container>
+            </div>
         </>
     );
 }

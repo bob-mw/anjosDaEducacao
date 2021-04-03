@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import Card from 'react-credit-cards'
+import "react-credit-cards/es/styles-compiled.css"
 
 export const Title = styled.h1`
     position: relative;
@@ -25,10 +27,17 @@ export const Container = styled.div`
     display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-gap: 4rem;
-    
+    justify-content: center;
+    align-content: stretch;
+
     width: 100%;
-    padding: 0 2rem;
+    padding: 0 3rem;
     margin: 5rem 0;
+`
+
+export const CardVisualizer = styled(Card)`
+    width: 100%;
+    align-self: center;
 `
 
 export const Form = styled.form`
@@ -36,7 +45,7 @@ export const Form = styled.form`
     display:flex;
     flex-direction: column;
     justify-content: center;
-    align-items:center;
+    align-items: stretch;
     padding: 5rem;
     margin: 5rem 1rem;
     border-radius: 2rem;
