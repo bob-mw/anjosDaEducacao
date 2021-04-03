@@ -22,17 +22,15 @@ const ChildrenCards = () => {
                         
                         <hr />
 
-                        <section>
-
-                            <div className="shadow b-radius border border-dark mb-3">
-                                <div className="bg-success b-radius" style={{
-                                    height: '10px', width: `${(children.collected === children.goal / 4) && "25%" ||
+                            <S.ProgressBarContainer>
+                                <S.ProgressBar style={{
+                                        width: `${(children.collected === children.goal / 4) && "25%" ||
                                         (children.collected <= children.goal / 2) && "50%" ||
                                         (children.collected <= (children.goal / 4) * 3) && "75%" ||
                                         (children.collected <= children.goal / 1) && "100%"}`
                                 }
-                                }></div>
-                            </div>
+                                }></S.ProgressBar>
+                            </S.ProgressBarContainer>
 
                             <div>
                                 <span><strong>Conseguimos: </strong> R$ {children.collected}</span>
@@ -45,8 +43,6 @@ const ChildrenCards = () => {
                             <div>
                                 <span><strong>Guardiões: </strong> {children.guardians}</span>
                             </div>
-
-                        </section>
 
                         <hr />
 
