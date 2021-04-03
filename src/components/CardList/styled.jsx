@@ -63,7 +63,7 @@ export const Description = styled.h2`
     color: var(--bg-darker-orange);
     font-size: 1.25rem;
     text-transform: uppercase;
-    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 `
 
 export const CardOpenLink = styled(Link)`

@@ -9,9 +9,17 @@ const ChildrenCards = () => {
             {
                 dataChildrens.map((children, index) => (
                     <S.Card key={index}>
-                        <h3 className="card-title text-uppercase">{children.name}</h3>
-                        <p className="card-title text-uppercase">{(children.teaching === "EF") && "Ensino Infantil" || (children.teaching === "F1") && "Fundamental 1" || (children.teaching === "F2") && "Fundamental 2" || (children.teaching === "EM") && "Ensino Médio" }</p>
-                        <p className="card-title text-uppercase">{children.schoolName}</p>
+                        <S.Name>{children.name}</S.Name>
+                        <S.Description>
+                            {
+                                (children.teaching === "EF") && "Ensino Infantil" || 
+                                (children.teaching === "F1") && "Fundamental 1" || 
+                                (children.teaching === "F2") && "Fundamental 2" || 
+                                (children.teaching === "EM") && "Ensino Médio" 
+                            }
+                        </S.Description>
+                        <S.Description>{children.schoolName}</S.Description>
+                        
                         <hr />
 
                         <section>

@@ -34,6 +34,20 @@ export const Card = styled.li`
     box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 `
 
+export const Name = styled.h2`
+    color: var(--bg-darker-orange);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    padding-top: 0.5rem;
+`
+
+export const Description = styled.h3`
+    color: var(--bg-darker-orange);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    padding-top: 0.5rem;
+`
+
 
 export const Button = styled.a`
     font-size: 1.2rem;
@@ -44,7 +58,7 @@ export const Button = styled.a`
 	transition: all .3s;
 
     display: inline-block;
-	padding: 1.5rem;
+	padding: 1.5rem 3rem;
     margin-top: 1.5rem;
 	border-radius: 2rem;
     border: none;
