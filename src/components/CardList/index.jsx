@@ -20,7 +20,6 @@ const Card = ({ id, name, age, city, state }) => {
           >
             <S.Name>{name}</S.Name>
             <S.Description>{`${age} anos, ${city} - ${state}`}</S.Description>
-            <S.Description>Clique para abrir</S.Description>
           </S.TitleContainer>
           <S.Menu>
             <S.Top/>
