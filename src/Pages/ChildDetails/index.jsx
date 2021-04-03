@@ -12,14 +12,14 @@ const ChildDetails = () => {
 
             <S.Label htmlFor="yourChildrens">
 
-                <select name="yourChildrens" id="yourChildrens">
+                <S.Select name="yourChildrens" id="yourChildrens">
                     <option value="" selected disabled>Filhos cadastrados</option>
                     {
                         fakeData.map((child, index) => (
                             <option key={index} value={child.name}>{child.name}</option>
                         ))
                     }
-                </select>
+                </S.Select>
             </S.Label>
 
             <ChipIn/>

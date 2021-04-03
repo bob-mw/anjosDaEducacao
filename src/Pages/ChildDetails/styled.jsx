@@ -23,5 +23,20 @@ export const Title = styled.h1`
 export const Label = styled.label`
     font-size: 1.3rem;
     color: var(--bg-darker-orange);
-    margin: 5rem 0;
+    margin: 5rem 0 0 0;
+`
+
+export const Select = styled.select`
+    width: 100%;
+    height: 3.5rem;
+    padding: 0.4rem 0.75rem;
+    margin-top: 0.5rem;
+    font-size: 2rem;
+    line-height: 1.5;
+    color: #000;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.2rem;
+    box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 `
