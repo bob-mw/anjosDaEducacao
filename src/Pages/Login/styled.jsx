@@ -1,5 +1,17 @@
 import styled from 'styled-components'
 
+export const HeroText = styled.div`
+	width: 80%;
+	text-transform: uppercase;
+	line-height: 1.5;
+	color: var(--bg-darker-orange);
+	font-weight:600;
+	font-size: 4rem;
+	margin-top: 5rem;
+	padding: 2rem 2rem 2rem 4rem;
+	align-self: flex-start;
+`
+
 export const Button = styled.button`
     text-decoration: none !important;
     cursor: pointer;
