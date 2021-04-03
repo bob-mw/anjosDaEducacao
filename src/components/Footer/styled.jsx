@@ -6,6 +6,6 @@ export const FooterContainer = styled.div`
     width: 100%;
     margin-top: 5rem;
     border-radius: 0 0 2rem 2rem;
-    background-color: var(--bg-light-orange);
+    background: linear-gradient(to bottom, rgba(243, 131, 117, 1), rgba(243, 131, 117, 0.5));
 
 `
