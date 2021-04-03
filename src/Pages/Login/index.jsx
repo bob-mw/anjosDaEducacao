@@ -32,14 +32,15 @@ const Login = () => {
         
     },[])
 
+    let Title = "Você não pode mudar o mundo, mas pode mudar o mundo de alguém!"
+
     return (
         <>
             <S.HeroContainer>
                 <S.HeroTitle>
-                    <SplitText 
-                        copy={"Você não pode mudar o mundo, mas pode mudar o mundo de alguém!"} 
-                        ref={addToHeroTexts}
-                    />
+                    {Title.split('/(\s+)/').map(function(char, index){
+                        return <span ref={addToHeroTexts} key={index} data-title={char}>{char}</span>
+                    })}
                 </S.HeroTitle>
             </S.HeroContainer>
             <S.HeroContainer>
