@@ -9,11 +9,6 @@ const Card = ({ id, name, age, city, state }) => {
   return (
     <S.Item>
       <S.CardContentContainer>
-        <S.Menu>
-            <S.Top/>
-            <S.Middle/>
-            <S.Bottom/>
-        </S.Menu>
         <S.CardContent layoutId={`card-container-${id}`}>
           <S.CardImageContainer
             layoutId={`card-image-container-${id}`}
@@ -27,6 +22,11 @@ const Card = ({ id, name, age, city, state }) => {
             <S.Description>{`${age} anos, ${city} - ${state}`}</S.Description>
             <S.Description>Clique para abrir</S.Description>
           </S.TitleContainer>
+          <S.Menu>
+            <S.Top/>
+            <S.Middle/>
+            <S.Bottom/>
+        </S.Menu>
         </S.CardContent>
       </S.CardContentContainer>
       <S.CardOpenLink to={`/mural/${id}`} />

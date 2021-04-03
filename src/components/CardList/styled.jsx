@@ -112,7 +112,7 @@ export const Item = styled.li`
 
 const thickness = 3;
 
-const Shape = styled.span`
+const Shape = styled(motion.span)`
   display: inline-block;
   position: absolute;
   right: 0;
@@ -138,14 +138,13 @@ export const Bottom = styled(Shape)`
 
 const side = 2;
 
-export const Menu = styled.div`
+export const Menu = styled(motion.div)`
   position: absolute;
   right: 0.5rem;
   top: 0.5rem;
   margin: 1.5rem;
   width: ${side}rem;
   height: ${side}rem;
-  z-index: 4;
   transition: transform 0.2s, opacity 0.2s !important;
   will-change: transform;
   &:hover {
