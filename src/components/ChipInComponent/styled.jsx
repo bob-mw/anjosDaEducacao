@@ -72,16 +72,17 @@ export const Table = styled.table`
 `
 
 export const PaymentMethodContainer = styled.div`
-    padding: 1.5rem;
+    padding: 2rem;
     margin: 2rem 0;
-    border: 2px solid var(--bg-dark-orange);
+    background: linear-gradient(to right bottom, var(--bg-dark-orange), var(--bg-darker-orange));
+    box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     border-radius: 2rem;
     align-self: center;
 `
 
 export const Subtitle = styled.h3`
-    color: black;
-    font-size: 1.8rem;
+    color: white;
+    font-size: 1.2rem;
     font-weight: 600;
     text-transform: uppercase;
     padding-bottom: 0.5rem;
@@ -100,7 +101,8 @@ export const RadioLabel = styled.label`
     display: flex;
     align-items: center;
     margin: 1rem 0;
-    font-size: 1.5rem;
+    color: white;
+    font-size: 1.2rem;
     font-weight: 600;
     text-transform: uppercase;
 `
