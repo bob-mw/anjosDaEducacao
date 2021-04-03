@@ -42,7 +42,7 @@ export const HeroTitle = styled.h2`
 
 	span {
 		display: inline-block;
-		transform: translateY(100%);
+		transform: translateY(200%);
 	}
 
 	@media only screen and (max-width: 1020px) {

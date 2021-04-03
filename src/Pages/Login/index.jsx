@@ -38,7 +38,7 @@ const Login = () => {
             <S.HeroContainer>
                 <S.HeroTitle>
                     {title.split(" ").map(function(word, index){
-                        return <span ref={addToHeroTexts} key={index} data-title={word}>{`${word} `}</span>
+                        return <span ref={addToHeroTexts} key={index} data-title={word}>{`${word}\u00A0`}</span>
                     })}
                 </S.HeroTitle>
             </S.HeroContainer>
