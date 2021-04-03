@@ -35,14 +35,14 @@ export const HeroTitle = styled.h2`
     -webkit-text-stroke-color: var(--bg-darker-orange); 
 	color: transparent;
 	font-weight:800;
-	font-size: 4em;
+	font-size: 5em;
 	text-align: left;
   	text-justify: inter-word;
 	overflow: hidden;
 
 	span {
 		display: inline-block;
-		transform: translateY(200%);
+		transform: translateY(100vh);
 	}
 
 	@media only screen and (max-width: 1020px) {

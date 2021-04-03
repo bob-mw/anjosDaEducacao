@@ -46,7 +46,7 @@ const Login = () => {
                 <S.HeroSubtitle><span ref={addToHeroTexts}>Anjos da Educação</span></S.HeroSubtitle>
                 <S.HeroText>
                     <span ref={addToHeroTexts}>
-                        A iniciativa desse projeto se deu a partir de um desafio do Hackaton proposto pelo Grupo FCamara. 
+                        A iniciativa desse projeto se deu a partir de um desafio do Hackathon proposto pelo Grupo FCamara. 
                         A ideia era criar uma solução para viabilizar doações de materiais escolares para crianças de escolas públicas.
                         Nosso objetivo é que as doações ocorram em qualquer lugar de modo que o doador possa ajudar de forma online e 
                         ainda ter papelarias parceiras que possam ter uma maior visibilidade financeira e social. 
