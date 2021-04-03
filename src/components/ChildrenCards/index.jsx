@@ -32,17 +32,11 @@ const ChildrenCards = () => {
                                 }></S.ProgressBar>
                             </S.ProgressBarContainer>
 
-                            <div>
-                                <span><strong>Conseguimos: </strong> R$ {children.collected}</span>
-                            </div>
+                            <S.Details>Conseguimos: R$ {children.collected}</S.Details>
 
-                            <div>
-                                <span><strong>Meta: </strong>R$ {children.goal}</span>
-                            </div>
+                            <S.Details>Meta: R$ {children.goal}</S.Details>
 
-                            <div>
-                                <span><strong>Guardiões: </strong> {children.guardians}</span>
-                            </div>
+                            <S.Details>Guardiões: {children.guardians}</S.Details>
 
                         <hr />
 

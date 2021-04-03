@@ -62,6 +62,14 @@ export const ProgressBar = styled.div`
 	border-radius: 15px;
 `
 
+export const Details = styled.p`
+    color: black;
+    font-size: 1.3rem;
+	font-weight: 600;
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+`
+
 
 export const Button = styled.a`
     font-size: 1.2rem;
