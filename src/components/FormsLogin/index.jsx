@@ -41,7 +41,7 @@ const FormsLogin = () => {
 
         <S.Button href="/parentDetails" onClick={ handleSubmit }>Entrar</S.Button>
         
-        <a href="#" className="my-3">esqueceu sua senha?</a>
+        <a href="#" className="my-3">Esqueceu sua senha?</a>
 
         <p>Ainda não tem cadastro? <a href="/parents">Cadastre-se</a></p>
 
