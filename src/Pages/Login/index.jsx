@@ -26,7 +26,7 @@ const Login = () => {
             y: "0%",
             duration: 0.7,
             stagger: 0.2,
-            delay: 2
+            delay: 1
         }, "0")
         
     },[])
@@ -34,8 +34,14 @@ const Login = () => {
     return (
         <>
             <S.HeroContainer>
-                <S.HeroText><span ref={addToHeroTexts}>Você não pode mudar o mundo,</span></S.HeroText>
-                <S.HeroText><span ref={addToHeroTexts}>mas pode mudar o mundo de alguém!</span></S.HeroText>
+                <S.HeroTitle><span ref={addToHeroTexts}>Você não pode mudar o mundo,</span></S.HeroTitle>
+                <S.HeroTitle><span ref={addToHeroTexts}>mas pode mudar o mundo de alguém!</span></S.HeroTitle>
+            </S.HeroContainer>
+            <S.HeroContainer>
+                <S.HeroSubtitle><span ref={addToHeroTexts}>Anjos da Educação</span></S.HeroSubtitle>
+            </S.HeroContainer>
+            <S.HeroContainer>
+                <S.HeroSubtitle><span ref={addToHeroTexts}>Como acontece?</span></S.HeroSubtitle>
             </S.HeroContainer>
             <S.Image src={ angel } alt="logo"/>
             <FormsLogin />
