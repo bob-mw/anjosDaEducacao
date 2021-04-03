@@ -5,7 +5,7 @@ import Layout from './components/Layout';
 import Login from './Pages/Login/index';
 import RegisterGuardian from './Pages/RegisterGuardian';
 import RegisterResponsable from './Pages/RegisterResponsable';
-import ResponsableDetails from './Pages/ResponsableDetails';
+import ResponsableDetails from './Pages/ResponsableDetails/index';
 import WishList from './Pages/WishList';
 import Mural from './Pages/Mural'
 import PaymentForm from './Pages/PaymentForm';

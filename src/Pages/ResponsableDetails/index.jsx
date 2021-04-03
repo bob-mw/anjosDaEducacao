@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
-import context from '../context/context';
-import MaterialsList from '../components/MaterialsList';
+import context from '../../context/context';
+import MaterialsList from '../../components/MaterialsList';
+import * as S from './styled';
 
 function ResponsableDetails() {
 
@@ -36,23 +37,23 @@ function ResponsableDetails() {
             <h1 className="text-center display-4">Fazer pedido para meus filhos</h1>
 
             <hr />
-            <form action="" className="bg-light b-radius p-5 my-5 row">
+            <form action="" className="p-5 my-5 row bg-light" >
 
                 <div className=" row m-auto">
 
                     <section id="informations" className="m-5">
 
-                        <label className="my-3 row " htmlFor="nome">
+                        <S.Label className="my-3 row " htmlFor="nome">
                             Nome:
-                <input className="form-control ml-3" type="text" id="name" name="name" placeholder="digite o nome da criança" onChange={setChildrenInformations} />
-                        </label>
+                <S.Field className="form-control ml-3" type="text" id="name" name="name" placeholder="digite o nome da criança" onChange={setChildrenInformations} />
+                        </S.Label>
 
-                        <label className="my-3 row " htmlFor="SchoolNome">
+                        <S.Label className="my-3 row " htmlFor="SchoolNome">
                             Escola:
-                <input className="form-control ml-3" type="text" id="schoolName" name="schoolName" placeholder="digite o nome da escola" onChange={setChildrenInformations} />
-                        </label>
+                <S.Field className="form-control ml-3" type="text" id="schoolName" name="schoolName" placeholder="digite o nome da escola" onChange={setChildrenInformations} />
+                        </S.Label>
 
-                        <label className="my-3 row " htmlFor="state">
+                        <S.Label className="my-3 row " htmlFor="state">
                             Estado:
                             <select name="state" id="state" className="form-control ml-3" onChange={setChildrenInformations}>
                                 <option value="" selected disabled>Escolha um Estado</option>
@@ -60,36 +61,36 @@ function ResponsableDetails() {
                                     brazilStates.map((state) => <option key={state.sigla} value={state.sigla}>{state.nome}</option>)
                                 }
                             </select>
-                        </label>
+                        </S.Label>
 
-                        <label className="my-3 row " htmlFor="city">
+                        <S.Label className="my-3 row " htmlFor="city">
                             cidade:
-                <input className="form-control ml-3" type="text" id="city" name="city" placeholder="digite o nome da cidade" onChange={setChildrenInformations} />
-                        </label>
+                <S.Field className="form-control ml-3" type="text" id="city" name="city" placeholder="digite o nome da cidade" onChange={setChildrenInformations} />
+                        </S.Label>
 
                     </section>
 
 
-                    <section className="d-flex flex-column justify-content-center align-items-center border border-primary p-2 b-radius m-auto boxInputRadio-width">
-                            <label className="d-flex align-items-center my-2" htmlFor="infantil">
+                    <section className="d-flex flex-column justify-content-center align-items-center mx-auto mb-5 boxS.FieldRadio-width">
+                            <S.LabelCheckBox className="d-flex align-items-center my-2" htmlFor="infantil">
                                 <input className="form-check-input" type="radio" name="teaching" id="infantil" value="EF" onChange={setChildrenInformations} />
                         Ensino Infantil
-                    </label>
+                    </S.LabelCheckBox>
 
-                            <label className="d-flex align-items-center my-2" htmlFor="primeiroAoQuinto">
+                            <S.LabelCheckBox className="d-flex align-items-center my-2" htmlFor="primeiroAoQuinto">
                                 <input className="form-check-input" type="radio" name="teaching" id="primeiroAoQuinto" value="F1" onChange={setChildrenInformations} />
                         1º ao 5º ANO
-                </label>
+                </S.LabelCheckBox>
 
-                            <label className="d-flex align-items-center my-2" htmlFor="sextoAoNono">
+                            <S.LabelCheckBox className="d-flex align-items-center my-2" htmlFor="sextoAoNono">
                                 <input className="form-check-input" type="radio" name="teaching" id="sextoAoNono" value="F2" onChange={setChildrenInformations} />
                         6º ao 9º ANO
-                </label>
+                </S.LabelCheckBox>
 
-                            <label className="d-flex align-items-center my-2" htmlFor="ensinoMedio">
+                            <S.LabelCheckBox className="d-flex align-items-center my-2" htmlFor="ensinoMedio">
                                 <input className="form-check-input" type="radio" name="teaching" id="ensinoMedio" value="EM" onChange={setChildrenInformations} />
                         Ensino Médio
-                    </label>
+                    </S.LabelCheckBox>
                     
                     </section>
 
@@ -98,9 +99,9 @@ function ResponsableDetails() {
                 </div>
                         <MaterialsList />
 
-                <button type="submit" className="btn w-100 m-3" style={{ background: '#f1d7d8ff', 'border-radius': '15px' }} onClick={handleSubmit}>Finalizar Pedido</button>
+                        <S.LinkStyleButton className="my-3 mx-auto" href="/childDetails" >Finalizar Pedido</S.LinkStyleButton>
 
-                <a className="btn w-100 m-3" style={{ background: '#f1d7d8ff', 'border-radius': '15px' }} href="/childDetails" >Vizualizar</a>
+                <S.LinkStyleButton className="my-3 mx-auto" href="/childDetails" >Vizualizar</S.LinkStyleButton>
 
             </form>
         </section>
