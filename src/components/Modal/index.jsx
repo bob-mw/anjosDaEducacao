@@ -40,7 +40,10 @@ const Modal = ({ showModal, setShowModal }) => {
                     <S.Menu
                         aria-label='Close modal'
                         onClick={() => setShowModal(prev => !prev)}
-                    />
+                    >
+                        <S.Top/>
+                        <S.Bottom/>
+                    </S.Menu>
                 </S.Panel>
             </S.Overlay>
         ) : null}

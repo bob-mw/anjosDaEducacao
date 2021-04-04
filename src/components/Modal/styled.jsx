@@ -4,11 +4,13 @@ import { motion } from 'framer-motion'
 export const Overlay = styled.div`
     width: 100%;
     height: 100%;
+    top: 0;
     background: rgba(0, 0, 0, 0.8);
     position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 10;
 `
 
 export const Panel = styled(motion.div)`
@@ -19,10 +21,9 @@ export const Panel = styled(motion.div)`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 10;
 
     border-radius: 2rem;
-    background: linear-gradient(to left bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    background: linear-gradient(to left bottom, #fff, #ECE9E6);
     box-shadow:0 1rem 1rem rgba(128, 91, 91, 0.5); 
 `
 
@@ -36,6 +37,7 @@ const Shape = styled(motion.span)`
     height: ${thickness}px;
     border-radius: 3px;
     background: var(--bg-darker-orange);
+    z-index: 10;
 `
 
 export const Top = styled(Shape)`
