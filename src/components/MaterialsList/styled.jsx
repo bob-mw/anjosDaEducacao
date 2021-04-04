@@ -26,4 +26,16 @@ export const Table = styled.table`
             background-color: var(--bg-light-orange);
         }
     }
+
+    @media only screen and (max-width: 600px) {
+        font-size: 0.8em;
+
+        thead > tr > th {
+            padding: 0.25rem;
+        }
+
+        tbody > tr > td {
+            padding: 0.25rem;
+        }
+    }
 `
