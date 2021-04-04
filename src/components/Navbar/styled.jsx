@@ -28,6 +28,7 @@ export const Name = styled.span`
     display: inline-block;
     color: white;
     font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     padding-left: 2rem;
     font-weight: 600;
