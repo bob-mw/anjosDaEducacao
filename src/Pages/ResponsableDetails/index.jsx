@@ -70,11 +70,11 @@ const ResponsableDetails = () => {
                     </S.FieldContainer>
 
 
-                    <section className="d-flex flex-column justify-content-center align-items-center mx-auto mb-5 boxS.FieldRadio-width">
+                    <S.RadioContainer>
                             <S.LabelCheckBox className="d-flex align-items-center my-2" htmlFor="infantil">
                                 <input className="form-check-input" type="radio" name="teaching" id="infantil" value="EF" onChange={setChildrenInformations} />
-                        Ensino Infantil
-                    </S.LabelCheckBox>
+                                Ensino Infantil
+                            </S.LabelCheckBox>
 
                             <S.LabelCheckBox className="d-flex align-items-center my-2" htmlFor="primeiroAoQuinto">
                                 <input className="form-check-input" type="radio" name="teaching" id="primeiroAoQuinto" value="F1" onChange={setChildrenInformations} />
@@ -91,11 +91,12 @@ const ResponsableDetails = () => {
                                 Ensino Médio
                             </S.LabelCheckBox>
                     
-                    </section>
+                    </S.RadioContainer>
 
 
 
                 </S.SuperiorDetails>
+
                         <MaterialsList />
 
                         <S.Button href="/childDetails" >Finalizar Pedido</S.Button>

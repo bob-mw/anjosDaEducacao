@@ -38,6 +38,8 @@ export const SuperiorDetails = styled.div`
     display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	column-gap: 4rem;
+    align-items: center;
+    justify-items: center;
     margin-bottom: 2rem;
 
 	@media only screen and (max-width: 800px) {
@@ -46,6 +48,11 @@ export const SuperiorDetails = styled.div`
 `
 
 export const FieldContainer = styled.div` 
+    display: flex;
+    flex-direction: column;
+`
+
+export const RadioContainer = styled.div`
     display: flex;
     flex-direction: column;
 `
