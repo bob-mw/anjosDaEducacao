@@ -71,25 +71,25 @@ const ResponsableDetails = () => {
 
 
                     <S.RadioContainer>
-                            <S.LabelCheckBox htmlFor="infantil">
-                                <input type="radio" name="teaching" id="infantil" value="EF" onChange={setChildrenInformations} />
+                            <S.RadioLabel htmlFor="infantil">
+                                <S.Input type="radio" name="teaching" id="infantil" value="EF" onChange={setChildrenInformations} />
                                 Ensino Infantil
-                            </S.LabelCheckBox>
+                            </S.RadioLabel>
 
-                            <S.LabelCheckBox htmlFor="primeiroAoQuinto">
-                                <input type="radio" name="teaching" id="primeiroAoQuinto" value="F1" onChange={setChildrenInformations} />
+                            <S.RadioLabel htmlFor="primeiroAoQuinto">
+                                <S.Input type="radio" name="teaching" id="primeiroAoQuinto" value="F1" onChange={setChildrenInformations} />
                                 1º ao 5º ANO
-                            </S.LabelCheckBox>
+                            </S.RadioLabel>
 
-                            <S.LabelCheckBox htmlFor="sextoAoNono">
-                                <input type="radio" name="teaching" id="sextoAoNono" value="F2" onChange={setChildrenInformations} />
+                            <S.RadioLabel htmlFor="sextoAoNono">
+                                <S.Input type="radio" name="teaching" id="sextoAoNono" value="F2" onChange={setChildrenInformations} />
                                 6º ao 9º ANO
-                            </S.LabelCheckBox>
+                            </S.RadioLabel>
 
-                            <S.LabelCheckBox htmlFor="ensinoMedio">
-                                <input type="radio" name="teaching" id="ensinoMedio" value="EM" onChange={setChildrenInformations} />
+                            <S.RadioLabel htmlFor="ensinoMedio">
+                                <S.Input type="radio" name="teaching" id="ensinoMedio" value="EM" onChange={setChildrenInformations} />
                                 Ensino Médio
-                            </S.LabelCheckBox>
+                            </S.RadioLabel>
                     
                     </S.RadioContainer>
 

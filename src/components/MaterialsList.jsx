@@ -9,7 +9,7 @@ function MaterialsList() {
     const { teaching } = childrenRegister;
 
     useEffect(() => {
-        (teaching === 'EF') && setChildrenRegister({ ...childrenRegister, materials: EF }) ||
+            (teaching === 'EF') && setChildrenRegister({ ...childrenRegister, materials: EF }) ||
             (teaching === 'F1') && setChildrenRegister({ ...childrenRegister, materials: F1 }) ||
             (teaching === 'F2') && setChildrenRegister({ ...childrenRegister, materials: F2 }) ||
             (teaching === 'EM') && setChildrenRegister({ ...childrenRegister, materials: EM })

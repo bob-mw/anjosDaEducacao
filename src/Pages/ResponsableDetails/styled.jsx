@@ -29,6 +29,7 @@ export const Form = styled.form`
     align-items: stretch;
     padding: 5rem;
     margin: 5rem 1rem;
+    max-width: 80%;
     border-radius: 2rem;
     background: linear-gradient(to left bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5));
     box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.3);
@@ -89,14 +90,22 @@ export const Select = styled.select`
     box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 `
 
-export const LabelCheckBox = styled.label`
-    font-size: 1.2rem;
-    color: var(--bg-darker-orange);
+export const RadioContainer = styled.div`
+    margin: 1rem 0;
 `
 
-export const RadioContainer = styled.div`
+export const Input = styled.input`
+    margin-right: 0.5rem;
+`
+
+export const RadioLabel = styled.label`
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
 `
 
 export const Button = styled.a`
