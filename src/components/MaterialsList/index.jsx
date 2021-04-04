@@ -1,6 +1,8 @@
 import React, { useContext, useEffect } from 'react'
-import { EF, F1, F2, EM } from '../../data/materialsList.js'
+import { EF, F1, F2, EM } from '../../data/materialsList'
 import context from '../../context/context'
+
+import * as S from './styled'
 
 const MaterialsList = () => {
 
