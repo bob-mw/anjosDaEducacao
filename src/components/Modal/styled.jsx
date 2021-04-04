@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
-const Overlay = styled.div`
+export const Overlay = styled.div`
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.8);
@@ -70,7 +70,7 @@ export const Menu = styled(motion.div)`
 
 export const Description = styled.h2`
     color: var(--bg-darker-orange);
-    font-size: 1.25rem;
+    font-size: 2rem;
     text-transform: uppercase;
     padding-top: 0.5rem;
 

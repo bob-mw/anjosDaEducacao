@@ -1,21 +1,21 @@
 import React, { useRef, useEffect, useCallback } from 'react'
 import * as S from './styled'
 
-export const Modal = ({ showModal, setShowModal }) => {
+const Modal = ({ showModal, setShowModal }) => {
 
     const modalRef = useRef()
 
     const closeModal = e => {
       if (modalRef.current === e.target) {
-        setShowModal(false);
+        setShowModal(false)
       }
     }
     
     const keyPress = useCallback(
         e => {
         if (e.key === 'Escape' && showModal) {
-            setShowModal(false);
-            console.log('I pressed');
+            setShowModal(false)
+            console.log('I pressed')
         }
         },
         [setShowModal, showModal]
@@ -34,10 +34,18 @@ export const Modal = ({ showModal, setShowModal }) => {
         {showModal ? (
             <S.Overlay  onClick={closeModal} ref={modalRef}>
                 <S.Panel>
-                    
+                    <S.Description>REGISTRO REALIZADO</S.Description>
+                    <S.Description>Gostaria de cadastrar um filho?</S.Description>
+                    <S.Button>Cadastrar</S.Button>
+                    <S.Menu
+                        aria-label='Close modal'
+                        onClick={() => setShowModal(prev => !prev)}
+                    />
                 </S.Panel>
             </S.Overlay>
         ) : null}
       </>
-    );
-  };
+    )
+  }
+
+export default Modal

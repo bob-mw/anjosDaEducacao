@@ -1,7 +1,8 @@
-import React, { useContext, useEffect } from 'react';
-import context from '../../context/context';
-import schema from '../../valitations/createUser';
-import CreateService from '../../services/create';
+import React, { useState, useContext, useEffect } from 'react'
+import context from '../../context/context'
+import schema from '../../valitations/createUser'
+import CreateService from '../../services/create'
+import Modal from '../Modal'
 
 import * as S from './styled'
 
@@ -25,6 +26,12 @@ const RegisterForms = () => {
         const validate = await schema.isValid(register);
         setFormValidation(validate);
     }, [register])
+
+    const [showModal, setShowModal] = useState(false);
+
+    const openModal = () => {
+        setShowModal(prev => !prev);
+    }
 
 
     return (
@@ -66,6 +73,10 @@ const RegisterForms = () => {
 
                 <S.Button type="button" onClick={handleClick} disabled={ !formValidation }>Finalizar Cadastro</S.Button>
             </S.Form>
+
+            <S.Button onClick={openModal}>I'm a modal</S.Button>
+
+            <Modal showModal={showModal} setShowModal={setShowModal} />
         </>
     );
 }
