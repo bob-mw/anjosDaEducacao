@@ -61,9 +61,7 @@ class UpdateUserService {
       }
     }
 
-    if (user.password !== password) {
-      user.password = await hash(newPassword, 10)
-    }
+    user.password = await hash(newPassword, 10)
 
     user.name = name
     user.phone = phone
