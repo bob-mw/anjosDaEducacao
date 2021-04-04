@@ -9,7 +9,7 @@ export const Modal = ({ showModal, setShowModal }) => {
       if (modalRef.current === e.target) {
         setShowModal(false);
       }
-    };
+    }
     
     const keyPress = useCallback(
         e => {
@@ -19,7 +19,15 @@ export const Modal = ({ showModal, setShowModal }) => {
         }
         },
         [setShowModal, showModal]
-    );
+    )
+
+    useEffect(
+        () => {
+          document.addEventListener('keydown', keyPress);
+          return () => document.removeEventListener('keydown', keyPress);
+        },
+        [keyPress]
+      )
   
     return (
       <>
