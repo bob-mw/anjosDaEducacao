@@ -25,6 +25,18 @@ export const Panel = styled(motion.div)`
     border-radius: 2rem;
     background: linear-gradient(to left bottom, #fff, #ECE9E6);
     box-shadow:0 1rem 1rem rgba(128, 91, 91, 0.5); 
+
+    @media only screen and (max-width: 1450px) {
+        font-size: 12px;
+    }
+
+    @media only screen and (max-width: 1150px) {
+        font-size: 8px;
+    }
+
+    @media only screen and (max-width: 800px) {
+        width: 60%;
+    }
 `
 
 const thickness = 5;
@@ -72,21 +84,13 @@ export const Menu = styled(motion.div)`
 
 export const Description = styled.h2`
     color: var(--bg-darker-orange);
-    font-size: 2rem;
+    font-size: 2em;
     text-transform: uppercase;
-    padding-top: 0.5rem;
-
-    @media only screen and (max-width: 600px) {
-        font-size: 1rem;
-    }
-
-    @media only screen and (max-width: 500px) {
-        font-size: 0.8rem;
-    }
+    padding: 0.5rem 1rem 0.5rem 1rem;
 `
 
 export const Button = styled.a`
-    font-size: 1.2rem;
+    font-size: 2em;
     text-decoration: none !important;
     cursor: pointer;
 	text-transform: uppercase;
@@ -95,7 +99,7 @@ export const Button = styled.a`
 
     display: inline-block;
 	padding: 1.5rem 3rem;
-    margin-top: 1.5rem;
+    margin: 1rem;
 	border-radius: 2rem;
     border: none;
 	color: #fff;
@@ -134,5 +138,9 @@ export const Button = styled.a`
 			width: 100%;
 		}
 	}
+
+    @media only screen and (max-width: 800px) {
+        padding: 1rem 1.5rem;
+    }
 
 `
