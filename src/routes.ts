@@ -7,6 +7,7 @@ import listController from '@controllers/list'
 import productController from '@controllers/product'
 import wishController from '@controllers/wish'
 import donationController from '@controllers/donation'
+import muralController from '@controllers/mural'
 
 import authMiddleware from '@middlewares/auth'
 import upload from '@middlewares/upload'
@@ -44,5 +45,7 @@ routes.put('/wish', authMiddleware, wishController.update)
 routes.patch('/wish', authMiddleware, upload.single('photo'), wishController.photo)
 
 routes.get('/donation', authMiddleware, donationController.show)
+
+routes.get('/mural', muralController.show)
 
 export default routes
