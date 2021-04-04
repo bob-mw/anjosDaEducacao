@@ -29,13 +29,13 @@ const FormsLogin = () => {
         <S.FormGroup>
             <S.Label for="email">
                 Email
-             <S.Field type="email" name="email" id="email" onChange={ handleChange }  placeholder="digite seu email" />
+             <S.Field type="email" name="email" id="email" onChange={ handleChange }  placeholder="email@dominio.com" />
             </S.Label>
         </S.FormGroup>
         <S.FormGroup>
             <S.Label for="password">
                 Senha
-            <S.Field type="password" name="password" id="password" onChange={ handleChange } placeholder="digite sua senha" />
+            <S.Field type="password" name="password" id="password" onChange={ handleChange } placeholder="Somente números" />
             </S.Label>
         </S.FormGroup>
 

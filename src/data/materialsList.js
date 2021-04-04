@@ -57,7 +57,7 @@
         {
             name: "CADERNOS UNIVERSITÁRIOS 200 FOLHAS PAUTADAS",
             price: 10,
-            amount: 4
+            amount: 3
         },
         {
             name: "RÉGUA 30 cm",
@@ -180,7 +180,7 @@
         {
             name: "CADERNOS UNIVERSITÁRIOS 200 FOLHAS PAUTADAS",
             price: 12,
-            amount: 4
+            amount: 3
         },
         {
             name: "RÉGUA 30 cm",

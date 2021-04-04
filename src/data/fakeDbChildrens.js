@@ -15,8 +15,8 @@ const dataChildrens = [
         schoolName: "nome da escola",
         state: "SP",
         teaching: "F1",
-        goal: 123,
-        collected: 23,
+        goal: 100,
+        collected: 0,
         guardians: 2
     },
     {

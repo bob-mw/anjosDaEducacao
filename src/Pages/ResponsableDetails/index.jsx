@@ -99,10 +99,16 @@ const ResponsableDetails = () => {
 
                 <MaterialsList/>
 
-                <S.Button href="/childDetails" >Finalizar Pedido</S.Button>
+
+                <S.Button href="/childDetails" >Adicionar outro filho</S.Button>
+
+                <h1 align="center" className="my-5">OU</h1>
 
                 <S.Button href="/childDetails" >Visualizar</S.Button>
 
+                <h1 align="center"  className="my-5">OU</h1>
+
+                <S.Button href="/childDetails" >Finalizar Pedido</S.Button>
             </S.Form>
         </>
     );

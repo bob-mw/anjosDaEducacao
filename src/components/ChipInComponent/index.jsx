@@ -5,7 +5,7 @@ import * as S from './styled'
 
 const ChipIn = () => {
 
-    const children = dataFake[5];
+    const children = dataFake[0];
 
     const SHIPPING_VALUE = 10;
 
@@ -87,9 +87,15 @@ const ChipIn = () => {
                             <S.Input value="ticket" name="paymentMethod" type="radio" id="ticket" />
                             Boleto
                         </S.RadioLabel>
-                    </S.RadioContainer>
-                </S.PaymentMethodContainer>
 
+                        <S.RadioLabel htmlFor="pix">
+                            <S.Input value="pix" name="paymentMethod" type="radio" id="pix" />
+                            PIX
+                        </S.RadioLabel>
+
+                    </S.RadioContainer>
+
+                </S.PaymentMethodContainer>
             </S.DetailsContainer>
 
             <S.Button href="/paymentForm">Próximo</S.Button>
