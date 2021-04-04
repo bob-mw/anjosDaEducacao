@@ -7,6 +7,7 @@ import AppError from '@errors/appError'
 
 interface IMaterialData {
   name: string;
+  price: number;
   amount: number;
 }
 

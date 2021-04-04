@@ -2,7 +2,17 @@ import mongoose, { Document, Schema } from 'mongoose'
 
 import product from '@schemas/product'
 
-type ProductList = Document & {}
+interface IProductList extends Document {
+  owner: string;
+  name: string;
+  products: [
+    {
+      name: string;
+      price: number;
+      amount: number;
+    }
+  ]
+}
 
 const productListSchema = new Schema({
   owner: {
@@ -21,4 +31,4 @@ const productListSchema = new Schema({
   timestamps: true
 })
 
-export default mongoose.model<ProductList>('ProductList', productListSchema)
+export default mongoose.model<IProductList>('ProductList', productListSchema)

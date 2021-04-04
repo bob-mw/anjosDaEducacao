@@ -11,8 +11,8 @@ export interface IWish extends Document {
   state: string;
   materials: [{
     name: string;
-    cost: string;
-    amount: string;
+    price: number;
+    amount: number;
   }],
   collected: number;
   finished: boolean;
