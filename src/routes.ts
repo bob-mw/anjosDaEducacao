@@ -8,6 +8,7 @@ import productController from '@controllers/product'
 import wishController from '@controllers/wish'
 
 import authMiddleware from '@middlewares/auth'
+import upload from '@middlewares/upload'
 
 const routes = Router()
 
@@ -39,5 +40,6 @@ routes.post('/product', authMiddleware, productController.create)
 routes.post('/wish', authMiddleware, wishController.create)
 routes.get('/wish', authMiddleware, wishController.show)
 routes.put('/wish', authMiddleware, wishController.update)
+routes.patch('/wish', authMiddleware, upload.single('photo'), wishController.photo)
 
 export default routes

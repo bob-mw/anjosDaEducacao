@@ -2,7 +2,24 @@ import mongoose, { Document, Schema } from 'mongoose'
 
 import material from '@schemas/material'
 
-type Request = Document & {}
+export interface IWish extends Document {
+  id: string;
+  owner: string;
+  name: string;
+  schoolName: string;
+  city: string;
+  state: string;
+  materials: [{
+    name: string;
+    cost: string;
+    amount: string;
+  }],
+  collected: number;
+  finished: boolean;
+  message: [string];
+  photo: string;
+  guardians: [string];
+}
 
 const RequestSchema = new Schema(
   {
@@ -40,6 +57,9 @@ const RequestSchema = new Schema(
     message: {
       type: String
     },
+    photo: {
+      type: String
+    },
     guardians: [
       String
     ]
@@ -49,4 +69,4 @@ const RequestSchema = new Schema(
   }
 )
 
-export default mongoose.model<Request>('Request', RequestSchema)
+export default mongoose.model<IWish>('Request', RequestSchema)

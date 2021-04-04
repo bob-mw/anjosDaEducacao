@@ -7,8 +7,8 @@ node_modules
 
 # testing
 front/coverage
-back/tmp
-tmp
+tmp/*
+!tmp/.gitkeep
 
 
 # production

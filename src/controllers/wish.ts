@@ -7,6 +7,7 @@ import materialListSchema from '@validation/MaterialList'
 import CreateWishService from '@services/createWish'
 import FindWishService from '@services/findWish'
 import UpdateWishService from '@services/updateWish'
+import UploadPhotoService from '@services/uploadPhoto'
 
 import AppError from '@errors/appError'
 
@@ -84,6 +85,22 @@ class WishController {
     })
 
     return response.json({
+      wish
+    })
+  }
+
+  async photo (request: Request, response: Response) {
+    const { id } = request.body
+
+    const uploadPhoto = new UploadPhotoService()
+
+    const wish = await uploadPhoto.execute({
+      owner: request.user.id,
+      id,
+      photo: request.file.filename
+    })
+
+    return response.status(201).json({
       wish
     })
   }
