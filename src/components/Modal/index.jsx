@@ -10,6 +10,16 @@ export const Modal = ({ showModal, setShowModal }) => {
         setShowModal(false);
       }
     };
+    
+    const keyPress = useCallback(
+        e => {
+        if (e.key === 'Escape' && showModal) {
+            setShowModal(false);
+            console.log('I pressed');
+        }
+        },
+        [setShowModal, showModal]
+    );
   
     return (
       <>
