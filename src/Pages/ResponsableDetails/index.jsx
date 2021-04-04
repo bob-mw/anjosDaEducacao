@@ -1,9 +1,9 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react'
 import context from '../../context/context';
-import MaterialsList from '../../components/MaterialsList';
-import * as S from './styled';
+import MaterialsList from '../../components/MaterialsList'
+import * as S from './styled'
 
-function ResponsableDetails() {
+const ResponsableDetails = () => {
 
     const { childrenRegister, setChildrenRegister } = useContext(context);
 
@@ -32,12 +32,11 @@ function ResponsableDetails() {
     }, [])
 
     return (
-        <section >
+        <>
 
-            <h1 className="text-center display-4">Fazer pedido para meus filhos</h1>
+            <S.Title>Fazer pedido para meus filhos</S.Title>
 
-            <hr />
-            <form action="" className="p-5 my-5 row bg-light" >
+            <S.Form action="">
 
                 <div className=" row m-auto">
 
@@ -99,12 +98,12 @@ function ResponsableDetails() {
                 </div>
                         <MaterialsList />
 
-                        <S.LinkStyleButton className="my-3 mx-auto" href="/childDetails" >Finalizar Pedido</S.LinkStyleButton>
+                        <S.Button href="/childDetails" >Finalizar Pedido</S.Button>
 
-                <S.LinkStyleButton className="my-3 mx-auto" href="/childDetails" >Vizualizar</S.LinkStyleButton>
+                <S.Button href="/childDetails" >Visualizar</S.Button>
 
-            </form>
-        </section>
+            </S.Form>
+        </>
     );
 }
 
