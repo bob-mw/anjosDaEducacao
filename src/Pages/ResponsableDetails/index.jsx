@@ -97,9 +97,9 @@ const ResponsableDetails = () => {
 
                 </S.SuperiorDetails>
 
-                        <MaterialsList/>
+                <MaterialsList/>
 
-                        <S.Button href="/childDetails" >Finalizar Pedido</S.Button>
+                <S.Button href="/childDetails" >Finalizar Pedido</S.Button>
 
                 <S.Button href="/childDetails" >Visualizar</S.Button>
 
