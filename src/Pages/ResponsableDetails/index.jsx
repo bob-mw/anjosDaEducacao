@@ -38,18 +38,18 @@ const ResponsableDetails = () => {
 
             <S.Form action="">
 
-                <div className=" row m-auto">
+                <div>
 
                     <section id="informations" className="m-5">
 
                         <S.Label className="my-3 row " htmlFor="nome">
                             Nome:
-                <S.Field className="form-control ml-3" type="text" id="name" name="name" placeholder="digite o nome da criança" onChange={setChildrenInformations} />
+                            <S.Field className="form-control ml-3" type="text" id="name" name="name" placeholder="digite o nome da criança" onChange={setChildrenInformations} />
                         </S.Label>
 
                         <S.Label className="my-3 row " htmlFor="SchoolNome">
                             Escola:
-                <S.Field className="form-control ml-3" type="text" id="schoolName" name="schoolName" placeholder="digite o nome da escola" onChange={setChildrenInformations} />
+                            <S.Field className="form-control ml-3" type="text" id="schoolName" name="schoolName" placeholder="digite o nome da escola" onChange={setChildrenInformations} />
                         </S.Label>
 
                         <S.Label className="my-3 row " htmlFor="state">
@@ -63,8 +63,8 @@ const ResponsableDetails = () => {
                         </S.Label>
 
                         <S.Label className="my-3 row " htmlFor="city">
-                            cidade:
-                <S.Field className="form-control ml-3" type="text" id="city" name="city" placeholder="digite o nome da cidade" onChange={setChildrenInformations} />
+                            Cidade:
+                            <S.Field className="form-control ml-3" type="text" id="city" name="city" placeholder="digite o nome da cidade" onChange={setChildrenInformations} />
                         </S.Label>
 
                     </section>
@@ -78,18 +78,18 @@ const ResponsableDetails = () => {
 
                             <S.LabelCheckBox className="d-flex align-items-center my-2" htmlFor="primeiroAoQuinto">
                                 <input className="form-check-input" type="radio" name="teaching" id="primeiroAoQuinto" value="F1" onChange={setChildrenInformations} />
-                        1º ao 5º ANO
-                </S.LabelCheckBox>
+                                1º ao 5º ANO
+                            </S.LabelCheckBox>
 
                             <S.LabelCheckBox className="d-flex align-items-center my-2" htmlFor="sextoAoNono">
                                 <input className="form-check-input" type="radio" name="teaching" id="sextoAoNono" value="F2" onChange={setChildrenInformations} />
-                        6º ao 9º ANO
-                </S.LabelCheckBox>
+                                6º ao 9º ANO
+                            </S.LabelCheckBox>
 
                             <S.LabelCheckBox className="d-flex align-items-center my-2" htmlFor="ensinoMedio">
                                 <input className="form-check-input" type="radio" name="teaching" id="ensinoMedio" value="EM" onChange={setChildrenInformations} />
-                        Ensino Médio
-                    </S.LabelCheckBox>
+                                Ensino Médio
+                            </S.LabelCheckBox>
                     
                     </section>
 
