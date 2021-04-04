@@ -22,12 +22,11 @@ const ChildrenCards = () => {
                         
                         <hr />
 
+                                <h1 className="align-self-end">{ Math.floor(children.collected * 100 / children.goal) } %</h1>
+                                
                             <S.ProgressBarContainer>
                                 <S.ProgressBar style={{
-                                        width: `${(children.collected === children.goal / 4) && "25%" ||
-                                        (children.collected <= children.goal / 2) && "50%" ||
-                                        (children.collected <= (children.goal / 4) * 3) && "75%" ||
-                                        (children.collected <= children.goal / 1) && "100%"}`
+                                        width: `${ children.collected * 100 / children.goal }%`
                                 }
                                 }></S.ProgressBar>
                             </S.ProgressBarContainer>

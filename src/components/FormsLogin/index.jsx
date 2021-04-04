@@ -2,7 +2,6 @@ import React, { useContext, useEffect } from 'react';
 import context from '../../context/context';
 import authService from '../../services/auth';
 import validationLogin from '../../valitations/validationLogin';
-import ModalLogin from '../ModalLogin/index';
 
 import * as S from './styled'
 
@@ -45,8 +44,6 @@ const FormsLogin = () => {
         <a href="#" className="my-3">Esqueceu sua senha?</a>
 
         <p>Ainda não tem cadastro? <a href="/parents">Cadastre-se</a></p>
-
-        <ModalLogin />
 
         <hr/>
             <h1>OU</h1>

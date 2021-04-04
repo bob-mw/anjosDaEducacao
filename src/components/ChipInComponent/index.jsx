@@ -5,7 +5,7 @@ import * as S from './styled'
 
 const ChipIn = () => {
 
-    const children = dataFake[0];
+    const children = dataFake[5];
 
     const SHIPPING_VALUE = 10;
 
@@ -19,10 +19,10 @@ const ChipIn = () => {
             <S.Name>{children.name}</S.Name>
             <S.Description>
                 {
-                    (children.teaching === "EF") && "Ensino Infantil" || 
-                    (children.teaching === "F1") && "Fundamental 1" || 
-                    (children.teaching === "F2") && "Fundamental 2" || 
-                    (children.teaching === "EM") && "Ensino Médio" 
+                    (children.teaching === "EF") && "Ensino Infantil" ||
+                    (children.teaching === "F1") && "Fundamental 1" ||
+                    (children.teaching === "F2") && "Fundamental 2" ||
+                    (children.teaching === "EM") && "Ensino Médio"
                 }
             </S.Description>
             <S.Description>{children.schoolName}</S.Description>
@@ -31,12 +31,12 @@ const ChipIn = () => {
 
             <S.DetailsContainer>
 
+                <h1 className="align-self-end">{Math.floor(children.collected * 100 / children.goal)} %</h1>
+
                 <S.ProgressBarContainer>
+
                     <S.ProgressBar style={{
-                            width: `${(children.collected === children.goal / 4) && "25%" ||
-                            (children.collected <= children.goal / 2) && "50%" ||
-                            (children.collected <= (children.goal / 4) * 3) && "75%" ||
-                            (children.collected <= children.goal / 1) && "100%"}`
+                        width: `${children.collected * 100 / children.goal}%`
                     }
                     }></S.ProgressBar>
                 </S.ProgressBarContainer>
@@ -69,9 +69,9 @@ const ChipIn = () => {
                     </tbody>
                 </S.Table>
 
-                <S.Details>Taxa de entrega: { SHIPPING_VALUE.toFixed(2) }</S.Details>
+                <S.Details>Taxa de entrega: {SHIPPING_VALUE.toFixed(2)}</S.Details>
 
-                <S.Details>Total: { (totalPrice + SHIPPING_VALUE).toFixed(2) } </S.Details>
+                <S.Details>Total: {(totalPrice + SHIPPING_VALUE).toFixed(2)} </S.Details>
 
 
                 <S.PaymentMethodContainer>
@@ -79,12 +79,12 @@ const ChipIn = () => {
                     <S.RadioContainer>
 
                         <S.RadioLabel htmlFor="card">
-                            <S.Input value="card" name="paymentMethod" type="radio" id="card"/>
+                            <S.Input value="card" name="paymentMethod" type="radio" id="card" />
                             Cartão
                         </S.RadioLabel>
 
                         <S.RadioLabel htmlFor="ticket">
-                            <S.Input value="ticket" name="paymentMethod" type="radio" id="ticket"/>
+                            <S.Input value="ticket" name="paymentMethod" type="radio" id="ticket" />
                             Boleto
                         </S.RadioLabel>
                     </S.RadioContainer>

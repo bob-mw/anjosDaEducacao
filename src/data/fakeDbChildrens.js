@@ -16,7 +16,7 @@ const dataChildrens = [
         state: "SP",
         teaching: "F1",
         goal: 123,
-        collected: 32,
+        collected: 23,
         guardians: 2
     },
     {
