@@ -1,8 +1,8 @@
-import React, { useContext, useEffect } from 'react';
-import { EF, F1, F2, EM } from '../data/materialsList.js';
-import context from '../context/context';
+import React, { useContext, useEffect } from 'react'
+import { EF, F1, F2, EM } from '../../data/materialsList.js'
+import context from '../../context/context'
 
-function MaterialsList() {
+const MaterialsList = () => {
 
     const { childrenRegister, setChildrenRegister } = useContext(context);
 
@@ -50,7 +50,7 @@ function MaterialsList() {
 
     return (
         list(teaching)
-    );
+    )
 }
 
-export default MaterialsList;
+export default MaterialsList
