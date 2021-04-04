@@ -34,6 +34,22 @@ export const Form = styled.form`
     box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.3);
 `
 
+export const SuperiorDetails = styled.div` 
+    display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 4rem;
+    margin-bottom: 2rem;
+
+	@media only screen and (max-width: 800px) {
+        grid-template-columns: 1fr
+    }
+`
+
+export const FieldContainer = styled.div` 
+    display: flex;
+    flex-direction: column;
+`
+
 export const Button = styled.a`
     font-size: 1.2rem;
     text-decoration: none !important;
@@ -87,6 +103,7 @@ export const Button = styled.a`
 
 export const Label = styled.label`
     font-size: 1.2rem;
+    margin-bottom: 1rem;
     color: var(--bg-darker-orange);
 `
 

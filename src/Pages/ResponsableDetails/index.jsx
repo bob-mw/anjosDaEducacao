@@ -38,21 +38,21 @@ const ResponsableDetails = () => {
 
             <S.Form action="">
 
-                <div>
+                <S.SuperiorDetails>
 
-                    <section id="informations" className="m-5">
+                    <S.FieldContainer id="informations">
 
-                        <S.Label className="my-3 row " htmlFor="nome">
+                        <S.Label htmlFor="nome">
                             Nome:
                             <S.Field className="form-control ml-3" type="text" id="name" name="name" placeholder="digite o nome da criança" onChange={setChildrenInformations} />
                         </S.Label>
 
-                        <S.Label className="my-3 row " htmlFor="SchoolNome">
+                        <S.Label htmlFor="SchoolNome">
                             Escola:
                             <S.Field className="form-control ml-3" type="text" id="schoolName" name="schoolName" placeholder="digite o nome da escola" onChange={setChildrenInformations} />
                         </S.Label>
 
-                        <S.Label className="my-3 row " htmlFor="state">
+                        <S.Label htmlFor="state">
                             Estado:
                             <select name="state" id="state" className="form-control ml-3" onChange={setChildrenInformations}>
                                 <option value="" selected disabled>Escolha um Estado</option>
@@ -62,12 +62,12 @@ const ResponsableDetails = () => {
                             </select>
                         </S.Label>
 
-                        <S.Label className="my-3 row " htmlFor="city">
+                        <S.Label  htmlFor="city">
                             Cidade:
                             <S.Field className="form-control ml-3" type="text" id="city" name="city" placeholder="digite o nome da cidade" onChange={setChildrenInformations} />
                         </S.Label>
 
-                    </section>
+                    </S.FieldContainer>
 
 
                     <section className="d-flex flex-column justify-content-center align-items-center mx-auto mb-5 boxS.FieldRadio-width">
@@ -95,7 +95,7 @@ const ResponsableDetails = () => {
 
 
 
-                </div>
+                </S.SuperiorDetails>
                         <MaterialsList />
 
                         <S.Button href="/childDetails" >Finalizar Pedido</S.Button>
