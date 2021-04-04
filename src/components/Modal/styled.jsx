@@ -68,6 +68,21 @@ export const Menu = styled(motion.div)`
     }
 `
 
+export const Description = styled.h2`
+    color: var(--bg-darker-orange);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    padding-top: 0.5rem;
+
+    @media only screen and (max-width: 600px) {
+        font-size: 1rem;
+    }
+
+    @media only screen and (max-width: 500px) {
+        font-size: 0.8rem;
+    }
+`
+
 export const Button = styled.a`
     font-size: 1.2rem;
     text-decoration: none !important;

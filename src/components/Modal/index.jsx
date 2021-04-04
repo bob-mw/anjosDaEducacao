@@ -32,7 +32,11 @@ export const Modal = ({ showModal, setShowModal }) => {
     return (
       <>
         {showModal ? (
-
+            <S.Overlay  onClick={closeModal} ref={modalRef}>
+                <S.Panel>
+                    
+                </S.Panel>
+            </S.Overlay>
         ) : null}
       </>
     );
