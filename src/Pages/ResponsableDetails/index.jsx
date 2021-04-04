@@ -44,50 +44,50 @@ const ResponsableDetails = () => {
 
                         <S.Label htmlFor="nome">
                             Nome:
-                            <S.Field className="form-control ml-3" type="text" id="name" name="name" placeholder="digite o nome da criança" onChange={setChildrenInformations} />
+                            <S.Field type="text" id="name" name="name" placeholder="digite o nome da criança" onChange={setChildrenInformations} />
                         </S.Label>
 
                         <S.Label htmlFor="SchoolNome">
                             Escola:
-                            <S.Field className="form-control ml-3" type="text" id="schoolName" name="schoolName" placeholder="digite o nome da escola" onChange={setChildrenInformations} />
+                            <S.Field type="text" id="schoolName" name="schoolName" placeholder="digite o nome da escola" onChange={setChildrenInformations} />
                         </S.Label>
 
                         <S.Label htmlFor="state">
                             Estado:
-                            <select name="state" id="state" className="form-control ml-3" onChange={setChildrenInformations}>
+                            <S.Select name="state" id="state" onChange={setChildrenInformations}>
                                 <option value="" selected disabled>Escolha um Estado</option>
                                 {
                                     brazilStates.map((state) => <option key={state.sigla} value={state.sigla}>{state.nome}</option>)
                                 }
-                            </select>
+                            </S.Select>
                         </S.Label>
 
                         <S.Label  htmlFor="city">
                             Cidade:
-                            <S.Field className="form-control ml-3" type="text" id="city" name="city" placeholder="digite o nome da cidade" onChange={setChildrenInformations} />
+                            <S.Field type="text" id="city" name="city" placeholder="digite o nome da cidade" onChange={setChildrenInformations} />
                         </S.Label>
 
                     </S.FieldContainer>
 
 
                     <S.RadioContainer>
-                            <S.LabelCheckBox className="d-flex align-items-center my-2" htmlFor="infantil">
-                                <input className="form-check-input" type="radio" name="teaching" id="infantil" value="EF" onChange={setChildrenInformations} />
+                            <S.LabelCheckBox htmlFor="infantil">
+                                <input type="radio" name="teaching" id="infantil" value="EF" onChange={setChildrenInformations} />
                                 Ensino Infantil
                             </S.LabelCheckBox>
 
-                            <S.LabelCheckBox className="d-flex align-items-center my-2" htmlFor="primeiroAoQuinto">
-                                <input className="form-check-input" type="radio" name="teaching" id="primeiroAoQuinto" value="F1" onChange={setChildrenInformations} />
+                            <S.LabelCheckBox htmlFor="primeiroAoQuinto">
+                                <input type="radio" name="teaching" id="primeiroAoQuinto" value="F1" onChange={setChildrenInformations} />
                                 1º ao 5º ANO
                             </S.LabelCheckBox>
 
-                            <S.LabelCheckBox className="d-flex align-items-center my-2" htmlFor="sextoAoNono">
-                                <input className="form-check-input" type="radio" name="teaching" id="sextoAoNono" value="F2" onChange={setChildrenInformations} />
+                            <S.LabelCheckBox htmlFor="sextoAoNono">
+                                <input type="radio" name="teaching" id="sextoAoNono" value="F2" onChange={setChildrenInformations} />
                                 6º ao 9º ANO
                             </S.LabelCheckBox>
 
-                            <S.LabelCheckBox className="d-flex align-items-center my-2" htmlFor="ensinoMedio">
-                                <input className="form-check-input" type="radio" name="teaching" id="ensinoMedio" value="EM" onChange={setChildrenInformations} />
+                            <S.LabelCheckBox htmlFor="ensinoMedio">
+                                <input type="radio" name="teaching" id="ensinoMedio" value="EM" onChange={setChildrenInformations} />
                                 Ensino Médio
                             </S.LabelCheckBox>
                     
