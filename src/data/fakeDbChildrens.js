@@ -22,7 +22,7 @@ const dataChildrens = [
     {
         id: 2,
         city: "São Paulo",
-        materials: F2,
+        materials: EF,
         name: "Miguel",
         age: 8,
         schoolName: "nome da escola",
@@ -50,7 +50,7 @@ const dataChildrens = [
     {
         id: 4,
         city: "São Paulo",
-        materials: EM,
+        materials: F2,
         name: "Iasmin",
         age: 7,
         schoolName: "nome da escola",

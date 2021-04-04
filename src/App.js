@@ -22,8 +22,8 @@ function App(){
             <Switch>
               <Route exact path="/" component={ Login } />
               <Route path="/guardian" component={ RegisterGuardian } />
-              <Route path="/parents" component={ RegisterResponsable } />
-              <Route path="/parentDetails" component={ ResponsableDetails } />
+              <Route path="/register" component={ RegisterResponsable } />
+              <Route path="/parent" component={ ResponsableDetails } />
               <Route path="/childDetails" component={ ChildDetails } />
               <Route path="/wishList" component={ WishList } />
               <Route path="/mural" component={ Mural } />

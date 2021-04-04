@@ -7,6 +7,12 @@ const ChipIn = () => {
 
     const children = dataFake[0];
 
+    const SHIPPING_VALUE = 10;
+
+    const materials = children.materials.map((material) => (material.price * material.amount))
+
+    const totalPrice = materials.reduce((acc, price) => acc + price);
+
     return (
         <S.Container>
 
@@ -36,9 +42,9 @@ const ChipIn = () => {
                 </S.ProgressBarContainer>
 
 
-                <S.Details>Conseguimos: R$ {children.collected}</S.Details>
+                <S.Details>Conseguimos: R$ {(children.collected).toFixed(2)}</S.Details>
 
-                <S.Details>Meta: R$ {children.goal}</S.Details>
+                <S.Details>Meta: R$ {(children.goal).toFixed(2)}</S.Details>
 
                 <S.Details>Guardiões: {children.guardians}</S.Details>
 
@@ -56,16 +62,16 @@ const ChipIn = () => {
                                 <tr key={index}>
                                     <td>{material.amount}</td>
                                     <td>{material.name}</td>
-                                    <td>{material.price}</td>
+                                    <td>{(material.price).toFixed(2)}</td>
                                 </tr>
                             ))
                         }
                     </tbody>
                 </S.Table>
 
-                <S.Details>Taxa de entrega:</S.Details>
+                <S.Details>Taxa de entrega: { SHIPPING_VALUE.toFixed(2) }</S.Details>
 
-                <S.Details>Total:</S.Details>
+                <S.Details>Total: { (totalPrice + SHIPPING_VALUE).toFixed(2) } </S.Details>
 
 
                 <S.PaymentMethodContainer>
