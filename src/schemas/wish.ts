@@ -19,6 +19,8 @@ export interface IWish extends Document {
   message: [string];
   photo: string;
   guardians: [string];
+  createdAt: string;
+  updatedAt: string;
 }
 
 const RequestSchema = new Schema(

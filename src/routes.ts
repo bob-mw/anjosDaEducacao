@@ -6,6 +6,7 @@ import storeController from '@controllers/store'
 import listController from '@controllers/list'
 import productController from '@controllers/product'
 import wishController from '@controllers/wish'
+import donationController from '@controllers/donation'
 
 import authMiddleware from '@middlewares/auth'
 import upload from '@middlewares/upload'
@@ -41,5 +42,7 @@ routes.post('/wish', authMiddleware, wishController.create)
 routes.get('/wish', authMiddleware, wishController.show)
 routes.put('/wish', authMiddleware, wishController.update)
 routes.patch('/wish', authMiddleware, upload.single('photo'), wishController.photo)
+
+routes.get('/donation', authMiddleware, donationController.show)
 
 export default routes

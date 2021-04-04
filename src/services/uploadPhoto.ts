@@ -17,11 +17,11 @@ class UploadPhotoService {
     }
 
     if (wish.owner !== owner) {
-      throw new AppError('Você não pode alterar um pedido que não é seu')
+      throw new AppError('Você não pode alterar um pedido que não é seu', 401)
     }
 
     if (!wish.finished) {
-      throw new AppError('O pedido precisa estar finalizado para poder adicionar uma imagem')
+      throw new AppError('O pedido precisa estar finalizado para poder adicionar uma imagem', 401)
     }
 
     const updatedWish = await Wish.findByIdAndUpdate(id, {

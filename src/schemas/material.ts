@@ -13,9 +13,6 @@ const materialSchema = new Schema(
       type: Number,
       required: true
     }
-  },
-  {
-    timestamps: true
   }
 )
 
