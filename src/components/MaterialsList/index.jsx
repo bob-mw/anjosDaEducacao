@@ -26,24 +26,24 @@ const MaterialsList = () => {
 
         return (
             
-            <table class="table table-bordered table-hover text-center">
-            <thead>
-                <tr>
-                    <th>Quantidade</th>
-                    <th>Material</th>
-                </tr>
-            </thead>
-            <tbody>
-                {
-                    childrenMaterials.map((material, index) => (
-                        <tr key={index}>
-                            <td>{material.amount}</td>
-                            <td>{material.name}</td>
-                        </tr>
-                    ))
-                }
-            </tbody>
-        </table>
+            <S.Table>
+                <thead>
+                    <tr>
+                        <th>Quantidade</th>
+                        <th>Material</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        childrenMaterials.map((material, index) => (
+                            <tr key={index}>
+                                <td>{material.amount}</td>
+                                <td>{material.name}</td>
+                            </tr>
+                        ))
+                    }
+                </tbody>
+        </S.Table>
          
         );
     }
