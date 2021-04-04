@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
-const Background = styled.div`
+const Overlay = styled.div`
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
@@ -9,27 +9,20 @@ const Background = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+`
 
-const ModalWrapper = styled.div`
-  width: 800px;
-  height: 500px;
-  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
-  background: #fff;
-  color: #000;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  position: relative;
-  z-index: 10;
-  border-radius: 10px;
-`;
+export const Panel = styled.div`
+    position: relative;
+    width: 40%;
+    height: 40%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    z-index: 10;
 
-const ModalImg = styled.img`
-  width: 100%;
-  height: 100%;
-  border-radius: 10px 0 0 10px;
-  background: #000;
-`;
+    border-radius: 2rem;
+    background: linear-gradient(to left bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    box-shadow:0 1rem 1rem rgba(128, 91, 91, 0.5); 
+`
 
 const ModalContent = styled.div`
   display: flex;
@@ -49,7 +42,7 @@ const ModalContent = styled.div`
     color: #fff;
     border: none;
   }
-`;
+`
 
 const CloseModalButton = styled(MdClose)`
   cursor: pointer;
@@ -60,4 +53,4 @@ const CloseModalButton = styled(MdClose)`
   height: 32px;
   padding: 0;
   z-index: 10;
-`;
+`
