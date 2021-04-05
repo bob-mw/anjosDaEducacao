@@ -6,7 +6,7 @@ class ShowAvailableWishesService {
 
     const { data: donations } = data;
 
-    return donations;
+    return { donations };
   }
 }
 
