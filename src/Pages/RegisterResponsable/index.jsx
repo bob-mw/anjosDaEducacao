@@ -72,7 +72,12 @@ const RegisterForms = () => {
                 <S.Button type="button" onClick={handleClick} disabled={ !formValidation }>Finalizar Cadastro</S.Button>
             </S.Form>
 
-            <Modal showModal={showModal} setShowModal={setShowModal} />
+            <Modal 
+                title='REGISTRO REALIZADO' 
+                subtitle='Gostaria de cadastrar um filho?'
+                showModal={showModal} 
+                setShowModal={setShowModal} 
+            />
         </>
     );
 }
