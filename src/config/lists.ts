@@ -1,188 +1,233 @@
+
 export default {
-  EI: [
+  EF: [
     {
-      name: 'Pacote camex 500 fls',
+      name: 'TUBO DE COLA',
+      price: 2,
       amount: 1
     },
     {
-      name: 'Tubo de cola',
+      name: 'ROLO FITA CREPE 50 mm x 50 mm',
+      price: 2,
       amount: 1
     },
     {
-      name: 'Rolo fita crepe 50mm x 50mm',
+      name: 'CAIXA DE GIZ DE CERA GRANDE',
+      price: 5,
       amount: 1
     },
     {
-      name: 'Caixa de giz de cera grande',
+      name: 'TESOURA SEM PONTA',
+      price: 2,
       amount: 1
     },
     {
-      name: 'Tesoura sem ponta',
-      amount: 1
-    },
-    {
-      name: 'Cx de lápis de cor 12 cores',
+      name: 'CX DE LÁPIS DE COR 12 CORES',
+      price: 12,
       amount: 2
     },
     {
-      name: 'Pincel tigre n12',
+      name: 'PINCEL TIGRE Nº 12',
+      price: 5,
       amount: 1
     },
     {
-      name: 'Lancheira',
+      name: 'LANCHEIRA',
+      price: 15,
       amount: 1
     },
     {
-      name: 'Agenda',
+      name: 'AGENDA',
+      price: 10,
+      amount: 1
+    },
+    {
+      name: 'PACOTE CHAMEX 500 FLS',
+      price: 5,
       amount: 1
     }
   ],
 
   F1: [
     {
-      name: 'Caderno universitário 200 folhas pautadas',
-      amount: 4
-    },
-    {
-      name: 'Régua 30cm',
-      amount: 1
-    },
-    {
-      name: 'Estojo',
-      amount: 1
-    },
-    {
-      name: 'Tesoura sem ponta',
-      amount: 1
-    },
-    {
-      name: 'Borracha',
-      amount: 1
-    },
-    {
-      name: 'Apontador',
-      amount: 1
-    },
-    {
-      name: 'Lápis preto',
+      name: 'CADERNOS UNIVERSITÁRIOS 200 FOLHAS PAUTADAS',
+      price: 10,
       amount: 3
     },
     {
-      name: 'Cx de lápis de cor 12 cores',
+      name: 'RÉGUA 30 cm',
+      price: 2,
       amount: 1
     },
     {
-      name: 'Tubo de cola',
+      name: 'ESTOJO',
+      price: 8,
       amount: 1
     },
     {
-      name: 'Mochila',
+      name: 'TESOURA SEM PONTA',
+      price: 2,
+      amount: 1
+    },
+    {
+      name: 'BORRACHA',
+      price: 1,
+      amount: 1
+    },
+    {
+      name: 'APONTADOR',
+      price: 1,
+      amount: 1
+    },
+    {
+      name: 'LÁPIS PRETOS',
+      price: 1,
+      amount: 3
+    },
+    {
+      name: 'CX DE LÁPIS DE COR 12 CORES',
+      price: 12,
+      amount: 1
+    },
+    {
+      name: 'TUBO DE COLA',
+      price: 3,
+      amount: 1
+    },
+    {
+      name: 'MOCHILA',
+      price: 50,
       amount: 1
     }
   ],
 
   F2: [
     {
-      name: 'Caderno universitário 200 folhas pautadas',
+      name: 'CADERNOS UNIVERSITÁRIOS 200 FOLHAS PAUTADAS',
+      price: 12,
       amount: 4
     },
     {
-      name: 'Caderno educação artística',
+      name: 'CADERNO EDUCAÇÃO ARTÍSTICA',
+      price: 10,
       amount: 1
     },
     {
-      name: 'Régua 30cm',
+      name: 'RÉGUA 30 cm',
+      price: 1,
       amount: 1
     },
     {
-      name: 'Estojo',
+      name: 'ESTOJO',
+      price: 6,
       amount: 1
     },
     {
-      name: 'Tesoura sem ponta',
+      name: 'TESOURA SEM PONTA',
+      price: 3,
       amount: 1
     },
     {
-      name: 'Borracha',
+      name: 'BORRACHA',
+      price: 2,
       amount: 1
     },
     {
-      name: 'Apontador',
+      name: 'APONTADOR',
+      price: 1,
       amount: 1
     },
     {
-      name: 'Lápis preto',
+      name: 'LÁPIS PRETOS',
+      price: 1,
       amount: 3
     },
     {
-      name: 'Caneta azul',
+      name: 'CANETAS AZUIS',
+      price: 1,
       amount: 2
     },
     {
-      name: 'Caneta preta',
+      name: '2 CANETAS PRETAS',
+      price: 1,
       amount: 2
     },
     {
-      name: 'Cx de lápis de cor 12 cores',
+      name: 'CX DE LÁPIS DE COR 12 CORES',
+      price: 12,
       amount: 1
     },
     {
-      name: 'Tubo de cola',
+      name: 'TUBO DE COLA',
+      price: 4,
       amount: 1
     },
     {
-      name: 'Mochila',
+      name: 'MOCHILA',
+      price: 50,
       amount: 1
     }
   ],
 
   EM: [
     {
-      name: 'Caderno universitário 200 folhas pautadas',
-      amount: 4
-    },
-    {
-      name: 'Régua 30cm',
-      amount: 1
-    },
-    {
-      name: 'Estojo',
-      amount: 1
-    },
-    {
-      name: 'Tesoura sem ponta',
-      amount: 1
-    },
-    {
-      name: 'Borracha',
-      amount: 1
-    },
-    {
-      name: 'Apontador',
-      amount: 1
-    },
-    {
-      name: 'Lápis preto',
+      name: 'CADERNOS UNIVERSITÁRIOS 200 FOLHAS PAUTADAS',
+      price: 12,
       amount: 3
     },
     {
-      name: 'Caneta azul',
-      amount: 2
-    },
-    {
-      name: 'Caneta preta',
-      amount: 2
-    },
-    {
-      name: 'Cx de lápis de cor 12 cores',
+      name: 'RÉGUA 30 cm',
+      price: 1,
       amount: 1
     },
     {
-      name: 'Cola bastão',
+      name: 'ESTOJO',
+      price: 6,
       amount: 1
     },
     {
-      name: 'Mochila',
+      name: 'TESOURA SEM PONTA',
+      price: 3,
+      amount: 1
+    },
+    {
+      name: 'BORRACHA',
+      price: 1,
+      amount: 1
+    },
+    {
+      name: 'APONTADOR',
+      price: 2,
+      amount: 1
+    },
+    {
+      name: 'LÁPIS PRETOS',
+      price: 1,
+      amount: 3
+    },
+    {
+      name: 'CANETAS AZUIS',
+      price: 1,
+      amount: 3
+    },
+    {
+      name: 'CANETAS PRETAS',
+      price: 1,
+      amount: 2
+    },
+    {
+      name: 'CX DE LÁPIS DE COR 12 CORES',
+      price: 12,
+      amount: 1
+    },
+    {
+      name: 'COLA BASTÃO',
+      price: 3,
+      amount: 1
+    },
+    {
+      name: 'MOCHILA',
+      price: 50,
       amount: 1
     }
   ]
