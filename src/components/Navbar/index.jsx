@@ -17,7 +17,7 @@ const Navbar = () => {
             duration: 1.5,
             text: name,
             ease: "power3.out",
-            delay: 2
+            delay: 1
         })
 
     }, [])

@@ -16,8 +16,8 @@ const icon = {
 };
 
 const transition = {
-  default: { duration: 3, ease: "easeInOut" },
-  fill: { duration: 5, ease: [1, 0, 0.8, 1] }
+  default: { duration: 1.5, ease: "easeInOut" },
+  fill: { duration: 3, ease: [1, 0, 0.8, 1] }
 }
 
 const Logo = (props) => {
