@@ -62,64 +62,20 @@ export const Field = styled.input`
     box-shadow:0 0.5rem 1rem rgba(0, 0, 0, 0.3);
 `
 
-export const Button = styled.button`
-    font-size: 1.2rem;
-    text-decoration: none !important;
-    cursor: pointer;
-    display: inline-block;
-	padding: 1.5rem;
-    margin-top: 1.5rem;
-	border-radius: 2rem;
-    border: none;
-	color: #fff;
-	text-transform: uppercase;
-	letter-spacing: .15rem;
-	transition: all .3s;
-	position: relative;
-	overflow: hidden;
-	z-index: 1;
-    justify-self: center;
-
-	&:after {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: var(--bg-dark-orange);
-		border-radius: 10rem;
-		z-index: -2;
-	}
-	&:before {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 0%;
-		height: 100%;
-		background-color: var(--bg-lighter-orange);
-		transition: all .3s;
-		border-radius: 10rem;
-		z-index: -1;
-	}
-
-	&:hover {
-		color: #fff;
-		&:before {
-			width: 100%;
-		}
-	}
-
+export const RegisterContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 2rem 0;
 `
 
-export const LinkStyleButton = styled.a`
+
+export const Button = styled.a`
     font-size: 1.2rem;
     text-decoration: none !important;
     cursor: pointer;
     display: inline-block;
 	padding: 1.5rem;
-    margin-top: 1.5rem;
 	border-radius: 2rem;
     border: none;
 	color: #fff;
@@ -129,6 +85,7 @@ export const LinkStyleButton = styled.a`
 	position: relative;
 	overflow: hidden;
 	z-index: 1;
+	align-self: center;
     justify-self: center;
 
 	&:after {
@@ -169,6 +126,7 @@ export const LinkStyleButton = styled.a`
 
 	&.tiny{
 		padding: 1rem;
+		margin-top: 1rem;
 		font-size: 1rem;
 		font-weight: 600;
 		border-radius: 1rem;

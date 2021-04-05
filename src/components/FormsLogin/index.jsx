@@ -46,12 +46,14 @@ const FormsLogin = () => {
                 </S.Label>
             </S.FormGroup>
 
-            <S.LinkStyleButton href="/parent" onClick={ handleSubmit }>Entrar</S.LinkStyleButton>
+            <S.Button href="/parent" onClick={ handleSubmit }>Entrar</S.Button>
             
             <a href="#" className="my-3">Esqueceu sua senha?</a>
 
-            <p>Ainda não tem cadastro?</p>
-            <S.LinkStyleButton className='tiny' onClick={ openModal }>Cadastre-se</S.LinkStyleButton> 
+            <S.RegisterContainer>
+                <p>Ainda não tem cadastro?</p>
+                <S.Button className='tiny' onClick={ openModal }>Cadastre-se</S.Button> 
+            </S.RegisterContainer>
 
             </S.Form>
 
