@@ -63,7 +63,7 @@ export const CardImageContainer = styled(motion.div)`
     max-width: 100vw;
 
     @media only screen and (max-width: 600px) {
-        height:300px
+        height:300px;
     }
 `
 

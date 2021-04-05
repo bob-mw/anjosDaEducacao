@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useCallback } from 'react'
 import * as S from './styled'
 
-const Modal = ({ showModal, setShowModal }) => {
+const Modal = ({ title, subtitle, showModal, setShowModal }) => {
 
     const modalRef = useRef()
 
@@ -34,8 +34,8 @@ const Modal = ({ showModal, setShowModal }) => {
         {showModal ? (
             <S.Overlay  onClick={closeModal} ref={modalRef}>
                 <S.Panel>
-                    <S.Description>REGISTRO REALIZADO</S.Description>
-                    <S.Description>Gostaria de cadastrar um filho?</S.Description>
+                    <S.Description>{title}</S.Description>
+                    <S.Description>{subtitle}</S.Description>
                     <S.ButtonWrapper>
                     <S.Button className="inverted" >Cadastrar</S.Button>
                         <S.Button
