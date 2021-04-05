@@ -36,14 +36,15 @@ const Modal = ({ showModal, setShowModal }) => {
                 <S.Panel>
                     <S.Description>REGISTRO REALIZADO</S.Description>
                     <S.Description>Gostaria de cadastrar um filho?</S.Description>
-                    <S.Button>Cadastrar</S.Button>
-                    <S.Menu
-                        aria-label='Close modal'
-                        onClick={() => setShowModal(prev => !prev)}
-                    >
-                        <S.Top/>
-                        <S.Bottom/>
-                    </S.Menu>
+                    <S.ButtonWrapper>
+                    <S.Button className="inverted" >Cadastrar</S.Button>
+                        <S.Button
+                            aria-label='Close modal'
+                            onClick={() => setShowModal(prev => !prev)}
+                        >
+                            Não
+                        </S.Button>
+                    </S.ButtonWrapper>
                 </S.Panel>
             </S.Overlay>
         ) : null}
