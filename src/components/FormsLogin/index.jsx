@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import context from '../../context/context';
 import authService from '../../services/authUser';
 import validationLogin from '../../valitations/validationLogin';
@@ -24,32 +24,48 @@ const FormsLogin = () => {
         setFormValidation(validate);
     }, [authLogin])
 
+    const [showModal, setShowModal] = useState(false);
+
+    const openModal = () => {
+        setShowModal(prev => !prev);
+    }
+
     return(
         <>
-        <S.Form>
-        <S.FormGroup>
-            <S.Label for="email">
-                Email
-             <S.Field type="email" name="email" id="email" onChange={ handleChange }  placeholder="email@dominio.com" />
-            </S.Label>
-        </S.FormGroup>
-        <S.FormGroup>
-            <S.Label for="password">
-                Senha
-            <S.Field type="password" name="password" id="password" onChange={ handleChange } placeholder="Somente números" />
-            </S.Label>
-        </S.FormGroup>
+            <S.Form>
+            <S.FormGroup>
+                <S.Label for="email">
+                    Email
+                <S.Field type="email" name="email" id="email" onChange={ handleChange }  placeholder="email@dominio.com" />
+                </S.Label>
+            </S.FormGroup>
+            <S.FormGroup>
+                <S.Label for="password">
+                    Senha
+                <S.Field type="password" name="password" id="password" onChange={ handleChange } placeholder="Somente números" />
+                </S.Label>
+            </S.FormGroup>
 
-        <S.LinkStyleButton href="/parent" onClick={ handleSubmit }>Entrar</S.LinkStyleButton>
-        
-        <a href="#" className="my-3">Esqueceu sua senha?</a>
+            <S.LinkStyleButton href="/parent" onClick={ handleSubmit }>Entrar</S.LinkStyleButton>
+            
+            <a href="#" className="my-3">Esqueceu sua senha?</a>
 
-        <p>Ainda não tem cadastro? <a href="/register">Cadastre-se</a> </p>
+            <p>Ainda não tem cadastro? <a onClick={ openModal }>Cadastre-se</a> </p>
 
-        <h1 className="m-5">OU</h1>
+            <h1 className="m-5">OU</h1>
 
-        <S.LinkStyleButton href="/wishList" onClick={ handleSubmit }>Seja Doador</S.LinkStyleButton>
-        </S.Form>
+            <S.LinkStyleButton href="/wishList" onClick={ handleSubmit }>Seja Doador</S.LinkStyleButton>
+            </S.Form>
+
+            <TwoButtonModal
+                title='Você deseja se cadastrar como?' 
+                showModal={showModal} 
+                setShowModal={setShowModal} 
+                firstButtonName='Pai' 
+                secondButtonName='Guardião'
+                firstPath='/register' 
+                secondPath='/guardian'
+            />
         </>
     );
 }
