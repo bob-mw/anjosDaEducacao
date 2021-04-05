@@ -1,7 +1,7 @@
-import React from 'react'
-import dataFake from '../../data/fakeDbChildrens'
+import React from 'react';
+import dataFake from '../../data/fakeDbChildrens';
 
-import * as S from './styled'
+import * as S from './styled';
 
 const ChipIn = () => {
 
@@ -62,16 +62,16 @@ const ChipIn = () => {
                                 <tr key={index}>
                                     <td>{material.amount}</td>
                                     <td>{material.name}</td>
-                                    <td>{(material.price).toFixed(2)}</td>
+                                    <td> R$ {(material.price).toFixed(2)}</td>
                                 </tr>
                             ))
                         }
                     </tbody>
                 </S.Table>
 
-                <S.Details>Taxa de entrega: {SHIPPING_VALUE.toFixed(2)}</S.Details>
+                <S.Details>Taxa de entrega: R$ {SHIPPING_VALUE.toFixed(2)}</S.Details>
 
-                <S.Details>Total: {(totalPrice + SHIPPING_VALUE).toFixed(2)} </S.Details>
+                <S.Details>Total: R$ {(totalPrice + SHIPPING_VALUE).toFixed(2)} </S.Details>
 
 
                 <S.PaymentMethodContainer>

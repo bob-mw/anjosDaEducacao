@@ -39,7 +39,7 @@ const FormsLogin = () => {
             </S.Label>
         </S.FormGroup>
 
-        <S.Button href="/parentDetails" onClick={ handleSubmit }>Entrar</S.Button>
+        <S.LinkStyleButton href="/parent" onClick={ handleSubmit }>Entrar</S.LinkStyleButton>
         
         <a href="#" className="my-3">Esqueceu sua senha?</a>
 
