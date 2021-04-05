@@ -10,6 +10,6 @@ export default function
   }
 
   return response.status(500).json({
-    error: 'Error interno'
+    error: 'Erro interno'
   })
 }

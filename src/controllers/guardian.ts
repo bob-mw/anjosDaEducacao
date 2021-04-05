@@ -18,16 +18,14 @@ class GuardianController {
       throw new AppError('Erro na validação, verifique seus dados')
     }
 
-    const { name, email, password, cpf, phone } = request.body
+    const { name, email, password } = request.body
 
     const createGuardian = new CreateGuardianService()
 
     const user = await createGuardian.execute({
       name,
       email,
-      password,
-      cpf,
-      phone
+      password
     })
 
     delete user.password
@@ -65,7 +63,7 @@ class GuardianController {
       throw new AppError('Erro na validação, verifique seus dados')
     }
 
-    const { name, email, password, newPassword, phone } = request.body
+    const { name, email, password, newPassword } = request.body
 
     const updateGuardian = new UpdateGuardianService()
 
@@ -74,8 +72,7 @@ class GuardianController {
       name,
       email,
       password,
-      newPassword,
-      phone
+      newPassword
     })
 
     delete user.password
