@@ -12,7 +12,7 @@ function Provider({ children }) {
     const [ registerType, setRegisterType ] = useState('');
     const [ authLogin, setAuthLogin ] = useState({});
     const [ idChipIn, setIdChipIn ] = useState(0);
-    const [ childId, setChildId  ] = useState(0);
+    const [ chipInPage, setChipInPage  ] = useState(false);
 
     const value = {
         formType,
@@ -29,6 +29,8 @@ function Provider({ children }) {
         setAuthLogin,
         idChipIn,
         setIdChipIn,
+        chipInPage,
+        setChipInPage
     };
 
     return(

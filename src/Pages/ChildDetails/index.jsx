@@ -1,29 +1,17 @@
-import React from 'react'
-import ChipIn from '../../components/ChipInComponent/'
-import fakeData from '../../data/fakeDbChildrens'
-
-import * as S from './styled'
+import React, { useContext, useEffect } from 'react';
+import ChipIn from '../../components/ChipInComponent';
+import context from '../../context/context';
 
 const ChildDetails = () => {
+    
+    const { chipInPage, setChipInPage } = useContext(context);
+
+    useEffect(() => {
+        setChipInPage(false)
+    }, [chipInPage])
+
     return (
-        <>
-
-            <S.Title>Você tem { fakeData.length } filhos cadastrados</S.Title>
-
-            <S.Label htmlFor="yourChildrens">
-
-                <S.Select name="yourChildrens" id="yourChildrens">
-                    <option value="" selected disabled>Filhos cadastrados</option>
-                    {
-                        fakeData.map((child, index) => (
-                            <option key={index} value={child.name}>{child.name}</option>
-                        ))
-                    }
-                </S.Select>
-            </S.Label>
-
-            <ChipIn/>
-        </>
+        <ChipIn/>
     )
 }
 

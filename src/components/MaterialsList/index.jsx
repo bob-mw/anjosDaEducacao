@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { EF, F1, F2, EM } from '../../data/materialsList'
 import context from '../../context/context'
 
@@ -16,7 +16,6 @@ const MaterialsList = () => {
             (teaching === 'F2') && setChildrenRegister({ ...childrenRegister, materials: F2 }) ||
             (teaching === 'EM') && setChildrenRegister({ ...childrenRegister, materials: EM })
     }, [teaching])
-
 
     const list = () => {
         let childrenMaterials = [];
@@ -49,6 +48,8 @@ const MaterialsList = () => {
          
         );
     }
+
+
 
     return (
         list(teaching)

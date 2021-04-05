@@ -136,7 +136,9 @@ export const Button = styled.a`
 	letter-spacing: .15rem;
 	transition: all .3s;
 
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 	padding: 1.5rem 3rem;
     margin-top: 1.5rem;
 	border-radius: 2rem;

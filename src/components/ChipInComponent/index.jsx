@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import dataFake from '../../data/fakeDbChildrens';
+import context from  '../../context/context'
 
 import * as S from './styled';
 
@@ -7,11 +8,14 @@ const ChipIn = () => {
 
     const children = dataFake[0];
 
+    const { chipInPage } = useContext(context);
+
     const SHIPPING_VALUE = 10;
 
     const materials = children.materials.map((material) => (material.price * material.amount))
 
     const totalPrice = materials.reduce((acc, price) => acc + price);
+
 
     return (
         <S.Container>
@@ -74,7 +78,7 @@ const ChipIn = () => {
                 <S.Details>Total: R$ {(totalPrice + SHIPPING_VALUE).toFixed(2)} </S.Details>
 
 
-                <S.PaymentMethodContainer>
+                    {(chipInPage) && ( <S.PaymentMethodContainer>
                     <S.Subtitle>Método de Pagamento</S.Subtitle>
                     <S.RadioContainer>
 
@@ -93,12 +97,15 @@ const ChipIn = () => {
                             PIX
                         </S.RadioLabel>
 
-                    </S.RadioContainer>
+                    </S.RadioContainer> 
 
-                </S.PaymentMethodContainer>
+                </S.PaymentMethodContainer>) }
+                
             </S.DetailsContainer>
 
-            <S.Button href="/paymentForm">Próximo</S.Button>
+            {
+                (chipInPage) ? (<S.Button href="/paymentForm">Próximo</S.Button>) : (<div><S.Button href="#">Atualizar Cadastro</S.Button><S.Button href="/parent">Cadastrar outro filho</S.Button></div>)
+            }
 
         </S.Container>
     )
