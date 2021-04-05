@@ -9,11 +9,9 @@ const RegisterForms = () => {
 
     const { register, setRegister, formValidation, setFormValidation, registerType } = useContext(context);
 
-
     const handleChange = ({ target: { name, value } }) => {
         setRegister({ ...register, [name]: value })
     }
-
 
     const handleClick = () => {
         const { name, email, password, confirmPassword , phone } = register
@@ -24,6 +22,13 @@ const RegisterForms = () => {
         const validate = await schema.isValid(register);
         setFormValidation(validate);
     }, [register])
+
+    const [showModal, setShowModal] = useState(false);
+
+    const openModal = () => {
+        setShowModal(prev => !prev);
+    }
+
 
     return (
         <>
@@ -64,8 +69,16 @@ const RegisterForms = () => {
 
                 <S.Button type="button" onClick={handleClick} disabled={ !formValidation }>Finalizar Cadastro</S.Button>
             </S.Form>
+
+            {/*<Modal 
+                title='REGISTRO REALIZADO' 
+                subtitle='Gostaria de cadastrar um filho?'
+                showModal={showModal} 
+                setShowModal={setShowModal} 
+            />*/}
         </>
     );
 }
+
 
 export default RegisterForms
