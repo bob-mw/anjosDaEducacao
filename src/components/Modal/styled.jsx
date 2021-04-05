@@ -89,6 +89,21 @@ export const Description = styled.h2`
     padding: 0.5rem 1rem 0.5rem 1rem;
 `
 
+export const ButtonWrapper = styled.div`
+    display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 1rem;
+    align-items: center;
+    justify-items: stretch;
+    margin: 1rem;
+
+	@media only screen and (max-width: 800px) {
+        grid-template-columns: 1fr;
+    }
+`
+    
+    
+
 export const Button = styled.a`
     font-size: 2em;
     text-decoration: none !important;
@@ -99,14 +114,18 @@ export const Button = styled.a`
 
     display: inline-block;
 	padding: 1.5rem 3rem;
-    margin: 1rem;
 	border-radius: 2rem;
     border: none;
 	color: #fff;
 	position: relative;
 	overflow: hidden;
 	z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
     align-self: center;
+
 
 	&:after {
 		content: '';
