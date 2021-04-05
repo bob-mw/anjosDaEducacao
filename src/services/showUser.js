@@ -19,6 +19,4 @@ class ShowService {
     }
 }
 
-
-
 export default new ShowService();

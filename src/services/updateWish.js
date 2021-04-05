@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-class CreateWishService {
+class UpdateWishService {
     async execute(
       {
         name,
@@ -9,17 +9,19 @@ class CreateWishService {
         city,
         teaching,
         materials,
+        id,
         token
       }
       ) {
-      const data = await axios.post('http://localhost:3333/wish', {
+      const data = await axios.put('http://localhost:3333/wish', {
         data: {
           name,
           schoolName,
           state,
           city,
           teaching,
-          materials
+          materials,
+          id
         },
         headers: {
           'Authorization': `token ${token}`
@@ -32,4 +34,4 @@ class CreateWishService {
     }
 }
 
-export default new CreateWishService();
+export default new UpdateWishService();
