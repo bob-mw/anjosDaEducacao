@@ -7,15 +7,21 @@ class ShowService {
         registerType
       }
       ) {
-        const data = await axios.get(`http://localhost:3333/${registerType}`, {
-          headers: {
-            'Authorization': `token ${token}`
-          }
-        })
+        try {
+          const data = await axios.get(`http://localhost:3333/${registerType}`, {
+            headers: {
+              'Authorization': `token ${token}`
+            }
+          })
 
-      const { user } = data.data
+          const { user } = data.data
 
-      return user;
+          return { error: false, user };
+        }
+        catch (err) {
+          const { error } = err.response.data;
+          return { error, user: false };
+        }
     }
 }
 

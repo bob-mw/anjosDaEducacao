@@ -6,7 +6,7 @@ class ShowMuralService {
 
     const { mural } = data.data;
 
-    return mural;
+    return { mural };
   }
 }
 

@@ -30,7 +30,7 @@ class CreateWishService {
 
           const { wish } = data.data
 
-          return wish;
+          return { wish, error: false };
         }
         catch (err) {
           const { error } = err.response.data

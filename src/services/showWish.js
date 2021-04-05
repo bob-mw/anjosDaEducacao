@@ -6,15 +6,21 @@ class ShowWishService {
         token
       }
       ) {
-        const data = await axios.get('http://localhost:3333/wish', {
-          headers: {
-            'Authorization': `token ${token}`
-          }
-        })
+        try {
+          const data = await axios.get('http://localhost:3333/wish', {
+            headers: {
+              'Authorization': `token ${token}`
+            }
+          })
 
-      const { wish } = data.data
+          const { wish } = data.data
 
-      return wish; // returns all user wishes
+          return { error: false, wish }; // returns all user wishes
+        }
+        catch (err) {
+          const { error } = err.response.data
+          return { error, wish: false }
+        }
     }
 }
 
