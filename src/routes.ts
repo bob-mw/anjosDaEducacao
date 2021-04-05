@@ -44,7 +44,7 @@ routes.get('/wish', authMiddleware, wishController.show)
 routes.put('/wish', authMiddleware, wishController.update)
 routes.patch('/wish', authMiddleware, upload.single('photo'), wishController.photo)
 
-routes.get('/donation', authMiddleware, donationController.show)
+routes.get('/donation', donationController.show)
 
 routes.get('/mural', muralController.show)
 
