@@ -4,7 +4,7 @@ import Provider from './context/Provider';
 import Layout from './components/Layout';
 import Login from './Pages/Login/index';
 import RegisterResponsable from './Pages/RegisterResponsable';
-import RegisterResponsable from './Pages/RegisterGuardian';
+import RegisterGuardian from './Pages/RegisterGuardian';
 import ResponsableDetails from './Pages/ResponsableDetails';
 import WishList from './Pages/WishList';
 import Mural from './Pages/Mural'
