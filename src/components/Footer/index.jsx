@@ -1,6 +1,9 @@
 import React from 'react'
 
 import * as S from './styled'
+import facebook from '../../img/facebook.svg'
+import instagram from '../../img/instagram.svg'
+import gmail from '../../img/gmail.svg'
 
 const Footer = () => {
 
@@ -14,6 +17,9 @@ const Footer = () => {
             </S.PapelariaContainer>
             <S.SocialMediaContainer>
             <S.Description>Nossas redes:</S.Description>
+            <S.Image src={facebook}></S.Image>
+            <S.Image src={instagram}></S.Image>
+            <S.Image src={gmail}></S.Image>
             </S.SocialMediaContainer>
         </S.FooterContainer>
     )

@@ -19,16 +19,11 @@ export const PapelariaContainer = styled.div`
     "title title title" 0.2fr
     "image image image" 1fr
     / 1fr 1fr 1fr;
-    width: 100%;
     grid-gap: 1rem;
     margin: 2rem;
 `
 
 export const SocialMediaContainer = styled(PapelariaContainer)`
-
-`
-
-export const IconContainer = styled.div`
 
 `
 
@@ -44,8 +39,7 @@ export const Image = styled.img`
     position: relative;
     display: block;
     height: auto;
-    width: auto;
-    max-width: 100%;
+    width: 100%;
     border-radius: 2rem;
     object-fit: contain;
     align-self: start;
