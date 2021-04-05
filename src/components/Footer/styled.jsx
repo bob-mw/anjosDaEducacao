@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const FooterContainer = styled.div`
     position: relative;
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2fr 1fr;
     min-height: 30rem;
     width: 100%;
     margin-top: 5rem;
@@ -20,6 +20,7 @@ export const PapelariaContainer = styled.div`
     / 1fr 1fr 1fr;
     width: 100%;
     grid-gap: 1rem;
+    margin: 2rem;
 `
 
 export const Description = styled.p`
@@ -27,13 +28,16 @@ export const Description = styled.p`
     color: white;
     font-size: 2em;
     text-transform: uppercase;
+    align-self: center;
 `
 
 export const Image = styled.img`
     position: relative;
     display: block;
-    height: 100%;
+    height: auto;
     width: auto;
     max-width: 100%;
-    object-fit: fill;
+    border-radius: 2rem;
+    object-fit: contain;
+    align-self: start;
 `
