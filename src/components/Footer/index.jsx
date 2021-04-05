@@ -17,7 +17,7 @@ const Footer = () => {
                     <S.Image src={'/papelaria/logopapelaria3.jpg'}></S.Image>
                 </S.PapelariaContainer>
                 <S.SocialMediaContainer>
-                    <S.Description>Nossas redes:</S.Description>
+                    <S.Description>Nossas contatos:</S.Description>
                     <S.Image src={facebook}></S.Image>
                     <S.Image src={instagram}></S.Image>
                     <S.Image src={gmail}></S.Image>

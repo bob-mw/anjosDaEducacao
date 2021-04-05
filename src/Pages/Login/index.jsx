@@ -26,7 +26,7 @@ const Login = () => {
             y: "0%",
             duration: 0.7,
             stagger: 0.1,
-            delay: 1.5
+            delay: 1
         }, "0")
         
     },[])
