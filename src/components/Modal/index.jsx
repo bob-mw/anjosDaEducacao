@@ -34,8 +34,10 @@ export const OneButtonModal = ({ title, subtitle, buttonName, path, showModal, s
         {showModal ? (
             <S.Overlay  onClick={closeModal} ref={modalRef}>
                 <S.Panel>
-                    <S.Description>{title}</S.Description>
-                    <S.Description>{subtitle}</S.Description>
+                    <S.DescriptionWrapper>
+                      <S.Description>{title}</S.Description>
+                      <S.Description>{subtitle}</S.Description>
+                    </S.DescriptionWrapper>
                     <S.ButtonWrapper>
                       <S.Button href={path} className="inverted" >{buttonName}</S.Button>
                       <S.Button
