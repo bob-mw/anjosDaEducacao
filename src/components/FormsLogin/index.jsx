@@ -15,7 +15,7 @@ const FormsLogin = () => {
 
     const handleSubmit = () => {
         const { email, password } = authLogin;
-        authService.execute({ email, password, formType })
+        authService.execute({ email, password, formType: 'user' })
     }
 
     useEffect(async () => {
