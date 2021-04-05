@@ -3,25 +3,37 @@ import styled from 'styled-components'
 export const FooterContainer = styled.div`
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 3fr 1fr;
     min-height: 30rem;
     width: 100%;
     margin-top: 5rem;
-    border-radius: 0 0 2rem 2rem;
-    background: linear-gradient(to top, rgba(243, 131, 117, 1), rgba(243, 131, 117, 0.9), 
-    rgba(243, 131, 117, 0.7), rgba(243, 131, 117, 0));
+    border-radius: 2rem;
+    background: linear-gradient(to right bottom, var(--bg-orange), var(--bg-dark-orange));
 
 `
 export const PapelariaContainer = styled.div`
     position: relative;
     display: grid;
-    grid: 0.2fr 1fr / 1fr 1fr 1fr;
+    grid-template:
+    "title title title" 0.2fr
+    "image image image" 1fr
+    / 1fr 1fr 1fr;
     width: 100%;
     grid-gap: 1rem;
 `
 
 export const Description = styled.p`
+    grid-area: title;
     color: white;
     font-size: 2em;
     text-transform: uppercase;
+`
+
+export const Image = styled.img`
+    position: relative;
+    display: block;
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: fill;
 `
