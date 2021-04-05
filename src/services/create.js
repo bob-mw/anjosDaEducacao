@@ -7,7 +7,7 @@ class CreateService {
         confirmPassword,
         phone,
         registerType }) {
-      const user = await axios.post(`http://localhost:3333/${ registerType }`, {
+      const data = await axios.post(`http://localhost:3333/${ registerType }`, {
         name,
         email,
         password,
@@ -15,7 +15,7 @@ class CreateService {
         phone
       });
 
-      console.log(user)
+      const { user } = data.data
 
       return user;
     }
