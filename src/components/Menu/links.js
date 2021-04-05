@@ -13,7 +13,7 @@ const links = [
     },
     {
       label: "Pais",
-      url: "/parents",
+      url: "/register",
     },
   ]
   

@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from 'react'
 import context from '../../context/context'
 import schema from '../../valitations/createUser'
 import CreateService from '../../services/create'
+import Modal from '../../components/Modal'
 
 import * as S from './styled'
 
@@ -9,11 +10,11 @@ const RegisterForms = () => {
 
     const { register, setRegister, formValidation, setFormValidation, registerType } = useContext(context);
 
+    const [showModal, setShowModal] = useState(false);
 
     const handleChange = ({ target: { name, value } }) => {
         setRegister({ ...register, [name]: value })
     }
-
 
     const handleClick = () => {
         const { name, email, password, confirmPassword , phone } = register
@@ -24,6 +25,12 @@ const RegisterForms = () => {
         const validate = await schema.isValid(register);
         setFormValidation(validate);
     }, [register])
+
+
+    const openModal = () => {
+        setShowModal(prev => !prev);
+    }
+
 
     return (
         <>
@@ -64,8 +71,23 @@ const RegisterForms = () => {
 
                 <S.Button type="button" onClick={handleClick} disabled={ !formValidation }>Finalizar Cadastro</S.Button>
             </S.Form>
+
+            <Modal showModal={showModal} setShowModal={setShowModal} />
         </>
     );
 }
 
-export default RegisterForms
+function RegisterResponsable() {
+
+    const { setRegisterType } = useContext(context);
+
+    useEffect(() => {
+        setRegisterType('user')
+    },[])
+
+    return(
+        <RegisterForms />
+    );
+}
+
+export default RegisterResponsable;
