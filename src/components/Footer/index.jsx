@@ -12,6 +12,9 @@ const Footer = () => {
                 <S.Image src={'/papelaria/logopapelaria2.jpg'}></S.Image>
                 <S.Image src={'/papelaria/logopapelaria3.jpg'}></S.Image>
             </S.PapelariaContainer>
+            <S.SocialMediaContainer>
+            <S.Description>Nossas redes:</S.Description>
+            </S.SocialMediaContainer>
         </S.FooterContainer>
     )
 }

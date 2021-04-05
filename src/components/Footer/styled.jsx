@@ -3,8 +3,9 @@ import styled from 'styled-components'
 export const FooterContainer = styled.div`
     position: relative;
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    min-height: 30rem;
+    grid-template-columns: 2fr 1.2fr;
+    grid-gap: 2rem;
+    min-height: 20rem;
     width: 100%;
     margin-top: 5rem;
     border-radius: 2rem;
@@ -21,6 +22,14 @@ export const PapelariaContainer = styled.div`
     width: 100%;
     grid-gap: 1rem;
     margin: 2rem;
+`
+
+export const SocialMediaContainer = styled(PapelariaContainer)`
+
+`
+
+export const IconContainer = styled.div`
+
 `
 
 export const Description = styled.p`
