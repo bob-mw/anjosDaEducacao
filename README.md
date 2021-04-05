@@ -10,13 +10,18 @@
 > **Clone o Repósitorio em sua máquina:**
 
 ```bash
-git clone  https://github.com/wend3ll-souza/anjosDaEducacao.git
+git clone https://github.com/wend3ll-souza/anjosDaEducacao.git
 ```
 
 > **Navegue para o diretório do projeto:**
 
 ```bash
 cd anjosDaEducacao
+```
+
+> **Mudando para a branch do backend**
+```bash
+git checkout back-heroku
 ```
 
 > **Instale as Dependências:**
