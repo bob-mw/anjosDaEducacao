@@ -1,23 +1,34 @@
 import axios from 'axios';
 
 class CreateService {
-    async execute({ name,
-        email,
-        password,
-        confirmPassword,
-        phone,
-        registerType }) {
-      const data = await axios.post(`http://localhost:3333/${ registerType }`, {
+    async execute(
+      { 
         name,
         email,
         password,
         confirmPassword,
-        phone
-      });
-
-      const { user } = data.data
-
-      return user;
+        phone,
+        registerType
+      }
+      ) {
+      
+        try{
+          const data = await axios.post(`http://localhost:3333/${ registerType }`, {
+            name,
+            email,
+            password,
+            confirmPassword,
+            phone
+          });
+    
+          const { user } = data.data
+    
+          return { error: false, user };
+        }
+        catch (err) {
+          const { error } = err.response.data;
+          return { error, user: false };
+        }
     }
 }
 

@@ -2,14 +2,20 @@ import axios from 'axios';
 
 class AuthService {
     async execute({ email, password, formType }) {
-        const data = await axios.post(`http://localhost:3333/${ formType }/authentication`,{
-            email,
-            password
-        })
+        try{
+            const data = await axios.post(`http://localhost:3333/${ formType }/authentication`,{
+                email,
+                password
+            });
 
-        const { token } = data.data
-        
-        return token;
+            const { token } = data.data;
+            
+            return { error: false, token };
+        }
+        catch (err) {
+            const { error } = err.response.data;
+            return { error, token: false };
+        }
     }
 }
 
