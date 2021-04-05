@@ -7,7 +7,7 @@ function RegisterResponsable() {
     const { setRegisterType } = useContext(context);
 
     useEffect(() => {
-        setRegisterType('user')
+        setRegisterType('guardian')
     },[])
 
     return(
