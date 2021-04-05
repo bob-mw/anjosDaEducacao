@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import dataChildrens from '../../data/fakeDbChildrens';
-import * as S from './styled'
+import * as S from './styled';
+import context from '../../context/context';
 
 const ChildrenCards = () => {
 
+    const { chipInPage } = useContext(context);
     
     return (
         <S.List>
@@ -40,7 +42,9 @@ const ChildrenCards = () => {
 
                         <hr />
 
-                        <S.Button href="/chipIn"> Doar</S.Button>
+                        {
+                            (chipInPage) ? (<S.Button href="/chipIn"> Doar</S.Button>) : (<S.Button href="/childDetails">Detalhes</S.Button>)
+                        }
                     </S.Card>
                 ))
             }

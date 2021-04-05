@@ -25,7 +25,7 @@ const FormsLogin = () => {
 
     return(
         <>
-        <S.Form>         
+        <S.Form>
         <S.FormGroup>
             <S.Label for="email">
                 Email
@@ -43,12 +43,11 @@ const FormsLogin = () => {
         
         <a href="#" className="my-3">Esqueceu sua senha?</a>
 
-        <p>Ainda não tem cadastro? <a href="/parents">Cadastre-se</a></p>
+        <p>Ainda não tem cadastro? <a href="/register">Cadastre-se</a> </p>
 
-        <hr/>
-            <h1>OU</h1>
+        <h1 className="m-5">OU</h1>
+
         <S.LinkStyleButton href="/wishList" onClick={ handleSubmit }>Seja Doador</S.LinkStyleButton>
-
         </S.Form>
         </>
     );
