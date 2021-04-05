@@ -17,10 +17,10 @@ const Footer = () => {
                     <S.Image src={'/papelaria/logopapelaria3.jpg'}></S.Image>
                 </S.PapelariaContainer>
                 <S.SocialMediaContainer>
-                    <S.Description>Nossas contatos:</S.Description>
-                    <S.Image src={facebook}></S.Image>
-                    <S.Image src={instagram}></S.Image>
-                    <S.Image src={gmail}></S.Image>
+                    <S.Description>Nossos contatos:</S.Description>
+                    <S.Icon src={facebook}></S.Icon>
+                    <S.Icon src={instagram}></S.Icon>
+                    <S.Icon src={gmail}></S.Icon>
                 </S.SocialMediaContainer>
             </S.FooterContainer>
         </S.Footer>

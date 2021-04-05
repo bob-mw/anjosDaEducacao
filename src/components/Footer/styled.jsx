@@ -15,14 +15,10 @@ export const Footer = styled.div`
 export const FooterContainer = styled.div`
     position: relative;
     display: grid;
-    grid-template-columns: 2fr 1.2fr;
+    grid-template-columns: 2fr 0.8fr;
     grid-gap: 2rem;
     height: 100%;
-    width: 80%;
-
-    @media only screen and (max-width: 1400px) {
-        width: 90%;
-    }
+    width: 90%;
 
     @media only screen and (max-width: 1000px) {
         grid-template-columns: 1fr;
@@ -60,7 +56,7 @@ export const SocialMediaContainer = styled(PapelariaContainer)`
 export const Description = styled.p`
     grid-area: title;
     color: white;
-    font-size: 2em;
+    font-size: 1.5em;
     text-transform: uppercase;
     align-self: center;
 
@@ -77,9 +73,9 @@ export const Image = styled.img`
     width: 100%;
     object-fit: contain;
     align-self: start;
+    object-position: 0% 50%;
+`
 
-    @media only screen and (max-width: 700px) {
-        object-position: 0% 50%;
-    }
-
+export const Icon = styled(Image)`
+    max-width: 4rem;
 `
