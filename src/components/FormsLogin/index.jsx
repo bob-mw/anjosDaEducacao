@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import context from '../../context/context';
-import authService from '../../services/auth';
+import authService from '../../services/authUser';
 import validationLogin from '../../valitations/validationLogin';
 
 import * as S from './styled'
