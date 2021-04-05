@@ -59,61 +59,79 @@ http://localhost:3333/
 
 
 > **Importando arquivo do insomnia existente na raiz do projeto**
-Abra o insomnia
-Clique em configurações (ou aperte control + ,)
-Vá para a aba data
-Import Data
-From file
-Selecione o arquivo insomnia.json na raiz do projeto
+<p>
+  Abra o insomnia </br>
+  Clique em configurações (ou aperte control + ,) </br>
+  Vá para a aba data </br>
+  Import Data </br>
+  From file </br>
+  Selecione o arquivo insomnia.json na raiz do projeto </br>
+</p>
 
 <h2 align="center">Navegando pela plataforma</h2>
 
-**user**
-Nessas rotas você poderá:
-criar: post na rota /user
-logar: post na rota /user/authentication
-atualizar: put na rota /user (você precisa do token desse usuário)
-mostrar dados: get na rota /user (você precisa do token desse usuário)
+**user** 
+<p>
+  Nessas rotas você poderá: </br>
+  criar: post na rota /user </br>
+  logar: post na rota /user/authentication </br>
+  atualizar: put na rota /user (você precisa do token desse usuário) </br>
+  mostrar dados: get na rota /user (você precisa do token desse usuário) </br>
+</p>
 
 **guardian**
-Nessas rotas você poderá:
-criar: post na rota /guardian
-logar: post na rota /guardian/authentication
-atualizar: put na rota /guardian (você precisa do token desse guardião)
-mostrar dados: get na rota /guardian (você precisa do token desse guardião)
+<p>
+  Nessas rotas você poderá: </br>
+  criar: post na rota /guardian </br>
+  logar: post na rota /guardian/authentication </br>
+  atualizar: put na rota /guardian (você precisa do token desse guardião) </br>
+  mostrar dados: get na rota /guardian (você precisa do token desse guardião) </br>
+</p>
 
 **store**
-Nessas rotas você poderá:
-criar: post na rota /store
-logar: post na rota /store/authentication
-atualizar: put na rota /store (você precisa do token dessa loja)
-mostrar dados: get na rota /store (você precisa do token dessa loja)
+<p>
+  Nessas rotas você poderá: </br>
+  criar: post na rota /store </br>
+  logar: post na rota /store/authentication </br>
+  atualizar: put na rota /store (você precisa do token dessa loja) </br>
+  mostrar dados: get na rota /store (você precisa do token dessa loja) </br>
+</p>
 
 **list**
-Aqui você pode buscar pelas listas de materiais
-get na rota /list contendo "list": "SiglaDaLista" para encontrar a lista desejada
-Listas existentes:
-  EI: ensino infantil
-  F1: fundamental 1
-  F2: fundamental 2
-  EM: ensino médio
+<p>
+Aqui você pode buscar pelas listas de materiais </br>
+get na rota /list contendo "list": "SiglaDaLista" para encontrar a lista desejada </br>
+Listas existentes: </br>
+  EI: ensino infantil </br>
+  F1: fundamental 1 </br>
+  F2: fundamental 2 </br>
+  EM: ensino médio </br>
+</p>
 
 **ProductList**
-Aqui você pode criar um catalogo de preços para as listas de materiais, estando logado como loja
-Basta informar a lista e os materiais com seus preços e quantidade
+<p>
+Aqui você pode criar um catalogo de preços para as listas de materiais, estando logado como loja </br>
+Basta informar a lista e os materiais com seus preços e quantidade </br>
+</p>
 
 **Wish**
-Aqui você pode criar pedidos de materiais, estando logado como usuário
-criar: post na rota /wish
-atualizar: put na rota /wish
-monstrar pedidos e seus dados: get na rota /wish
-upload de foto: patch na rota /wish (o pedido precisa estar finalizado)
+<p>
+  Aqui você pode criar pedidos de materiais, estando logado como usuário </br>
+  criar: post na rota /wish </br>
+  atualizar: put na rota /wish </br>
+  monstrar pedidos e seus dados: get na rota /wish </br>
+  upload de foto: patch na rota /wish (o pedido precisa estar finalizado) </br>
+</p>
 
 **Donation**
-Aqui você pode acompanhar a lista de pedidos em aberto
-get na rota /donation
+<p>
+  Aqui você pode acompanhar a lista de pedidos em aberto </br>
+  get na rota /donation </br>
+</p>
 
 **Mural**
-Aqui você pode encontrar mensagens e imagens das crianças que tiveram seus pedidos atendidos, além da lista de guardiões
+<p>
+  Aqui você pode encontrar mensagens e imagens das crianças que tiveram seus pedidos atendidos, além da lista de guardiões
+</p>
 
 > **Todos os dados para essas requisições estão presentes no arquivo do insomnia**
