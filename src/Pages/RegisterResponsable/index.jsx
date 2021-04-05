@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react'
 import context from '../../context/context'
 import schema from '../../valitations/createUser'
-import CreateService from '../../services/create'
+import CreateService from '../../services/createUser'
 import Modal from '../../components/Modal'
 
 import * as S from './styled'
