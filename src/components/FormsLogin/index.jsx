@@ -50,11 +50,9 @@ const FormsLogin = () => {
             
             <a href="#" className="my-3">Esqueceu sua senha?</a>
 
-            <p>Ainda não tem cadastro? <a onClick={ openModal }>Cadastre-se</a> </p>
+            <p>Ainda não tem cadastro?</p>
+            <S.LinkStyleButton className='tiny' onClick={ openModal }>Cadastre-se</S.LinkStyleButton> 
 
-            <h1 className="m-5">OU</h1>
-
-            <S.LinkStyleButton href="/wishList" onClick={ handleSubmit }>Seja Doador</S.LinkStyleButton>
             </S.Form>
 
             <TwoButtonModal

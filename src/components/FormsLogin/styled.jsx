@@ -142,6 +142,7 @@ export const LinkStyleButton = styled.a`
 		border-radius: 10rem;
 		z-index: -2;
 	}
+
 	&:before {
 		content: '';
 		position: absolute;
@@ -159,6 +160,28 @@ export const LinkStyleButton = styled.a`
 		color: #fff;
 		&:before {
 			width: 100%;
+		}
+
+		&.tiny{
+            color: var(--bg-dark-orange);
+        }
+	}
+
+	&.tiny{
+		padding: 1rem;
+		font-size: 1rem;
+		font-weight: 600;
+		border-radius: 1rem;
+		border: 1px solid var(--bg-dark-orange);
+		color: var(--bg-dark-orange);	
+
+		&:after{
+			border-radius: 1rem;
+			background: linear-gradient(to left bottom, #fff, #ECE9E6);
+		}
+
+		&:before{
+			border-radius: 1rem;
 		}
 	}
 
