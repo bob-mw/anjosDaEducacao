@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useCallback } from 'react'
 import * as S from './styled'
 
-export const OneButtonModal = ({ title, subtitle, buttonName, showModal, setShowModal }) => {
+export const OneButtonModal = ({ title, subtitle, buttonName, path, showModal, setShowModal }) => {
 
     const modalRef = useRef()
 
@@ -37,7 +37,7 @@ export const OneButtonModal = ({ title, subtitle, buttonName, showModal, setShow
                     <S.Description>{title}</S.Description>
                     <S.Description>{subtitle}</S.Description>
                     <S.ButtonWrapper>
-                      <S.Button className="inverted" >{buttonName}</S.Button>
+                      <S.Button href={path} className="inverted" >{buttonName}</S.Button>
                       <S.Button
                           aria-label='Close modal'
                           onClick={() => setShowModal(prev => !prev)}
@@ -52,7 +52,7 @@ export const OneButtonModal = ({ title, subtitle, buttonName, showModal, setShow
     )
 }
 
-export const TwoButtonModal = ({ title, subtitle, firstButtonName, secondButtonName, showModal, setShowModal }) => {
+export const TwoButtonModal = ({ title, subtitle, firstButtonName, secondButtonName, firstPath, secondPath, showModal, setShowModal }) => {
 
   const modalRef = useRef()
 
@@ -88,8 +88,8 @@ export const TwoButtonModal = ({ title, subtitle, firstButtonName, secondButtonN
                   <S.Description>{title}</S.Description>
                   <S.Description>{subtitle}</S.Description>
                   <S.ButtonWrapper>
-                    <S.Button>{firstButtonName}</S.Button>       
-                    <S.Button>{secondButtonName}</S.Button>   
+                    <S.Button href={firstPath}>{firstButtonName}</S.Button>       
+                    <S.Button href={secondPath}>{secondButtonName}</S.Button>   
                   </S.ButtonWrapper>
                   <S.Menu
                       aria-label='Close modal'

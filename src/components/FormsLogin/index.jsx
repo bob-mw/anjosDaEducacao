@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import context from '../../context/context';
 import authService from '../../services/authUser';
 import validationLogin from '../../valitations/validationLogin';
+import { TwoButtonModal } from '../../components/Modal'
 
 import * as S from './styled'
 
