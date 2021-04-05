@@ -12,23 +12,30 @@ class CreateWishService {
         token
       }
       ) {
-      const data = await axios.post('http://localhost:3333/wish', {
-        data: {
-          name,
-          schoolName,
-          state,
-          city,
-          teaching,
-          materials
-        },
-        headers: {
-          'Authorization': `token ${token}`
+      
+        try{
+          const data = await axios.post('http://localhost:3333/wish', {
+            data: {
+              name,
+              schoolName,
+              state,
+              city,
+              teaching,
+              materials
+            },
+            headers: {
+              'Authorization': `token ${token}`
+            }
+          });
+
+          const { wish } = data.data
+
+          return wish;
         }
-      });
-
-      const { wish } = data.data
-
-      return wish;
+        catch (err) {
+          const { error } = err.response.data
+          return { error, wish: false }
+        }
     }
 }
 
