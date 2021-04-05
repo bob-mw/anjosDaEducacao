@@ -126,6 +126,10 @@ export const Button = styled.a`
     align-items: center;
     align-self: center;
 
+    border: 3px solid var(--bg-dark-orange);
+    box-sizing: border-box;
+    border-radius: 10rem;
+
 
 	&:after {
 		content: '';
@@ -156,7 +160,19 @@ export const Button = styled.a`
 		&:before {
 			width: 100%;
 		}
+
+        &.inverted{
+            color: var(--bg-dark-orange);
+        }
 	}
+
+    &.inverted {
+        color: var(--bg-dark-orange);
+
+        &:after {
+            background: linear-gradient(to left bottom, #fff, #ECE9E6);
+        }
+    }
 
     @media only screen and (max-width: 800px) {
         padding: 1rem 1.5rem;

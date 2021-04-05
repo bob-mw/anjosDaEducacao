@@ -37,7 +37,7 @@ const Modal = ({ showModal, setShowModal }) => {
                     <S.Description>REGISTRO REALIZADO</S.Description>
                     <S.Description>Gostaria de cadastrar um filho?</S.Description>
                     <S.ButtonWrapper>
-                    <S.Button>Cadastrar</S.Button>
+                    <S.Button className="inverted" >Cadastrar</S.Button>
                         <S.Button
                             aria-label='Close modal'
                             onClick={() => setShowModal(prev => !prev)}
