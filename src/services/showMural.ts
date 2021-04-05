@@ -24,8 +24,6 @@ class ShowDonationService {
       return name
     })
 
-    console.log(wishes)
-
     return wishes
   }
 }
