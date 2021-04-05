@@ -7,6 +7,8 @@ export const HeroContainer = styled.div`
 	line-height: 1.5;
 	font-size: 16px;
 	align-self: flex-start;
+	display: flex;
+	flex-direction: column;
 
 	@media only screen and (max-width: 1320px) {
         font-size: 14px;
@@ -58,6 +60,9 @@ export const HeroSubtitle = styled.h3`
 	font-weight:800;
 	font-size: 3.5em;
 	overflow: hidden;
+	text-align: center;
+	align-self: center;
+
 
 	span {
 		display: inline-block;
@@ -71,6 +76,9 @@ export const HeroText = styled.p`
 	font-size: 2em;
 	overflow: hidden;
 	width: 80%;
+	text-align: center;
+	align-self: center;
+
 
 	span {
 		display: inline-block;
