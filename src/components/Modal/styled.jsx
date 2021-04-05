@@ -16,10 +16,11 @@ export const Overlay = styled.div`
 export const Panel = styled(motion.div)`
     position: relative;
     width: 40%;
-    height: 40%;
+    height: auto;
+    padding: 3rem 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 
     border-radius: 2rem;
@@ -67,11 +68,10 @@ export const Bottom = styled(Shape)`
 const side = 2;
 
 export const Menu = styled(motion.div)`
-    position: absolute;
+    position: flex;
+    align-self: flex-end;
     cursor: pointer;
-    right: 0.5rem;
-    top: 0.5rem;
-    margin: 1.5rem;
+    margin: 0 1rem 1rem 0;
     width: ${side}rem;
     height: ${side}rem;
     transition: transform 0.2s, opacity 0.2s !important;
@@ -80,6 +80,13 @@ export const Menu = styled(motion.div)`
         opacity: 0.7;
         transform: scale(1.2);
     }
+`
+
+export const DescriptionWrapper = styled.div`
+    display: flex;
+	flex-direction: column;
+    justify-items: center;
+    margin-top: 1rem;
 `
 
 export const Description = styled.h2`
@@ -102,8 +109,6 @@ export const ButtonWrapper = styled.div`
     }
 `
     
-    
-
 export const Button = styled.a`
     font-size: 2em;
     text-decoration: none !important;

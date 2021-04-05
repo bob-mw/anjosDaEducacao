@@ -85,12 +85,6 @@ export const TwoButtonModal = ({ title, subtitle, firstButtonName, secondButtonN
       {showModal ? (
           <S.Overlay  onClick={closeModal} ref={modalRef}>
               <S.Panel>
-                  <S.Description>{title}</S.Description>
-                  <S.Description>{subtitle}</S.Description>
-                  <S.ButtonWrapper>
-                    <S.Button href={firstPath}>{firstButtonName}</S.Button>       
-                    <S.Button href={secondPath}>{secondButtonName}</S.Button>   
-                  </S.ButtonWrapper>
                   <S.Menu
                       aria-label='Close modal'
                       onClick={() => setShowModal(prev => !prev)}
@@ -98,6 +92,14 @@ export const TwoButtonModal = ({ title, subtitle, firstButtonName, secondButtonN
                     <S.Top/>
                     <S.Bottom/>
                   </S.Menu>
+                  <S.DescriptionWrapper>
+                    <S.Description>{title}</S.Description>
+                    <S.Description>{subtitle}</S.Description>
+                  </S.DescriptionWrapper>
+                  <S.ButtonWrapper>
+                    <S.Button href={firstPath}>{firstButtonName}</S.Button>       
+                    <S.Button href={secondPath}>{secondButtonName}</S.Button>   
+                  </S.ButtonWrapper>
               </S.Panel>
           </S.Overlay>
       ) : null}
