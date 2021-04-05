@@ -2,12 +2,11 @@ import styled from 'styled-components'
 
 export const List = styled.ul`
     list-style-type: none;
-    padding: 0;
-    margin: 0;
-
     display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 4rem;
+	padding: 3rem;
+	margin: 5rem 0;
 
 	@media only screen and (max-width: 1200px) {
         grid-template-columns: repeat(2, 1fr);
