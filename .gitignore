@@ -2,15 +2,17 @@
 
 # dependencies
 node_modules
+backend/node_modules
 
 # testing
 coverage
-tmp
+backend/tmp/*
+!backend/tmp/.gitkeep
 
 
 # production
 build
-build
+backend/build
 
 # misc
 .DS_Store
