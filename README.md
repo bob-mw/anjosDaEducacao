@@ -1,6 +1,6 @@
 <h1 align="center">Anjos da Eduacação</h1>
 
-<p align="center"><img width="250" src="./src/img/angel.svg" alt="print"></p>
+<p align="center"><img width="300" src="./src/img/angel.svg" alt="print"></p>
 
 <p align="center">A iniciativa desse projeto se deu a partir de um desafio do Hackaton proposto pelo Grupo <a target="_blank" href="https://digital.fcamara.com.br/programadeformacao">FCamara</a>.</p> 
 <p align="center">A solução proposta é viabilizar doações de materiais escolares para crianças de escolas públicas. As doações iram acontecer em qualquer lugar de modo que o doador possa ajudar de forma online. Além do mais, as papelarias parceiras, que disponibilizam os materiais, terão maior visibilidade financeira e social. </p>
@@ -114,4 +114,8 @@ http://localhost:3000/
 
 <p align="center"><a href="https://www.figma.com/file/Jk6LbA1eGpjGsK914lpAlS/Prot%C3%B3tipo-Alta-Qualidade-Anjos-da-Educa%C3%A7%C3%A3o?node-id=0%3A1" target="_blank"><img src="https://img.shields.io/static/v1?label=ProtoTipo&message=FIGMA&color=rgb(245,50,66)&style=for-the-badge&logo=ghost"></a></p>
 
-<p align="center"><a href="https://github.com/wend3ll-souza/anjosDaEducacao/tree/back-heroku" target="_blank">Acesse a branch do backend</a></p>
+<p align="center"><a href="https://youtu.be/eztbrqiGCuI" target="_blank"><img src="https://img.shields.io/static/v1?label=PITCH&message=COMERCIAL&color=rgb(25,150,66)&style=for-the-badge&logo=ghost"></a></p>
+
+<p align="center"><a href="https://youtu.be/ZXjAuVrYECk" target="_blank"><img src="https://img.shields.io/static/v1?label=PITCH&message=FUNCIONALIDADES&color=rgb(25,150,255)&style=for-the-badge&logo=ghost"></a></p>
+
+<p align="center"><a href="https://github.com/wend3ll-souza/anjosDaEducacao/tree/main/backend" target="_blank"><img src="https://img.shields.io/static/v1?label=FOLDER&message=BACKEND&color=rgb(25,150,25)&style=for-the-badge&logo=ghost"></a></p>
