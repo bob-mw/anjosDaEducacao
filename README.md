@@ -63,7 +63,9 @@ http://localhost:3000/
 
 <hr>
 
-Rotas da aplicação:
+<p align="center" ><img src="./printImages/gifReadme.gif" width="400" alt="gif"></p>
+
+**ROTAS DA APLICAÇÃO:**
 
 "/" → home
 
@@ -83,9 +85,9 @@ Rotas da aplicação:
 
 "/chipIn" → vaquinha
 
+<hr>
 
-
-RESPONSAVEL PELA CRIANÇA
+**RESPONSAVEL PELA CRIANÇA**
 
 - O usuário pode entrar na aplicação utilizando o formulário de login.
 
@@ -98,7 +100,7 @@ RESPONSAVEL PELA CRIANÇA
 - Depois que a criança estiver registrada o reponsável poderá acompanhar o andamento das contribuições, cadastrar mais um filho ou pedir pela atualização de algum registro.
 
 
-DOADOR
+**DOADOR**
 
 - Após entrar ou cadastrar-se na aplicação, o doador será direcionado para lista de pedidos, onde poderá visualizar as crianças que precisam de doações
 
