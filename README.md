@@ -63,6 +63,27 @@ http://localhost:3000/
 
 <hr>
 
+Rotas da aplicação:
+
+"/" → home
+
+"/register"  → registro de pais
+
+"/guardian" → registro de doador
+
+"/childrenList" → lista de criança registrada
+
+"/childDetails" → detalhes da criança registrada
+
+"/wishList" → lista de pedidos
+
+"/mural" → mural
+
+"/paymentForm" → pagamento
+
+"/chipIn" → vaquinha
+
+
 
 RESPONSAVEL PELA CRIANÇA
 
