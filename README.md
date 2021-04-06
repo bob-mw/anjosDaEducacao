@@ -62,88 +62,31 @@ http://localhost:3000/
 > **Ainda não é possível cadastrar ou fazer uma doação**
 
 <hr>
-<h3 align="center">Responsável pela criança</h3>
-
-O usuário pode entrar na aplicação utilizando o formulário de login:
-
-**End Point**: `/`
-
-<p align="center"><img width="250" src="./printImages/login.png" alt="print"></p>
-
-Caso o usuário não for cadastrado será direcionado para tela de cadastro:
-
-<p align="center"><img width="250" src="./printImages/solicitacaoCadastro.png" alt="print"></p>
 
 
+RESPONSAVEL PELA CRIANÇA
 
-**End Point**: `/parents`
+- O usuário pode entrar na aplicação utilizando o formulário de login.
 
-<p align="center"><img width="250" src="./printImages/formularioCadastropng.png" alt="print"></p>
+- Caso o usuário não tenha cadastro será direcionado para tela de cadastro .
 
-Caso o usuário já tenha feito o cadastro será direcionado para página onde irá registrar a criança que precisa dos materiais. Sendo preciso nome, endereço da escola e série. A uma lista de matériais para cada ciclo de ensino.
+- Com o usuário já cadastrado como responsavél pela criança, será direcionado para página onde irá registrar filhos que precisam de materiais. Sendo preciso nome, endereço da escola e série. 
 
-**End Point**: `/parentDetails`
+- A uma lista de materiais para cada ciclo de ensino. Onde o pai poderá escolher os materiais que precisa daquela lista. Também podendo escolher a quantidade de alguns materiais até um número limitado.
 
-<p align="center"><img width="250" src="./printImages/registroCrianca.png" alt="print"></p>
-
-<p align="center"><img width="250" src="./printImages/registroCriancaTable.png" alt="print"></p>
-
+- Depois que a criança estiver registrada o reponsável poderá acompanhar o andamento das contribuições, cadastrar mais um filho ou pedir pela atualização de algum registro.
 
 
-Logo após registrar uma criança, ou clicando em vizualizar o responsável poderá vizualizar as crianças que tem cadastradas
+DOADOR
 
-<p align="center"><img width="250" src="./printImages/alertaSucessoCrianca.png" alt="print"></p>
+- Após entrar ou cadastrar-se na aplicação, o doador será direcionado para lista de pedidos, onde poderá visualizar as crianças que precisam de doações
 
+- Ao clicar em Doar o doador será direcionado para a página contente mais informações sobre o andamento da vaquinha daquela criança
 
-**End Point**: `/childDetails`
+- Ao clicar em próximo o usuario irá para a página pedindo informações do cartão e valor a ser doado.
 
-<p align="center"><img width="250" src="./printImages/" alt="print"></p>
+- Depois que finalizar a doação o usuário ,se quiser, poderá enviar uma pequena carta que será entregue para criança justo aos materiais.
 
+- Se quiser, o doador poderá compartilhar o projeto nas redes sociais ou entrar no mural de depoimentos
 
-<hr>
-<br>
-<br>
-<br>
-<h3 align="center">Doador</h3>
-
-Caso o usuário queira ajudar alguma criança, basta clicar no botão `Seja um doador` no formulário de Login:
-
-<p align="center"><img width="250" src="./printImages/login.png" alt="print"></p>
-
-Então o usuário será direcionado para lista de pedidos, onde poderá vizualizar as crianças que precisam de doações
-
-**End Point**: `/wishList`
-
-<p align="center"><img width="250" src="./printImages/" alt="print"></p>
-
-Ao clicar em `Doar` o doador será direcionado para página contente mais informações sobre o andamento da vaquinha daquela criança:
-
-**End Point**: `/littleCow`
-
-<p align="center"><img width="250" src="./printImages/" alt="print"></p>
-
-Então, usuário poderá escolher sua forma de pagamento, _por enquanto só tem o método cartão implementado_
-
-Ao clicar em `próximo` o usuario irá para a página pedindo informações do cartão e valor a ser doado.
-
-
-
-**End Point**: `/paymentForm`
-
-<p align="center"><img width="250" src="./printImages/" alt="print"></p>
-
-
-
-Depois que finalizar a doação o úsuario poderá compartilhar a mensagem de colaborador em suas redes sociais e se quiser poderá enviar uma pequena carta que será entregue para criança justo aos materiais.
-
-<br>
-<br>
-<br>
-<br>
-
-
-Os usuários poderem visitar o mural de depoimentos para casos de sucesso e mensagens deixadas pelas crianças
-
-**End Point**: `/mural`
-
-<p align="center"><img width="250" src="./printImages/" alt="print"></p>
+<p align="center"><a href="https://www.figma.com/file/Jk6LbA1eGpjGsK914lpAlS/Prot%C3%B3tipo-Alta-Qualidade-Anjos-da-Educa%C3%A7%C3%A3o?node-id=0%3A1" target="_blank"><img src="https://img.shields.io/static/v1?label=ProtoTipo&message=FIGMA&color=rgb(245,50,66)&style=for-the-badge&logo=ghost"></a></p>
